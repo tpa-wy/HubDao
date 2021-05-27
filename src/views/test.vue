@@ -1,11 +1,12 @@
 <template>
     <div>
-        <setting />
+        <Dialog>
+            111
+        </Dialog>
     </div>
 </template>
 
 <script>
-import setting from '../components/setting';
 export default {
     name: 'EducationTest',
     data() {
@@ -13,7 +14,6 @@ export default {
             
         };
     },
-    components:{setting},
     mounted() {
         
     },

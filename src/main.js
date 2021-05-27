@@ -36,6 +36,9 @@ Vue.use(Switch)
 Vue.use(input)
 Vue.use(progress)
 Vue.use(checkbox)
+// 引入封装的Dialog弹框
+import dialog from './components/dialog/dialog.js'
+Vue.use(dialog)
 
 Vue.config.productionTip = false
 
