@@ -24,17 +24,40 @@
         </div>
         <div v-if="dataList.length==0" class="content">Connect to a wallet to view your liquidity.</div>
         <div v-if="dataList.length!==0" class="content-list">
-              <div v-for="(item,i) in dataList" :key="i" class="content-item">
+              <div v-for="(item,i) in dataList" :key="i" 
+                 @click="onTap(item,i)"
+                  class="content-item">
                   <div class="content-i-head">
-                            <div>
-                                <img v-for="(img,idx) in item.imgs" :key="idx" :src="img"  class="head-img">
+                            <div class="content-i-img">
+                                
+                                <img v-for="_img in item.imgs" :key="_img" :src="_img"  class="head-img" />
+                                 
+                                
                                 <span class="head-title">HD/HT</span>
                             </div>
                             <div>
-                                <img class="list-row-down" src="../../../assets/down-icon.png"/>
+                                <img :class="'list-row-down ' +(item.checked?'content-icon-down':'content-icon-upper')" src="/assets/down-icon.png"/>
                             </div>
                   </div>
+                  <div v-if="item.checked&&item.children.length!==0" class="content-i-box">
+
+                       <div v-for="(cItem,indx) in item.children" :key="indx" class="content-i-card">
+                            <div class="content-i-name">{{cItem.name}}</div>
+                            <div class="content-i-value">
+                                <span>{{cItem.value}}</span>
+                                <img v-for="(icon,imgindex) in cItem.icons" :key="imgindex" :src="icon" alt="">
+                            </div>
+                       </div>
+
+                        <div class="submit-group">
+                             <div class="submit-btn submit-btn1">Add</div>
+                             <div class="submit-btn submit-btn2">Remove</div>
+                        </div>
+                  </div>
+                 
               </div>
+
+              
         </div>
         <div class="value">
           <div class="value-1">Don’t see a pool you joined? Import it.</div>
@@ -59,17 +82,82 @@
     background-color: #ffffff;
    
 }
-.content-i-head{
+.submit-group{
     display: flex;
     justify-content: space-between;
+    .submit-btn{
+                width: 232px;
+                height: 48px;
+                margin: 30px 18px 0px 18px;
+               
+                border-radius: 6px;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 48px;
+                text-align: center;
+    }
+    .submit-btn1{
+        
+       font-weight: 500;
+        background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
+    }
+    .submit-btn2{
+       
+        background-image: linear-gradient(to left, #44465e, #2f303f 0%);
+        color: #ffffff;
+    }
+}
+
+.content-i-head,.content-i-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.content-i-card{
+     margin-bottom: 10px;
+}
+.content-i-img{
+    .content-i-head;
 }
 .Liquidity{
     .head-title{
         color: #2f303f;font-size: 20px;
+        margin-left: 11px;
     }
     .head-img{
         width:32px;height: 32px;
     }
+   
+    
+    
+
+}
+.content-icon-down{
+        transform: rotate(180deg);
+        transition: transform 0.2s linear;
+}
+.content-icon-upper{
+        transform: rotate(360deg);
+        transition: transform 0.2s linear;
+}
+.content-i-box{
+    padding-top: 34px;
+}
+.content-i-value{
+    display: flex;
+    align-items: center;
+}
+.content-i-value>img{
+    width: 20px;height: 20px;
+    margin-left:12px;
+}
+
+ .content-i-name{
+        color: #2f303f; font-size: 16px;
+        .content-i-value>span{
+                font-size: 16px;
+        }
 }
 </style>
 <script>
@@ -79,20 +167,20 @@ export default {
                dataList:[
                    {
                        imgs:[
-                           '../../../assets/icons-default-img-2@2x.png',
-                           '../../../assets/icons-default-img-3@2x.png'
+                           '/assets/icons-default-img-2@2x.png',
+                           '/assets/icons-default-img-3@2x.png'
                        ],
                        coinName:'HD/HT',
                        children:[
                            {
                                name:'Pooled HD :',
                                value:'3.22221',
-                               icons:['../../../assets/icons-default-img-3@2x.png'],
+                               icons:['/assets/icons-default-img-3@2x.png'],
                            },
                            {
                                name:'Pooled HT :',
                                value:'0.34256',
-                               icons:['../../../assets/icons-default-img-2@2x.png'],
+                               icons:['/assets/icons-default-img-2@2x.png'],
                            },
                            {
                                name:'Your pool tokens:',
@@ -113,6 +201,17 @@ export default {
                this.$router.push({
                    path:'/ExchangeHUB/Liquidity/Supply-Liquidity'
                })
+           },
+           onTap(item,i){
+                let obj=this.dataList;
+                obj=Object.assign([],obj);
+                if(!obj[i]['checked']){
+                    obj[i]['checked']=true;
+                }else{
+                    obj[i]['checked']=false;
+                }
+                console.log('obj[i]',obj[i]);
+                this.dataList=obj;
            }
        }
 }
