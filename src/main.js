@@ -16,7 +16,10 @@ import {
   dropdown,
   dropdownItem,
   DropdownMenu,
-  Switch
+  Switch,
+  input,
+  progress,
+  checkbox
 } from 'element-ui';
 Vue.use(container)
 Vue.use(header)
@@ -30,6 +33,9 @@ Vue.use(dropdown)
 Vue.use(dropdownItem)
 Vue.use(DropdownMenu)
 Vue.use(Switch)
+Vue.use(input)
+Vue.use(progress)
+Vue.use(checkbox)
 
 Vue.config.productionTip = false
 

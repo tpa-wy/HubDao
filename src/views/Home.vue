@@ -201,11 +201,15 @@ export default {
 };
 </script>
 <style lang="less">
+body {
+  overflow: hidden;
+}
+
 .el-header {
   width: 100%;
   height: 73px;
   padding: 14px 22px 17px;
-  background-color: #010033;
+  background-color: @header-left;
   display: flex;
   justify-content: space-between;
   .menu-button {
@@ -218,21 +222,21 @@ export default {
       height: 2px;
       margin: 9px 19px 4px 0;
       border-radius: 1.5px;
-      background-color: #ffffff;
+      background-color: #898989;
     }
     .Rectangle-Copy {
       width: 18px;
       height: 2px;
       margin: 4px 19px 4px 0;
       border-radius: 1.5px;
-      background-color: #ffffff;
+      background-color: #898989;
     }
     .Rectangle-Copy-2 {
       width: 18px;
       height: 2px;
       margin: 4px 19px 13px 0;
       border-radius: 1.5px;
-      background-color: #ffffff;
+      background-color: #898989;
     }
     .logo {
       width: 122px;
@@ -252,6 +256,7 @@ export default {
       box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
       border: solid 1px #fff2c4;
       display: inline-block;
+      background-color: #2f303f;
       .Connect {
         width: 64px;
         height: 24px;
@@ -263,7 +268,7 @@ export default {
         line-height: normal;
         letter-spacing: normal;
         text-align: center;
-        color: #fff2c4;
+        color: #fff;
         cursor: pointer;
       }
     }
@@ -292,8 +297,8 @@ export default {
   }
 }
 .el-main {
-  background-color: #101040;
-  // background-color: #f00;
+  background-color: @bgcolor;
+  // background-color: #fff;
   height: 100%;
   // height: 90vh;
   padding: 0;
@@ -304,19 +309,9 @@ export default {
   margin: 0;
   width: 100%;
 }
-</style>
-<style lang="less">
-/* .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 264px;
-  min-height: 400px;
-}
-.el-container {
-  height: 100%;
-}
- */
 
 .el-aside {
-  background-color: #010033;
+  background-color: @header-left;
   color: #333;
   text-align: center;
   line-height: 200px;

@@ -114,7 +114,7 @@ export default {
     line-height: normal;
     letter-spacing: 7.5px;
     text-align: center;
-    color: #ffefb4;
+    color: @font-color;
   }
   .block {
     margin-top: 40px;
@@ -136,7 +136,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #fff2c4;
+            color: @font-color;
             margin-left: 30px;
           }
           .time {
@@ -151,7 +151,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: right;
-            color: #e7e7e7;
+            color: #8f90a5;
             margin-right: 30px;
           }
         }
@@ -165,7 +165,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #fff2c4;
+          color: @font-color;
         }
       }
       .Rectangle-Copy-13 {
@@ -176,8 +176,9 @@ export default {
         margin-right: 60px;
         padding: 18px 0 24px;
         border-radius: 10px;
-        box-shadow: 5px 5px 20px 8px rgba(2, 1, 29, 0.58);
-        background-color: #0f1145;
+        // box-shadow: 5px 5px 20px 8px rgba(2, 1, 29, 0.58);
+        // background-color: #0f1145;
+        background-color: @boxcolor;
       }
       .Rectangle-Copy-14 {
         width: 547px;
@@ -185,8 +186,15 @@ export default {
         margin-bottom: 31px;
         padding: 12px 24px 28px 24px;
         border-radius: 10px;
-        box-shadow: 5px 5px 20px 8px rgba(2, 1, 29, 0.58);
-        background-color: #0f1145;
+        // box-shadow: 5px 5px 20px 8px rgba(2, 1, 29, 0.58);
+        // background-color: #0f1145;
+        background-color: @boxcolor;
+
+        .block-td-column:nth-child(1) {
+          div {
+            color: #ffa402;
+          }
+        }
         .block-td-column:nth-last-of-type(1) {
           position: relative;
           &::before {
@@ -195,7 +203,7 @@ export default {
             height: 1px;
             margin: 0 0 14px;
             opacity: 0.27;
-            background-color: #fff2c4;
+            background-color: @font-color;
             position: absolute;
             bottom: -8px;
           }
@@ -205,7 +213,7 @@ export default {
             height: 1px;
             margin: 0 0 14px;
             opacity: 0.27;
-            background-color: #fff2c4;
+            background-color: @font-color;
             position: absolute;
             top: 0;
           }
@@ -219,7 +227,7 @@ export default {
             height: 1px;
             margin: 0 0 14px;
             opacity: 0.27;
-            background-color: #fff2c4;
+            background-color: @font-color;
             position: absolute;
           }
           > div:nth-child(1) {
@@ -239,9 +247,9 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #fdc702;
+            color: @font-color;
             span {
-              color: #fff2c4;
+              color: @font-color;
             }
           }
         }
@@ -260,7 +268,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #fff2c4;
+          color: @font-color;
         }
         .content {
           display: flex;
@@ -276,7 +284,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #fff2c4;
+            color: #ffe68c;
           }
           .content-2 {
             width: 93px;
@@ -289,7 +297,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #fff2c4;
+            color: #ffe68c;
           }
 
           .content-3 {
@@ -304,7 +312,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: right;
-            color: #ffe68c;
+            color: @font-color;
           }
         }
       }
@@ -320,7 +328,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #fff2c4;
+          color: @font-color;
         }
         .table {
           .th {
@@ -354,7 +362,7 @@ export default {
               letter-spacing: normal;
               text-align: left;
               padding-left: 31px;
-              color: #ffffff;
+              color: @font-color;
             }
             .APY {
               width: 150px;
@@ -369,7 +377,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: left;
-              color: #ffffff;
+              color: @font-color;
             }
             .Add-Liquidity {
               width: 74px;
@@ -383,7 +391,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #ffffff;
+              color: @font-color;
             }
             .Trade {
               width: 40px;
@@ -397,7 +405,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #ffffff;
+              color: @font-color;
             }
           }
           .td {
@@ -414,7 +422,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #fff2c4;
+              color: @font-color;
             }
             .APY-td {
               width: 150px;
@@ -426,7 +434,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #fff2c4;
+              color: @font-color;
             }
             .button-1 {
               width: 75px;

@@ -1,7 +1,9 @@
 <template>
   <div class="yield-farming">
-    <div class="title">Yield Farming</div>
-    <div class="connect">Stake Liquidity Pool(LP) tokens to earn.</div>
+    <div class="header">
+      <div class="title">Yield Farming</div>
+      <div class="connect">Stake Liquidity Pool(LP) tokens to earn.</div>
+    </div>
     <div class="outer">
       <div class="Rectangle">
         <div class="left">
@@ -33,7 +35,7 @@
           </div>
         </div>
       </div>
-      <div class="block">
+      <!-- <div class="block">
         <div class="block-item block-1">
           <div class="content">
             <div class="title">
@@ -169,6 +171,19 @@
             <div class="icon"></div>
           </div>
         </div>
+      </div> -->
+      <div class="block2">
+        <div class="block-item">
+          <div class="icon-block">
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+          </div>
+          <div class="title">Title-HT</div>
+        </div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
       </div>
     </div>
   </div>
@@ -190,32 +205,42 @@ export default {
 
 <style lang="less" scoped>
 .yield-farming {
-  > .title {
-    // width: 244px;
-    height: 54px;
-    margin: 48px 197px 9px 178px;
-    font-family: NotoSansCJKkr;
-    font-size: 36px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
+  .header {
+    height: 206px;
+    background-image: linear-gradient(
+      275deg,
+      #11122e 99%,
+      #2c3053 31%,
+      #070721 2%
+    );
+    > .title {
+      padding-top: 48px;
+      // width: 244px;
+      margin-left: 178px;
+      font-family: NotoSansCJKkr;
+      font-size: 36px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #ffffff;
+    }
+    > .connect {
+      // width: 442px;
+      height: 36px;
+      margin: 9px 441px 63px 178px;
+      font-family: NotoSansCJKkr;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #ffffff;
+    }
   }
-  > .connect {
-    // width: 442px;
-    height: 36px;
-    margin: 9px 441px 63px 178px;
-    font-family: NotoSansCJKkr;
-    font-size: 24px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #fff9e3;
-  }
+
   .outer {
     width: 1302px;
     margin: 0 auto;
@@ -270,7 +295,7 @@ export default {
           // margin: 0 366px 0 40px;
           padding: 0 20px 0 0;
           border-radius: 24px;
-          background-color: #444462;
+          background-color: #d8d8d8;
           display: flex;
           align-items: center;
           .live-1 {
@@ -279,7 +304,7 @@ export default {
             // margin: 0 21px 0 0;
             padding: 3px 16px 5px 17px;
             border-radius: 16px;
-            background-color: #ffffff;
+            background-color: #000;
             font-family: NotoSansCJKkr;
             font-size: 16px;
             font-weight: bold;
@@ -288,7 +313,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #030226;
+            color: #fff;
           }
           .live-2 {
             width: 65px;
@@ -302,7 +327,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #ffffff;
+            color: #000;
             margin-left: 21px;
           }
         }
@@ -326,7 +351,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: right;
-            color: #ffffff;
+            color: #000;
           }
         }
         .select {
@@ -359,8 +384,9 @@ export default {
         // margin-right: 24px;
         margin-top: 30px;
         border-radius: 8px;
-        box-shadow: 3px 3px 11px 1px rgba(1, 0, 51, 0.65);
-        background-color: #181742;
+        // box-shadow: 3px 3px 11px 1px rgba(1, 0, 51, 0.65);
+        // background-color: #181742;
+        background-color: #fff;
         > .content {
           padding: 35px 0 0 24px;
         }
@@ -398,7 +424,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #ffffff;
+            color: #000;
             margin-left: 70px;
           }
         }
@@ -411,7 +437,7 @@ export default {
             margin: 22px 11px 42px 24px;
             padding: 2px 11px 2px 6px;
             border-radius: 4px;
-            border: solid 1px #ffffff;
+            border: solid 1px #252736;
             display: flex;
             align-items: center;
             .icon {
@@ -433,7 +459,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: center;
-              color: #ffffff;
+              color: #252736;
             }
           }
           .ratio {
@@ -442,7 +468,7 @@ export default {
             margin: 22px 1px 42px 9px;
             padding: 2px 12px 2px 13px;
             border-radius: 4px;
-            background-color: #b5b6c9;
+            background-color: #2f303f;
             font-family: NotoSansCJKkr;
             font-size: 16px;
             font-weight: 500;
@@ -451,7 +477,7 @@ export default {
             line-height: normal;
             letter-spacing: 0.5px;
             text-align: center;
-            color: #010033;
+            color: #fff;
           }
         }
         .line {
@@ -470,7 +496,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #ffffff;
+              color: #000;
             }
             .line-row-2 {
               width: 69px;
@@ -483,7 +509,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: right;
-              color: #ffffff;
+              color: #000;
             }
           }
         }
@@ -530,8 +556,8 @@ export default {
               padding: 7px 24px 8px 26px;
               opacity: 0.5;
               border-radius: 4px;
-              box-shadow: 3px 3px 7px 0 #010033;
-              background-color: #707091;
+              // box-shadow: 3px 3px 7px 0 #010033;
+              background-color: #e6e6e6;
               font-family: NotoSansCJKkr;
               font-size: 20px;
               font-weight: 500;
@@ -540,7 +566,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: center;
-              color: #c9c8eb;
+              color: #949494;
             }
             .button2 {
               cursor: pointer;
@@ -549,8 +575,7 @@ export default {
               padding: 14px 0 15px;
               margin-right: 22px;
               border-radius: 6px;
-              border: solid 1px #b5b9ff;
-              background-color: #010033;
+              background-color: #ffcc19;
               font-family: NotoSansCJKkr;
               font-size: 20px;
               font-weight: 500;
@@ -559,7 +584,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: center;
-              color: #b5b9ff;
+              color: #fff;
             }
           }
         }
@@ -568,7 +593,7 @@ export default {
           justify-content: center;
           align-items: center;
           margin-bottom: 27px;
-          border-top: 1px solid #6a6a82;
+          border-top: 1px solid #dbdbdb;
           margin-top: 39px;
           height: 79px;
           width: 100%;
@@ -580,7 +605,7 @@ export default {
           font-style: normal;
           letter-spacing: normal;
           text-align: center;
-          color: #f5f5f5;
+          color: #000;
           .icon {
             margin-left: 8px;
             width: 9px;
@@ -588,6 +613,77 @@ export default {
             background-color: #f00;
           }
         }
+      }
+    }
+    .block2 {
+      margin-top: 60px;
+      .block-item {
+        height: 112px;
+        padding-left: 35px;
+        // padding: 20px 101px 33px 36px;
+        border-radius: 8px;
+        border: solid 1px #d8d8d8;
+        background-color: #ffffff;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        .icon-block {
+          display: flex;
+          position: relative;
+          align-items: center;
+          .icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            position: absolute;
+          }
+          .icon-1 {
+            background-color: #f00;
+          }
+          .icon-2 {
+            left: 28px;
+            background-color: #ff0;
+          }
+        }
+        > .title {
+          height: 29px;
+          margin: 3px 183px 9px 80px;
+          font-family: NotoSansCJKkr;
+          font-size: 20px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #000000;
+        }
+        /* .Earned {
+          position: relative;
+          .title {
+            top: -30px;
+            font-family: NotoSansCJKkr;
+            position: absolute;
+            font-size: 12px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+          }
+          .value {
+            // margin-top: 25px;
+            // margin: 12px 123px 0 183px;
+            font-family: NotoSansCJKkr;
+            font-size: 20px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+          }
+        } */
       }
     }
   }

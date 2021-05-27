@@ -13,13 +13,41 @@ const routes = [{
       name: 'Index',
       component: () => import('@/views/Index.vue'),
     }, {
-      path: 'Swap',
-      name: 'Swap',
-      component: () => import('@/views/ExchangeHUB/Swap.vue'),
+      path: 'ExchangeHUB',
+      name: 'ExchangeHUB',
+      component: () => import('@/views/ExchangeHUB/ExchangeHUB.vue'),
+      redirect: '/ExchangeHUB/Swap',
+      children: [{
+        path: 'Swap',
+        name: 'Swap',
+        component: () => import('@/views/ExchangeHUB/Swap.vue'),
+      }, {
+        path: 'Liquidity',
+        name: 'Liquidity',
+        component: () => import('@/views/ExchangeHUB/Liquidity.vue'),
+      }]
     }, {
-      path: 'YieldFarming',
+      path: 'Start-upHUB',
+      name: 'Start-upHUB',
+      component: () => import('@/views/Start-upHUB/Start-upHUB.vue'),
+      redirect: '/Start-upHUB/IHO',
+      children: [{
+        path: 'IHO',
+        name: 'IHO',
+        component: () => import('@/views/Start-upHUB/IHO.vue'),
+      }, {
+        path: 'IHOs',
+        name: 'IHOs',
+        component: () => import('@/views/Start-upHUB/IHOs.vue'),
+      }]
+    }, {
+      path: 'StakeHUB/YieldFarming',
       name: 'YieldFarming',
       component: () => import('@/views/StakeHUB/YieldFarming.vue'),
+    }, {
+      path: 'StakeHUB/CommunityPool',
+      name: 'CommunityPool',
+      component: () => import('@/views/StakeHUB/CommunityPool.vue'),
     }]
   },
   {
@@ -29,6 +57,11 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import( /* webpackChunkName: "about" */ '../views/Error.vue')
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('@/views/test.vue'),
   }
 ]
 
@@ -37,5 +70,8 @@ const router = new VueRouter({
   // base: process.env.BASE_URL,
   routes
 })
-
+const VueRouterPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(to) {
+  return VueRouterPush.call(this, to).catch(err => err)
+}
 export default router

@@ -1,70 +1,29 @@
 <template>
-  <div class="swap">
-    <div class="block">
-      <div class="header">
-        <div class="title">Exchange</div>
-        <div class="icon">
-          <div class="icon-1"></div>
-          <div class="icon-2"></div>
-        </div>
+  <div class="ExchangeHUB">
+    <div class="nav">
+      <div
+        class="nav-item nav-swap"
+        :class="{ checked: nav == 1 }"
+        @click="skipNav(1)"
+      >
+        Swap
       </div>
-      <div class="title-2">Trade tokens in an instant</div>
-      <div class="block-1">
-        <div class="From">
-          <div>From</div>
-          <div>Balance : 0.210304</div>
-        </div>
-        <div class="content">
-          <div class="money">0.0</div>
-          <div class="currency">
-            <div class="img">
-              <img src="../../assets/icons-max.png" alt="" />
-            </div>
-            <div class="icon"></div>
-            <el-dropdown class="currency-select" @command="selectCurrency">
-              <span class="el-dropdown-link">
-                {{ selectedCurrency
-                }}<i class="el-icon-arrow-down el-icon--right"></i>
-              </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item
-                  v-for="item in currencyList"
-                  :key="item.currencyList"
-                  :command="item.label"
-                  >{{ item.name }}</el-dropdown-item
-                >
-              </el-dropdown-menu>
-            </el-dropdown>
-          </div>
-        </div>
+      <div
+        class="nav-item nav-liquidityb"
+        :class="{ checked: nav == 2 }"
+        @click="skipNav(2)"
+      >
+        Liquidity
       </div>
-      <div class="icon-xia"></div>
-      <div class="block-2">
-        <div class="to">
-          <div>To</div>
-          <div>Balance : 0.210304</div>
-        </div>
-        <div class="content">
-          <div class="money">0.0</div>
-          <div class="button-select">Select a currency</div>
-        </div>
-      </div>
-      <div class="button">Unlock Wallet</div>
-    </div>
-    <div class="rest">
-      <div>
-        <div>Maximum sold</div>
-        <div>0.0000000 HT</div>
-      </div>
-      <div>
-        <div>Maximum sold</div>
-        <div></div>
-      </div>
-      <div>
-        <div>Maximum sold</div>
-        <div>0.0000000 HT</div>
+      <div
+        class="nav-item nav-brideg"
+        :class="{ checked: nav == 3 }"
+        @click="skipNav(3)"
+      >
+        Bridge
       </div>
     </div>
+    <router-view />
   </div>
 </template>
 
@@ -77,6 +36,7 @@ export default {
       currencyList: [],
       // 当前选中的货币
       selectedCurrency: "",
+      nav: 1,
     };
   },
   mounted() {
@@ -94,21 +54,133 @@ export default {
     if (this.currencyList.length >= 1) {
       this.selectedCurrency = this.currencyList[0].label;
     }
+    var router = this.$route.path;
+    if (router == "/ExchangeHUB/Liquidity") {
+      this.nav = 2;
+    } else if (router == "/ExchangeHUB/Bridge") {
+      this.nav = 3;
+    }
   },
   methods: {
     selectCurrency(command) {
       console.log(command);
       this.selectedCurrency = command;
     },
+    // 跳转Nav导航
+    skipNav(nav) {
+      var router = "Bridge";
+      if (nav == 1) {
+        router = "Swap";
+      } else if (nav == 2) {
+        router = "Liquidity";
+      }
+      this.nav = nav;
+      this.$router.push(router);
+    },
   },
 };
 </script>
 
 <style lang="less" scoped>
-.swap {
-  // padding-top: 72px;
+.ExchangeHUB {
+  padding-top: 72px;
   width: 594px;
   margin: 0 auto;
+  // background-color: #0f0;
+  // height: 500px;
+  .nav {
+    width: 350px;
+    margin: 0 auto;
+    background-color: #ebebeb;
+    border-radius: 125px;
+    margin-bottom: 57px;
+    display: flex;
+    justify-content: space-between;
+    .nav-item {
+      cursor: pointer;
+      display: inline-block;
+      //   width: 122px;
+      height: 40px;
+      padding: 8px 28px 8px 29px;
+      font-family: NotoSansCJKkr;
+      font-size: 16px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000000;
+    }
+    .checked {
+      cursor: pointer;
+      display: inline-block;
+      height: 40px;
+      padding: 8px 28px 8px 29px;
+      border-radius: 21.5px;
+      background-color: #000000;
+      font-family: NotoSansCJKkr;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #fff;
+    }
+    /* .nav-swap {
+      cursor: pointer;
+      display: inline-block;
+      width: 101px;
+      height: 40px;
+      padding: 8px 28px 8px 29px;
+      border-radius: 21.5px;
+      background-color: #fbfbfb;
+      font-family: NotoSansCJKkr;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #010033;
+    }
+    .nav-liquidityb {
+      cursor: pointer;
+      display: inline-block;
+      width: 122px;
+      height: 40px;
+      padding: 8px 28px 8px 29px;
+      font-family: NotoSansCJKkr;
+      font-size: 16px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+    }
+    .nav-brideg {
+      cursor: pointer;
+      display: inline-block;
+      width: 101px;
+      height: 40px;
+      padding: 8px 25px 8px 27px;
+      border-radius: 21.5px;
+      font-family: NotoSansCJKkr;
+      font-size: 16px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+    } */
+  }
   > .block {
     width: 594px;
     height: 600px;
@@ -116,9 +188,8 @@ export default {
     // margin: 55px 531px 185px;
     padding: 22px 39px 59px 40px;
     border-radius: 8px;
-    // border: solid 1px rgba(255, 242, 196, 0.31);
-    background-color: #fff;
-    border: solid 1px #d8d8d8;
+    border: solid 1px rgba(255, 242, 196, 0.31);
+    background-color: #010033;
     .header {
       display: flex;
       justify-content: space-between;
@@ -133,7 +204,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000;
+        color: #ffffff;
       }
       .icon {
         display: flex;
@@ -151,6 +222,7 @@ export default {
       }
     }
     .title-2 {
+      width: 192px;
       height: 24px;
       margin: 7px 59px 47px 0;
       font-family: NotoSansCJKkr;
@@ -160,20 +232,18 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #000;
+      color: #ffffff;
       margin-bottom: 47px;
     }
     > .block-1 {
       width: 466px;
       height: 120px;
-      // margin: 47px 0 19px 24px;
-      margin-bottom: 19px;
-      margin-left: 24px;
+      margin: 47px 0 19px 24px;
       padding: 12px 21px 20px 20px;
       border-radius: 6px;
-      background-color: #f0f0f0;
+      background-color: #181742;
       .From {
-        // width: 41px;
+        width: 41px;
         height: 24px;
         margin: 0 286px 24px 0;
         font-family: NotoSansCJKkr;
@@ -183,10 +253,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000;
-        display: flex;
-        justify-content: space-between;
-        margin-right: 20px;
+        color: #ffffff;
       }
       .content {
         display: flex;
@@ -195,9 +262,6 @@ export default {
         .currency {
           display: flex;
           align-items: center;
-          img {
-            margin-right: 12px;
-          }
           .icon {
             width: 34px;
             height: 34px;
@@ -236,12 +300,11 @@ export default {
       margin: 20px 0 47px 24px;
       padding: 12px 14px 14px 20px;
       border-radius: 6px;
-      background-color: #f0f0f0;
+      background-color: #181742;
       .to {
-        // width: 20px;
+        width: 20px;
         height: 24px;
-        // margin: 0 190px 24px 0;
-        margin-bottom: 24px;
+        margin: 0 190px 24px 0;
         font-family: NotoSansCJKkr;
         font-size: 16px;
         font-weight: 500;
@@ -249,10 +312,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000;
-        display: flex;
-        justify-content: space-between;
-        margin-right: 20px;
+        color: #ffffff;
       }
       .content {
         display: flex;
@@ -265,8 +325,8 @@ export default {
         height: 41px;
         padding: 4px 28.4px 8px 29.6px;
         border-radius: 20.5px;
-        // box-shadow: 2px 2px 6px 0 rgba(1, 0, 51, 0.64);
-        // background-color: #323160;
+        box-shadow: 2px 2px 6px 0 rgba(1, 0, 51, 0.64);
+        background-color: #323160;
         font-family: NotoSansCJKkr;
         font-size: 20px;
         font-weight: 500;
@@ -275,7 +335,7 @@ export default {
         line-height: normal;
         letter-spacing: normal;
         text-align: right;
-        color: #000;
+        color: #ffffff;
       }
     }
     .icon-xia {
@@ -292,7 +352,7 @@ export default {
     margin: 47px 0 0 24px;
     padding: 14px 0 15px;
     border-radius: 6px;
-    background-color: #ffe505;
+    background-color: #e7e7e7;
     font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 500;
@@ -302,34 +362,6 @@ export default {
     letter-spacing: normal;
     text-align: center;
     color: #010033;
-  }
-  .rest {
-    margin-top: 21px;
-    width: 594px;
-    height: 113px;
-    // margin: 21px 531px 111px 530.5px;
-    padding: 15px 31px 14px 27px;
-    border-radius: 8px;
-    border: solid 1px #d8d8d8;
-    background-color: #ffffff;
-    > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      > div {
-        // width: 108px;
-        height: 24px;
-        margin: 0 6px 6px 0;
-        font-family: NotoSansCJKkr;
-        font-size: 16px;
-        font-weight: 300;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #444444;
-      }
-    }
   }
 }
 // 下拉菜单
@@ -343,7 +375,7 @@ export default {
   line-height: normal;
   letter-spacing: normal;
   text-align: right;
-  color: #000;
+  color: #ffffff;
 }
 .el-icon-arrow-down {
   font-size: 12px;
