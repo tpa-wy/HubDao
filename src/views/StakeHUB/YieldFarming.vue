@@ -7,8 +7,8 @@
     <div class="outer">
       <div class="Rectangle">
         <div class="left">
-          <div class="icon-block icon-block-1"></div>
-          <div class="icon-block icon-block-2"></div>
+          <div class="icon-block icon-block-1" @click="is_show = true"></div>
+          <div class="icon-block icon-block-2" @click="is_show = false"></div>
           <div class="swith">
             <el-switch
               v-model="switchValue"
@@ -35,7 +35,7 @@
           </div>
         </div>
       </div>
-      <!-- <div class="block">
+      <div class="block" v-show="is_show">
         <div class="block-item block-1">
           <div class="content">
             <div class="title">
@@ -171,19 +171,188 @@
             <div class="icon"></div>
           </div>
         </div>
-      </div> -->
-      <div class="block2">
+      </div>
+      <div class="block2" v-show="!is_show">
         <div class="block-item">
           <div class="icon-block">
             <div class="icon icon-1"></div>
             <div class="icon icon-2"></div>
           </div>
           <div class="title">Title-HT</div>
+          <div class="Earned">
+            <div class="top">Earned</div>
+            <div class="bottom">0</div>
+          </div>
+          <div class="APR">
+            <div class="top">APR</div>
+            <div class="bottom">
+              <div class="font">16.05</div>
+              <div class="icon">ROI</div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Liquidity</div>
+            <div class="bottom">
+              <div class="font">$663,186,461</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Multiplier</div>
+            <div class="bottom">
+              <div class="font">8x</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Details">
+            <div class="font">Details</div>
+            <div class="icon"></div>
+          </div>
         </div>
-        <div class="block-item"></div>
-        <div class="block-item"></div>
-        <div class="block-item"></div>
-        <div class="block-item"></div>
+        <div class="block-item">
+          <div class="icon-block">
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+          </div>
+          <div class="title">Title-HT</div>
+          <div class="Earned">
+            <div class="top">Earned</div>
+            <div class="bottom">0</div>
+          </div>
+          <div class="APR">
+            <div class="top">APR</div>
+            <div class="bottom">
+              <div class="font">16.05</div>
+              <div class="icon">ROI</div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Liquidity</div>
+            <div class="bottom">
+              <div class="font">$663,186,461</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Multiplier</div>
+            <div class="bottom">
+              <div class="font">8x</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Details">
+            <div class="font">Details</div>
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="block-item">
+          <div class="icon-block">
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+          </div>
+          <div class="title">Title-HT</div>
+          <div class="Earned">
+            <div class="top">Earned</div>
+            <div class="bottom">0</div>
+          </div>
+          <div class="APR">
+            <div class="top">APR</div>
+            <div class="bottom">
+              <div class="font">16.05</div>
+              <div class="icon">ROI</div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Liquidity</div>
+            <div class="bottom">
+              <div class="font">$663,186,461</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Multiplier</div>
+            <div class="bottom">
+              <div class="font">8x</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Details">
+            <div class="font">Details</div>
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="block-item">
+          <div class="icon-block">
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+          </div>
+          <div class="title">Title-HT</div>
+          <div class="Earned">
+            <div class="top">Earned</div>
+            <div class="bottom">0</div>
+          </div>
+          <div class="APR">
+            <div class="top">APR</div>
+            <div class="bottom">
+              <div class="font">16.05</div>
+              <div class="icon">ROI</div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Liquidity</div>
+            <div class="bottom">
+              <div class="font">$663,186,461</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Multiplier</div>
+            <div class="bottom">
+              <div class="font">8x</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Details">
+            <div class="font">Details</div>
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="block-item">
+          <div class="icon-block">
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+          </div>
+          <div class="title">Title-HT</div>
+          <div class="Earned">
+            <div class="top">Earned</div>
+            <div class="bottom">0</div>
+          </div>
+          <div class="APR">
+            <div class="top">APR</div>
+            <div class="bottom">
+              <div class="font">16.05</div>
+              <div class="icon">ROI</div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Liquidity</div>
+            <div class="bottom">
+              <div class="font">$663,186,461</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Liquidity">
+            <div class="top">Multiplier</div>
+            <div class="bottom">
+              <div class="font">8x</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="Details">
+            <div class="font">Details</div>
+            <div class="icon"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -196,6 +365,7 @@ export default {
     return {
       // 开关
       switchValue: false,
+      is_show: false,
     };
   },
   mounted() {},
@@ -205,6 +375,7 @@ export default {
 
 <style lang="less" scoped>
 .yield-farming {
+  margin-bottom: 100px;
   .header {
     height: 206px;
     background-image: linear-gradient(
@@ -259,13 +430,20 @@ export default {
         .icon-block-1 {
           width: 22px;
           height: 22px;
-          background-color: #f00;
+          // background-color: #f00;
+          background-image: url(../../../public/assets/icons-cardview-non.png);
+          background-size: 100% 100%;
           margin-right: 32px;
+          cursor: pointer;
         }
         .icon-block-2 {
+          cursor: pointer;
           width: 22px;
           height: 22px;
-          background-color: #f00;
+
+          background-image: url(../../../public/assets/icons-listview-on.png);
+          background-size: 100% 100%;
+          // background-color: #f00;
           //   margin-right: 70px;
         }
         .swith {
@@ -378,9 +556,10 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: 30px;
       .block-item {
         width: 418px;
-        height: 540px;
+        // height: 540px;
         // margin-right: 24px;
         margin-top: 30px;
         border-radius: 8px;
@@ -592,7 +771,7 @@ export default {
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-bottom: 27px;
+          // margin-bottom: 27px;
           border-top: 1px solid #dbdbdb;
           margin-top: 39px;
           height: 79px;
@@ -609,8 +788,11 @@ export default {
           .icon {
             margin-left: 8px;
             width: 9px;
-            height: 5px;
-            background-color: #f00;
+            height: 10px;
+            // background-color: #f00;
+            background-image: url(../../../public/assets/down-icon.png);
+            background-size: 100% 100%;
+            transform: rotate(360deg);
           }
         }
       }
@@ -626,7 +808,7 @@ export default {
         background-color: #ffffff;
         margin-bottom: 12px;
         display: flex;
-        align-items: center;
+        // align-items: center;
         .icon-block {
           display: flex;
           position: relative;
@@ -646,34 +828,32 @@ export default {
           }
         }
         > .title {
-          height: 29px;
-          margin: 3px 183px 9px 80px;
+          line-height: 112px;
+          margin: 0px 183px 0px 80px;
           font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: bold;
           font-stretch: normal;
           font-style: normal;
-          line-height: normal;
           letter-spacing: normal;
           color: #000000;
         }
-        /* .Earned {
-          position: relative;
-          .title {
-            top: -30px;
+        .Earned {
+          .top {
             font-family: NotoSansCJKkr;
-            position: absolute;
-            font-size: 12px;
-            font-weight: 300;
+            font-size: 14px;
+            font-weight: 500;
             font-stretch: normal;
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
             color: #000000;
+            margin-top: 20px;
           }
-          .value {
-            // margin-top: 25px;
+          .bottom {
+            height: 29px;
             // margin: 12px 123px 0 183px;
+            margin-top: 12px;
             font-family: NotoSansCJKkr;
             font-size: 20px;
             font-weight: 500;
@@ -683,7 +863,120 @@ export default {
             letter-spacing: normal;
             color: #000000;
           }
-        } */
+        }
+        .APR {
+          .top {
+            font-family: NotoSansCJKkr;
+            font-size: 14px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+            margin-top: 20px;
+          }
+          .bottom {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            margin-right: 93px;
+            .font {
+              // height: 29px;
+              // margin: 12px 123px 0 183px;
+              font-family: NotoSansCJKkr;
+              font-size: 20px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #000000;
+            }
+            .icon {
+              width: 29px;
+              height: 17px;
+              margin: 0px 0 0px 10px;
+              // padding: 0 3px 0 4px;
+              border-radius: 2px;
+              background-color: #2f303f;
+              font-family: NotoSansCJKkr;
+              font-size: 11px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 17px;
+              text-align: center;
+              letter-spacing: 0.83px;
+              color: #ffffff;
+            }
+          }
+        }
+        .Liquidity {
+          .top {
+            font-family: NotoSansCJKkr;
+            font-size: 14px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+            margin-top: 20px;
+          }
+          .bottom {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            margin-right: 93px;
+            .font {
+              // height: 29px;
+              // margin: 12px 123px 0 183px;
+              font-family: NotoSansCJKkr;
+              font-size: 20px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #000000;
+            }
+            .icon {
+              width: 20px;
+              height: 20px;
+              margin: 0px 0 0px 10px;
+              // padding: 0 3px 0 4px;
+              background-image: url(../../../public/assets/icons-help.png);
+              background-size: 100% 100%;
+              cursor: pointer;
+            }
+          }
+        }
+        .Details {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 112px;
+          cursor: pointer;
+          margin-left: 109px;
+          font-family: NotoSansCJKkr;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          text-align: center;
+          color: #727272;
+          .icon {
+            width: 9px;
+            height: 10px;
+            // background-color: #f00;
+            background-image: url(../../../public/assets/down-icon.png);
+            transform: rotate(360deg);
+            background-size: 100% 100%;
+            margin-left: 14px;
+          }
+        }
       }
     }
   }

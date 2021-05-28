@@ -12,6 +12,9 @@
             <div class="time">2021-05-19 오후 10:00 기준</div>
           </div>
           <div class="money">$104.419.391</div>
+          <div class="canvas">
+            <div id="main" :style="{ width: '100%', height: '100%' }"></div>
+          </div>
         </div>
         <div class="block-td Rectangle-Copy-14">
           <div class="block-td-column">
@@ -80,12 +83,35 @@
 </template>
 
 <script>
+const echarts = require("echarts");
 export default {
   name: "EducationIndex",
   data() {
     return {};
   },
-  mounted() {},
+  mounted() {
+    var chartDom = document.getElementById("main");
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      xAxis: {
+        type: "category",
+        data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      },
+      yAxis: {
+        type: "value",
+      },
+      series: [
+        {
+          data: [150, 230, 224, 218, 135, 147, 260],
+          type: "line",
+        },
+      ],
+    };
+
+    option && myChart.setOption(option);
+  },
   methods: {},
 };
 </script>
@@ -157,7 +183,8 @@ export default {
         }
         .money {
           height: 36px;
-          margin: 3px 86px 26px 30px;
+          // margin: 3px 86px 26px 30px;
+          margin-left: 30px;
           font-family: NotoSansCJKkr;
           font-size: 24px;
           font-weight: normal;
@@ -166,6 +193,12 @@ export default {
           line-height: normal;
           letter-spacing: normal;
           color: @font-color;
+        }
+        .canvas {
+          // background-color: #f00;
+          width: 100%;
+          height: 100%;
+          // height: 130px;
         }
       }
       .Rectangle-Copy-13 {

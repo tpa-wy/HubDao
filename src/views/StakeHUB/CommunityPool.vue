@@ -34,21 +34,162 @@
           </div>
         </div>
         <div class="content">
-            <div class="APR">
-                <div class="left">APR :</div>
-                <div class="right">
-                    <span>49.28%</span>
-                    <div class="smail-block"></div>
-                </div>
+          <div class="APR">
+            <div class="left">APR :</div>
+            <div class="right">
+              <span>49.28%</span>
+              <div class="smail-block"></div>
             </div>
+          </div>
+          <div class="start">START EARNING</div>
+          <div class="button">Unlock Wallet</div>
+          <div class="Menual">
+            <div class="Menual-button">Menual</div>
+            <div class="icon"></div>
+          </div>
         </div>
-        <div class="footer">Details</div>
+        <div class="footer">Details <span class="icon"></span></div>
       </div>
-      <div class="block-item"></div>
-      <div class="block-item"></div>
-      <div class="block-item"></div>
-      <div class="block-item"></div>
-      <div class="block-item"></div>
+      <div class="block-item">
+        <div class="header">
+          <div class="img">
+            <img src="../../assets/icons-default-img-3.png" alt="" srcset="" />
+            <img src="../../assets/icons-default-img-4.png" alt="" srcset="" />
+          </div>
+          <div class="info">
+            <div class="title">Earn XEND</div>
+            <div class="smail-title">Stake HD</div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="APR">
+            <div class="left">APR :</div>
+            <div class="right">
+              <span>49.28%</span>
+              <div class="smail-block"></div>
+            </div>
+          </div>
+          <div class="start">START EARNING</div>
+          <div class="button">Unlock Wallet</div>
+          <div class="Menual">
+            <div class="Menual-button">Menual</div>
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="footer">Details <span class="icon"></span></div>
+      </div>
+      <div class="block-item">
+        <div class="header">
+          <div class="img">
+            <img src="../../assets/icons-default-img-3.png" alt="" srcset="" />
+            <img src="../../assets/icons-default-img-4.png" alt="" srcset="" />
+          </div>
+          <div class="info">
+            <div class="title">Earn XEND</div>
+            <div class="smail-title">Stake HD</div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="APR">
+            <div class="left">APR :</div>
+            <div class="right">
+              <span>49.28%</span>
+              <div class="smail-block"></div>
+            </div>
+          </div>
+          <div class="start">START EARNING</div>
+          <div class="button">Unlock Wallet</div>
+          <div class="Menual">
+            <div class="Menual-button">Menual</div>
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="footer">Details <span class="icon"></span></div>
+      </div>
+      <div class="block-item">
+        <div class="header">
+          <div class="img">
+            <img src="../../assets/icons-default-img-3.png" alt="" srcset="" />
+            <img src="../../assets/icons-default-img-4.png" alt="" srcset="" />
+          </div>
+          <div class="info">
+            <div class="title">Earn XEND</div>
+            <div class="smail-title">Stake HD</div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="APR">
+            <div class="left">APR :</div>
+            <div class="right">
+              <span>49.28%</span>
+              <div class="smail-block"></div>
+            </div>
+          </div>
+          <div class="start">START EARNING</div>
+          <div class="button">Unlock Wallet</div>
+          <div class="Menual">
+            <div class="Menual-button">Menual</div>
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="footer">Details <span class="icon"></span></div>
+      </div>
+      <div class="block-item">
+        <div class="header">
+          <div class="img">
+            <img src="../../assets/icons-default-img-3.png" alt="" srcset="" />
+            <img src="../../assets/icons-default-img-4.png" alt="" srcset="" />
+          </div>
+          <div class="info">
+            <div class="title">Earn XEND</div>
+            <div class="smail-title">Stake HD</div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="APR">
+            <div class="left">APR :</div>
+            <div class="right">
+              <span>49.28%</span>
+              <div class="smail-block"></div>
+            </div>
+          </div>
+          <div class="start">START EARNING</div>
+          <div class="button">Unlock Wallet</div>
+          <div class="Menual">
+            <div class="Menual-button">Menual</div>
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="footer">Details <span class="icon"></span></div>
+      </div>
+      <div class="block-item">
+        <div class="header">
+          <div class="img">
+            <img src="../../assets/icons-default-img-3.png" alt="" srcset="" />
+            <img src="../../assets/icons-default-img-4.png" alt="" srcset="" />
+          </div>
+          <div class="info">
+            <div class="title">Earn XEND</div>
+            <div class="smail-title">Stake HD</div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="APR">
+            <div class="left">APR :</div>
+            <div class="right">
+              <span>49.28%</span>
+              <div class="smail-block"></div>
+            </div>
+          </div>
+          <div class="start">START EARNING</div>
+          <div class="button">Unlock Wallet</div>
+          <div class="Menual">
+            <div class="Menual-button">Menual</div>
+            <div class="icon"></div>
+          </div>
+        </div>
+        <div class="footer">Details <span class="icon"></span></div>
+      </div>
     </div>
   </div>
 </template>
@@ -140,15 +281,17 @@ export default {
         margin-right: 20px;
       }
       .checked {
-        // width: 66px;
+        width: 66px;
         height: 32px;
+        line-height: 32px;
         // margin: 0 21px 0 0;
-        padding: 3px 16px 5px 17px;
+        // padding: 3px 16px 5px 17px;
         border-radius: 16px;
         background-color: #000000;
       }
     }
     .help-button {
+      cursor: pointer;
       margin-left: 46px;
       display: flex;
       justify-content: center;
@@ -180,6 +323,7 @@ export default {
     // justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+      margin-bottom: 48px;
     .block-item {
       margin-right: 24px;
       //   padding-top: 35px;
@@ -243,12 +387,90 @@ export default {
         }
       }
       .content {
-          padding-top: 30px;
-          .APR {
-              .left {
-                  
-              }
+        padding-top: 30px;
+        height: 308px;
+        .APR {
+          display: flex;
+          justify-content: space-between;
+          height: 29px;
+          margin: 0 21px 60px 24px;
+          font-family: NotoSansCJKkr;
+          font-size: 20px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #000000;
+          .left {
           }
+        }
+        .start {
+          height: 20px;
+          margin: 0 39px 9px 24px;
+          font-family: NotoSansCJKkr;
+          font-size: 14px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #ffa402;
+        }
+        .button {
+          width: 370px;
+          height: 58px;
+          line-height: 58px;
+          margin: 9px 24px 44px;
+          // padding: 14px 0 15px;
+          border-radius: 6px;
+          background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
+          font-family: NotoSansCJKkr;
+          font-size: 20px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          text-align: center;
+          color: #010033;
+        }
+        .Menual {
+          // text-align: right;
+          display: flex;
+          align-items: center;
+          justify-content: right;
+          float: right;
+          margin-right: 20px;
+          .Menual-button {
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            // margin: 44px 7px 28px 33px;
+            // padding: 2px 18px 4px 17px;
+            border-radius: 18px;
+            border: solid 1px #2f303f;
+            background-color: #2f303f;
+            font-family: NotoSansCJKkr;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            margin-right: 7px;
+          }
+          .icon {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            // margin: 49px 24px 33px 7px;
+            object-fit: contain;
+            background-image: url(../../../public/assets/icons-help.png);
+            background-size: 100% 100%;
+          }
+        }
       }
       .footer {
         border-top: solid 1px #d8d8d8;
@@ -262,6 +484,17 @@ export default {
         letter-spacing: normal;
         text-align: center;
         color: #727272;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .icon {
+          background-image: url(../../../public/assets/down-icon.png);
+          background-size: 100% 100%;
+          width: 9px;
+          height: 10px;
+          margin-left: 8px;
+        }
       }
     }
   }

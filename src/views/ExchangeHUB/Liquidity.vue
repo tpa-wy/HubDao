@@ -2,7 +2,6 @@
   <div class="Liquidity">
     <div class="block">
         <router-view>
-          
         </router-view>
     </div>
   </div>
@@ -47,7 +46,7 @@ export default {
 <style lang="less">
 // @import url('./liquidity/liquidity.less');
 .Liquidity {
-  padding-top: 72px;
+  // padding-top: 72px;
   width: 594px;
   margin: 0 auto;
   > .block {

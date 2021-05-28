@@ -55,7 +55,7 @@ export default {
       this.selectedCurrency = this.currencyList[0].label;
     }
     var router = this.$route.path;
-    if (router == "/ExchangeHUB/Liquidity") {
+    if (router == "/ExchangeHUB/Liquidity" || router == "/ExchangeHUB/Liquidity/Supply-Liquidity") {
       this.nav = 2;
     } else if (router == "/ExchangeHUB/Bridge") {
       this.nav = 3;

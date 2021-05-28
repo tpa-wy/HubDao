@@ -4,8 +4,8 @@
       <div class="header">
         <div class="title">Exchange</div>
         <div class="icon">
-          <div class="icon-1"></div>
-          <div class="icon-2"></div>
+          <div class="icon-1"><img src="../../../public/assets/icons-settings.png" alt=""></div>
+          <div class="icon-2"><img src="../../../public/assets/icons-recent.png" alt="" srcset=""></div>
         </div>
       </div>
       <div class="title-2">Trade tokens in an instant</div>
@@ -20,7 +20,7 @@
             <div class="img">
               <img src="../../assets/icons-max.png" alt="" />
             </div>
-            <div class="icon"></div>
+            <img class="icon" src="../../../public/assets/icons-default-img-3.png" alt="" srcset="">
             <el-dropdown class="currency-select" @command="selectCurrency">
               <span class="el-dropdown-link">
                 {{ selectedCurrency
@@ -138,15 +138,15 @@ export default {
       .icon {
         display: flex;
         .icon-1 {
-          background-color: #f00;
           width: 20px;
           height: 20px;
           margin-right: 25px;
+          cursor: pointer;
         }
         .icon-2 {
-          background-color: #ff0;
           width: 20px;
           height: 20px;
+          cursor: pointer;
         }
       }
     }
@@ -203,11 +203,11 @@ export default {
             height: 34px;
             // margin: 0 51px 0 0;
             margin-right: 13px;
-            padding: 6px 7px 4px 6px;
-            opacity: 0.69;
-            border: solid 1px #444444;
+            // padding: 6px 7px 4px 6px;
+            // opacity: 0.69;
+            // border: solid 1px #444444;
             // background-color: #ffffff;
-            background-color: #f00;
+            // background-color: #f00;
             border-radius: 50%;
           }
           .currency-select {
@@ -279,10 +279,13 @@ export default {
       }
     }
     .icon-xia {
-      width: 17px;
+      width: 25px;
       height: 21px;
       margin: 0 auto;
-      background-color: #f00;
+      // background-color: #f00;
+      background-image: url(../../../public/assets/back-icon.png);
+      background-size: 100% 100%;
+      transform: rotate(-90deg);
     }
   }
   .button {
@@ -304,6 +307,7 @@ export default {
     color: #010033;
   }
   .rest {
+    margin-bottom: 100px;
     margin-top: 21px;
     width: 594px;
     height: 113px;

@@ -5,11 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    account: ''
   },
   mutations: {
+    setAccount(state, account) { //设置参数
+      state.account = account;
+    }
   },
-  actions: {
-  },
-  modules: {
-  }
+  actions: {},
+  modules: {}
 })
