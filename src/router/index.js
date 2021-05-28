@@ -23,8 +23,19 @@ const routes = [{
         component: () => import('@/views/ExchangeHUB/Swap.vue'),
       }, {
         path: 'Liquidity',
-        name: 'Liquidity',
         component: () => import('@/views/ExchangeHUB/Liquidity.vue'),
+        children:[
+          {
+            name:'Add-Liquidity',
+            path:'',
+            component: () => import('@/views/ExchangeHUB/liquidity/index.vue'),
+          },
+          {
+            name:'Supply-Liquidity',
+            path:'Supply-Liquidity',
+            component: () => import('@/views/ExchangeHUB/liquidity/supply.vue'),
+          }
+        ]
       }]
     }, {
       path: 'Start-upHUB',
