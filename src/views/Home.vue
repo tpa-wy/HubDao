@@ -136,7 +136,7 @@
                 alt=""
                 class="menu-img"
               />
-              <span slot="title">Dashboard</span>
+              <span slot="title">Settings</span>
             </el-menu-item>
           </el-menu>
         </div>

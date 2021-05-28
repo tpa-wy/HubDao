@@ -19,18 +19,67 @@
     </div>
     <div class="block">
       <div class="block-item block-item-1">
-        <div>
-          <div>HT Deposited</div>
-          <div>
-            <img src="" class="icon" alt="" srcset="">
+        <div class="block-item-child block-item-1-1">
+          <div class="left">HT Deposited</div>
+          <div class="right">
+            <img
+              src="../../../public/assets/icons-default-img-1.png"
+              class="icon"
+              alt=""
+              srcset=""
+            />
             <div class="font">0.18283949</div>
           </div>
         </div>
-        <div></div>
+        <div class="block-item-child block-item-1-2">
+          <div class="left">HT Deposited</div>
+          <div class="right">
+            <img
+              src="../../../public/assets/icons-default-img-3.png"
+              class="icon"
+              alt=""
+              srcset=""
+            />
+            <div class="font">0.18283949</div>
+          </div>
+        </div>
       </div>
-      <div class="block-item block-item-2"></div>
-      <div class="block-item block-item-3"></div>
+      <div class="block-item block-item-1">
+        <div class="block-item-child block-item-1-1">
+          <div class="left">HT Deposited</div>
+          <div class="right">
+            <img
+              src="../../../public/assets/icons-default-img-1.png"
+              class="icon"
+              alt=""
+              srcset=""
+            />
+            <div class="font">0.18283949</div>
+          </div>
+        </div>
+        <div class="block-item-child block-item-1-2">
+          <div class="left"></div>
+          <div class="right">
+            <img
+              src="../../../public/assets/icons-default-img-3.png"
+              class="icon"
+              alt=""
+              srcset=""
+            />
+            <div class="font">0.18283949</div>
+          </div>
+        </div>
+      </div>
+      <div class="block-item block-item-1">
+        <div class="block-item-child block-item-1-1">
+          <div class="left">HT Deposited</div>
+          <div class="right">
+            <div class="font">0.18283949</div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="button">Confirm Supply</div>
   </div>
 </template>
 
@@ -48,7 +97,8 @@ export default {
 <style lang="less" scoped>
 .Receive {
   // 临时
-  height: 562px;
+  // height: 562px;
+  height: auto;
   padding: 21px 0 28px;
   border-radius: 9px;
   border: solid 1px #979797;
@@ -128,12 +178,68 @@ export default {
     color: #444444;
   }
   .block {
+    padding-left: 39px;
+    padding-right: 32px;
+    font-family: NotoSansCJKkr;
+    margin-bottom: 36px;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    .icon {
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      margin-right: 7px;
+    }
     .block-item-1 {
       height: 105px;
+      .block-item-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .right {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .block-item-1-1 {
+        margin-top: 22px;
+      }
+      .block-item-1-2 {
+        margin-top: 15px;
+      }
     }
     .block-item {
-
+      border-top: solid 1px #d8d8d8;
+      padding-bottom: 20px;
     }
+    .block-item:last-child {
+      border-bottom: solid 1px #d8d8d8;
+      // padding-bottom: 0;
+      height: auto;
+    }
+  }
+  > .button {
+    width: 409px;
+    height: 58px;
+    margin: 0 0 0 39px;
+    // padding: 14px 0 15px;
+    border-radius: 6px;
+    background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
+    font-family: NotoSansCJKkr;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 58px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #010033;
+    cursor: pointer;
   }
 }
 </style>

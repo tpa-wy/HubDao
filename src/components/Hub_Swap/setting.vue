@@ -10,7 +10,7 @@
           </div>
           <div class="content">
             <div class="Slippage">
-              <div>0.1%</div>
+              <div class="checked">0.1%</div>
               <div>0.5%</div>
               <div>1%</div>
               <div>2%</div>
@@ -18,6 +18,9 @@
             <div class="percentage">
               <div><el-input v-model="input"></el-input></div>
               <div>%</div>
+            </div>
+            <div class="describe">
+              Error message Error message Error message Error message
             </div>
           </div>
         </div>
@@ -83,6 +86,19 @@ export default {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      .describe {
+        height: 20px;
+        margin: 15px 17px 27px 0;
+        font-family: NotoSansCJKkr;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #eb3232;
+        margin-bottom: 56px;
+      }
       > .title {
         //   width: 98px;
         text-align: center;
@@ -100,6 +116,7 @@ export default {
         color: #000000;
       }
       .block {
+          margin-bottom: 20px;
         .smail-title {
           height: 29px;
           // margin: 0 9px 22px 0;
@@ -117,7 +134,7 @@ export default {
             margin-left: 9px;
             width: 22px;
             height: 22px;
-            background-image: url(../assets/icons-help.png);
+            background-image: url(../../assets/icons-help.png);
           }
         }
         .content {
@@ -125,7 +142,24 @@ export default {
             margin-top: 22px;
             margin-bottom: 17px;
             display: flex;
+            .checked {
+              //   width: 90px;
+              //   height: 40px;
+              //   margin: 22px 8px 17px 0;
+              //   padding: 8px 25px 8px 26px;
+              border-radius: 6px;
+              background-color: #2f303f;
+              font-family: NotoSansCJKkr;
+              font-size: 16px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 40px;
+              letter-spacing: normal;
+              color: #ffffff;
+            }
             div {
+              cursor: pointer;
               width: 90px;
               height: 40px;
               border-radius: 6px;
@@ -143,7 +177,6 @@ export default {
             }
           }
           .percentage {
-            margin-bottom: 56px;
             display: flex;
             align-items: center;
             .el-input {

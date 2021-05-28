@@ -1,0 +1,276 @@
+<template>
+  <div class="confirm">
+    <div class="title">Confirm Swap</div>
+    <div class="currency">
+      <div class="currency-item currency-top">
+        <div class="left">
+          <img
+            src="../../../public/assets/icons-default-img-5.png"
+            alt=""
+            class="icon"
+          />
+          <div class="font">7.482793</div>
+        </div>
+        <div class="right">HD</div>
+      </div>
+      <div class="currency-center"></div>
+      <div class="currency-item currency-buttom">
+        <div class="left">
+          <img
+            src="../../../public/assets/icons-default-img-5.png"
+            alt=""
+            class="icon"
+          />
+          <div class="font">7.482793</div>
+        </div>
+        <div class="right">HD</div>
+      </div>
+    </div>
+    <div class="describe">
+      Output is estimated . You will receive at least <span>0.453432</span> HT
+      or the transaction will revert.
+    </div>
+    <div class="Price">
+      <div class="Price-1">
+        <div class="left">Price</div>
+        <div class="right">
+          <div class="font">0.18283949 HT / HD</div>
+          <div class="icon"></div>
+        </div>
+      </div>
+      <div class="Price-2">
+        <div class="Price-2-item">
+          <div class="left">
+            <div class="font">Minimum received</div>
+            <div class="icon"></div>
+          </div>
+          <div class="right">0.482372 HT</div>
+        </div>
+        <div class="Price-2-item">
+          <div class="left">
+            <div class="font">Minimum received</div>
+            <div class="icon"></div>
+          </div>
+          <div class="right">0.482372 HT</div>
+        </div>
+        <div class="Price-2-item">
+          <div class="left">
+            <div class="font">Minimum received</div>
+            <div class="icon"></div>
+          </div>
+          <div class="right">0.482372 HT</div>
+        </div>
+      </div>
+    </div>
+    <div class="button">Confirm Swap</div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HubdaoConfirm",
+  data() {
+    return {};
+  },
+  mounted() {},
+  methods: {},
+};
+</script>
+
+<style lang="less" scoped>
+.confirm {
+  width: 480px;
+  height: 673px;
+  padding: 21px 0 27px;
+  border-radius: 9px;
+  border: solid 1px #979797;
+  background-color: #ffffff;
+  > .title {
+    height: 36px;
+    margin: 11px 60px 37px 39px;
+    font-family: NotoSansCJKkr;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+  }
+  .currency {
+    .currency-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 36px;
+      margin-bottom: 21px;
+      .left {
+        margin-left: 41px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          margin-right: 16px;
+          border-radius: 50%;
+        }
+        .font {
+          font-family: NotoSansCJKkr;
+          font-size: 24px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #444444;
+        }
+      }
+      .right {
+        // margin: 41px 0 21px 205px;
+        margin-right: 32px;
+        font-family: NotoSansCJKkr;
+        font-size: 24px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: right;
+        color: #000000;
+      }
+    }
+    .currency-center {
+      width: 20px;
+      height: 14px;
+      margin-left: 55px;
+      margin-bottom: 23px;
+      background-image: url(../../../public/assets/back-icon.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      transform: rotate(270deg);
+    }
+  }
+  .describe {
+    height: 48px;
+    margin: 34px 60px 28.5px 38px;
+    font-family: NotoSansCJKkr;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+    span {
+      color: #ffa402;
+      font-weight: 500;
+    }
+  }
+  .Price {
+    height: 192px;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    padding-left: 39px;
+    padding-right: 32px;
+    padding-top: 22px;
+    padding-bottom: 33px;
+    .Price-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 24px;
+      margin-bottom: 28px;
+      .left {
+        font-family: NotoSansCJKkr;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #000000;
+      }
+      .right {
+        display: flex;
+        // justify-content: ;
+        align-items: center;
+        .font {
+          // width: 39px;
+          // margin: 22.5px 19px 28px 39px;
+          font-family: NotoSansCJKkr;
+          font-size: 16px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #000000;
+          margin-right: 12px;
+        }
+        .icon {
+          width: 20px;
+          height: 20px;
+          background-image: url(../../../public/assets/icons-home-copy-2.png);
+          background-size: 100% 100%;
+        }
+      }
+    }
+    .Price-2 {
+      .Price-2-item {
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 24px;
+        .left {
+          display: flex;
+          align-items: center;
+          .font {
+            margin: 0 8px 0 0;
+            font-family: NotoSansCJKkr;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+          }
+          .icon {
+            width: 20px;
+            height: 20px;
+            background-image: url(../../../public/assets/icons-help.png);
+            background-size: 100% 100%;
+          }
+        }
+        .right {
+          font-family: NotoSansCJKkr;
+          font-size: 16px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #000000;
+        }
+      }
+    }
+  }
+  .button {
+    cursor: pointer;
+    height: 58px;
+    line-height: 58px;
+    margin: 25px 39px 27px 39px;
+    // padding: 14px 0 15px;
+    border-radius: 6px;
+    background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
+    font-family: NotoSansCJKkr;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #010033;
+  }
+}
+</style>

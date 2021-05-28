@@ -1,5 +1,5 @@
 <template>
-  <div class="setting">
+  <div class="dialog">
     <div class="mask">
       <div class="content">
         <slot />
@@ -23,18 +23,18 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.setting {
+.dialog {
   position: relative;
   .mask {
     > .content {
       position: absolute;
       margin: 0 auto;
-      width: 480px;
+      // width: 480px;
       height: auto;
       // padding: 21px 19px 57px 47px;
       border-radius: 9px;
-      border: solid 1px #979797;
-      background-color: #ffffff;
+      // border: solid 1px #979797;
+      // background-color: #ffffff;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
