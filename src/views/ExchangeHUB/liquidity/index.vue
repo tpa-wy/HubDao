@@ -1,5 +1,5 @@
 <template>
-  <div>
+<div class="block">
     <div class="top">
       <div class="header">
         <div class="title">Liquidity</div>
@@ -145,17 +145,7 @@
 .content-i-img {
   .content-i-head;
 }
-.Liquidity {
-  .head-title {
-    color: #2f303f;
-    font-size: 20px;
-    margin-left: 11px;
-  }
-  .head-img {
-    width: 32px;
-    height: 32px;
-  }
-}
+
 .content-icon-down {
   transform: rotate(180deg);
   transition: transform 0.2s linear;

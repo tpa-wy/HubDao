@@ -5,7 +5,9 @@
         <div class="logo"><img src="../../assets/icons-logo.png" alt="" /></div>
         <div class="title">TITLE TITLE</div>
         <div class="Comming">Comming Soon</div>
-        <div class="icon"></div>
+        <div class="icon fx-aj-cc">
+           <img class="header-icon-i" src="/assets/down-icon.png"/>
+        </div>
       </div>
       <div class="content">
         <div class="progress">
@@ -84,7 +86,9 @@
         </div>
         <div class="info">
           <div class="left">
-            <div class="img"></div>
+            <div class="img fx-aj-cc">
+               <img class="left-img" src="/assets/icons-default-img-2@2x.png"/>
+            </div>
             <div class="content">
               <div>Achievement :</div>
               <div>IHO Shopper: TITLE (TITLE)</div>
@@ -92,9 +96,11 @@
             </div>
           </div>
           <div class="right">
-            <el-checkbox v-model="checked"></el-checkbox>100
+            <img class="cut-img" src="/assets/Cup.png"/>
             <span>Learn more about TITLE(TITLE)</span>
-            <div class="share"></div>
+            <div class="share">
+               <img src="/assets/Share.png" class="right-share-img"/>
+            </div>
           </div>
         </div>
       </div>
@@ -143,7 +149,9 @@
           </div>
           <div>
             Details
-            <div class="icon"></div>
+            <div class="icon">
+              <img class="top-icon-i" src="/assets/down-icon-2.png"/>
+            </div>
           </div>
         </div>
       </div>
@@ -154,7 +162,9 @@
           </div>
           <div>
             Details
-            <div class="icon"></div>
+            <div class="icon">
+              <img class="top-icon-i" src="/assets/down-icon-2.png"/>
+            </div>
           </div>
         </div>
       </div>
@@ -165,7 +175,9 @@
           </div>
           <div>
             Details
-            <div class="icon"></div>
+            <div class="icon">
+              <img class="top-icon-i" src="/assets/down-icon-2.png"/>
+            </div>
           </div>
         </div>
       </div>
@@ -176,7 +188,9 @@
           </div>
           <div>
             Details
-            <div class="icon"></div>
+            <div class="icon">
+              <img class="top-icon-i" src="/assets/down-icon-2.png"/>
+            </div>
           </div>
         </div>
       </div>
@@ -249,12 +263,17 @@ export default {
         cursor: pointer;
       }
       .icon {
-        width: 22px;
-        height: 11px;
-        background-color: #f00;
-        position: absolute;
-        right: 62px;
-        top: 50%;
+        width: 48px;
+        height: 48px;
+        border-radius: 6px;
+        box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;
+        position:absolute;
+        top: 29px;
+        right:49px;
+      }
+      .header-icon-i{
+         width:24px;height: 24px;
       }
     }
     > .content {
@@ -431,8 +450,12 @@ export default {
             margin: 19px 21px 23px 0;
             border-radius: 11px;
             border: solid 1px #979797;
-            background-color: #d8d8d8;
+            background-color: #010033;
             margin-right: 21px;
+            .left-img{
+              width: 50px;
+              height:50px;
+            }
           }
           .content {
             > div {
@@ -463,13 +486,17 @@ export default {
         .right {
           display: flex;
           align-items: center;
+          .cut-img{
+            width: 16px;height:16px;
+            margin-right: 8px;
+          }
           .share {
-            width: 12px;
-            height: 12px;
             margin: 2px 2px 0 0;
             // border: solid 1.5px #2f303f;
             margin-left: 5px;
-            background-color: #f00;
+          }
+          .right-share-img{
+             width: 12px;height: 12px;
           }
           span {
             margin-left: 5px;
@@ -682,10 +709,12 @@ export default {
           text-align: center;
           color: #444444;
           .icon {
-            width: 12px;
-            height: 6px;
-            background-color: #f00;
+           
             margin-left: 5px;
+            .top-icon-i{
+                width: 12px;
+                height: 12px;
+            }
           }
         }
       }

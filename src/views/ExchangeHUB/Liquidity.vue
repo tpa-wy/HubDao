@@ -1,9 +1,10 @@
 <template>
   <div class="Liquidity">
-    <div class="block">
+    
         <router-view>
         </router-view>
-    </div>
+    
+     
   </div>
 </template>
 
@@ -49,10 +50,10 @@ export default {
   // padding-top: 72px;
   width: 594px;
   margin: 0 auto;
-  > .block {
+  .block {
     width: 594px;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     // margin: 55px 531px 185px;
     padding: 22px 0px 59px 0px;
     padding: 22px 0 49px;

@@ -1,4 +1,6 @@
 <template>
+<div>
+ <div class="block">
    <div class="supply">
         <div class="top">
             <div class="header">
@@ -68,15 +70,43 @@
            </div>
 
       </div>
-      
-     
-     
-   </div>
+   </div>  
+</div>
+
+<div class="wallet-box">
+    <div class="wallet-state">
+        <div class="w-title">
+            LP TOKENS IN YOUR WALLET
+        </div>
+
+        <div class="fx-aj-cs w-item">
+            <div class="w-img-box fx-box">
+                <img class="head-img" src="/assets/icons-default-img-2@2x.png"/>
+                <img class="head-img" src="/assets/icons-default-img-3@2x.png"/>
+            </div>
+            <div class="w-text">HD/HT</div>
+            <div>0</div>
+        </div>
+        <div class="fx-aj-cs w-item">
+            <div class="w-img-box w-text">HD/HT</div>
+            <div class="w-text">HD/HT</div>
+            <div>0</div>
+        </div>
+        <div class="fx-aj-cs w-item">
+            <div class="w-img-box w-text">HD/HT</div>
+            <div class="w-text">HD/HT</div>
+            <div>0</div>
+        </div>
+        
+    </div>
+</div>
+
+</div>
 </template>
 
 <style lang="less" scoped>
 @import url('./liquidity.less');
-.supply{
+.supply,.wallet-state{
        font-family: NotoSansCJKkr;
         font-size: 16px;
         font-weight: 300;
@@ -163,7 +193,7 @@
        
        
 }
-
+ 
     .btm-liq{
             margin-top:0px;
     }
@@ -213,11 +243,41 @@
      .submit-btn:active{
          opacity: 0.65;
      }
+    
         
 }
 
-
-
+ .wallet-state{
+         width: 466px;
+         padding:23px 33px 19px 33px;
+         border-radius: 6px;
+         border: solid 1px #d8d8d8;
+         background-color: #ffffff;
+         
+}
+.wallet-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.w-title{
+     color: #ffa402;
+     font-size: 16px;
+     margin-bottom:6px;
+}
+.w-text{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+}
+.w-img-box{
+    width: 64px;
+    padding-right: 24px;
+}
+.w-item{
+    margin-top:11px;
+}
 </style>
 <script>
 export default {

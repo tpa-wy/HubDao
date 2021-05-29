@@ -181,7 +181,7 @@ export default {
       color: #ffffff;
     } */
   }
-  > .block {
+  >.block {
     width: 594px;
     height: 600px;
     margin: 0 auto;

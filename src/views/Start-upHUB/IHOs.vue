@@ -5,7 +5,9 @@
         <div class="logo"><img src="../../assets/icons-logo.png" alt="" /></div>
         <div class="title">TITLE TITLE</div>
         <div class="icon">
-          <div class="smail-icon"></div>
+          <div class="smail-icon fx-aj-cc">
+             <img class="header-icon-i" src="/assets/down-icon.png"/>
+          </div>
         </div>
       </div>
       <div class="content">
@@ -46,7 +48,9 @@
         </div>
         <div class="info">
           <div class="left">
-            <div class="img"></div>
+             <div class="img fx-aj-cc">
+               <img class="left-img" src="/assets/icons-default-img-2@2x.png"/>
+            </div>
             <div class="content">
               <div>Achievement :</div>
               <div>IHO Shopper: TITLE (TITLE)</div>
@@ -54,9 +58,11 @@
             </div>
           </div>
           <div class="right">
-            <div class="icon"></div>
+            <img class="cut-img" src="/assets/Cup.png"/>
             <span>Learn more about TITLE(TITLE)</span>
-            <div class="share"></div>
+            <div class="share">
+               <img src="/assets/Share.png" class="right-share-img"/>
+            </div>
           </div>
         </div>
       </div>
@@ -67,7 +73,9 @@
         <div class="logo"><img src="../../assets/icons-logo.png" alt="" /></div>
         <div class="title">TITLE TITLE</div>
         <div class="icon">
-          <div class="smail-icon"></div>
+          <div class="smail-icon fx-aj-cc">
+             <img class="header-icon-i" src="/assets/down-icon.png"/>
+          </div>
         </div>
       </div>
       <div class="content">
@@ -108,7 +116,9 @@
         </div>
         <div class="info">
           <div class="left">
-            <div class="img"></div>
+            <div class="img fx-aj-cc">
+               <img class="left-img" src="/assets/icons-default-img-2@2x.png"/>
+            </div>
             <div class="content">
               <div>Achievement :</div>
               <div>IHO Shopper: TITLE (TITLE)</div>
@@ -116,9 +126,11 @@
             </div>
           </div>
           <div class="right">
-            <div class="icon"></div>
+             <img class="cut-img" src="/assets/Cup.png"/>
             <span>Learn more about TITLE(TITLE)</span>
-            <div class="share"></div>
+            <div class="share">
+               <img src="/assets/Share.png" class="right-share-img"/>
+            </div>
           </div>
         </div>
       </div>
@@ -139,6 +151,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+
 .ihos {
   > .block-item {
     // height: 1075px;
@@ -181,12 +194,17 @@ export default {
         display: flex;
         align-items: center;
         .smail-icon {
-          width: 22px;
-          height: 11px;
-          background-color: #f00;
-          line-height: 11px;
+           width: 48px;
+           height: 48px;
+           border-radius: 6px;
+           box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+           background-color: #ffffff;
           margin: 0 auto;
         }
+        
+          .header-icon-i{
+            width:24px;height: 24px;
+          }
       }
     }
     > .content {
@@ -365,8 +383,12 @@ export default {
             margin: 19px 21px 23px 0;
             border-radius: 11px;
             border: solid 1px #979797;
-            background-color: #d8d8d8;
+             background-color: #010033;
             margin-right: 21px;
+            .left-img{
+              width: 50px;
+              height:50px;
+            }
           }
           .content {
             > div {
@@ -404,14 +426,21 @@ export default {
             // border: solid 1px #000000;
             background-color: #f00;
           }
-          .share {
-            width: 12px;
-            height: 12px;
-            margin: 2px 2px 0 0;
-            // border: solid 1.5px #2f303f;
-            margin-left: 5px;
-            background-color: #f00;
-          }
+           
+           .cut-img{
+              width: 16px;height:16px;
+              margin-right: 8px;
+            }
+         
+            .share {
+              margin: 2px 2px 0 0;
+              // border: solid 1.5px #2f303f;
+              margin-left: 5px;
+            }
+            .right-share-img{
+              width: 12px;height: 12px;
+            }
+          
           span {
             margin-left: 5px;
           }
@@ -430,8 +459,8 @@ export default {
     }
     .footer {
       border-top: solid 1px #979797;
-      height: 102px;
-      line-height: 102px;
+      height: 70px;
+      line-height: 70px;
       font-family: NotoSansCJKkr;
       font-size: 20px;
       font-weight: 500;
@@ -441,6 +470,9 @@ export default {
       text-align: center;
       color: #727272;
     }
+  }
+  .block-item:last-child{
+    margin-bottom: 100px;
   }
 }
 </style>
