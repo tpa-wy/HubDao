@@ -51,7 +51,7 @@ const routes = [{
         name: 'IHOs',
         component: () => import('@/views/Start-upHUB/IHOs.vue'),
       }]
-    }, {
+    },{
       path: 'StakeHUB/YieldFarming',
       name: 'YieldFarming',
       component: () => import('@/views/StakeHUB/YieldFarming.vue'),
@@ -59,7 +59,13 @@ const routes = [{
       path: 'StakeHUB/CommunityPool',
       name: 'CommunityPool',
       component: () => import('@/views/StakeHUB/CommunityPool.vue'),
-    }]
+    },
+    {
+      path:'PredictionHUB/Lottery',
+      name:'Lottery',
+      component: () => import('@/views/Lottery/index.vue'),
+    }
+  ]
   },
   {
     path: '/error',
