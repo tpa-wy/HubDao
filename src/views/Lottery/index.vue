@@ -26,11 +26,39 @@
                      <img src="/assets/search.png" alt="">
                  </div>
 
-                 <div class="lottery-card">
-                      <div class="fx-box fx-jc-sb">
+                 <div class="lottery-card lottery-pt">
+                      <div class="fx-box fx-jc-sb lottery-plr">
                           <span class="font-size24">Round #499</span>
                           <span class="font-size14 font-color2">APR 28,2:00 UTC</span>
                       </div>
+                      <div class="card-item fx-box lottery-plr">
+                          <div class="card-item-i fx-box fx-jc-sb full-r-w">
+                              <img src="/assets/s-card.png"/>
+                              <div class="card-cxt-box fx-box fx-fd-jc-sb">
+                                <div class="card-num-title">Winning numbers</div>
+                                <div class="card-num">14, 11, 11, 2</div>
+                              </div>
+                          </div>
+                          <div class="card-item-i fx-box fx-jc-sb full-r-w">
+                              <img src="/assets/s-card.png"/>
+                              <div class="card-cxt-box fx-box fx-fd-jc-sb">
+                                <div class="card-num-title">Winning numbers</div>
+                                <div class="card-num">14, 11, 11, 2</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card-split full-r-w"></div>
+
+                      <div class="card-table lottery-plr">
+                          <div class="card-table-header">
+                            <div>No Matched</div>
+                            <div>Winners</div>
+                            <div>Prize Pot</div>
+                          </div>
+                          <div class="card-table-body"></div>
+                      </div>
+
+
                  </div>
 
              </div>
@@ -156,8 +184,14 @@ export default {
                  padding-bottom: 10px;
                  font-size: 16px;
              }
+             .lottery-pt{
+               padding-top: 24px;
+             }
+             .lottery-plr{
+               padding:0px  30px 0px 30px;
+             }
              .lottery-card{
-                    padding: 24px 30px 35px;
+                    
                     opacity: 0.84;
                     border-radius: 8px;
                     box-shadow: 3px 3px 8px 0 #d8d8d8;
@@ -165,6 +199,33 @@ export default {
                     background-color: #ffffff;
                     margin-top: 23px;
                     margin-bottom:100px;
+
+                    .card-split{
+                        border: dashed 1px #a5a5a5;
+                    }
+             }
+             .card-item{
+               margin-top:58px;
+               img{
+                 width: 64px;
+                 height:64px;
+               }
+               .card-item-i{
+                 width: 50%;
+               }
+               .card-cxt-box{
+                 height: 64px;
+               }
+               .card-num-title{
+                  font-size: 14px;
+                  font-weight: 300;
+               }
+               .card-num{
+                   color: #2f303f;
+                  font-size: 20px;
+                  font-weight: bold;
+               }
+               
              }
             
          }
