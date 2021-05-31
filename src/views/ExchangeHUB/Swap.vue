@@ -4,8 +4,16 @@
       <div class="header">
         <div class="title">Exchange</div>
         <div class="icon">
-          <div class="icon-1"><img src="../../../public/assets/icons-settings.png" alt=""></div>
-          <div class="icon-2"><img src="../../../public/assets/icons-recent.png" alt="" srcset=""></div>
+          <div class="icon-1">
+            <img src="../../../public/assets/icons-settings.png" alt="" />
+          </div>
+          <div class="icon-2">
+            <img
+              src="../../../public/assets/icons-recent.png"
+              alt=""
+              srcset=""
+            />
+          </div>
         </div>
       </div>
       <div class="title-2">Trade tokens in an instant</div>
@@ -20,21 +28,13 @@
             <div class="img">
               <img src="../../assets/icons-max.png" alt="" />
             </div>
-            <img class="icon" src="../../../public/assets/icons-default-img-3.png" alt="" srcset="">
-            <el-dropdown class="currency-select" @command="selectCurrency">
-              <span class="el-dropdown-link">
-                {{ selectedCurrency
-                }}<i class="el-icon-arrow-down el-icon--right"></i>
-              </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item
-                  v-for="item in currencyList"
-                  :key="item.currencyList"
-                  :command="item.label"
-                  >{{ item.name }}</el-dropdown-item
-                >
-              </el-dropdown-menu>
-            </el-dropdown>
+            <img
+              class="icon"
+              src="../../../public/assets/icons-default-img-3.png"
+              alt=""
+              srcset=""
+            />
+            <div class="font" @click="is_show = !is_show">HT</div>
           </div>
         </div>
       </div>
@@ -65,41 +65,32 @@
         <div>0.0000000 HT</div>
       </div>
     </div>
+    <!-- 选择货币 -->
+    <div class="select-currency" v-show="is_show">
+      <Dialog :is_close.sync="is_show">
+        <SelectCurrency @SelectCurrency="SelectCurrency"></SelectCurrency>
+      </Dialog>
+    </div>
   </div>
 </template>
 
 <script>
+import SelectCurrency from '../../components/Hub_Swap/token';
 export default {
+  components:{SelectCurrency},
   name: "EducationSwap",
   data() {
     return {
-      // 货币列表
-      currencyList: [],
-      // 当前选中的货币
-      selectedCurrency: "",
+      // 弹框是否显示
+      is_show: false,
     };
   },
-  mounted() {
-    //   设置货币列表
-    this.currencyList = [
-      {
-        name: "HT",
-        label: "HT",
-      },
-      {
-        name: "BTC",
-        label: "BTC",
-      },
-    ];
-    if (this.currencyList.length >= 1) {
-      this.selectedCurrency = this.currencyList[0].label;
-    }
-  },
+  mounted() {},
   methods: {
-    selectCurrency(command) {
-      console.log(command);
-      this.selectedCurrency = command;
-    },
+    SelectCurrency(Currency) {
+      this.is_show = false
+      console.log(Currency)
+    }
   },
 };
 </script>
@@ -195,8 +186,22 @@ export default {
         .currency {
           display: flex;
           align-items: center;
+          font-family: NotoSansCJKkr;
+          font-size: 20px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: right;
+          color: #000000;
+          .font {
+            cursor: pointer;
+          }
           img {
             margin-right: 12px;
+            border-radius: 15px;
+            cursor: pointer;
           }
           .icon {
             width: 34px;
@@ -334,27 +339,6 @@ export default {
         color: #444444;
       }
     }
-  }
-}
-// 下拉菜单
-.el-dropdown-link {
-  cursor: pointer;
-  font-family: NotoSansCJKkr;
-  font-size: 20px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: right;
-  color: #000;
-}
-.el-icon-arrow-down {
-  font-size: 12px;
-}
-.el-dropdown {
-  .el-icon-arrow-down {
-    font-size: 18px;
   }
 }
 </style>

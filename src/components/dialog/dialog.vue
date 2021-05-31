@@ -2,6 +2,7 @@
   <div class="dialog">
     <div class="mask">
       <div class="content">
+        <div class="close" @click="close()"></div>
         <slot />
       </div>
     </div>
@@ -11,14 +12,23 @@
 <script>
 export default {
   name: "EducationSetting",
+  props:{
+    is_close:{
+      type:Boolean,
+      default:false
+    }
+  },
   data() {
     return {
-      input: "",
-      value: true,
     };
   },
   mounted() {},
-  methods: {},
+  methods: {
+    close() {
+      console.log('应该关闭这个弹框')
+      this.$emit('update:is_close',false);
+    }
+  },
 };
 </script>
 
@@ -27,6 +37,17 @@ export default {
   position: relative;
   .mask {
     > .content {
+      position: relative;
+      .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        background-size: 100% 100%;
+        background-image: url(../../../public/assets/del.png);
+      }
       position: absolute;
       margin: 0 auto;
       // width: 480px;

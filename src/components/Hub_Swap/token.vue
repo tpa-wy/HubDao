@@ -14,7 +14,8 @@
         <div class="icon"></div>
       </div>
       <div class="block">
-        <div class="block-item checked">
+        <!-- checked -->
+        <div class="block-item" @click="SelectCurrency('HT')">
           <img
             src="../../../public/assets/icons-default-img-1.png"
             alt=""
@@ -111,10 +112,16 @@
 export default {
   name: "HubdaoToken",
   data() {
-    return {};
+    return {
+    };
   },
   mounted() {},
-  methods: {},
+  methods: {
+    // 用户选择了某个货币
+    SelectCurrency(Currency) {
+      this.$emit('SelectCurrency',Currency);
+    }
+  },
 };
 </script>
 <style lang="less">
@@ -227,6 +234,7 @@ export default {
         background-color: #f5f5f5;
       }
       .block-item {
+        cursor: pointer;
         height: 56px;
         line-height: 56px;
         margin: 22px 0 12px;
