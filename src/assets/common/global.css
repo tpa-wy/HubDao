@@ -7,3 +7,98 @@
 @header-left: #010033;
 // 字体颜色
 @font-color: #ffffca; */
+.font-color1 {
+  color: #000;
+}
+.font-color2 {
+  color: #444444;
+}
+.font-size14 {
+  font-size: 14px;
+}
+.font-size16 {
+  font-size: 16px;
+}
+.font-size24 {
+  font-size: 24px;
+}
+.layout-mt20 {
+  margin-top: 20px;
+}
+.layout-mt24 {
+  margin-top: 24px;
+}
+.full-r-w {
+  width: 100%;
+}
+.fx-box {
+  display: flex;
+}
+.fx-aj-cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fx-aj-cs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fx-fd-c {
+  display: flex;
+  flex-direction: column;
+}
+.fx-ai-c {
+  display: flex;
+  align-items: center;
+}
+.fx-aj-cs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fx-aj-ca {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.fx-ai-c {
+  align-items: center;
+}
+.fx-jc-sb {
+  justify-content: space-between;
+}
+.fx-jc-c {
+  justify-content: center;
+}
+.fx-fd-jc-sb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fx-1 {
+  flex: 1;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.basic-font {
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.basic-btn-yellow {
+  border-radius: 6px;
+  background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
+  text-align: center;
+}

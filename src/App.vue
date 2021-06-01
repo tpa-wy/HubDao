@@ -240,4 +240,15 @@ a:focus,
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.el-input--suffix .el-input__inner {
+    padding-right: 30px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+}
+.el-input__icon {line-height: 30px;}
+.el-select .el-input.is-focus .el-input__inner{
+  border-color: #DCDFE6;
+}
 </style>
