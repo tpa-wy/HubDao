@@ -5,5 +5,9 @@ module.exports = {
 	      preProcessor: 'less',
 	      patterns: [path.resolve(__dirname, './src/assets/common/global.less')]
 	  }
-	}
+	},
+	transpileDependencies: [
+	    'vue-echarts',
+	    'resize-detector'
+	]
 }
