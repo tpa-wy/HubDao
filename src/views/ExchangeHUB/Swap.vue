@@ -82,7 +82,7 @@ export default {
   data() {
     return {
       // 弹框是否显示
-      is_show: false,
+      is_show: true,
     };
   },
   mounted() {},

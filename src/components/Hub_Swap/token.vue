@@ -15,14 +15,15 @@
       </div>
       <div class="block">
         <!-- checked -->
-        <div class="block-item" @click="SelectCurrency('HT')">
+        <div class="block-item" v-for="item in tokens" :key="item.tokens" @click="SelectCurrency(item)">
           <img
-            src="../../../public/assets/icons-default-img-1.png"
+            :src="item.logoURI"
             alt=""
             class="icon"
           />
-          <div class="font">HT</div>
+          <div class="font">{{item.symbol}}</div>
         </div>
+        <!-- 
         <div class="block-item">
           <img
             src="../../../public/assets/icons-default-img-1.png"
@@ -102,25 +103,31 @@
             class="icon"
           />
           <div class="font">HT</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import tokenInfo from "../../../public/js/tokens";
 export default {
   name: "HubdaoToken",
   data() {
     return {
+      tokens: [],
     };
   },
-  mounted() {},
+  mounted() {
+    this.tokens = [...tokenInfo.tokens]
+    // console.log(tokenInfo.tokens);
+    console.log(this.tokens);
+  },
   methods: {
     // 用户选择了某个货币
     SelectCurrency(Currency) {
-      this.$emit('SelectCurrency',Currency);
-    }
+      this.$emit("SelectCurrency", Currency);
+    },
   },
 };
 </script>

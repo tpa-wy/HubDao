@@ -22,7 +22,8 @@ export default {
     return {
     };
   },
-  mounted() {},
+  mounted() {
+  },
   methods: {
     close() {
       console.log('应该关闭这个弹框')
