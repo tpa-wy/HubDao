@@ -203,7 +203,7 @@ export default {
     this.$util
       .getUserinfo()
       .then((account) => {
-        console.log(account);
+        // console.log(account);
         this.$store.commit("setAccount", account[0]);
       })
       .catch((error) => {
@@ -223,7 +223,7 @@ export default {
       // console.log(key, keyPath);
     },
     menuselect(index) {
-      console.log(index);
+      // console.log(index);
       this.$router.push(index);
     },
     // 连接钱包

@@ -4,7 +4,7 @@
       <div class="header">
         <div class="title">Exchange</div>
         <div class="icon">
-          <div class="icon-1">
+          <div class="icon-1" @click="is_setting = !is_setting">
             <img src="../../../public/assets/icons-settings.png" alt="" />
           </div>
           <div class="icon-2">
@@ -71,26 +71,35 @@
         <SelectCurrency @SelectCurrency="SelectCurrency"></SelectCurrency>
       </Dialog>
     </div>
+    <!-- 设置 -->
+    <div class="settings" v-show="is_setting">
+      <Dialog :is_close.sync="is_setting">
+        <Setting @Setting="Setting"></Setting>
+      </Dialog>
+    </div>
   </div>
 </template>
 
 <script>
-import SelectCurrency from '../../components/Hub_Swap/token';
+import SelectCurrency from "../../components/Hub_Swap/token";
+import Setting from "../../components/Hub_Swap/setting";
 export default {
-  components:{SelectCurrency},
+  components: { SelectCurrency, Setting },
   name: "EducationSwap",
   data() {
     return {
       // 弹框是否显示
-      is_show: true,
+      is_show: false,
+      // 设置是否显示
+      is_setting: false,
     };
   },
   mounted() {},
   methods: {
     SelectCurrency(Currency) {
-      this.is_show = false
-      console.log(Currency)
-    }
+      this.is_show = false;
+      console.log(Currency);
+    },
   },
 };
 </script>

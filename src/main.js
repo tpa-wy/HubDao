@@ -46,9 +46,16 @@ Vue.use(dialog)
 import util from '@/util/util'
 Vue.prototype.$util = util
 Vue.config.productionTip = false
+// 检测用户是否安装MetaMask
 if (typeof window.ethereum !== 'undefined') {
   console.log('MetaMask is installed!');
 }
+// 使用懒加载
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload, {
+  loading: require('../public/assets/loading.gif'),//加载中图片，一定要有，不然会一直重复加载占位图
+  error: require('../public/assets/loading.gif')  //加载失败图片
+});
 
 new Vue({
   router,

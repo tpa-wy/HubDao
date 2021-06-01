@@ -6,17 +6,34 @@
         <div class="block">
           <div class="smail-title">
             Slippage tolerance
-            <div class="icon"></div>
+            <div class="icon-info">
+              <div class="icon"></div>
+              <div class="hover">Your transaction will revert if the price changes unfavorably by more than this percentage.</div>
+            </div>
           </div>
           <div class="content">
             <div class="Slippage">
-              <div class="checked">0.1%</div>
-              <div>0.5%</div>
-              <div>1%</div>
-              <div>2%</div>
+              <div
+                :class="{ checked: tolerance == 0.1 }"
+                @click="tolerance = 0.1"
+              >
+                0.1%
+              </div>
+              <div
+                :class="{ checked: tolerance == 0.5 }"
+                @click="tolerance = 0.5"
+              >
+                0.5%
+              </div>
+              <div :class="{ checked: tolerance == 1 }" @click="tolerance = 1">
+                1%
+              </div>
+              <div :class="{ checked: tolerance == 2 }" @click="tolerance = 2">
+                2%
+              </div>
             </div>
             <div class="percentage">
-              <div><el-input v-model="input"></el-input></div>
+              <div><el-input v-model="tolerance"></el-input></div>
               <div>%</div>
             </div>
             <div class="describe">
@@ -26,19 +43,19 @@
         </div>
         <div class="block block-2">
           <div class="smail-title">
-            Slippage tolerance
+            Transaction deadline
             <div class="icon"></div>
           </div>
           <div class="content">
             <div class="percentage">
               <div><el-input v-model="input"></el-input></div>
-              <div>%</div>
+              <div>Minutes</div>
             </div>
           </div>
         </div>
         <div class="block block-3">
           <div class="smail-title">
-            Slippage tolerance
+            Audio
             <div class="icon"></div>
           </div>
           <div class="content">
@@ -63,6 +80,7 @@ export default {
     return {
       input: "",
       value: true,
+      tolerance: 0.1,
     };
   },
   mounted() {},
@@ -97,7 +115,6 @@ export default {
         line-height: normal;
         letter-spacing: normal;
         color: #eb3232;
-        margin-bottom: 56px;
       }
       > .title {
         //   width: 98px;
@@ -116,7 +133,7 @@ export default {
         color: #000000;
       }
       .block {
-          margin-bottom: 20px;
+        margin-bottom: 20px;
         .smail-title {
           height: 29px;
           // margin: 0 9px 22px 0;
@@ -130,11 +147,14 @@ export default {
           color: #000000;
           display: flex;
           align-items: center;
-          .icon {
+          > .icon-info {
+            position: relative;
             margin-left: 9px;
-            width: 22px;
-            height: 22px;
-            background-image: url(../../assets/icons-help.png);
+            .icon {
+              width: 22px;
+              height: 22px;
+              background-image: url(../../assets/icons-help.png);
+            }
           }
         }
         .content {

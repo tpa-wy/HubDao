@@ -1,7 +1,8 @@
 <template>
   <div class="dialog">
-    <div class="mask">
-      <div class="content">
+    <div class="mask" @click="close">
+      <!-- 阻止冒泡事件传播 -->
+      <div class="content" @click.stop="">
         <div class="close" @click="close()"></div>
         <slot />
       </div>
@@ -28,6 +29,8 @@ export default {
     close() {
       console.log('应该关闭这个弹框')
       this.$emit('update:is_close',false);
+    },
+    close1() {
     }
   },
 };

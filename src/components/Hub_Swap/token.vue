@@ -2,108 +2,43 @@
   <div class="token">
     <div class="title">
       <div class="font">Select a token</div>
-      <img src="../../../public/assets/icons-help.png" alt="" class="icon" />
+      <div class="icon">
+        <img src="../../../public/assets/icons-help.png" alt="" class="icon" />
+        <div class="hover">
+          <div class="font">
+            Find a token by searching for its name or symbol or by pasting its
+            address below.
+          </div>
+        </div>
+      </div>
     </div>
     <div class="search">
-      <el-input placeholder="Search name or paste address" />
-      <i class="icon-search el-icon-search"></i>
+      <el-input
+        placeholder="Search name or paste address"
+        v-model="searchValue"
+      />
+      <!-- <i class="icon-search el-icon-search" @click="search()"></i> -->
     </div>
     <div class="select">
       <div class="title">
         <div class="font">Token name</div>
-        <div class="icon"></div>
+        <div
+          class="icon"
+          :class="{ 'icon-sort ': sort }"
+          @click="sort = !sort"
+        ></div>
       </div>
       <div class="block">
         <!-- checked -->
-        <div class="block-item" v-for="item in tokens" :key="item.tokens" @click="SelectCurrency(item)">
-          <img
-            :src="item.logoURI"
-            alt=""
-            class="icon"
-          />
-          <div class="font">{{item.symbol}}</div>
+        <div
+          class="block-item"
+          v-for="item in searchList"
+          :key="item.tokens"
+          @click="SelectCurrency(item)"
+        >
+          <img v-lazy="item.logoURI" :key="item.logoURI" alt="" class="icon" />
+          <div class="font">{{ item.symbol }}</div>
         </div>
-        <!-- 
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div>
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div>
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div>
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div>
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div>
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div>
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div>
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div>
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div>
-        <div class="block-item">
-          <img
-            src="../../../public/assets/icons-default-img-1.png"
-            alt=""
-            class="icon"
-          />
-          <div class="font">HT</div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -116,10 +51,12 @@ export default {
   data() {
     return {
       tokens: [],
+      searchValue: "",
+      sort: true,
     };
   },
   mounted() {
-    this.tokens = [...tokenInfo.tokens]
+    this.tokens = [...tokenInfo.tokens];
     // console.log(tokenInfo.tokens);
     console.log(this.tokens);
   },
@@ -127,6 +64,32 @@ export default {
     // 用户选择了某个货币
     SelectCurrency(Currency) {
       this.$emit("SelectCurrency", Currency);
+    },
+  },
+  computed: {
+    searchList() {
+      var _this = this;
+      var searchList = [];
+      _this.tokens.map(function (item) {
+        if (
+          item.address.toUpperCase() == _this.searchValue.toUpperCase() ||
+          item.symbol.toUpperCase().search(_this.searchValue.toUpperCase()) !=
+            -1
+        ) {
+          searchList.push(item);
+        }
+      });
+      // console.log(searchList)
+      if (this.sort) {
+        searchList = searchList.sort((a, b) => {
+          return a["symbol"].localeCompare(b["symbol"]); //index是list你需要索引的字段名称
+        });
+      } else {
+        searchList = searchList.sort((a, b) => {
+          return b["symbol"].localeCompare(a["symbol"]); //index是list你需要索引的字段名称
+        });
+      }
+      return searchList;
     },
   },
 };
@@ -165,8 +128,16 @@ export default {
     letter-spacing: normal;
     color: #000000;
     margin-bottom: 22px;
-    .font {
+    > .font {
       margin-right: 8px;
+    }
+    .icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      img {
+        cursor: pointer;
+      }
     }
   }
   .search {
@@ -220,8 +191,12 @@ export default {
         height: 20px;
         background-image: url(../../../public/assets/back-icon.png);
         background-size: 100% 100%;
-        transform: rotate(270deg);
+        transform: rotate(90deg);
         margin-left: 22px;
+        cursor: pointer;
+      }
+      .icon-sort {
+        transform: rotate(270deg);
       }
       .font {
         height: 20px;
