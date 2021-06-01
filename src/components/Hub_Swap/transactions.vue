@@ -4,7 +4,7 @@
     <div class="content">
       Please connect your wallet to view your recent transactions
     </div>
-    <div class="button">Close</div>
+    <div class="button" @click="close">Close</div>
   </div>
 </template>
 
@@ -15,7 +15,11 @@ export default {
     return {};
   },
   mounted() {},
-  methods: {},
+  methods: {
+    close() {
+      this.$emit('close');
+    }
+  },
 };
 </script>
 

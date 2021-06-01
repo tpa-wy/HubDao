@@ -7,7 +7,7 @@
           <div class="icon-1" @click="is_setting = !is_setting">
             <img src="../../../public/assets/icons-settings.png" alt="" />
           </div>
-          <div class="icon-2">
+          <div class="icon-2" @click="is_transactions = !is_transactions">
             <img
               src="../../../public/assets/icons-recent.png"
               alt=""
@@ -74,7 +74,13 @@
     <!-- 设置 -->
     <div class="settings" v-show="is_setting">
       <Dialog :is_close.sync="is_setting">
-        <Setting @Setting="Setting"></Setting>
+        <Setting></Setting>
+      </Dialog>
+    </div>
+    <!-- 最近的交易 -->
+    <div class="transactions" v-show="is_transactions">
+      <Dialog :is_close.sync="is_transactions">
+        <Transactions @close="close"></Transactions>
       </Dialog>
     </div>
   </div>
@@ -83,8 +89,9 @@
 <script>
 import SelectCurrency from "../../components/Hub_Swap/token";
 import Setting from "../../components/Hub_Swap/setting";
+import Transactions from "../../components/Hub_Swap/transactions";
 export default {
-  components: { SelectCurrency, Setting },
+  components: { SelectCurrency, Setting,Transactions },
   name: "EducationSwap",
   data() {
     return {
@@ -92,6 +99,7 @@ export default {
       is_show: false,
       // 设置是否显示
       is_setting: false,
+      is_transactions: false,
     };
   },
   mounted() {},
@@ -100,6 +108,9 @@ export default {
       this.is_show = false;
       console.log(Currency);
     },
+    close() {
+      this.is_transactions = false
+    }
   },
 };
 </script>
@@ -167,8 +178,7 @@ export default {
       width: 466px;
       height: 120px;
       // margin: 47px 0 19px 24px;
-      margin-bottom: 19px;
-      margin-left: 24px;
+      margin: 20px auto 19px auto;
       padding: 12px 21px 20px 20px;
       border-radius: 6px;
       background-color: #f0f0f0;
@@ -247,7 +257,8 @@ export default {
     > .block-2 {
       width: 466px;
       height: 120px;
-      margin: 20px 0 47px 24px;
+      // margin: 20px 0 47px 24px;
+      margin: 20px auto 0 auto;
       padding: 12px 14px 14px 20px;
       border-radius: 6px;
       background-color: #f0f0f0;
@@ -306,8 +317,10 @@ export default {
     cursor: pointer;
     width: 466px;
     height: 58px;
-    margin: 47px 0 0 24px;
-    padding: 14px 0 15px;
+    line-height: 58px;
+    // margin: 47px 0 0 24px;
+    margin: 47px auto 0 auto;
+    // padding: 14px 0 15px;
     border-radius: 6px;
     background-color: #ffe505;
     font-family: NotoSansCJKkr;
@@ -315,7 +328,6 @@ export default {
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
-    line-height: normal;
     letter-spacing: normal;
     text-align: center;
     color: #010033;

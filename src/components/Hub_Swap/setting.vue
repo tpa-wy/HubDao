@@ -8,7 +8,10 @@
             Slippage tolerance
             <div class="icon-info">
               <div class="icon"></div>
-              <div class="hover">Your transaction will revert if the price changes unfavorably by more than this percentage.</div>
+              <div class="hover">
+                Your transaction will revert if the price changes unfavorably by
+                more than this percentage.
+              </div>
             </div>
           </div>
           <div class="content">
@@ -44,7 +47,13 @@
         <div class="block block-2">
           <div class="smail-title">
             Transaction deadline
-            <div class="icon"></div>
+            <div class="icon-info">
+              <div class="icon"></div>
+              <div class="hover">
+                Your transaction will revert if the price changes unfavorably by
+                more than this percentage.
+              </div>
+            </div>
           </div>
           <div class="content">
             <div class="percentage">
@@ -54,10 +63,7 @@
           </div>
         </div>
         <div class="block block-3">
-          <div class="smail-title">
-            Audio
-            <div class="icon"></div>
-          </div>
+          <div class="smail-title">Audio</div>
           <div class="content">
             <el-switch
               v-model="value"
@@ -221,6 +227,15 @@ export default {
       .block-3 {
         .smail-title {
           margin-bottom: 23px;
+          > .icon-info {
+            position: relative;
+            margin-left: 9px;
+            .icon {
+              width: 22px;
+              height: 22px;
+              background-image: url(../../assets/icons-help.png);
+            }
+          }
         }
         .myswich {
           height: 24px;

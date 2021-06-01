@@ -58,7 +58,7 @@ Vue.use(progress)
 Vue.use(checkbox)
 Vue.use(option)
 Vue.use(select)
-Vue.component('v-chart',ECharts);
+Vue.component('v-chart', ECharts);
 
 Vue.prototype.$message = message
 // 引入封装的Dialog弹框
@@ -75,10 +75,21 @@ if (typeof window.ethereum !== 'undefined') {
 // 使用懒加载
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload, {
-  loading: require('../public/assets/loading.gif'),//加载中图片，一定要有，不然会一直重复加载占位图
-  error: require('../public/assets/loading.gif')  //加载失败图片
+  loading: require('../public/assets/loading.gif'), //加载中图片，一定要有，不然会一直重复加载占位图
+  error: require('../public/assets/loading.gif') //加载失败图片
 });
 
+import sdk from '@/util/index'
+Vue.prototype.$sdk = sdk
+// 获取账户的余额
+// console.log(sdk.getBalance('0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3'))
+// 转账
+// console.log(sdk.transfer('0x26b9F14f32a3063142EaE9535aee2228B6078a84', '0.01', 18))
+// 一件查询合约
+/* this.$sdk.getMultiBalanceOf()
+.then(list=>{console.log(list)})
+.catch(error=>console.error(error))
+ */
 new Vue({
   router,
   store,

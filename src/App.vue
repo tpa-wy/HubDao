@@ -232,21 +232,13 @@ a:focus,
 .none {
   display: none;
 }
-// 盒子
-.mask {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 // 鼠标移上显示快
 
 .hover {
   display: none;
 }
-.icon:hover,.icon-info:hover {
+.icon:hover,
+.icon-info:hover {
   .hover {
     display: block;
     left: -100px;
@@ -272,13 +264,29 @@ a:focus,
   }
 }
 .el-input--suffix .el-input__inner {
-    padding-right: 30px;
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
+  padding-right: 30px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
 }
-.el-input__icon {line-height: 30px;}
-.el-select .el-input.is-focus .el-input__inner{
-  border-color: #DCDFE6;
+.el-input__icon {
+  line-height: 30px;
+}
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: #dcdfe6;
+  padding-right: 30px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+
+// 盒子
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 </style>
