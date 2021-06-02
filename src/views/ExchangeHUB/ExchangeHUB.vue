@@ -75,7 +75,7 @@ export default {
         router = "Liquidity";
       }
       this.nav = nav;
-      this.$router.push(router);
+      this.$router.push('/ExchangeHUB/'+router);
     },
   },
 };
@@ -96,6 +96,7 @@ export default {
     margin-bottom: 57px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     .nav-item {
       cursor: pointer;
       display: inline-block;
@@ -107,7 +108,6 @@ export default {
       font-weight: 300;
       font-stretch: normal;
       font-style: normal;
-      line-height: normal;
       letter-spacing: normal;
       text-align: center;
       color: #000000;
@@ -116,7 +116,7 @@ export default {
       cursor: pointer;
       display: inline-block;
       height: 40px;
-      padding: 8px 28px 8px 29px;
+      // padding: 8px 28px 8px 29px;
       border-radius: 21.5px;
       background-color: #000000;
       font-family: NotoSansCJKkr;
@@ -124,7 +124,6 @@ export default {
       font-weight: bold;
       font-stretch: normal;
       font-style: normal;
-      line-height: normal;
       letter-spacing: normal;
       text-align: center;
       color: #fff;

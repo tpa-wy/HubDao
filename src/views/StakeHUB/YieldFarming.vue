@@ -174,9 +174,77 @@
       </div>
       <div class="block2" v-show="!is_show">
         <div class="block-item">
+          <input type="checkbox" />
+          <div class="top">
+            <div class="icon-block">
+              <img
+                class="icon icon-1"
+                src="../../../public/assets/icons-default-img-4.png"
+                alt=""
+              />
+              <img
+                class="icon icon-2"
+                src="../../../public/assets/icons-default-img-4.png"
+                alt=""
+              />
+            </div>
+            <div class="title">Title-HT</div>
+            <div class="Earned">
+              <div class="top">Earned</div>
+              <div class="bottom">0</div>
+            </div>
+            <div class="APR">
+              <div class="top">APR</div>
+              <div class="bottom">
+                <div class="font">16.05</div>
+                <div class="icon">ROI</div>
+              </div>
+            </div>
+            <div class="Liquidity">
+              <div class="top">Liquidity</div>
+              <div class="bottom">
+                <div class="font">$663,186,461</div>
+                <div class="icon"></div>
+              </div>
+            </div>
+            <div class="Liquidity">
+              <div class="top">Multiplier</div>
+              <div class="bottom">
+                <div class="font">8x</div>
+                <div class="icon"></div>
+              </div>
+            </div>
+            <div class="Details">
+              <div class="font">Details</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div>
+              唧唧复唧唧，木兰当户织。不闻机杼声，惟闻女叹息。(惟闻
+              通：唯)问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。(惟闻
+              通：唯)
+            </div>
+            <div>
+              东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。
+            </div>
+            <div>
+              万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。
+            </div>
+            <div>
+              归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。(一作：愿借明驼千里足)
+            </div>
+            <div>
+              爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。（帖
+              通：贴；惊忙一作：惶；惶 火伴 通：伙）
+            </div>
+            <div>雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？</div>
+          </div>
+        </div>
+        <!-- <div class="block-item">
           <div class="icon-block">
-            <div class="icon icon-1"></div>
-            <div class="icon icon-2"></div>
+            <img class="icon icon-1" src="../../../public/assets/icons-default-img-4.png" alt="">
+            <img class="icon icon-2" src="../../../public/assets/icons-default-img-4.png" alt="">
           </div>
           <div class="title">Title-HT</div>
           <div class="Earned">
@@ -211,8 +279,8 @@
         </div>
         <div class="block-item">
           <div class="icon-block">
-            <div class="icon icon-1"></div>
-            <div class="icon icon-2"></div>
+            <img class="icon icon-1" src="../../../public/assets/icons-default-img-4.png" alt="">
+            <img class="icon icon-2" src="../../../public/assets/icons-default-img-4.png" alt="">
           </div>
           <div class="title">Title-HT</div>
           <div class="Earned">
@@ -247,8 +315,8 @@
         </div>
         <div class="block-item">
           <div class="icon-block">
-            <div class="icon icon-1"></div>
-            <div class="icon icon-2"></div>
+            <img class="icon icon-1" src="../../../public/assets/icons-default-img-4.png" alt="">
+            <img class="icon icon-2" src="../../../public/assets/icons-default-img-4.png" alt="">
           </div>
           <div class="title">Title-HT</div>
           <div class="Earned">
@@ -283,8 +351,8 @@
         </div>
         <div class="block-item">
           <div class="icon-block">
-            <div class="icon icon-1"></div>
-            <div class="icon icon-2"></div>
+            <img class="icon icon-1" src="../../../public/assets/icons-default-img-4.png" alt="">
+            <img class="icon icon-2" src="../../../public/assets/icons-default-img-4.png" alt="">
           </div>
           <div class="title">Title-HT</div>
           <div class="Earned">
@@ -316,43 +384,7 @@
             <div class="font">Details</div>
             <div class="icon"></div>
           </div>
-        </div>
-        <div class="block-item">
-          <div class="icon-block">
-            <div class="icon icon-1"></div>
-            <div class="icon icon-2"></div>
-          </div>
-          <div class="title">Title-HT</div>
-          <div class="Earned">
-            <div class="top">Earned</div>
-            <div class="bottom">0</div>
-          </div>
-          <div class="APR">
-            <div class="top">APR</div>
-            <div class="bottom">
-              <div class="font">16.05</div>
-              <div class="icon">ROI</div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Liquidity</div>
-            <div class="bottom">
-              <div class="font">$663,186,461</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Multiplier</div>
-            <div class="bottom">
-              <div class="font">8x</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Details">
-            <div class="font">Details</div>
-            <div class="icon"></div>
-          </div>
-        </div>
+        </div>  -->
       </div>
     </div>
   </div>
@@ -800,90 +832,71 @@ export default {
     .block2 {
       margin-top: 60px;
       .block-item {
-        height: 112px;
+        // height: auto;
+        // height: 300px;
         padding-left: 35px;
         // padding: 20px 101px 33px 36px;
         border-radius: 8px;
         border: solid 1px #d8d8d8;
         background-color: #ffffff;
         margin-bottom: 12px;
-        display: flex;
-        // align-items: center;
-        .icon-block {
-          display: flex;
+        [type="checkbox"] {
           position: relative;
-          align-items: center;
-          .icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            position: absolute;
-          }
-          .icon-1 {
-            background-color: #f00;
-          }
-          .icon-2 {
-            left: 28px;
-            background-color: #ff0;
-          }
+          display: block;
+          width: 120px;
+          height: 24px;
+          margin: -24px auto 0;
+          z-index: 1000;
+          // opacity: 0;
         }
-        > .title {
-          line-height: 112px;
-          margin: 0px 183px 0px 80px;
-          font-family: NotoSansCJKkr;
-          font-size: 20px;
-          font-weight: bold;
-          font-stretch: normal;
-          font-style: normal;
-          letter-spacing: normal;
-          color: #000000;
-        }
-        .Earned {
-          .top {
-            font-family: NotoSansCJKkr;
-            font-size: 14px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #000000;
-            margin-top: 20px;
+        .top {
+          display: flex;
+          .icon-block {
+            display: flex;
+            position: relative;
+            margin-top: 40px;
+            // align-items: center;
+            .icon {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              position: absolute;
+            }
+            .icon-1 {
+              // background-color: #f00;
+            }
+            .icon-2 {
+              left: 25px;
+              // background-color: #ff0;
+            }
           }
-          .bottom {
-            height: 29px;
-            // margin: 12px 123px 0 183px;
-            margin-top: 12px;
+          > .title {
+            line-height: 112px;
+            margin: 0px 183px 0px 80px;
             font-family: NotoSansCJKkr;
             font-size: 20px;
-            font-weight: 500;
+            font-weight: bold;
             font-stretch: normal;
             font-style: normal;
-            line-height: normal;
             letter-spacing: normal;
             color: #000000;
           }
-        }
-        .APR {
-          .top {
-            font-family: NotoSansCJKkr;
-            font-size: 14px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #000000;
-            margin-top: 20px;
-          }
-          .bottom {
-            display: flex;
-            align-items: center;
-            margin-top: 12px;
-            margin-right: 93px;
-            .font {
-              // height: 29px;
+          .Earned {
+            .top {
+              font-family: NotoSansCJKkr;
+              font-size: 14px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #000000;
+              margin-top: 20px;
+            }
+            .bottom {
+              height: 29px;
               // margin: 12px 123px 0 183px;
+              margin-top: 12px;
               font-family: NotoSansCJKkr;
               font-size: 20px;
               font-weight: 500;
@@ -893,92 +906,137 @@ export default {
               letter-spacing: normal;
               color: #000000;
             }
-            .icon {
-              width: 29px;
-              height: 17px;
-              margin: 0px 0 0px 10px;
-              // padding: 0 3px 0 4px;
-              border-radius: 2px;
-              background-color: #2f303f;
-              font-family: NotoSansCJKkr;
-              font-size: 11px;
-              font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 17px;
-              text-align: center;
-              letter-spacing: 0.83px;
-              color: #ffffff;
-            }
           }
-        }
-        .Liquidity {
-          .top {
-            font-family: NotoSansCJKkr;
-            font-size: 14px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #000000;
-            margin-top: 20px;
-          }
-          .bottom {
-            display: flex;
-            align-items: center;
-            margin-top: 12px;
-            margin-right: 93px;
-            .font {
-              // height: 29px;
-              // margin: 12px 123px 0 183px;
+          .APR {
+            .top {
               font-family: NotoSansCJKkr;
-              font-size: 20px;
+              font-size: 14px;
               font-weight: 500;
               font-stretch: normal;
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
               color: #000000;
+              margin-top: 20px;
             }
+            .bottom {
+              display: flex;
+              align-items: center;
+              margin-top: 12px;
+              margin-right: 93px;
+              .font {
+                // height: 29px;
+                // margin: 12px 123px 0 183px;
+                font-family: NotoSansCJKkr;
+                font-size: 20px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #000000;
+              }
+              .icon {
+                width: 29px;
+                height: 17px;
+                margin: 0px 0 0px 10px;
+                // padding: 0 3px 0 4px;
+                border-radius: 2px;
+                background-color: #2f303f;
+                font-family: NotoSansCJKkr;
+                font-size: 11px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 17px;
+                text-align: center;
+                letter-spacing: 0.83px;
+                color: #ffffff;
+              }
+            }
+          }
+          .Liquidity {
+            .top {
+              font-family: NotoSansCJKkr;
+              font-size: 14px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #000000;
+              margin-top: 20px;
+            }
+            .bottom {
+              display: flex;
+              align-items: center;
+              margin-top: 12px;
+              margin-right: 93px;
+              .font {
+                // height: 29px;
+                // margin: 12px 123px 0 183px;
+                font-family: NotoSansCJKkr;
+                font-size: 20px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #000000;
+              }
+              .icon {
+                width: 20px;
+                height: 20px;
+                margin: 0px 0 0px 10px;
+                // padding: 0 3px 0 4px;
+                background-image: url(../../../public/assets/icons-help.png);
+                background-size: 100% 100%;
+                cursor: pointer;
+              }
+            }
+          }
+          .Details {
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+            margin-top: 0px;
+            line-height: 112px;
+            cursor: pointer;
+            margin-left: 109px;
+            font-family: NotoSansCJKkr;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #727272;
             .icon {
-              width: 20px;
-              height: 20px;
-              margin: 0px 0 0px 10px;
-              // padding: 0 3px 0 4px;
-              background-image: url(../../../public/assets/icons-help.png);
+              width: 9px;
+              height: 10px;
+              // background-color: #f00;
+              background-image: url(../../../public/assets/down-icon.png);
+              transform: rotate(360deg);
               background-size: 100% 100%;
-              cursor: pointer;
+              margin-left: 14px;
+              margin-top: 50px;
             }
           }
         }
-        .Details {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          line-height: 112px;
-          cursor: pointer;
-          margin-left: 109px;
-          font-family: NotoSansCJKkr;
-          font-size: 16px;
-          font-weight: normal;
-          font-stretch: normal;
-          font-style: normal;
-          letter-spacing: normal;
-          text-align: center;
-          color: #727272;
-          .icon {
-            width: 9px;
-            height: 10px;
-            // background-color: #f00;
-            background-image: url(../../../public/assets/down-icon.png);
-            transform: rotate(360deg);
-            background-size: 100% 100%;
-            margin-left: 14px;
-          }
+        .bottom {
+          // max-height: 0;
+          height: 28px;
+          overflow: hidden;
         }
+        // align-items: center;
       }
     }
   }
+}
+</style>
+<style>
+[type="checkbox"]:checked +.top + .bottom {
+  max-height: inherit;
+  height: auto;
 }
 </style>

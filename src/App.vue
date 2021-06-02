@@ -232,6 +232,55 @@ a:focus,
 .none {
   display: none;
 }
+// 鼠标移上显示快
+
+.hover {
+  display: none;
+}
+.icon:hover,
+.icon-info:hover {
+  .hover {
+    display: block;
+    left: -100px;
+    position: absolute;
+    width: auto;
+    min-width: 200px;
+    // box-s
+    height: auto;
+    background-color: #fff;
+    border-radius: 6px;
+    top: 30px;
+    z-index: 2003;
+    user-select: none;
+    padding: 15px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+  }
+}
+.el-input--suffix .el-input__inner {
+  padding-right: 30px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+.el-input__icon {
+  line-height: 30px;
+}
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: #dcdfe6;
+  padding-right: 30px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+
+// 盒子
 .mask {
   position: fixed;
   top: 0;
@@ -240,15 +289,11 @@ a:focus,
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-.el-input--suffix .el-input__inner {
-    padding-right: 30px;
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
-}
-.el-input__icon {line-height: 30px;}
-.el-select .el-input.is-focus .el-input__inner{
-  border-color: #DCDFE6;
+.button:hover,
+.button:active {
+  opacity: 0.85;
+  // transform: translateY(1px);
+  user-select: none;
+  box-shadow: none;
 }
 </style>
