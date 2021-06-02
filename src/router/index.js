@@ -64,9 +64,15 @@ const routes = [{
       path:'PredictionHUB/Lottery',
       name:'Lottery',
       component: () => import('@/views/Lottery/index.vue'),
-    }
+    },
+    {
+      path:'/Vote/vote',
+      name:'Vote',
+      component: () => import('@/views/Vote/index.vue'),
+    },
   ]
   },
+
   {
     path: '/error',
     name: 'Error',
