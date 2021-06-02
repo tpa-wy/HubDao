@@ -1,12 +1,14 @@
 import tokenInfo from '../../public/js/tokenlist.json'
-import erc20 from '../../public/js/ERC20_ABI.json'
-// console.log('ERC20 ABI = %s', erc20)
+import ERC20_ABI from '../../public/js/ERC20_ABI.json'
+import Router_ABI from '../../public/js/Router_ABI.json'
+import Factory_ABI from '../../public/js/Factory_ABI.json'
+// console.log('ERC20 ABI = %s', ERC20_ABI)
 import Web3 from 'web3-eth';
 import utils from './util'
 
 
-
-// 一次性引入合约
+// 一次性引入合约 @ethers-multicall https://github.com/hsienfu/ethers-multicall
+// https://github.com/ethers-io/ethers.js/tree/master/packages/providers
 const {
     Contract,
     Provider
@@ -27,7 +29,17 @@ const {
 } = require("@ethersproject/address");
 // const USDT = "0xa71EdC38d189767582C38A3145b5873052c3e47a"
 const LINK_NODE = 'https://http-mainnet-node.huobichain.com'
+/**
+ * HubDao Factory: 0xeedcce959675ae3d8974741e80aaa8244a6e3507
+ * HubDao Router: 0x767bbc9D5AF753CB7aB0b088748F19D8348eD95C
+ */
+const ROUTER = '0x767bbc9D5AF753CB7aB0b088748F19D8348eD95C'
+const FACTORY = '0xeedcce959675ae3d8974741e80aaa8244a6e3507'
 
+// 一个巨大的授权金额 @ethersproject/constants https://github.com/ethers-io/ethers.js/tree/master/packages/constants
+const {
+    MaxUint256
+} = require("@ethersproject/constants");
 
 
 class SDK {
@@ -50,9 +62,10 @@ class SDK {
          await this.salecontract.symbol();// BNB, BOO, MDX
          await this.salecontract.name(); // string
          await this.salecontract.allowance(spender_address) */
+        //  初始化web3
         this.web3 = new Web3(window.ethereum);
         // console.log(this.web3)
-        // this.contract = new this.web3.Contract(erc20, USDT);
+        // this.contract = new this.web3.Contract(ERC20_ABI, USDT);
         // this.accountList = {}
         // console.log(tokenInfo)
 
@@ -60,15 +73,20 @@ class SDK {
         // console.log(this.contract)
     }
     // 获取账户余额
+    /**
+     * 获取账户余额
+     * @param {*} address 链接
+     * @returns 
+     */
     async getBalance(address) {
         // console.log(this.contract)
 
         // return false
-        // this.balance = await this.contract.methods.balanceOf(address).call({}, 'latest')
+        this.balance = await this.contract.methods.balanceOf(address).call({}, 'latest')
         // console.log('[INFO] this.balance = %s', this.web3.utils.fromWei(this.balance))
         // console.log('[INFO] this.balance = %s', formatUnits(this.balance))
         // 返回余额
-        // return formatUnits(this.balance)
+        return formatUnits(this.balance)
     }
     /**
      * 添加合约
@@ -76,12 +94,12 @@ class SDK {
      * @returns 
      */
     async getTokenInfo(address) {
-        if(!isAddress(address)){
+        if (!isAddress(address)) {
             return false
         }
         const provider = new Provider(new JsonRpcProvider(LINK_NODE));
         await provider.init();
-        const contract = new Contract(address, erc20);
+        const contract = new Contract(address, ERC20_ABI);
         const calls = [];
 
         calls.push(contract.balanceOf('your_wallet'));
@@ -93,46 +111,314 @@ class SDK {
     }
     /**
      * 转账 https://web3js.readthedocs.io/en/v1.3.4/web3-eth-contract.html#methods-mymethod-send
-     * @param {*} receipt 收钱的用户
-     * @param {*} amount  转账的金额
-     * @param {*} decimal 货币的长度
+     * @param {*} receipt  收钱的用户
+     * @param {*} amount   转账的金额
+     * @param {*} currency 转账的合约
+     * @param {*} decimal  货币的长度
      */
-    async transfer(receipt, amount, decimal = 18) {
-        /* const usdt = new this.web3.Contract(erc20, USDT);
-        console.log('我的钱包地址=>%s', '0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3')
-        console.log(amount)
-        amount = parseUnits(amount, decimal);
-        console.log('要转账的金额=>%s', amount)
-        await usdt.methods.transfer(receipt, amount).send({
-            from: '0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3'
-        }).then(res => console.log(res)).catch(error => {
-            console.log(error)
-        }) */
+    async transfer(receipt, amount, toeken, decimal = 18) {
+        // 判断一个合约是否是正确的
+        if (isAddress(toeken)) {
+            const CURRENCY = new this.web3.Contract(ERC20_ABI, toeken);
+            let account = await this.getAddress();
+            console.log('我的钱包地址=>%s', account)
+            // console.log(amount)
+            amount = parseUnits(amount, decimal);
+            console.log('要转账的金额=>%s', amount)
+            await CURRENCY.methods.transfer(receipt, amount).send({
+                    from: account
+                })
+                .on('transactionHash', function (hash) {})
+                .on('confirmation', function (confirmationNumber, receipt) {})
+                .on('receipt', function (receipt) {
+                    console.log('receipt=>%s', receipt);
+                    console.log(receipt)
+                })
+                .on('error', console.error); // If there's an out of gas error the second parameter is the receipt.
+        }
+        // return false
+
     }
     /**
      * 添加所有token合约
      * @returns 
      */
     async getMultiBalanceOf() {
+        let account = await this.getAddress();
         const provider = new Provider(new JsonRpcProvider(LINK_NODE));
         await provider.init();
 
         let calls = []
-        console.log(tokenInfo.tokens.length)
+        // console.log(tokenInfo.tokens.length)
         for (let i in tokenInfo.tokens) {
-            console.log(i)
-            // if (i > 20) {
-            calls.push(new Contract(tokenInfo.tokens[i].address, erc20).balanceOf('0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3'))
-            // }
+            const contract = new Contract(tokenInfo.tokens[i].address, ERC20_ABI)
+            calls.push(contract.balanceOf(account))
+            calls.push(contract.allowance(account, ROUTER))
         }
         // console.log(calls)
 
-        // console.log(erc20)
+        // console.log(ERC20_ABI)
         /* let calls = [
-            new Contract('0xa71edc38d189767582c38a3145b5873052c3e47a', erc20).balanceOf(`0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3`)
+            new Contract('0xa71edc38d189767582c38a3145b5873052c3e47a', ERC20_ABI).balanceOf(`0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3`)
         ]; */
         return provider.all(calls);
     }
+    /**
+     * 获取火币余额
+     * @returns 
+     */
+    async getHTCurrency() {
+        let account = await this.getAddress();
+        return this.web3.getBalance(account)
+    }
+    /**
+     * 获取用户的账户
+     * @returns 
+     */
+    async getAddress() {
+        if (!window["ethereum"]) return false;
+        if (window["ethereum"].selectedAddress)
+            return window["ethereum"].selectedAddress;
+        await new Promise(r => setTimeout(r, 400));
+        return window["ethereum"].selectedAddress;
+    }
+    /**
+     * 添加流动性HT
+     * @param {*} usdt  合约地址 
+     * @param {*} Authorizedamount  已经授权的金额 
+     * @param {*} one_amount  要流动的第一个币值 
+     * @param {*} two_amount  要流动的第二个币值
+     */
+    async addLiquidityaETH(usdt, Authorizedamount, one_amount, two_amount) {
+        // 将已授权的金额转换为可识别的金额 
+        Authorizedamount = formatUnits(Authorizedamount)
+        let account = await this.getAddress()
+        const USDT = new this.web3.Contract(ERC20_ABI, usdt);
+        const router = new this.web3.Contract(Router_ABI, ROUTER);
+
+        const deadline = Math.ceil((+Date.now()) / 1000) + 1800;
+        // const fund500 = parseUnits('0.01');
+        const fund500 = MaxUint256;
+        console.log('fund500=>%s', fund500)
+        console.log(USDT)
+        console.log(router)
+        console.log(Authorizedamount > one_amount)
+        return new Promise((resolve, reject) => {
+            // 判断授权
+            if (Authorizedamount > one_amount) {
+                console.log(router)
+                router.methods.addLiquidityETH(
+                        usdt,
+                        parseUnits(one_amount),
+                        0,
+                        0,
+                        account,
+                        deadline
+                    ).send({
+                        from: account,
+                        value: parseUnits(two_amount)
+                    })
+                    .on('transactionHash', function (hash) {})
+                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    .on('receipt', function (receipt) {
+                        console.log('receipt=>%s', receipt);
+                        // console.log(receipt)
+                        // resolve(receipt)
+                    })
+                    .on('error', () => {
+                        reject(-1)
+                    }); // If there's an out of gas error the second parameter is the receipt.
+            } else {
+                // router合约 要授权的金额(一个无尽的数)
+                USDT.methods.approve(ROUTER, fund500).send({
+                        from: account
+                    })
+                    .on('transactionHash', function (hash) {})
+                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    .on('receipt', function (receipt) {
+                        console.log('receipt=>%s', receipt);
+                        console.log(receipt)
+                        router.methods.addLiquidityETH(
+                                usdt,
+                                parseUnits(one_amount),
+                                0,
+                                0,
+                                account,
+                                deadline
+                            ).send({
+                                from: account,
+                                value: two_amount
+                            })
+                            .on('transactionHash', function (hash) {})
+                            .on('confirmation', function (confirmationNumber, receipt) {})
+                            .on('receipt', function (receipt) {
+                                // console.log('receipt=>%s', receipt);
+                                // console.log(receipt)
+                                resolve(receipt)
+                            })
+                            .on('error', () => {
+                                reject(-1)
+                            }); // If there's an out of gas error the second parameter is the receipt.
+                    })
+                    .on('error', console.error); // If there's an out of gas error the second parameter is the receipt.
+            }
+        })
+    }
+    /**
+     * 添加流动性
+     * @param {*} currency1 合约1
+     * @param {*} currency2 合约2
+     * @param {*} Authorizedamount1 已经授权的金额 
+     * @param {*} Authorizedamount2 已经授权的金额
+     * @param {*} one_amount 要流动的第一个币值
+     * @param {*} two_amount 要流动的第二个币值
+     * @returns 
+     */
+    async addLiquidity(currency1, currency2, Authorizedamount1, Authorizedamount2, one_amount, two_amount) {
+        // 将已授权的金额转换为可识别的金额 
+        let _Authorizedamount1 = formatUnits(Authorizedamount1)
+        let _Authorizedamount2 = formatUnits(Authorizedamount2)
+        let account = await this.getAddress()
+        const TOKEN1 = new this.web3.Contract(ERC20_ABI, currency1);
+        const TOKEN2 = new this.web3.Contract(ERC20_ABI, currency2);
+        const router = new this.web3.Contract(Router_ABI, ROUTER);
+
+        const deadline = Math.ceil((+Date.now()) / 1000) + 1800;
+        // const fund500 = parseUnits('0.01');
+        const fund500 = MaxUint256;
+        console.log('fund500=>%s', fund500)
+        return new Promise((resolve, reject) => {
+            // 判断授权
+            // debugger
+            if (_Authorizedamount1 > one_amount && _Authorizedamount2 > two_amount) {
+                console.log(111)
+                router.methods.addLiquidity(
+                        currency1,
+                        currency2,
+                        parseUnits(one_amount),
+                        parseUnits(two_amount),
+                        0,
+                        0,
+                        account,
+                        deadline
+                    ).send({
+                        from: account,
+                    })
+                    .on('transactionHash', function (hash) {})
+                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    .on('receipt', function (receipt) {
+                        console.log('receipt=>%s', receipt);
+                        // console.log(receipt)
+                        // resolve(receipt)
+                    })
+                    .on('error', () => {
+                        reject(-1)
+                    }); // If there's an out of gas error the second parameter is the receipt.
+            } else if (_Authorizedamount1 < one_amount) {
+                TOKEN1.methods.approve(ROUTER, fund500).send({
+                        from: account
+                    })
+                    .on('transactionHash', function (hash) {})
+                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    .on('receipt', function (receipt) {
+                        console.log('receipt=>%s', receipt);
+                        console.log(receipt)
+                        if (_Authorizedamount2 > two_amount) {
+                            router.methods.addLiquidity(
+                                    currency1,
+                                    currency2,
+                                    parseUnits(one_amount),
+                                    parseUnits(two_amount),
+                                    0,
+                                    0,
+                                    account,
+                                    deadline
+                                ).send({
+                                    from: account,
+                                })
+                                .on('transactionHash', function (hash) {})
+                                .on('confirmation', function (confirmationNumber, receipt) {})
+                                .on('receipt', function (receipt) {
+                                    console.log('receipt=>%s', receipt);
+                                    // console.log(receipt)
+                                    // resolve(receipt)
+                                })
+                                .on('error', () => {
+                                    reject(-1)
+                                }); // If there's an out of gas error the second parameter is the receipt.
+                        }
+                    })
+                    .on('error', console.error); // If there's an out of gas error the second parameter is the receipt.
+            } else if (_Authorizedamount2 < two_amount) {
+                TOKEN2.methods.approve(ROUTER, fund500).send({
+                        from: account
+                    })
+                    .on('transactionHash', function (hash) {})
+                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    .on('receipt', function (receipt) {
+                        console.log('receipt=>%s', receipt);
+                        console.log(receipt)
+                        if (_Authorizedamount1 > one_amount) {
+                            console.log('创建流动性')
+                            router.methods.addLiquidity(
+                                    currency1,
+                                    currency2,
+                                    parseUnits(one_amount),
+                                    parseUnits(two_amount),
+                                    0,
+                                    0,
+                                    account,
+                                    deadline
+                                ).send({
+                                    from: account,
+                                })
+                                .on('transactionHash', function (hash) {})
+                                .on('confirmation', function (confirmationNumber, receipt) {})
+                                .on('receipt', function (receipt) {
+                                    console.log('receipt=>%s', receipt);
+                                    // console.log(receipt)
+                                    // resolve(receipt)
+                                })
+                                .on('error', () => {
+                                    reject(-1)
+                                }); // If there's an out of gas error the second parameter is the receipt.
+                        }
+                    })
+                    .on('error', console.error); // If there's an out of gas error the second parameter is the receipt.
+            }
+        })
+    }
+
+    async getLpBalance() {
+            let Factory = new this.web3.Contract(Factory_ABI, FACTORY)
+            console.log(Factory.methods)
+            let len = await Factory.methods.allPairsLength().call({}, 'latest')
+            // console.log(len)
+            let account = await this.getAddress();
+            const provider = new Provider(new JsonRpcProvider(LINK_NODE));
+            await provider.init();
+
+            let calls = []
+            // console.log(tokenInfo.tokens.length)
+            for (var i = 0; i < len; i++) {
+                var lp_address = await Factory.methods.allPairs(i).call({}, 'latest')
+                // console.log(lp_address)
+                const abi = ERC20_ABI.concat([{"constant":true,"inputs":[],"name":"token0","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"token1","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]);
+                const contract = new Contract(lp_address, abi)
+                calls.push(contract.balanceOf(account))
+                calls.push(contract.token0())
+                calls.push(contract.token1())
+                calls.push(contract.allowance(account, ROUTER))
+            }
+            // console.log(calls)
+
+            // console.log(ERC20_ABI)
+            /* let calls = [
+                new Contract('0xa71edc38d189767582c38a3145b5873052c3e47a', ERC20_ABI).balanceOf(`0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3`)
+            ]; */
+            return provider.all(calls)
+    }
+
 }
 
 const sdk = new SDK()

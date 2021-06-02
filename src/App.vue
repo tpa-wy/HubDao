@@ -289,4 +289,11 @@ a:focus,
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.button:hover,
+.button:active {
+  opacity: 0.85;
+  // transform: translateY(1px);
+  user-select: none;
+  box-shadow: none;
+}
 </style>

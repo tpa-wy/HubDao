@@ -75,7 +75,7 @@ export default {
         router = "Liquidity";
       }
       this.nav = nav;
-      this.$router.push(router);
+      this.$router.push('/ExchangeHUB/'+router);
     },
   },
 };

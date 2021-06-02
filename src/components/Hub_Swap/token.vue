@@ -32,6 +32,38 @@
         <!-- checked -->
         <div
           class="block-item"
+          v-if="item != undefined"
+          v-show="searchValue == ''"
+          @click="SelectCurrency(item)"
+        >
+          <div class="left">
+            <img
+              v-lazy="item.logoURI"
+              :key="item.logoURI"
+              alt=""
+              class="icon"
+            />
+            <div class="font">{{ item.symbol }}</div>
+          </div>
+          <div class="right" v-show="account">
+            <div
+              class="balance1"
+              :title="item.info"
+              v-show="item.info == undefined"
+            >
+              <img src="../../../public/assets/loading.gif" alt="" srcset="" />
+            </div>
+            <div
+              class="balance2"
+              :title="item.info"
+              v-show="item.info != undefined"
+            >
+              {{ item.info }}
+            </div>
+          </div>
+        </div>
+        <div
+          class="block-item"
           v-for="item in searchList"
           :key="item.tokens"
           @click="SelectCurrency(item)"
@@ -45,8 +77,21 @@
             />
             <div class="font">{{ item.symbol }}</div>
           </div>
-          <div class="right">
-            <div class="balance" :title="item.info">{{item.info}}</div>
+          <div class="right" v-show="account">
+            <div
+              class="balance1"
+              :title="item.info"
+              v-show="item.info == undefined"
+            >
+              <img src="../../../public/assets/loading.gif" alt="" srcset="" />
+            </div>
+            <div
+              class="balance2"
+              :title="item.info"
+              v-show="item.info != undefined"
+            >
+              {{ item.info }}
+            </div>
           </div>
         </div>
       </div>
@@ -55,41 +100,23 @@
 </template>
 
 <script>
-const {
-  // 将金额转换为小数
-  formatUnits,
-  // 将小数转换为金额
-  parseUnits,
-} = require("@ethersproject/units");
 
-import tokenInfo from "../../../public/js/tokenlist.json";
 // import erc20_ABi from "../../../public/js/ERC20_ABI.json";
 export default {
   name: "HubdaoToken",
+  props: {
+    item: {
+      type: Object,
+    },
+    tokens: {
+      type: Array,
+    },
+  },
   data() {
     return {
-      tokens: [],
       searchValue: "",
       sort: true,
     };
-  },
-  mounted() {
-    // console.log(tokenInfo);
-    this.$sdk
-      .getMultiBalanceOf()
-      .then((list) => {
-        console.log(tokenInfo.tokens)
-        console.log(list)
-        for (var i in tokenInfo.tokens) {
-          tokenInfo.tokens[i].info = formatUnits(list[i]);
-          // console.log(tokenInfo.tokens[i].info)
-        }
-      })
-      .catch((error) => console.error(error));
-
-    this.tokens = [...tokenInfo.tokens];
-    console.log(this.tokens);
-    console.log(tokenInfo);
   },
   methods: {
     // 用户选择了某个货币
@@ -121,6 +148,10 @@ export default {
         });
       }
       return searchList;
+    },
+    account() {
+      // console.log(this.$store.state.account)
+      return this.$store.state.account;
     },
   },
 };
@@ -278,12 +309,27 @@ export default {
         }
         .right {
           margin-right: 20px;
-          .balance {
+          .balance1 {
             white-space: nowrap;
             overflow: hidden;
             max-width: 5rem;
             text-overflow: ellipsis;
             font-size: 16px;
+            display: flex;
+            align-items: center;
+            .font {
+              width: 5rem;
+            }
+          }
+          .balance2 {
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 5rem;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            .font {
+              width: 5rem;
+            }
           }
         }
       }
