@@ -14,11 +14,12 @@
     <div class="block full-r-w">
         
         <div class="vote-cxt">
-            <div class="vote-header">
-               <div class="vote-item">
-                   <div></div>
-                   <div class="vote-active"></div>
+            <div class="vote-header fx-box">
+               <div v-for="item in headerList" :key="item.label" class="vote-item layout-rel">
+                   <div>{{item.label}}</div>
+                   <div :class="'vote-active layout-abs '+(item.checked?'vote-ac':'vote-bc')"></div>
                </div>
+               
             </div>
         </div>
   
@@ -36,6 +37,27 @@ export default {
   data() {
     return {
       
+      headerList:[
+        {
+          label:'All',
+          checked:true,
+        },
+        {
+          label:'Core',
+          checked:false,
+        },
+        {
+          label:'Active',
+          checked:false,
+        },
+        {
+          label:'Pending',
+          checked:false,
+        },{
+          label:'Closed',
+          checked:false,
+        }
+      ]
      
     };
   },
@@ -59,7 +81,7 @@ export default {
 
 <style lang="less" scoped>
 .lottery {
-  
+   .basic-font;
   
   .title {
     font-family: NotoSansCJKkr;
@@ -88,9 +110,31 @@ export default {
      .vote-cxt{
        margin: 20px 233px 0px 233px;
        .vote-header{
+         width:400px;
          margin:26px 0px;
-         border-bottom: 1px solid #eee;
+         .vote-item{
+            height:41px;
+            line-height: 41px;
+            margin-right: 40px;
+            letter-spacing: 0.5px;
+            color: #000000;
+            font-size: 28px;
+            font-weight: 500;
+           .vote-active{
+             border-radius: 3px; 
+             width: 100%;height: 6px;
+             left: 0;
+             bottom:-3px;
+           }
+           .vote-ac{
+             background-color: #fdc702;
+           }
+           .vote-bc{
+            
+           }
+         }
        }
+
      }
   }
 }
