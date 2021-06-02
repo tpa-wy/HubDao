@@ -126,10 +126,10 @@ class SDK {
             amount = parseUnits(amount, decimal);
             console.log('要转账的金额=>%s', amount)
             await CURRENCY.methods.transfer(receipt, amount).send({
-                    from: account
-                })
-                .on('transactionHash', function (hash) {})
-                .on('confirmation', function (confirmationNumber, receipt) {})
+                from: account
+            })
+                .on('transactionHash', function (hash) { })
+                .on('confirmation', function (confirmationNumber, receipt) { })
                 .on('receipt', function (receipt) {
                     console.log('receipt=>%s', receipt);
                     console.log(receipt)
@@ -208,18 +208,18 @@ class SDK {
             if (Authorizedamount > one_amount) {
                 console.log(router)
                 router.methods.addLiquidityETH(
-                        usdt,
-                        parseUnits(one_amount),
-                        0,
-                        0,
-                        account,
-                        deadline
-                    ).send({
-                        from: account,
-                        value: parseUnits(two_amount)
-                    })
-                    .on('transactionHash', function (hash) {})
-                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    usdt,
+                    parseUnits(one_amount),
+                    0,
+                    0,
+                    account,
+                    deadline
+                ).send({
+                    from: account,
+                    value: parseUnits(two_amount)
+                })
+                    .on('transactionHash', function (hash) { })
+                    .on('confirmation', function (confirmationNumber, receipt) { })
                     .on('receipt', function (receipt) {
                         console.log('receipt=>%s', receipt);
                         // console.log(receipt)
@@ -231,26 +231,26 @@ class SDK {
             } else {
                 // router合约 要授权的金额(一个无尽的数)
                 USDT.methods.approve(ROUTER, fund500).send({
-                        from: account
-                    })
-                    .on('transactionHash', function (hash) {})
-                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    from: account
+                })
+                    .on('transactionHash', function (hash) { })
+                    .on('confirmation', function (confirmationNumber, receipt) { })
                     .on('receipt', function (receipt) {
                         console.log('receipt=>%s', receipt);
                         console.log(receipt)
                         router.methods.addLiquidityETH(
-                                usdt,
-                                parseUnits(one_amount),
-                                0,
-                                0,
-                                account,
-                                deadline
-                            ).send({
-                                from: account,
-                                value: two_amount
-                            })
-                            .on('transactionHash', function (hash) {})
-                            .on('confirmation', function (confirmationNumber, receipt) {})
+                            usdt,
+                            parseUnits(one_amount),
+                            0,
+                            0,
+                            account,
+                            deadline
+                        ).send({
+                            from: account,
+                            value: two_amount
+                        })
+                            .on('transactionHash', function (hash) { })
+                            .on('confirmation', function (confirmationNumber, receipt) { })
                             .on('receipt', function (receipt) {
                                 // console.log('receipt=>%s', receipt);
                                 // console.log(receipt)
@@ -291,21 +291,20 @@ class SDK {
             // 判断授权
             // debugger
             if (_Authorizedamount1 > one_amount && _Authorizedamount2 > two_amount) {
-                console.log(111)
                 router.methods.addLiquidity(
-                        currency1,
-                        currency2,
-                        parseUnits(one_amount),
-                        parseUnits(two_amount),
-                        0,
-                        0,
-                        account,
-                        deadline
-                    ).send({
-                        from: account,
-                    })
-                    .on('transactionHash', function (hash) {})
-                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    currency1,
+                    currency2,
+                    parseUnits(one_amount),
+                    parseUnits(two_amount),
+                    0,
+                    0,
+                    account,
+                    deadline
+                ).send({
+                    from: account,
+                })
+                    .on('transactionHash', function (hash) { })
+                    .on('confirmation', function (confirmationNumber, receipt) { })
                     .on('receipt', function (receipt) {
                         console.log('receipt=>%s', receipt);
                         // console.log(receipt)
@@ -316,28 +315,28 @@ class SDK {
                     }); // If there's an out of gas error the second parameter is the receipt.
             } else if (_Authorizedamount1 < one_amount) {
                 TOKEN1.methods.approve(ROUTER, fund500).send({
-                        from: account
-                    })
-                    .on('transactionHash', function (hash) {})
-                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    from: account
+                })
+                    .on('transactionHash', function (hash) { })
+                    .on('confirmation', function (confirmationNumber, receipt) { })
                     .on('receipt', function (receipt) {
                         console.log('receipt=>%s', receipt);
                         console.log(receipt)
                         if (_Authorizedamount2 > two_amount) {
                             router.methods.addLiquidity(
-                                    currency1,
-                                    currency2,
-                                    parseUnits(one_amount),
-                                    parseUnits(two_amount),
-                                    0,
-                                    0,
-                                    account,
-                                    deadline
-                                ).send({
-                                    from: account,
-                                })
-                                .on('transactionHash', function (hash) {})
-                                .on('confirmation', function (confirmationNumber, receipt) {})
+                                currency1,
+                                currency2,
+                                parseUnits(one_amount),
+                                parseUnits(two_amount),
+                                0,
+                                0,
+                                account,
+                                deadline
+                            ).send({
+                                from: account,
+                            })
+                                .on('transactionHash', function (hash) { })
+                                .on('confirmation', function (confirmationNumber, receipt) { })
                                 .on('receipt', function (receipt) {
                                     console.log('receipt=>%s', receipt);
                                     // console.log(receipt)
@@ -351,29 +350,29 @@ class SDK {
                     .on('error', console.error); // If there's an out of gas error the second parameter is the receipt.
             } else if (_Authorizedamount2 < two_amount) {
                 TOKEN2.methods.approve(ROUTER, fund500).send({
-                        from: account
-                    })
-                    .on('transactionHash', function (hash) {})
-                    .on('confirmation', function (confirmationNumber, receipt) {})
+                    from: account
+                })
+                    .on('transactionHash', function (hash) { })
+                    .on('confirmation', function (confirmationNumber, receipt) { })
                     .on('receipt', function (receipt) {
                         console.log('receipt=>%s', receipt);
                         console.log(receipt)
                         if (_Authorizedamount1 > one_amount) {
                             console.log('创建流动性')
                             router.methods.addLiquidity(
-                                    currency1,
-                                    currency2,
-                                    parseUnits(one_amount),
-                                    parseUnits(two_amount),
-                                    0,
-                                    0,
-                                    account,
-                                    deadline
-                                ).send({
-                                    from: account,
-                                })
-                                .on('transactionHash', function (hash) {})
-                                .on('confirmation', function (confirmationNumber, receipt) {})
+                                currency1,
+                                currency2,
+                                parseUnits(one_amount),
+                                parseUnits(two_amount),
+                                0,
+                                0,
+                                account,
+                                deadline
+                            ).send({
+                                from: account,
+                            })
+                                .on('transactionHash', function (hash) { })
+                                .on('confirmation', function (confirmationNumber, receipt) { })
                                 .on('receipt', function (receipt) {
                                     console.log('receipt=>%s', receipt);
                                     // console.log(receipt)
@@ -388,35 +387,219 @@ class SDK {
             }
         })
     }
-
+    /**
+     * 获取所有lp /4
+     * @returns 
+     */
     async getLpBalance() {
-            let Factory = new this.web3.Contract(Factory_ABI, FACTORY)
-            console.log(Factory.methods)
-            let len = await Factory.methods.allPairsLength().call({}, 'latest')
-            // console.log(len)
-            let account = await this.getAddress();
-            const provider = new Provider(new JsonRpcProvider(LINK_NODE));
-            await provider.init();
+        let Factory = new this.web3.Contract(Factory_ABI, FACTORY)
+        // console.log(Factory.methods)
+        let len = await Factory.methods.allPairsLength().call({}, 'latest')
+        // console.log(len)
+        let account = await this.getAddress();
+        const provider = new Provider(new JsonRpcProvider(LINK_NODE));
+        await provider.init();
+        let calls = []
+        // console.log(tokenInfo.tokens.length)
+        for (var i = 0; i < len; i++) {
+            var lp_address = await Factory.methods.allPairs(i).call({}, 'latest')
+            // console.log(lp_address)
+            const abi = ERC20_ABI.concat([{
+                "constant": true,
+                "inputs": [],
+                "name": "token0",
+                "outputs": [{
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "constant": true,
+                "inputs": [],
+                "name": "token1",
+                "outputs": [{
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }]);
+            const contract = new Contract(lp_address, abi)
+            console.log(lp_address)
+            calls.push(contract.balanceOf(account))
+            calls.push(contract.allowance(account, ROUTER))
+            calls.push(contract.token0())
+            calls.push(contract.token1())
+            // calls.push(lp_address)
+            // calls.push(contract.address)
+        }
+        // console.log(calls)
 
-            let calls = []
-            // console.log(tokenInfo.tokens.length)
-            for (var i = 0; i < len; i++) {
-                var lp_address = await Factory.methods.allPairs(i).call({}, 'latest')
-                // console.log(lp_address)
-                const abi = ERC20_ABI.concat([{"constant":true,"inputs":[],"name":"token0","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"token1","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]);
-                const contract = new Contract(lp_address, abi)
-                calls.push(contract.balanceOf(account))
-                calls.push(contract.token0())
-                calls.push(contract.token1())
-                calls.push(contract.allowance(account, ROUTER))
+        // console.log(ERC20_ABI)
+        /* let calls = [
+            new Contract('0xa71edc38d189767582c38a3145b5873052c3e47a', ERC20_ABI).balanceOf(`0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3`)
+        ]; */
+        return provider.all(calls)
+    }
+    /**
+     * 
+     * @param {*} lpAddress lp合约地址
+     * @param {*} token usdt合约地址
+     * @param {*} Authorizedamount1 lp地址授权金额
+     * @param {*} lpBalance 去除流动性的金额
+     * @returns 
+     */
+    async removeLpETH(lpAddress, token, Authorizedamount1, lpBalance) {
+        const _lpBalance = parseUnits(lpBalance)
+        const _Authorizedamount1 = formatUnits(Authorizedamount1)
+        // console.log(_lpBalance)
+        // removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)
+        let account = await this.getAddress()
+        // console.log(FACTORY)
+        // let Factory = new this.web3.Contract(Factory_ABI, FACTORY)
+        const router = new this.web3.Contract(Router_ABI, ROUTER);
+        const deadline = Math.ceil((+Date.now()) / 1000) + 1800;
+        const fund500 = MaxUint256;
+        console.log(router.methods)
+        return new Promise((resolve, reject) => {
+            if (_Authorizedamount1 > lpBalance) {
+                router.methods.removeLiquidityETH(
+                    token,// 0xa71edc38d189767582c38a3145b5873052c3e47a usdttoken
+                    _lpBalance,// 0.0001
+                    0,
+                    0,
+                    account,// 我的钱包地址
+                    deadline
+                ).send({
+                    from: account
+                })
+                    .on('transactionHash', function (hash) { })
+                    .on('confirmation', function (confirmationNumber, receipt) { })
+                    .on('receipt', function (receipt) {
+                        // console.log('receipt=>%s', receipt);
+                        // console.log(receipt)
+                        resolve(receipt)
+                    })
+                    .on('error', () => {
+                        reject(-1)
+                    });
+            } else {
+                const USDT = new this.web3.Contract(ERC20_ABI, lpAddress);
+                USDT.methods.approve(ROUTER, fund500).send({
+                    from: account
+                })
+                    .on('transactionHash', function (hash) { })
+                    .on('confirmation', function (confirmationNumber, receipt) { })
+                    .on('receipt', async function (receipt) {
+                        await router.methods.removeLiquidityETH(
+                            token,// 0xa71edc38d189767582c38a3145b5873052c3e47a usdttoken
+                            _lpBalance,// 0.0001
+                            0,
+                            0,
+                            account,// 我的钱包地址
+                            deadline
+                        ).send({
+                            from: account
+                        })
+                            .on('transactionHash', function (hash) { })
+                            .on('confirmation', function (confirmationNumber, receipt) { })
+                            .on('receipt', function (receipt) {
+                                // console.log('receipt=>%s', receipt);
+                                // console.log(receipt)
+                                resolve(receipt)
+                            })
+                            .on('error', () => {
+                                reject(-1)
+                            });
+                    })
+                    .on('error', console.error); // If there's an out of gas error the second parameter is the receipt.
             }
-            // console.log(calls)
+        })
+    }
+    
+    /**
+     * 
+     * @param {*} lpAddress lp合约地址
+     * @param {*} token0 token0合约地址
+     * @param {*} token1 token1合约地址
+     * @param {*} Authorizedamount1 lp地址授权金额
+     * @param {*} lpBalance 去除流动性的金额
+     * @returns 
+     */
+    async removeLp(lpAddress, token0, token1, Authorizedamount1, lpBalance) {
+        const _lpBalance = parseUnits(lpBalance)
+        const _Authorizedamount1 = formatUnits(Authorizedamount1)
+        // console.log(_lpBalance)
+        // removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)
+        let account = await this.getAddress()
+        // console.log(FACTORY)
+        // let Factory = new this.web3.Contract(Factory_ABI, FACTORY)
+        const router = new this.web3.Contract(Router_ABI, ROUTER);
+        const deadline = Math.ceil((+Date.now()) / 1000) + 1800;
+        const fund500 = MaxUint256;
+        // console.log(router.methods)
 
-            // console.log(ERC20_ABI)
-            /* let calls = [
-                new Contract('0xa71edc38d189767582c38a3145b5873052c3e47a', ERC20_ABI).balanceOf(`0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3`)
-            ]; */
-            return provider.all(calls)
+        return new Promise((resolve, reject) => {
+            if (_Authorizedamount1 > lpBalance) {
+                router.methods.removeLiquidity(
+                    token0,
+                    token1,
+                    _lpBalance,// 0.0001
+                    0,
+                    0,
+                    account,// 我的钱包地址
+                    deadline
+                ).send({
+                    from: account
+                })
+                    .on('transactionHash', function (hash) { })
+                    .on('confirmation', function (confirmationNumber, receipt) { })
+                    .on('receipt', function (receipt) {
+                        // console.log('receipt=>%s', receipt);
+                        // console.log(receipt)
+                        resolve(receipt)
+                    })
+                    .on('error', () => {
+                        reject(-1)
+                    });
+            } else {
+                const USDT = new this.web3.Contract(ERC20_ABI, lpAddress);
+                USDT.methods.approve(ROUTER, fund500).send({
+                    from: account
+                })
+                    .on('transactionHash', function (hash) { })
+                    .on('confirmation', function (confirmationNumber, receipt) { })
+                    .on('receipt', async function (receipt) {
+                        await router.methods.removeLiquidity(
+                            token0,
+                            token1,
+                            _lpBalance,// 0.0001
+                            0,
+                            0,
+                            account,// 我的钱包地址
+                            deadline
+                        ).send({
+                            from: account
+                        })
+                            .on('transactionHash', function (hash) { })
+                            .on('confirmation', function (confirmationNumber, receipt) { })
+                            .on('receipt', function (receipt) {
+                                // console.log('receipt=>%s', receipt);
+                                // console.log(receipt)
+                                resolve(receipt)
+                            })
+                            .on('error', () => {
+                                reject(-1)
+                            });
+                    })
+                    .on('error', console.error); // If there's an out of gas error the second parameter is the receipt.
+            }
+        })
     }
 
 }

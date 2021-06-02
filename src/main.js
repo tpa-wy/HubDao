@@ -6,24 +6,24 @@ import store from './store'
 
 // 引入 element-ui 框架
 import {
-  container,
-  header,
-  aside,
-  main,
-  menu,
-  submenu,
-  menuItemGroup,
-  menuItem,
-  dropdown,
-  dropdownItem,
-  DropdownMenu,
-  Switch,
-  input,
-  progress,
-  checkbox,
-  message,
-  option,
-  select
+    container,
+    header,
+    aside,
+    main,
+    menu,
+    submenu,
+    menuItemGroup,
+    menuItem,
+    dropdown,
+    dropdownItem,
+    DropdownMenu,
+    Switch,
+    input,
+    progress,
+    checkbox,
+    message,
+    option,
+    select
 } from 'element-ui';
 
 import ECharts from 'vue-echarts'
@@ -71,13 +71,13 @@ Vue.prototype.$util = util
 Vue.config.productionTip = false
 // 检测用户是否安装MetaMask
 if (typeof window.ethereum !== 'undefined') {
-  console.log('MetaMask is installed!');
+    console.log('MetaMask is installed!');
 }
 // 使用懒加载
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload, {
-  loading: require('../public/assets/loading.gif'), //加载中图片，一定要有，不然会一直重复加载占位图
-  error: require('../public/assets/loading.gif') //加载失败图片
+    loading: require('../public/assets/loading.gif'), //加载中图片，一定要有，不然会一直重复加载占位图
+    error: require('../public/assets/loading.gif') //加载失败图片
 });
 
 import sdk from '@/util/index'
@@ -131,15 +131,37 @@ var obj = {
         .catch((error) => console.log(error)); */
 
 // 查询lp
-
+const {
+    // 将金额转换为小数
+    formatUnits,
+    // 将小数转换为金额
+    parseUnits
+} = require("@ethersproject/units");
 sdk.getLpBalance()
-  .then(list => {
-    console.log(list)
-  })
-  .catch(error => console.error(error))
+    .then(list => {
+        console.log(list)
+        for (var i = 0; i < list.length; i += 5) {
+            console.log(formatUnits(list[i]))
+            console.log(list[i + 1])
+            console.log(list[i + 2])
+        }
+    })
+    .catch(error => console.error(error))
+
+// 去除流动性
+// sdk.removeLpETH("0x1b498643DeB60bbaedC1fc1FD526a09937713AD9","0xa71edc38d189767582c38a3145b5873052c3e47a","0x00","0.0001")
+// sdk.removeLpETH("0x1b498643DeB60bbaedC1fc1FD526a09937713AD9","0xa71edc38d189767582c38a3145b5873052c3e47a","0xfffffffffffffffffffffffffffffffffffff","0.0001")
+
+// sdk.removeLp("0xc1467C024cF2c68Fc487dE4e6735a720CD508c38","0x25D2e80cB6B86881Fd7e07dd263Fb79f4AbE033c","0xa71edc38d189767582c38a3145b5873052c3e47a","0x00","0.0001")
+/* sdk.removeLp("0xc1467C024cF2c68Fc487dE4e6735a720CD508c38", "0x25D2e80cB6B86881Fd7e07dd263Fb79f4AbE033c", "0xa71edc38d189767582c38a3145b5873052c3e47a", "0xfffffffffffffffffffffffffffff", "0.0001")
+    .then(res => {
+        console.log(res)
+    })
+    .catch(error => console.error(error)) */
+
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
