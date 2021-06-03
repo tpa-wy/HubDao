@@ -48,6 +48,7 @@
                     maxlength="79"
                     spellcheck="false"
                     value=""
+                    @input="fromValue=fromValue.replace(/[^\d.]/g,'')"
                   />
                 </div>
                 <div class="liq-list-img">
@@ -92,6 +93,7 @@
                     maxlength="79"
                     spellcheck="false"
                     value=""
+                    @input="toValue=toValue.replace(/[^\d.]/g,'')"
                   />
                 </div>
                 <div class="liq-list-img">
@@ -100,7 +102,7 @@
                     @click="toValue = toToken.info"
                     src="../../../assets/icons-max@2x.png"
                   />
-                  <div class="list-block" @click="is_show = !is_show">
+                  <div class="list-block" @click="is_show2 = !is_show2">
                     <img class="list-row-map" :src="toToken.logoURI" />
                     <span class="list-row-span">{{ toToken.symbol }}</span>
                     <img
@@ -133,8 +135,31 @@
           </div>
 
           <div class="submit-cxt">
-            <div class="submit-btn" @click="addLiquidity">Approve</div>
-            <!-- <div class="submit-btn" @click="addLiquidity">Supply</div> -->
+            <!-- <div
+              class="submit-btn-1"
+              v-if="fromValue == '' && toValue == ''"
+              @click="addLiquidity"
+            >
+              Enter amount
+            </div>
+            <div
+              class="submit-btn-1"
+              disabled
+              v-if="fromValue>fromToken.info"
+              @click="addLiquidity"
+            >
+              Insufficient {{fromToken.symbol}} balance
+            </div>
+            <div
+              class="submit-btn-1"
+              disabled
+              v-if="fromValue<fromToken.info&&toValue>toToken.info"
+              @click="addLiquidity"
+            >
+              Insufficient {{toToken.symbol}} balance
+            </div> -->
+            <!-- <div class="submit-btn" @click="addLiquidity">Approve</div> -->
+            <div class="submit-btn" @click="addLiquidity">Supply</div>
           </div>
         </div>
       </div>
@@ -258,12 +283,24 @@ export default {
         this.fromToken.address === this.item.address ||
         this.toToken.address === this.item.address
       ) {
+        let address = this.fromToken.address;
+        let authorization = this.fromToken.authorization;
+        if (this.fromToken.address === this.item.address) {
+          address = this.toToken.address;
+          authorization = this.toToken.authorization;
+        }
+        console.log(
+          address,
+          authorization,
+          this.fromValue, // usdt的金额
+          this.toValue // mdx的金额
+        );
         this.$sdk
           .addLiquidityaETH(
-            "0xa71edc38d189767582c38a3145b5873052c3e47a",
-            "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-            "0.16",
-            "0.01"
+            address,
+            authorization,
+            this.fromValue, // usdt的金额
+            this.toValue // mdx的金额
           )
           .then((res) => console.log(res))
           .catch((error) => console.log(error));
@@ -275,7 +312,7 @@ export default {
             this.fromToken.authorization, // usdt的授权金额
             this.toToken.authorization, // usdt的授权金额
             this.fromValue, // usdt的金额
-            this.toValue// mdx的金额
+            this.toValue // mdx的金额
           )
           .then((res) => console.log(res))
           .catch((error) => console.log(error));
@@ -285,14 +322,14 @@ export default {
       this.$router.go(-1);
     },
     SelectCurrency(item) {
-      console.log(item);
+      console.log("fromToken", item);
       this.fromToken = item;
       this.is_show = false;
     },
     SelectCurrency2(item) {
       this.toToken = item;
       this.is_show2 = false;
-      console.log(item);
+      console.log("toToken", item);
     },
   },
   watch: {
@@ -425,6 +462,7 @@ export default {
       width: 54px;
       height: 29px;
       margin-right: 12px;
+      cursor: pointer;
     }
     .list-row-map {
       width: 34px;
@@ -447,6 +485,9 @@ export default {
       .list-block:hover {
         border-radius: 20px;
         background-color: #e0d9eb;
+      }
+      img {
+        border-radius: 20px;
       }
     }
     .add-btn {
@@ -509,6 +550,19 @@ export default {
     border-radius: 6px;
     background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
     color: #010033;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    user-select: none;
+  }
+  .submit-btn-1 {
+    width: 466px;
+    height: 58px;
+    margin: 12px 24px 0;
+    padding: 14px 0 15px;
+    border-radius: 6px;
+    background-color: rgb(221, 226, 235);
+    color: rgb(128, 142, 181);
     font-size: 20px;
     font-weight: 500;
     text-align: center;

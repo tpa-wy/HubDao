@@ -77,8 +77,8 @@
             </div>
 
             <div class="submit-group">
-              <div class="submit-btn submit-btn1">Add</div>
-              <div class="submit-btn submit-btn2">Remove</div>
+              <div class="submit-btn submit-btn1" @click="skip('add')">Add</div>
+              <div class="submit-btn submit-btn2" @click="skip('remove')">Remove</div>
             </div>
           </div>
         </div>
@@ -285,6 +285,14 @@ export default {
     console.log(lpList);
   },
   methods: {
+    skip(router){
+      if(router=='add') {
+        this.$router.push('/ExchangeHUB/Liquidity/Supply-Liquidity')
+      }else if(router=='remove'){
+        // 暂未页面
+        // this.$router.push('/ExchangeHUB/Liquidity/Supply-Liquidity')
+      }
+    },
     addLiquidity() {
       this.$router.push({
         path: "/ExchangeHUB/Liquidity/Supply-Liquidity",

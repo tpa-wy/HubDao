@@ -222,9 +222,9 @@ class SDK {
                     .on('transactionHash', function (hash) {})
                     .on('confirmation', function (confirmationNumber, receipt) {})
                     .on('receipt', function (receipt) {
-                        console.log('receipt=>%s', receipt);
+                        // console.log('receipt=>%s', receipt);
                         // console.log(receipt)
-                        // resolve(receipt)
+                        resolve(receipt)
                     })
                     .on('error', () => {
                         reject(-1)
@@ -309,7 +309,7 @@ class SDK {
                     .on('receipt', function (receipt) {
                         console.log('receipt=>%s', receipt);
                         // console.log(receipt)
-                        // resolve(receipt)
+                        resolve(receipt)
                     })
                     .on('error', () => {
                         reject(-1)
@@ -341,7 +341,7 @@ class SDK {
                                 .on('receipt', function (receipt) {
                                     console.log('receipt=>%s', receipt);
                                     // console.log(receipt)
-                                    // resolve(receipt)
+                                    resolve(receipt)
                                 })
                                 .on('error', () => {
                                     reject(-1)
@@ -356,8 +356,6 @@ class SDK {
                     .on('transactionHash', function (hash) {})
                     .on('confirmation', function (confirmationNumber, receipt) {})
                     .on('receipt', function (receipt) {
-                        console.log('receipt=>%s', receipt);
-                        console.log(receipt)
                         if (_Authorizedamount1 > one_amount) {
                             console.log('创建流动性')
                             router.methods.addLiquidity(
@@ -375,9 +373,7 @@ class SDK {
                                 .on('transactionHash', function (hash) {})
                                 .on('confirmation', function (confirmationNumber, receipt) {})
                                 .on('receipt', function (receipt) {
-                                    console.log('receipt=>%s', receipt);
-                                    // console.log(receipt)
-                                    // resolve(receipt)
+                                    resolve(receipt)
                                 })
                                 .on('error', () => {
                                     reject(-1)
@@ -403,6 +399,9 @@ class SDK {
         let calls = []
         // console.log(tokenInfo.tokens.length)
         for (var i = 0; i < len; i++) {
+            // console.log('---------------------')
+            // console.log(Factory.methods.allPairs(i))
+            // console.log('---------------------')
             var lp_address = await Factory.methods.allPairs(i).call({}, 'latest')
             // console.log(lp_address)
             const abi = ERC20_ABI.concat([{
