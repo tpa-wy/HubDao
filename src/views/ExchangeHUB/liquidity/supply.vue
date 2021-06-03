@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="block">
+    <div id="block">
       <div class="supply">
         <div class="top">
           <div class="header">
@@ -24,34 +24,92 @@
 
         <!-- 数据列表 -->
         <div class="liq-listview">
-          <div v-for="item in 2" :key="item" class="liq-item">
+          <div class="liq-item">
             <div class="liq-listitem">
               <div class="liq-list-row">
                 <div>Input</div>
-                <div class="list-item-right">Balance : 0.210304</div>
+                <div class="list-item-right">
+                  Balance : {{ fromToken.info }}
+                </div>
               </div>
               <div class="liq-list-row">
-                <div>0.0530543</div>
+                <div>
+                  <input
+                    v-model="fromValue"
+                    data-v-51d51e0a=""
+                    inputmode="decimal"
+                    title="Token Amount"
+                    autocomplete="off"
+                    autocorrect="off"
+                    type="text"
+                    pattern="^[0-9]*[.,]?[0-9]*$"
+                    placeholder="0.0"
+                    minlength="1"
+                    maxlength="79"
+                    spellcheck="false"
+                    value=""
+                  />
+                </div>
                 <div class="liq-list-img">
                   <img
                     class="list-row-max"
                     src="../../../assets/icons-max@2x.png"
+                    @click="fromValue = fromToken.info"
                   />
-                  <img
-                    class="list-row-map"
-                    src="../../../assets/icons-default-img-2@2x.png"
-                  />
-                  <span class="list-row-span">HT</span>
-                  <img
-                    class="list-row-down"
-                    src="../../../assets/down-icon.png"
-                  />
+                  <div class="list-block" @click="is_show = !is_show">
+                    <img class="list-row-map" :src="fromToken.logoURI" />
+                    <span class="list-row-span">{{ fromToken.symbol }}</span>
+                    <img
+                      class="list-row-down"
+                      src="../../../assets/down-icon.png"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="add-btn">
               <img class="add-button" src="../../../assets/add-icon.png" />
+            </div>
+            <div class="liq-listitem">
+              <div class="liq-list-row">
+                <div>Input</div>
+                <div class="list-item-right">Balance : {{ toToken.info }}</div>
+              </div>
+              <div class="liq-list-row">
+                <div>
+                  <input
+                    v-model="toValue"
+                    data-v-51d51e0a=""
+                    inputmode="decimal"
+                    title="Token Amount"
+                    autocomplete="off"
+                    autocorrect="off"
+                    type="text"
+                    pattern="^[0-9]*[.,]?[0-9]*$"
+                    placeholder="0.0"
+                    minlength="1"
+                    maxlength="79"
+                    spellcheck="false"
+                    value=""
+                  />
+                </div>
+                <div class="liq-list-img">
+                  <img
+                    class="list-row-max"
+                    @click="toValue = toToken.info"
+                    src="../../../assets/icons-max@2x.png"
+                  />
+                  <div class="list-block" @click="is_show = !is_show">
+                    <img class="list-row-map" :src="toToken.logoURI" />
+                    <span class="list-row-span">{{ toToken.symbol }}</span>
+                    <img
+                      class="list-row-down"
+                      src="../../../assets/down-icon.png"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -106,6 +164,25 @@
         </div>
       </div>
     </div>
+    <!-- 选择货币 -->
+    <div class="select-currency" v-show="is_show">
+      <Dialog :is_close.sync="is_show">
+        <SelectCurrency
+          :tokens="tokens"
+          :item="item"
+          @SelectCurrency="SelectCurrency"
+        ></SelectCurrency>
+      </Dialog>
+    </div>
+    <div class="select-currency" v-show="is_show2">
+      <Dialog :is_close.sync="is_show2">
+        <SelectCurrency
+          :tokens="tokens"
+          :item="item"
+          @SelectCurrency="SelectCurrency2"
+        ></SelectCurrency>
+      </Dialog>
+    </div>
   </div>
 </template>
 
@@ -117,7 +194,22 @@ const {
   parseUnits,
 } = require("@ethersproject/units");
 import tokenInfo from "../../../../public/js/tokenlist.json";
+import SelectCurrency from "../../../components/Hub_Swap/token";
+
 export default {
+  data() {
+    return {
+      tokens: [],
+      fromToken: [],
+      toToken: [],
+      fromValue: "",
+      toValue: "",
+      is_show: false,
+      is_show2: false,
+      item: {},
+    };
+  },
+  components: { SelectCurrency },
   async mounted() {
     // 获取当前HT的余额
     if (await this.$sdk.getAddress()) {
@@ -145,6 +237,7 @@ export default {
               money = "0";
             }
             this.$set(tokenInfo.tokens[i / 2], "info", money);
+            this.$set(tokenInfo.tokens[i / 2], "authorization", list[i + 1]);
             // tokenInfo.tokens[i].info = formatUnits(list[i]);
             // console.log(tokenInfo.tokens[i].info)
           }
@@ -153,37 +246,53 @@ export default {
     }
 
     this.tokens = [...tokenInfo.tokens];
+    this.fromToken = this.item;
+    this.toToken = this.tokens[0];
     // console.log(this.tokens);
     // console.log(tokenInfo);
   },
   methods: {
     // 添加流动性
     addLiquidity() {
-      console.log("添加流动性");
-      /* this.$sdk
-        .addLiquidityaETH(
-          "0xa71edc38d189767582c38a3145b5873052c3e47a",
-          "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-          "0.16",
-          "0.01"
-        )
-        .then((res) => console.log(res))
-        .catch((error) => console.log(error)); */
-      /* this.$sdk
-        .addLiquidity(
-          "0xa71edc38d189767582c38a3145b5873052c3e47a", // usdt合约
-          "0x25D2e80cB6B86881Fd7e07dd263Fb79f4AbE033c", // mdx合约
-          "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", // usdt的授权金额
-          "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", // usdt的授权金额
-        //   "0x00", // mdx的授权金额
-          "0.01", // usdt的金额
-          "0.0039390087" // mdx的金额
-        )
-        .then((res) => console.log(res))
-        .catch((error) => console.log(error)); */
+      if (
+        this.fromToken.address === this.item.address ||
+        this.toToken.address === this.item.address
+      ) {
+        this.$sdk
+          .addLiquidityaETH(
+            "0xa71edc38d189767582c38a3145b5873052c3e47a",
+            "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "0.16",
+            "0.01"
+          )
+          .then((res) => console.log(res))
+          .catch((error) => console.log(error));
+      } else {
+        this.$sdk
+          .addLiquidity(
+            this.fromToken.address, // usdt合约
+            this.toToken.address, // usdt合约
+            this.fromToken.authorization, // usdt的授权金额
+            this.toToken.authorization, // usdt的授权金额
+            this.fromValue, // usdt的金额
+            this.toValue// mdx的金额
+          )
+          .then((res) => console.log(res))
+          .catch((error) => console.log(error));
+      }
     },
     backPage() {
       this.$router.go(-1);
+    },
+    SelectCurrency(item) {
+      console.log(item);
+      this.fromToken = item;
+      this.is_show = false;
+    },
+    SelectCurrency2(item) {
+      this.toToken = item;
+      this.is_show2 = false;
+      console.log(item);
     },
   },
   watch: {
@@ -260,7 +369,7 @@ export default {
   }
 
   .liq-listview {
-    margin: 57px 64px 0px 64px;
+    margin: 26px 64px 0px 64px;
     display: flex;
     flex-direction: column;
     .liq-listitem {
@@ -278,7 +387,25 @@ export default {
     }
     .liq-list-row {
       display: flex;
+      width: 100%;
       justify-content: space-between;
+      input {
+        outline: none;
+        border: none;
+        flex: 1 1 auto;
+        background-color: transparent;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0px;
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+        width: 100%;
+        height: 38px;
+        font-family: NotoSansCJKkr;
+        font-size: 16px;
+      }
     }
     .list-item-right {
       color: #444444;
@@ -308,6 +435,19 @@ export default {
     .liq-list-img {
       display: flex;
       align-items: center;
+      > .list-block {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .list-block:hover {
+        border-radius: 20px;
+        background-color: #e0d9eb;
+      }
     }
     .add-btn {
       display: flex;
@@ -321,15 +461,15 @@ export default {
       height: 30px;
     }
     .liq-item:last-child .add-btn {
-      height: 26px;
+      // height: 26px;
     }
     .liq-item:last-child .add-button {
-      display: none;
+      // display: none;
     }
   }
 
   .btm-liq {
-    margin-top: 0px;
+    // margin-top: 0px;
   }
   .btm-liq-item {
     padding: 23px 17px 20px 20px;

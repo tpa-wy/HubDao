@@ -1,6 +1,6 @@
 <template>
   <div class="swap">
-    <div class="block">
+    <div id="block">
       <div class="header">
         <div class="title">Exchange</div>
         <div class="icon">
@@ -191,18 +191,6 @@ export default {
   },
   async mounted() {
     // 获取当前HT的余额
-
-    /* sdk
-      .getHTCurrency()
-      .then((res) => {
-        // 得到HT的余额
-        console.log(formatUnits(res));
-      })
-      .catch((error) => {
-        console.log("error=>", error);
-      });
-     */
-
     if (await this.$sdk.getAddress()) {
       // 获取HT的余额
       this.item = {
@@ -313,7 +301,7 @@ export default {
   // padding-top: 72px;
   width: 594px;
   margin: 0 auto;
-  > .block {
+  > #block {
     width: 594px;
     height: 600px;
     margin: 0 auto;

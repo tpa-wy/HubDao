@@ -278,7 +278,7 @@ body {
       // padding: 4px 22px 6px;
       border-radius: 18.5px;
       box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
-      border: solid 1px #fff2c4;
+      // border: solid 1px #fff2c4;
       display: inline-block;
       background-color: #2f303f;
       .Connect {
@@ -307,7 +307,7 @@ body {
       // margin: 4px 15px 1px 1547px;
       border-radius: 18.5px;
       box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
-      border: solid 1px #fff2c4;
+      // border: solid 1px #fff2c4;
       display: inline-block;
       background-color: rgb(255, 104, 113);
       .heUZLp {
