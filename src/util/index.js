@@ -72,7 +72,6 @@ class SDK {
         // console.log(this.accountList)
         // console.log(this.contract)
     }
-    // 获取账户余额
     /**
      * 获取账户余额
      * @param {*} address 链接
@@ -447,7 +446,7 @@ class SDK {
         return provider.all(calls)
     }
     /**
-     * 
+     * 去除单流动性
      * @param {*} lpAddress lp合约地址
      * @param {*} token usdt合约地址
      * @param {*} Authorizedamount1 lp地址授权金额
@@ -521,9 +520,9 @@ class SDK {
             }
         })
     }
-    
+
     /**
-     * 
+     * 去除lp流动性
      * @param {*} lpAddress lp合约地址
      * @param {*} token0 token0合约地址
      * @param {*} token1 token1合约地址
@@ -601,7 +600,39 @@ class SDK {
             }
         })
     }
+    async swapExactETH() {
+        const router = new this.web3.Contract(Router_ABI, ROUTER);
+        const account = await this.getAddress()
+        const deadline = Math.ceil((+Date.now()) / 1000) + 1800;
 
+        console.log(await router.methods.swapExactETHForTokensSupportingFeeOnTransferTokens(
+            0,
+            ['0x5545153ccfca01fbd7dd11c0b23ba694d9509a6f',"0xa71edc38d189767582c38a3145b5873052c3e47a"],
+            account,
+            deadline,
+            ).send({
+                from: account,
+                value:parseUnits('0.001')
+        }))
+    }
+    async swapExactTokensForETH() {
+        // 1.授权usdt一个无穷大的数
+        // 2.调用router的方法
+        const router = new this.web3.Contract(Router_ABI, ROUTER);
+        console.log(router.methods)
+        const account = await this.getAddress()
+        const deadline = Math.ceil((+Date.now()) / 1000) + 1800;
+
+        console.log(await router.methods.swapExactTokensForETHSupportingFeeOnTransferTokens(
+            parseUnits('0.001'),
+            0,
+            ["0xa71edc38d189767582c38a3145b5873052c3e47a","0x5545153ccfca01fbd7dd11c0b23ba694d9509a6"],
+            account,
+            deadline,
+            ).send({
+                from: account,
+        }))
+    }
 }
 
 const sdk = new SDK()

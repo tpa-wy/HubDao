@@ -130,7 +130,7 @@ var obj = {
         .then((res) => console.log(res))
         .catch((error) => console.log(error)); */
 
-// 查询lp
+/* // 查询lp
 const {
     // 将金额转换为小数
     formatUnits,
@@ -147,7 +147,7 @@ sdk.getLpBalance()
         }
     })
     .catch(error => console.error(error))
-
+ */
 // 去除流动性
 // sdk.removeLpETH("0x1b498643DeB60bbaedC1fc1FD526a09937713AD9","0xa71edc38d189767582c38a3145b5873052c3e47a","0x00","0.0001")
 // sdk.removeLpETH("0x1b498643DeB60bbaedC1fc1FD526a09937713AD9","0xa71edc38d189767582c38a3145b5873052c3e47a","0xfffffffffffffffffffffffffffffffffffff","0.0001")
@@ -159,6 +159,8 @@ sdk.getLpBalance()
     })
     .catch(error => console.error(error)) */
 
+    // sdk.swapExactETH()
+    sdk.swapExactTokensForETH()
 
 new Vue({
     router,
