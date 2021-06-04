@@ -392,7 +392,7 @@ export default {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #000000;
+  .font-color1;
   .top {
     .header-back-icon {
       width: 32px;
@@ -413,10 +413,10 @@ export default {
       height: 120px;
       padding: 12px 20px 20px;
       border-radius: 6px;
-      background-color: @list-item-back;
+      .theme-list-back;
     }
     .liq-title {
-      color: #444444;
+      .font-color2;
       font-size: 14px;
       font-weight: 300;
       height: 30px;
@@ -445,15 +445,15 @@ export default {
       }
     }
     .list-item-right {
-      color: #444444;
+      .font-color2;
     }
     .liq-list-row:last-child {
       .layout-mt24;
       font-size: 26px;
-      color: #2f303f;
+      .font-color7;
     }
     .list-row-span {
-      color: #000000;
+      .font-color1;
       font-size: 20px;
       font-weight: 500;
       margin-right: 4px;
@@ -516,18 +516,19 @@ export default {
     padding: 23px 17px 20px 20px;
     border-radius: 6px;
     border: solid 1px #d8d8d8;
+    .pink-border-color3;
     display: flex;
     flex-wrap: nowrap;
   }
   .liq-i-num {
-    color: #2f303f;
+    .font-color7;
     font-family: NotoSansCJKkr;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
   }
   .liq-i-txt {
-    color: #a5a5a5;
+    .font-color11;
     font-family: NotoSansCJKkr;
     font-size: 16px;
     font-weight: 500;
@@ -548,12 +549,12 @@ export default {
     margin: 12px 24px 0;
     padding: 14px 0 15px;
     border-radius: 6px;
-    background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
-    color: #010033;
     font-size: 20px;
     font-weight: 500;
     text-align: center;
     user-select: none;
+    .font-color5;
+    .black-theme-img2;
   }
   .submit-btn-1 {
     width: 466px;
@@ -578,7 +579,8 @@ export default {
   padding: 23px 33px 19px 33px;
   border-radius: 6px;
   border: solid 1px #d8d8d8;
-  background-color: #ffffff;
+  .pink-border-color3;
+  .theme-box-back;
 }
 .wallet-box {
   display: flex;
@@ -587,12 +589,12 @@ export default {
   margin-bottom: 100px;
 }
 .w-title {
-  color: #ffa402;
+  .font-color9;
   font-size: 16px;
   margin-bottom: 6px;
 }
 .w-text {
-  color: #000000;
+  .font-color1;
   font-size: 16px;
   font-weight: 300;
 }

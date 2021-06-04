@@ -174,7 +174,7 @@ export default {
   padding: 21px 0 0;
   border-radius: 8px;
   border: solid 1px #979797;
-  background-color: #ffffff;
+  .theme-box-back;
   > .title {
     height: 36px;
     display: flex;
@@ -188,7 +188,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
     margin-bottom: 22px;
     > .font {
       margin-right: 8px;
@@ -211,6 +211,7 @@ export default {
     // padding: 20px 19px 19.7px 16px;
     border-radius: 6px;
     border: solid 1px #a5a5a5;
+    .pink-border-color1;
     .icon-search {
       // width: 30px;
       // height: 30px;
@@ -228,14 +229,14 @@ export default {
       width: 16px;
       height: 84px;
       border-radius: 8px;
-      background-color: #eaeaea;
+      .theme-back2;
       &::-webkit-scrollbar {
         width: 16px;
         // height: 528px;
         margin: 38px 0 0 3px;
         padding: 0 0 444px;
         border-radius: 8px;
-        background-color: #eaeaea;
+        .theme-back2;
       }
     }
     &::-webkit-scrollbar-thumb {
@@ -270,12 +271,12 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000000;
+        .font-color1;
       }
     }
     .block {
       .checked {
-        background-color: #f5f5f5;
+        .theme-back1;
       }
       .block-item {
         cursor: pointer;
@@ -304,7 +305,7 @@ export default {
             font-stretch: normal;
             font-style: normal;
             letter-spacing: normal;
-            color: #000000;
+            .font-color1;
           }
         }
         .right {
@@ -334,7 +335,7 @@ export default {
         }
       }
       .block-item:hover {
-        background-color: #f5f5f5;
+        .theme-back1;
       }
     }
   }

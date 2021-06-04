@@ -247,7 +247,6 @@ a:focus,
     min-width: 200px;
     // box-s
     height: auto;
-    background-color: #fff;
     border-radius: 6px;
     top: 30px;
     z-index: 2003;
@@ -260,7 +259,8 @@ a:focus,
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
+    .theme-box-back;
   }
 }
 .el-input--suffix .el-input__inner {
@@ -273,11 +273,12 @@ a:focus,
   line-height: 30px;
 }
 .el-select .el-input.is-focus .el-input__inner {
-  border-color: #dcdfe6;
+  
   padding-right: 30px;
   width: 100px;
   height: 30px;
   line-height: 30px;
+  .pink-border-color;
 }
 
 // 盒子
@@ -287,7 +288,7 @@ a:focus,
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  .mask-back;
 }
 .button {
   cursor: pointer;

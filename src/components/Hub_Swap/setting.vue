@@ -106,7 +106,7 @@ export default {
       padding: 21px 19px 57px 47px;
       border-radius: 9px;
       border: solid 1px #979797;
-      background-color: #ffffff;
+      .theme-box-back;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -120,7 +120,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #eb3232;
+        
       }
       > .title {
         //   width: 98px;
@@ -136,7 +136,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000000;
+        .font-color1;
       }
       .block {
         margin-bottom: 20px;
@@ -150,7 +150,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #000000;
+          .font-color1;
           display: flex;
           align-items: center;
           > .icon-info {
@@ -169,12 +169,8 @@ export default {
             margin-bottom: 17px;
             display: flex;
             .checked {
-              //   width: 90px;
-              //   height: 40px;
-              //   margin: 22px 8px 17px 0;
-              //   padding: 8px 25px 8px 26px;
               border-radius: 6px;
-              background-color: #2f303f;
+              
               font-family: NotoSansCJKkr;
               font-size: 16px;
               font-weight: 500;
@@ -182,14 +178,15 @@ export default {
               font-style: normal;
               line-height: 40px;
               letter-spacing: normal;
-              color: #ffffff;
+              .font-color4;
+              .theme-pink-back;
             }
             div {
               cursor: pointer;
               width: 90px;
               height: 40px;
               border-radius: 6px;
-              background-color: #ebebeb;
+              .theme-pink-back1;
               font-family: NotoSansCJKkr;
               font-size: 16px;
               font-weight: 500;
@@ -197,7 +194,7 @@ export default {
               font-style: normal;
               line-height: 40px;
               letter-spacing: normal;
-              color: #727272;
+              .font-color6;
               text-align: center;
               margin-right: 8px;
             }
@@ -218,7 +215,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #000000;
+              .font-color1;
             }
           }
         }
@@ -246,7 +243,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #2f303f;
+          .font-color7;
         }
       }
       .block-3 {

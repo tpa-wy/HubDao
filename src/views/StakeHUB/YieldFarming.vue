@@ -542,12 +542,7 @@ export default {
   margin-bottom: 100px;
   .header {
     height: 206px;
-    background-image: linear-gradient(
-      275deg,
-      #11122e 99%,
-      #2c3053 31%,
-      #070721 2%
-    );
+    .black-theme-img7;
     > .title {
       padding-top: 48px;
       // width: 244px;
@@ -559,7 +554,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #ffffff;
+      .font-color4;
     }
     > .connect {
       // width: 442px;
@@ -572,7 +567,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #ffffff;
+      .font-color4;
     }
   }
 
@@ -594,7 +589,6 @@ export default {
         .icon-block-1 {
           width: 22px;
           height: 22px;
-          // background-color: #f00;
           margin-right: 10px;
           cursor: pointer;
         }
@@ -606,10 +600,7 @@ export default {
             width: 100%;
             height: 100%;
           }
-          // background-image: url(../../../public/assets/icons-listview-on.png);
-          // background-size: 100% 100%;
-          // background-color: #f00;
-          //   margin-right: 70px;
+          
         }
         .icon-checked {
           fill: rgb(31, 199, 212);
@@ -631,7 +622,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #a5a5a5;
+            .font-color11;
           }
         }
         .live {
@@ -641,7 +632,7 @@ export default {
           // margin: 0 366px 0 40px;
           padding: 0 20px 0 0;
           border-radius: 24px;
-          background-color: #d8d8d8;
+          .theme-pink-back2;
           display: flex;
           align-items: center;
           .live-1 {
@@ -650,7 +641,6 @@ export default {
             // margin: 0 21px 0 0;
             padding: 3px 16px 5px 17px;
             border-radius: 16px;
-            background-color: #000;
             font-family: NotoSansCJKkr;
             font-size: 16px;
             font-weight: bold;
@@ -659,7 +649,8 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #fff;
+            .font-color4;
+            .theme-black-back;
           }
           .live-2 {
             width: 65px;
@@ -673,7 +664,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #000;
+            .font-color1;
             margin-left: 21px;
           }
         }
@@ -697,7 +688,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: right;
-            color: #000;
+            .font-color1;
           }
         }
         .select {
@@ -732,12 +723,9 @@ export default {
       .block-item {
         width: 418px;
         overflow: hidden;
-        // margin-right: 24px;
         margin-top: 30px;
         border-radius: 8px;
-        // box-shadow: 3px 3px 11px 1px rgba(1, 0, 51, 0.65);
-        // background-color: #181742;
-        background-color: #fff;
+        .theme-box-back;
         > .content {
           padding: 35px 0 0 24px;
         }
@@ -775,7 +763,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #000;
+            .font-color1;
             margin-left: 70px;
           }
         }
@@ -819,7 +807,7 @@ export default {
             margin: 22px 1px 42px 9px;
             padding: 2px 12px 2px 13px;
             border-radius: 4px;
-            background-color: #2f303f;
+            .theme-pink-back;
             font-family: NotoSansCJKkr;
             font-size: 16px;
             font-weight: 500;
@@ -828,7 +816,7 @@ export default {
             line-height: normal;
             letter-spacing: 0.5px;
             text-align: center;
-            color: #fff;
+            .font-color4;
           }
         }
         .line {
@@ -847,7 +835,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #000;
+              .font-color1;
             }
             .line-row-2 {
               width: 69px;
@@ -860,7 +848,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: right;
-              color: #000;
+              .font-color1;
             }
           }
         }
@@ -875,7 +863,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #a5a5a5;
+            .font-color11;
             span {
               margin-left: 5px;
               font-weight: bold;
@@ -897,7 +885,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #a5a5a5;
+              .font-color11;
             }
             .button {
               cursor: pointer;
@@ -935,7 +923,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: center;
-              color: #fff;
+              .font-color4;
             }
           }
         }
@@ -956,13 +944,13 @@ export default {
           font-style: normal;
           letter-spacing: normal;
           text-align: center;
-          color: #000;
+          .font-color1;
           cursor: pointer;
           .icon {
             margin-left: 8px;
             width: 9px;
             height: 10px;
-            // background-color: #f00;
+            
             background-image: url(../../../public/assets/down-icon.png);
             background-size: 100% 100%;
             transform: rotate(360deg);
@@ -1010,7 +998,8 @@ export default {
         // padding: 20px 101px 33px 36px;
         border-radius: 8px;
         border: solid 1px #d8d8d8;
-        background-color: #ffffff;
+        .pink-border-color3;
+        .theme-box-back;
         margin-bottom: 12px;
         .top {
           padding-left: 35px;
@@ -1019,19 +1008,16 @@ export default {
             display: flex;
             position: relative;
             margin-top: 40px;
-            // align-items: center;
             .icon {
               width: 32px;
               height: 32px;
               border-radius: 50%;
               position: absolute;
             }
-            /* .icon-1 {
-              // background-color: #f00;
-            } */
+            
             .icon-2 {
               left: 25px;
-              // background-color: #ff0;
+              
             }
           }
           > .title {
@@ -1043,7 +1029,7 @@ export default {
             font-stretch: normal;
             font-style: normal;
             letter-spacing: normal;
-            color: #000000;
+            .font-color1;
           }
           .Earned {
             .top {
@@ -1054,7 +1040,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #000000;
+              .font-color1;
               margin-top: 20px;
             }
             .bottom {
@@ -1068,7 +1054,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #000000;
+              .font-color1;
             }
           }
           .APR {
@@ -1080,7 +1066,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #000000;
+              .font-color1;
               margin-top: 20px;
             }
             .bottom {
@@ -1098,7 +1084,7 @@ export default {
                 font-style: normal;
                 line-height: normal;
                 letter-spacing: normal;
-                color: #000000;
+                .font-color1;
               }
               .icon {
                 width: 29px;
@@ -1106,7 +1092,7 @@ export default {
                 margin: 0px 0 0px 10px;
                 // padding: 0 3px 0 4px;
                 border-radius: 2px;
-                background-color: #2f303f;
+               .theme-pink-back;
                 font-family: NotoSansCJKkr;
                 font-size: 11px;
                 font-weight: 500;
@@ -1115,7 +1101,7 @@ export default {
                 line-height: 17px;
                 text-align: center;
                 letter-spacing: 0.83px;
-                color: #ffffff;
+                .font-color4;
               }
             }
           }
@@ -1128,7 +1114,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #000000;
+              .font-color1;
               margin-top: 20px;
             }
             .bottom {
@@ -1146,7 +1132,7 @@ export default {
                 font-style: normal;
                 line-height: normal;
                 letter-spacing: normal;
-                color: #000000;
+                .font-color1;
               }
               .icon {
                 width: 20px;
@@ -1163,7 +1149,7 @@ export default {
             user-select: none;
             display: flex;
             justify-content: center;
-            // align-items: center;
+           
             margin-top: 0px;
             line-height: 112px;
             cursor: pointer;
@@ -1175,11 +1161,10 @@ export default {
             font-style: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #727272;
+            .font-color6;
             .icon {
               width: 9px;
               height: 10px;
-              // background-color: #f00;
               background-image: url(../../../public/assets/down-icon.png);
               transform: rotate(360deg);
               background-size: 100% 100%;
@@ -1190,6 +1175,7 @@ export default {
         }
         > .bottom {
           border-top: 1px solid #d8d8d8;
+          .pink-border-color3;
           padding-left: 35px;
           padding-top: 24px;
 
@@ -1214,7 +1200,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #2f303f;
+              .font-color7;
               svg {
                 margin-left: 6px;
               }
@@ -1227,9 +1213,9 @@ export default {
             padding: 19px 30px 20px 24px;
             border-radius: 6px;
             border: solid 1px #f5f5f5;
-            background-color: rgba(245, 245, 245, 0.41);
+            .theme-pink-back3;
             .title {
-              color: #ffa402;
+              .font-color9;
               font-family: NotoSansCJKkr;
               font-size: 14px;
               font-weight: 500;
@@ -1237,10 +1223,10 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #727272;
+              .font-color6;
               span {
                 font-weight: bold;
-                color: #ffa402;
+                .font-color9;
               }
             }
             .content {
@@ -1256,7 +1242,7 @@ export default {
                 font-style: normal;
                 line-height: normal;
                 letter-spacing: normal;
-                color: #a5a5a5;
+                .font-color11;
               }
               .button {
                 width: 125px;
@@ -1271,10 +1257,10 @@ export default {
                 font-style: normal;
                 letter-spacing: normal;
                 text-align: center;
-                color: #a5a5a5;
+                .font-color11;
                 opacity: 0.64;
                 border-radius: 4px;
-                background-color: #d8d8d8;
+                .theme-pink-back2;
               }
             }
           }
@@ -1285,7 +1271,7 @@ export default {
             padding: 19px 22px 20px 30px;
             border-radius: 6px;
             border: solid 1px #f5f5f5;
-            background-color: rgba(245, 245, 245, 0.41);
+            .theme-pink-back3;
             .title {
               font-family: NotoSansCJKkr;
               font-size: 14px;
@@ -1294,10 +1280,10 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #ffa402;
+              .font-color9;
               span {
                 font-weight: 500;
-                color: #727272;
+                .font-color6;
               }
             }
             .button {
@@ -1312,10 +1298,10 @@ export default {
               font-style: normal;
               letter-spacing: normal;
               text-align: center;
-              color: #010033;
+              .font-color5;
               margin: 18px 0 0;
               border-radius: 6px;
-              background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
+              .black-theme-img2;
             }
           }
         }

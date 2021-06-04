@@ -27,7 +27,7 @@ export default {
   padding: 21px 19px 32px 36px;
   border-radius: 9px;
   border: solid 1px #979797;
-  background-color: #ffffff;
+  .theme-box-back;
   .title {
     margin: 11px 139px 48px 3px;
     font-family: NotoSansCJKkr;
@@ -37,7 +37,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   .img-center {
     text-align: center;
@@ -52,7 +52,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #2f303f;
+    .font-color7;
     margin-bottom: 48px;
   }
   .button {
@@ -62,7 +62,7 @@ export default {
     margin: 48px 4px 0 0;
     padding: 6px 119.8px 15px 127.6px;
     border-radius: 6px;
-    background-image: linear-gradient(to left, #44465e, #2f303f 0%);
+    .black-theme-img1;
     font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 500;
@@ -70,7 +70,7 @@ export default {
     font-style: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #ffffff;
+    .font-color4;
   }
 }
 </style>

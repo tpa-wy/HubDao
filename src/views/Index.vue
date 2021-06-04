@@ -205,7 +205,7 @@ export default {
     line-height: normal;
     letter-spacing: 7.5px;
     text-align: center;
-    color: @font-color;
+    .font-color1;
   }
   .block {
     margin-top: 40px;
@@ -227,7 +227,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: @font-color;
+            .font-color1;
             margin-left: 30px;
           }
           .time {
@@ -257,13 +257,11 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: @font-color;
+          .font-color1;
         }
         .canvas {
-          // background-color: #f00;
           width: 100%;
           height: 100%;
-          // height: 130px;
         }
       }
       .Rectangle-Copy-13 {
@@ -274,9 +272,7 @@ export default {
         margin-right: 60px;
         padding: 18px 0 24px;
         border-radius: 10px;
-        // box-shadow: 5px 5px 20px 8px rgba(2, 1, 29, 0.58);
-        // background-color: #0f1145;
-        background-color: @boxcolor;
+        .theme-box-back;
       }
       .Rectangle-Copy-14 {
         width: 547px;
@@ -286,11 +282,10 @@ export default {
         border-radius: 10px;
         // box-shadow: 5px 5px 20px 8px rgba(2, 1, 29, 0.58);
         // background-color: #0f1145;
-        background-color: @boxcolor;
-
+        .theme-box-back;
         .block-td-column:nth-child(1) {
           div {
-            color: #ffa402;
+            .font-color9;
           }
         }
         .block-td-column:nth-last-of-type(1) {
@@ -301,7 +296,7 @@ export default {
             height: 1px;
             margin: 0 0 14px;
             opacity: 0.27;
-            background-color: @font-color;
+            .font-color1;
             position: absolute;
             bottom: -8px;
           }
@@ -311,9 +306,9 @@ export default {
             height: 1px;
             margin: 0 0 14px;
             opacity: 0.27;
-            background-color: @font-color;
             position: absolute;
             top: 0;
+			.font-color1;
           }
         }
         .block-td-column {
@@ -325,8 +320,8 @@ export default {
             height: 1px;
             margin: 0 0 14px;
             opacity: 0.27;
-            background-color: @font-color;
             position: absolute;
+			.font-color1;
           }
           > div:nth-child(1) {
             margin-right: 36px;
@@ -345,9 +340,9 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: @font-color;
+            .font-color1;
             span {
-              color: @font-color;
+              .font-color1;
             }
           }
         }
@@ -366,7 +361,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: @font-color;
+          .font-color1;
         }
         .content {
           display: flex;
@@ -410,7 +405,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: right;
-            color: @font-color;
+            .font-color1;
           }
         }
       }
@@ -426,7 +421,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: @font-color;
+          .font-color1;
         }
         .table {
           .th {
@@ -441,7 +436,7 @@ export default {
               width: 100%;
               height: 1px;
               opacity: 0.3;
-              background-color: #d8d8d8;
+              .theme-pink-back2;
             }
             > div {
               // flex: 1;
@@ -460,7 +455,7 @@ export default {
               letter-spacing: normal;
               text-align: left;
               padding-left: 31px;
-              color: @font-color;
+              .font-color1;
             }
             .APY {
               width: 150px;
@@ -475,7 +470,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: left;
-              color: @font-color;
+              .font-color1;
             }
             .Add-Liquidity {
               width: 74px;
@@ -489,7 +484,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: @font-color;
+              .font-color1;
             }
             .Trade {
               width: 40px;
@@ -503,7 +498,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: @font-color;
+              .font-color1;
             }
           }
           .td {
@@ -520,7 +515,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: @font-color;
+              .font-color1;
             }
             .APY-td {
               width: 150px;
@@ -532,14 +527,14 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: @font-color;
+              .font-color1;
             }
             .button-1 {
               width: 75px;
               height: 23px;
               padding: 2px 19px 3px;
               border-radius: 4px;
-              background-color: #ffa402;
+              .theme-yellow-back;
               cursor: pointer;
               font-family: NotoSansCJKkr;
               font-size: 12px;
@@ -549,7 +544,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: center;
-              color: #2f303f;
+              .font-color7;
             }
             .button-2 {
               cursor: pointer;
@@ -568,7 +563,7 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: center;
-              color: #ffffff;
+              .font-color4;
             }
           }
         }

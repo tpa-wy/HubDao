@@ -221,7 +221,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   > .smail-title {
     height: 36px;
@@ -233,7 +233,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
     margin-bottom: 78px;
   }
   .operation {
@@ -255,7 +255,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #727272;
+        .font-color6;
       }
     }
     .nav {
@@ -264,7 +264,7 @@ export default {
       //   margin: 79px 46px 59px 40px;
       //   padding: 0 21px 0 21px;
       border-radius: 24px;
-      background-color: #d8d8d8;
+      .theme-pink-back2;
       display: flex;
       justify-content: space-between;
       .nav-item {
@@ -277,17 +277,15 @@ export default {
         font-style: normal;
         letter-spacing: normal;
         text-align: center;
-        color: #ffffff;
+        .font-color4;
         margin-right: 20px;
       }
       .checked {
         width: 66px;
         height: 32px;
         line-height: 32px;
-        // margin: 0 21px 0 0;
-        // padding: 3px 16px 5px 17px;
         border-radius: 16px;
-        background-color: #000000;
+        .theme-black-back;
       }
     }
     .help-button {
@@ -302,7 +300,7 @@ export default {
       //   margin: 79px 397px 59px 46px;
       //   padding: 3px 12px 5px 13px;
       border-radius: 6px;
-      background-color: #2f303f;
+      
       font-family: NotoSansCJKkr;
       font-size: 16px;
       font-weight: 500;
@@ -310,7 +308,8 @@ export default {
       font-stretch: normal;
       font-style: normal;
       letter-spacing: 0.5px;
-      color: #ffffff;
+      .font-color4;
+      .theme-pink-back;
       .icon {
         width: 19px;
         height: 19px;
@@ -334,13 +333,15 @@ export default {
       border-radius: 8px;
       box-shadow: 3px 3px 11px 1px rgba(165, 165, 165, 0.53);
       border: solid 1px #d8d8d8;
-      background-color: #ffffff;
+      .pink-border-color3;
+      .theme-box-back;
       margin-bottom: 48px;
       .header {
         height: 105px;
         display: flex;
         align-items: center;
         border-bottom: 1px solid #d8d8d8;
+        .pink-border-color3;
         .img {
           padding-left: 22px;
           position: relative;
@@ -370,7 +371,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #000000;
+            .font-color1;
           }
           .smail-title {
             height: 24px;
@@ -382,7 +383,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #727272;
+            .font-color6;
           }
         }
       }
@@ -401,7 +402,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #000000;
+          .font-color1;
           .left {
           }
         }
@@ -415,7 +416,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #ffa402;
+          .font-color9;
         }
         .button {
           width: 370px;
@@ -424,7 +425,6 @@ export default {
           margin: 9px 24px 44px;
           // padding: 14px 0 15px;
           border-radius: 6px;
-          background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
           font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: 500;
@@ -432,7 +432,8 @@ export default {
           font-style: normal;
           letter-spacing: normal;
           text-align: center;
-          color: #010033;
+          .font-color1;
+          .black-theme-img2;
         }
         .Menual {
           // text-align: right;
@@ -451,14 +452,14 @@ export default {
             // padding: 2px 18px 4px 17px;
             border-radius: 18px;
             border: solid 1px #2f303f;
-            background-color: #2f303f;
+            .theme-pink-back;
             font-family: NotoSansCJKkr;
             font-size: 16px;
             font-weight: normal;
             font-stretch: normal;
             font-style: normal;
             letter-spacing: normal;
-            color: #ffffff;
+            .font-color4;
             margin-right: 7px;
           }
           .icon {
@@ -474,6 +475,7 @@ export default {
       }
       .footer {
         border-top: solid 1px #d8d8d8;
+        .pink-border-color3;
         font-family: NotoSansCJKkr;
         height: 79px;
         line-height: 79px;
@@ -483,7 +485,7 @@ export default {
         font-style: normal;
         letter-spacing: normal;
         text-align: center;
-        color: #727272;
+        .font-color6;
         display: flex;
         justify-content: center;
         align-items: center;

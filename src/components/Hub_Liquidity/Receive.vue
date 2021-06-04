@@ -102,7 +102,7 @@ export default {
   padding: 21px 0 28px;
   border-radius: 9px;
   border: solid 1px #979797;
-  background-color: #ffffff;
+  .theme-box-back;
   .title {
     // width: 191px;
     height: 36px;
@@ -114,7 +114,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   .money {
     display: flex;
@@ -133,7 +133,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #2f303f;
+      .font-color7;
     }
     .right {
       position: relative;
@@ -160,7 +160,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #2f303f;
+    .font-color7;
   }
   .content {
     width: 404px;
@@ -175,7 +175,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #444444;
+    .font-color2;
   }
   .block {
     padding-left: 39px;
@@ -188,7 +188,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
     .icon {
       border-radius: 50%;
       width: 24px;
@@ -229,7 +229,6 @@ export default {
     margin: 0 0 0 39px;
     // padding: 14px 0 15px;
     border-radius: 6px;
-    background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
     font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 500;
@@ -238,8 +237,9 @@ export default {
     line-height: 58px;
     letter-spacing: normal;
     text-align: center;
-    color: #010033;
     cursor: pointer;
+    .font-color5;
+    .black-theme-img2;
   }
 }
 </style>

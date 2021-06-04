@@ -40,7 +40,8 @@ export default {
     padding: 22px 0 49px;
     border-radius: 8px;
     border: solid 1px #d8d8d8;
-    background-color: #ffffff;
+    .pink-border-color3;
+    .theme-box-back;
   }
 }
 .el-icon-arrow-down {

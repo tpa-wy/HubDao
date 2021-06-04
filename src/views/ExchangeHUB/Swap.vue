@@ -309,8 +309,8 @@ export default {
     padding: 22px 39px 59px 40px;
     border-radius: 8px;
     // border: solid 1px rgba(255, 242, 196, 0.31);
-    background-color: #fff;
-    border: solid 1px #d8d8d8;
+    .theme-box-back;
+    .pink-border-color3;
     .header {
       display: flex;
       justify-content: space-between;
@@ -325,7 +325,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000;
+        .font-color1;
       }
       .icon {
         display: flex;
@@ -352,7 +352,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #000;
+      .font-color1;
       margin-bottom: 47px;
     }
     > .block-1 {
@@ -362,7 +362,7 @@ export default {
       margin: 20px auto 19px auto;
       padding: 12px 21px 20px 20px;
       border-radius: 6px;
-      background-color: #f0f0f0;
+      .theme-list-back;
       .From {
         // width: 41px;
         height: 24px;
@@ -374,7 +374,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000;
+        .font-color1;
         display: flex;
         justify-content: space-between;
         margin-right: 20px;
@@ -394,7 +394,7 @@ export default {
           line-height: normal;
           letter-spacing: normal;
           text-align: right;
-          color: #000000;
+          .font-color1;
           .font {
             cursor: pointer;
           }
@@ -421,13 +421,7 @@ export default {
           .icon {
             width: 34px;
             height: 34px;
-            // margin: 0 51px 0 0;
             margin-right: 13px;
-            // padding: 6px 7px 4px 6px;
-            // opacity: 0.69;
-            // border: solid 1px #444444;
-            // background-color: #ffffff;
-            // background-color: #f00;
             border-radius: 50%;
           }
           .currency-select {
@@ -448,7 +442,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #a5a5a5;
+      .font-color11;
       flex: 1;
       input {
         outline: none;
@@ -488,7 +482,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000;
+        .font-color1;
         display: flex;
         justify-content: space-between;
         margin-right: 20px;
@@ -518,7 +512,7 @@ export default {
         font-style: normal;
         letter-spacing: normal;
         text-align: center;
-        color: #000;
+        .font-color1;
       }
       .block {
         display: flex;
@@ -537,7 +531,7 @@ export default {
         line-height: normal;
         letter-spacing: normal;
         text-align: right;
-        color: #000000;
+        .font-color1;
         &:hover {
           background-color: #e0d9eb;
         }
@@ -545,13 +539,7 @@ export default {
       .icon {
         width: 34px;
         height: 34px;
-        // margin: 0 51px 0 0;
         margin-right: 13px;
-        // padding: 6px 7px 4px 6px;
-        // opacity: 0.69;
-        // border: solid 1px #444444;
-        // background-color: #ffffff;
-        // background-color: #f00;
         border-radius: 50%;
       }
       .currency-select {
@@ -562,7 +550,6 @@ export default {
       width: 25px;
       height: 21px;
       margin: 0 auto;
-      // background-color: #f00;
       background-image: url(../../../public/assets/back-icon.png);
       background-size: 100% 100%;
       transform: rotate(-90deg);
@@ -573,9 +560,7 @@ export default {
     width: 466px;
     height: 58px;
     line-height: 58px;
-    // margin: 47px 0 0 24px;
     margin: 47px auto 0 auto;
-    // padding: 14px 0 15px;
     border-radius: 6px;
     background-color: #ffe505;
     font-family: NotoSansCJKkr;
@@ -585,7 +570,7 @@ export default {
     font-style: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #010033;
+    .font-color5;
   }
   .rest {
     margin-bottom: 100px;
@@ -595,8 +580,8 @@ export default {
     // margin: 21px 531px 111px 530.5px;
     padding: 15px 31px 14px 27px;
     border-radius: 8px;
-    border: solid 1px #d8d8d8;
-    background-color: #ffffff;
+    .pink-border-color3;
+    .theme-box-back;
     > div {
       display: flex;
       justify-content: space-between;
@@ -612,7 +597,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #444444;
+        .font-color2;
       }
     }
   }

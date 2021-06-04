@@ -84,7 +84,7 @@ export default {
   padding: 21px 0 27px;
   border-radius: 9px;
   border: solid 1px #979797;
-  background-color: #ffffff;
+  .theme-box-back;
   > .title {
     height: 36px;
     margin: 11px 60px 37px 39px;
@@ -95,7 +95,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   .currency {
     .currency-item {
@@ -121,7 +121,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #444444;
+          .font-color2;
         }
       }
       .right {
@@ -135,7 +135,7 @@ export default {
         line-height: normal;
         letter-spacing: normal;
         text-align: right;
-        color: #000000;
+        .font-color1;
       }
     }
     .currency-center {
@@ -159,9 +159,9 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #444444;
+    .font-color2;
     span {
-      color: #ffa402;
+      .font-color9;
       font-weight: 500;
     }
   }
@@ -187,7 +187,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000000;
+        .font-color1;
       }
       .right {
         display: flex;
@@ -203,7 +203,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #000000;
+          .font-color1;
           margin-right: 12px;
         }
         .icon {
@@ -233,7 +233,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #000000;
+            .font-color1;
           }
           .icon {
             width: 20px;
@@ -250,7 +250,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #000000;
+          .font-color1;
         }
       }
     }
@@ -262,7 +262,7 @@ export default {
     margin: 25px 39px 27px 39px;
     // padding: 14px 0 15px;
     border-radius: 6px;
-    background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
+    .black-theme-img2;
     font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 500;
@@ -270,7 +270,7 @@ export default {
     font-style: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #010033;
+    .font-color5;
   }
 }
 </style>

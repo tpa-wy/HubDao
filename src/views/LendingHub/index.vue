@@ -56,14 +56,14 @@ export default {
     
     .title-cxt{
         margin: 48px 176.5px 9px 176.5px;
-        color: #000000;
+        .font-color1;
         text-align: left;
     }
   }
   .smail-title {
         .basic-font;
         height: 36px;
-        color: #000000;
+        .font-color1;
         .smail-title-text{
             margin: 0px 176.5px 9px 176.5px;
         }
@@ -75,13 +75,14 @@ export default {
                     border-radius: 8px;
                     height: 560px;
                     border: solid 1px #979797;
-                    background-color:@boxcolor;
                     margin-bottom:100px;
+                    .theme-box-back;
                     .block-msg{
-                        color: #d8d8d8;
+                        
                         font-size: 72px;
                         line-height:560px;
                         text-align: center;
+                        .font-color12;
                     }
             }
      }

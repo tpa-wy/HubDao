@@ -95,7 +95,7 @@ export default {
   .nav {
     width: 350px;
     margin: 0 auto;
-    background-color: #ebebeb;
+    .theme-pink-back1;
     border-radius: 125px;
     margin-bottom: 57px;
     display: flex;
@@ -116,7 +116,7 @@ export default {
       font-style: normal;
       letter-spacing: normal;
       text-align: center;
-      color: #000000;
+      .font-color1;
     }
     .checked {
       cursor: pointer;
@@ -124,7 +124,6 @@ export default {
       // height: 40px;
       // padding: 8px 28px 8px 29px;
       border-radius: 21.5px;
-      background-color: #000000;
       font-family: NotoSansCJKkr;
       font-size: 16px;
       font-weight: bold;
@@ -132,59 +131,10 @@ export default {
       font-style: normal;
       letter-spacing: normal;
       text-align: center;
-      color: #fff;
+      .font-color4;
+      .theme-black-back;
     }
-    /* .nav-swap {
-      cursor: pointer;
-      display: inline-block;
-      width: 101px;
-      height: 40px;
-      padding: 8px 28px 8px 29px;
-      border-radius: 21.5px;
-      background-color: #fbfbfb;
-      font-family: NotoSansCJKkr;
-      font-size: 16px;
-      font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: #010033;
-    }
-    .nav-liquidityb {
-      cursor: pointer;
-      display: inline-block;
-      width: 122px;
-      height: 40px;
-      padding: 8px 28px 8px 29px;
-      font-family: NotoSansCJKkr;
-      font-size: 16px;
-      font-weight: 300;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: #ffffff;
-    }
-    .nav-brideg {
-      cursor: pointer;
-      display: inline-block;
-      width: 101px;
-      height: 40px;
-      padding: 8px 25px 8px 27px;
-      border-radius: 21.5px;
-      font-family: NotoSansCJKkr;
-      font-size: 16px;
-      font-weight: 300;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: #ffffff;
-    } */
+   
   }
   >.block {
     width: 594px;
@@ -194,7 +144,7 @@ export default {
     padding: 22px 39px 59px 40px;
     border-radius: 8px;
     border: solid 1px rgba(255, 242, 196, 0.31);
-    background-color: #010033;
+   .black-font-color;
     .header {
       display: flex;
       justify-content: space-between;
@@ -209,7 +159,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #ffffff;
+        .font-color4;
       }
       .icon {
         display: flex;
@@ -237,7 +187,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #ffffff;
+      .font-color4;
       margin-bottom: 47px;
     }
     > .block-1 {
@@ -246,7 +196,7 @@ export default {
       margin: 47px 0 19px 24px;
       padding: 12px 21px 20px 20px;
       border-radius: 6px;
-      background-color: #181742;
+      .theme-pink-back4;
       .From {
         width: 41px;
         height: 24px;
@@ -258,7 +208,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #ffffff;
+        .font-color4;
       }
       .content {
         display: flex;
@@ -275,8 +225,6 @@ export default {
             padding: 6px 7px 4px 6px;
             opacity: 0.69;
             border: solid 1px #444444;
-            // background-color: #ffffff;
-            background-color: #f00;
             border-radius: 50%;
           }
           .currency-select {
@@ -297,7 +245,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #a5a5a5;
+      .font-color11;
     }
     > .block-2 {
       width: 466px;
@@ -317,7 +265,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #ffffff;
+        .font-color4;
       }
       .content {
         display: flex;
@@ -340,7 +288,7 @@ export default {
         line-height: normal;
         letter-spacing: normal;
         text-align: right;
-        color: #ffffff;
+        .font-color4;
       }
     }
     .icon-xia {
@@ -366,7 +314,7 @@ export default {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #010033;
+    .font-color5;
   }
 }
 // 下拉菜单
@@ -380,7 +328,7 @@ export default {
   line-height: normal;
   letter-spacing: normal;
   text-align: right;
-  color: #ffffff;
+  .font-color4;
 }
 .el-icon-arrow-down {
   font-size: 12px;

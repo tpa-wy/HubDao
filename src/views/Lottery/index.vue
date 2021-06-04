@@ -234,14 +234,14 @@ export default {
     
     .title-cxt{
         margin: 48px 176.5px 9px 176.5px;
-        color: #000000;
+        .font-color1;
         text-align: left;
     }
   }
   .smail-title {
         .basic-font;
         height: 36px;
-        color: #000000;
+        .font-color1;
         .smail-title-text{
             margin: 0px 176.5px 9px 176.5px;
         }
@@ -254,16 +254,17 @@ export default {
         border-radius: 8px;
         box-shadow: 4px 4px 10px 0 rgba(118, 134, 184, 0.62);
         border: solid 2px rgba(81, 90, 255, 0.45);
-        background-image: linear-gradient(to left, #010033, #2c3074 68%, #010033 88%);
+        
         margin: 90px 176.5px 0px 176.5px;
         padding:0px 0px 0px 261px;
+        .black-theme-img;
         .lottery-nav-i{
             width: 77px;
             height: auto;
             margin-right: 25px;
         }
         .text{
-            color: #ffffff;
+            .font-color4;
             font-size: 24px;
             margin-right: 30px;
         }
@@ -273,8 +274,8 @@ export default {
                 padding: 14px 95px 15px 98px;
                 border-radius: 6px;
                 box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
-                background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
-                  color: #010033;
+                .font-color5;
+                .black-theme-img2;
                   font-size: 20px;
 
         }
@@ -286,7 +287,7 @@ export default {
              width: calc(calc(100% - 24px)/2);
              .lottery-input{
                          border: solid 1px #000000;
-                         background-color: #ffffff;
+                         .theme-box-back;
                          border-radius: 6px; height:56px;
                          overflow: hidden;
                     
@@ -319,12 +320,14 @@ export default {
                     border-radius: 8px;
                     box-shadow: 3px 3px 8px 0 #d8d8d8;
                     border: solid 1px #d8d8d8;
-                    background-color: #ffffff;
+                    .pink-border-color3;
+                    .theme-box-back;
                     margin-top: 23px;
                     margin-bottom:100px;
                     padding-bottom: 35px;
                     .card-split{
                         border: dashed 1px #a5a5a5;
+                        .pink-border-color1;
                         margin-top:43.5px;
                     }
                     .card-table-header{
@@ -335,13 +338,13 @@ export default {
 
                     }
                     .body-item{
-                      background-color: #f0f0f0;
+                      .theme-list-back;
                       padding: 3px 11px 5px;
                       border-radius: 2px;
                       font-size: 16px;
                       font-weight: 500;
-                      color: #000;
-                      margin-bottom: 8px;
+                      .font-color1;
+                      margin-bottom:8px;
                     }
                     .body-item-op1{
                       opacity: 0.6;
@@ -353,7 +356,7 @@ export default {
                         height: 58px;
                         width: 380px;
                         line-height: 58px;
-                        color: #010033;
+                        .font-color5;
                         font-size: 20px;
                         margin-top: 64px;
                     }
@@ -375,7 +378,7 @@ export default {
                   font-weight: 300;
                }
                .card-num{
-                   color: #2f303f;
+                  .font-color7;
                   font-size: 20px;
                   font-weight: bold;
                }
@@ -386,13 +389,14 @@ export default {
          .lottery-item2{
            border-radius: 8px;
           box-shadow: 3px 3px 8px 0 #d8d8d8;
-          background-color: #f5f5f5;
+          .pink-border-color3;
+          .theme-back1;
           padding-top: 26px;height: 534px;
          }
          .history{
            font-size: 24px;
            font-weight: bold;
-           color:#000;
+           .font-color1;
          }
          .showlast{
            font-size: 14px;

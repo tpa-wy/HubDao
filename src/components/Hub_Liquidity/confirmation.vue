@@ -31,7 +31,7 @@ export default {
   padding: 21px 29px 58px 29px;
   border-radius: 9px;
   border: solid 1px #979797;
-  background-color: #ffffff;
+  .theme-box-back;
   .title {
     margin: 11px 90px 62px 0;
     font-family: NotoSansCJKkr;
@@ -41,7 +41,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   .loadimg {
     text-align: center;
@@ -76,7 +76,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #000000;
+      .font-color1;
     }
     .block-smail-title {
       margin: 10px 36px 0 29px;
@@ -87,7 +87,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #727272;
+      .font-color6;
     }
   }
 }

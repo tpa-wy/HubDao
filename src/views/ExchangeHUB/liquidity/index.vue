@@ -106,7 +106,7 @@
   border-radius: 6px;
   box-shadow: 2px 2px 4px 0 #e7e7e7;
   border: solid 1px #d8d8d8;
-  background-color: #ffffff;
+  .theme-box-back;
 }
 .submit-group {
   display: flex;
@@ -127,11 +127,12 @@
   }
   .submit-btn1 {
     font-weight: 500;
-    background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
+    .black-theme-img2;
+    
   }
   .submit-btn2 {
-    background-image: linear-gradient(to left, #44465e, #2f303f 0%);
-    color: #ffffff;
+    .black-theme-img1;
+    .font-color4;
   }
 }
 
@@ -170,7 +171,7 @@
 }
 
 .content-i-name {
-  color: #2f303f;
+  .font-color7;
   font-size: 16px;
   .content-i-value > span {
     font-size: 16px;

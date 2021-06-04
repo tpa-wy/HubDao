@@ -66,7 +66,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   .smail-title {
     height: 36px;
@@ -78,7 +78,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
     margin-bottom: 79px;
   }
   .block {
@@ -91,7 +91,7 @@ export default {
       //   padding: 0 17px 0 0;
       border-radius: 24px;
       margin-bottom: 79px;
-      background-color: #d8d8d8;
+      .theme-pink-back2;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -108,10 +108,10 @@ export default {
         line-height: 40px;
         letter-spacing: normal;
         text-align: center;
-        color: #ffffff;
+        .font-color4;
       }
       .checked {
-        background-color: #000000;
+        .theme-black-back;
       }
     }
   }

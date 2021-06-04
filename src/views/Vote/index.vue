@@ -158,14 +158,14 @@ export default {
     
     .title-cxt{
         margin: 48px 176.5px 9px 176.5px;
-        color: #000000;
+        .font-color1;
         text-align: left;
     }
   }
   .smail-title {
         .basic-font;
         height: 36px;
-        color: #000000;
+        .font-color1;
         .smail-title-text{
             margin: 0px 176.5px 9px 176.5px;
         }
@@ -182,7 +182,7 @@ export default {
             line-height: 41px;
             margin-right: 40px;
             letter-spacing: 0.5px;
-            color: #000000;
+            .font-color1;
             font-size: 28px;
             font-weight: 500;
            .vote-active{
@@ -203,10 +203,10 @@ export default {
           width: 48px;
           height: 22px;
           border-radius: 13.5px;
-          background-color: #010033;
           text-align: center;
           line-height:22px;
           margin-left: 7px;
+          .black-font-color;
        }
 
      }
@@ -217,26 +217,26 @@ export default {
           padding: 23px 41px 36px;
           border-radius: 8px;
           border: solid 1px #d8d8d8;
-          background-color: @boxcolor;
+          .pink-border-color3;
           margin-bottom: 10px;
+          .theme-box-back;
           .vote-list-btn{
             padding: 5px 21px 7px 23px;
             border-radius: 24px;
-            background-color:@blue-btn-color;
+            .blue-btn-color;
           }
           .vote-list-btn-close{
-           
-            background-color:@black-font-color;
+             .black-font-color;
           }
           .vote-list-content{
             margin-left:30px;
             .store-name{
-              color:@black-font-color;
               font-size: 36px;
+              .font-color5;
             }
             .store-sign{
                .font-size26;
-               color:@pink-font-color;
+               .font-color6;
                max-width:550px;
                overflow: hidden;
                white-space:nowrap;

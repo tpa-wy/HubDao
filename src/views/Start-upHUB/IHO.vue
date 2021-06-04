@@ -218,7 +218,7 @@ export default {
     // height: 1075px;
     border-radius: 12px;
     border: solid 1px #979797;
-    background-color: #ffffff;
+    .theme-box-back;
     margin-bottom: 144px;
     .header {
       height: 117px;
@@ -229,7 +229,7 @@ export default {
       //   border-radius: 12px;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
-      background-image: linear-gradient(to left, #0b0d36, #44465e 0%);
+      .black-theme-img3;
       position: relative;
       .title {
         margin: 0 0 0 16px;
@@ -240,7 +240,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #ffffff;
+        .font-color4;
       }
       .Comming {
         position: absolute;
@@ -251,7 +251,6 @@ export default {
         line-height: 57px;
         border-radius: 6px;
         box-shadow: 3px 7px 5px 1px rgba(3, 3, 26, 0.18);
-        background-image: linear-gradient(to bottom, #e4ede1, #ffffff 87%);
         font-family: NotoSansCJKkr;
         font-size: 18px;
         font-weight: bold;
@@ -261,13 +260,14 @@ export default {
         text-align: center;
         color: #263757;
         cursor: pointer;
+        .black-theme-img5;
       }
       .icon {
         width: 48px;
         height: 48px;
         border-radius: 6px;
         box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
-        background-color: #ffffff;
+        .theme-box-back;
         position:absolute;
         top: 29px;
         right:49px;
@@ -308,7 +308,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #444444;
+          .font-color2;
           text-align: right;
           //   margin-left: 62px;
         }
@@ -329,7 +329,8 @@ export default {
           margin-bottom: 38px;
           border-radius: 6px;
           border: solid 1px #d8d8d8;
-          background-image: linear-gradient(to bottom, #fbfbfb 21%, #f5f5f5);
+          .pink-border-color3;
+          .black-theme-img4;
           .title {
             height: 29px;
             font-family: NotoSansCJKkr;
@@ -340,7 +341,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #010033;
+            .font-color5;
             position: relative;
             .icon {
               position: absolute;
@@ -361,7 +362,6 @@ export default {
             // padding: 3px 11px 3px 10px;
             line-height: 26px;
             border-radius: 16px;
-            background-color: #010033;
             font-family: NotoSansCJKkr;
             font-size: 14px;
             font-weight: bold;
@@ -369,9 +369,10 @@ export default {
             font-style: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #ffffff;
+            .font-color4;
             cursor: pointer;
             margin-bottom: 9px;
+            .black-font-color;
           }
           .money {
             height: 54px;
@@ -383,7 +384,7 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #010033;
+            .font-color5;
           }
           .total {
             height: 29px;
@@ -405,15 +406,15 @@ export default {
             // margin: 42px 6px 32px 0;
             // padding: 14px 92px 15px 95px;
             border-radius: 6px;
-            background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
             font-family: NotoSansCJKkr;
+            .black-theme-img2;
             font-size: 20px;
             font-weight: 500;
             font-stretch: normal;
             font-style: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #010033;
+            .font-color5;
             margin-bottom: 32px;
           }
           .table {
@@ -431,7 +432,7 @@ export default {
                 font-style: normal;
                 line-height: normal;
                 letter-spacing: normal;
-                color: #000000;
+                .font-color1;
                 margin-right: 26px;
               }
             }
@@ -450,8 +451,8 @@ export default {
             margin: 19px 21px 23px 0;
             border-radius: 11px;
             border: solid 1px #979797;
-            background-color: #010033;
             margin-right: 21px;
+            .black-font-color;
             .left-img{
               width: 50px;
               height:50px;
@@ -468,7 +469,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #010033;
+              .font-color5;
             }
             > div:nth-child(2) {
               font-family: NotoSansCJKkr;
@@ -478,7 +479,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #010033;
+             .font-color5;
               width: 154px;
             }
           }
@@ -510,7 +511,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #444444;
+          .font-color2;
         }
       }
     }
@@ -525,7 +526,7 @@ export default {
       font-style: normal;
       letter-spacing: normal;
       text-align: center;
-      color: #727272;
+      .font-color6;
     }
   }
   > .block-item-2 {
@@ -533,8 +534,8 @@ export default {
     // height: 1096px;
     // margin: 144px 354px 110px 353px;
     border-radius: 12px;
-    border: solid 1px #d8d8d8;
-    background-color: #ffffff;
+    border: solid 1px #d8d8d8;.pink-border-color3;
+    .theme-box-back;
     .header {
       height: 103px;
       line-height: 103px;
@@ -542,7 +543,7 @@ export default {
       //   padding: 25px 326px 24px;
       border-radius: 12px;
       border: solid 1px #d8d8d8;
-      background-color: #010033;
+      .pink-border-color3;
       font-family: NotoSansCJKkr;
       font-size: 36px;
       font-weight: 500;
@@ -550,13 +551,14 @@ export default {
       font-style: normal;
       letter-spacing: normal;
       text-align: center;
-      color: #ffffff;
+      .font-color4;
+      .black-font-color;
     }
     .content {
       margin-top: 68px;
       margin-left: 71px;
       padding-left: 55px;
-      border-left: 5px solid #d8d8d8;
+      border-left: 5px solid #d8d8d8;.pink-border-color3;
       //   临时
       height: auto;
       padding-bottom: 100px;
@@ -570,9 +572,6 @@ export default {
           width: 74px;
           height: 74px;
           line-height: 74px;
-          //   margin: 68px 21px 0 71px;
-          //   padding: 12px 28px 17px;
-          background-color: #010033;
           border-radius: 50%;
           font-family: NotoSansCJKkr;
           font-size: 30px;
@@ -582,16 +581,17 @@ export default {
           //   line-height: normal;
           letter-spacing: normal;
           text-align: center;
-          color: #ffffff;
+          .font-color4;
+          .black-font-color;
         }
         .line {
           position: absolute;
           width: 5px;
           height: 100%;
-          background-color: #010033;
           left: -60px;
           z-index: 1;
           top: 56px;
+          .black-font-color;
         }
         margin-right: 50px;
         // margin: 83px 516px 4px 21px;
@@ -604,7 +604,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #000000;
+          .font-color1;
         }
         .smail-title {
           //   height: 29px;
@@ -617,7 +617,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #000000;
+          .font-color1;
         }
         .button {
           cursor: pointer;
@@ -629,7 +629,6 @@ export default {
           //   padding: 14px 33px 15px 36px;
           opacity: 0.69;
           border-radius: 6px;
-          background-image: linear-gradient(to left, #44465e, #2f303f 0%);
           font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: 500;
@@ -637,7 +636,9 @@ export default {
           font-style: normal;
           letter-spacing: normal;
           text-align: center;
-          color: #ffffff;
+          .black-theme-img1;
+          .font-color4;
+          
         }
         .button2 {
           margin-bottom: 68px;
@@ -652,11 +653,9 @@ export default {
           font-style: normal;
           letter-spacing: normal;
           text-align: center;
-          color: #010033;
-          //   margin: 20px 553px 51px 21px;
-          //   padding: 14px 21px 15px 50px;
+          .font-color5;
           border-radius: 6px;
-          background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
+          .black-theme-img2;
         }
       }
     }
@@ -669,7 +668,7 @@ export default {
     padding: 48px 22px 25px 26px;
     border-radius: 12px;
     border: solid 1px #d8d8d8;
-    background-color: #ffffff;
+    .theme-box-back;
     .header {
       //   width: 119px;
       height: 54px;
@@ -682,7 +681,7 @@ export default {
       line-height: normal;
       letter-spacing: normal;
       text-align: center;
-      color: #010033;
+      .font-color5;
     }
     .block {
       width: 900px;
@@ -690,7 +689,7 @@ export default {
       margin: 0 auto 20px auto;
       padding: 48px 40px 48px 29px;
       border-radius: 6px;
-      background-color: #f5f5f5;
+      .theme-back1;
       .top {
         display: flex;
         justify-content: space-between;
@@ -707,7 +706,7 @@ export default {
           line-height: normal;
           letter-spacing: normal;
           text-align: center;
-          color: #444444;
+          .font-color2;
           .icon {
            
             margin-left: 5px;

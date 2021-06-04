@@ -373,9 +373,10 @@ body {
   width: 100%;
   height: 73px;
   padding: 14px 22px 17px;
-  background-color: @header-left;
+  
   display: flex;
   justify-content: space-between;
+  .theme-box-back;
   .menu-button {
     display: flex;
     align-items: center;
@@ -407,7 +408,7 @@ body {
       box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
       // border: solid 1px #fff2c4;
       display: inline-block;
-      background-color: #2f303f;
+     .theme-pink-back;
       .Connect {
         // width: 64px;
         // margin-left: 10px;
@@ -425,7 +426,7 @@ body {
         // line-height: normal;
         letter-spacing: normal;
         text-align: center;
-        color: #fff;
+        .font-color4;
         cursor: pointer;
       }
     }
@@ -447,7 +448,7 @@ body {
         font-style: normal;
         letter-spacing: normal;
         text-align: center;
-        color: #fff;
+        .font-color4;
         cursor: pointer;
       }
     }
@@ -459,7 +460,7 @@ body {
       margin: 4px 2px 1px 15px;
       padding: 1px;
       border: solid 1px #d8d8d8;
-      background-color: #d8d8d8;
+      .theme-pink-back2;
       border-radius: 50%;
       position: relative;
       .dot {
@@ -476,12 +477,9 @@ body {
   }
 }
 .el-main {
-  background-color: @bgcolor;
-  // background-color: #fff;
   height: 100%;
-  // height: 90vh;
   padding: 0;
-  // margin-bottom: 1000px;
+  .theme-back;
 }
 .el-container {
   height: 100%;

@@ -58,7 +58,7 @@ export default {
   padding: 21px 19px 29px 36px;
   border-radius: 9px;
   border: solid 1px #979797;
-  background-color: #ffffff;
+  .theme-box-back;
   .title {
     height: 36px;
     margin: 11px 70px 36px 95px;
@@ -70,7 +70,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   .table {
     padding-left: 36px;
@@ -87,8 +87,8 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #727272;
       justify-content: space-between;
+      .font-color6;
     }
     .td {
       margin-top: 12px;
@@ -102,7 +102,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #161557;
+      .font-color8;
     }
   }
   .content {
@@ -115,7 +115,7 @@ export default {
     line-height: normal;
     letter-spacing: normal;
     text-align: justify;
-    color: #000000;
+    .font-color1;
     margin-right: 36px;
   }
   .footer {
@@ -130,15 +130,14 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #2f303f;
+      
       margin-right: 9px;
+      .font-color7;
     }
     .icon {
       width: 20px;
       height: 20px;
-      //   background-image: url(../../../public/assets);
       background-size: 100% 100%;
-      background-color: #f00;
     }
   }
 }

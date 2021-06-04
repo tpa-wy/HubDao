@@ -30,7 +30,7 @@ export default {
   padding: 21px 19px 26px 36px;
   border-radius: 9px;
   border: solid 1px #979797;
-  background-color: #ffffff;
+  .theme-box-back;
   .title {
     // width: 237px;
     height: 36px;
@@ -43,7 +43,7 @@ export default {
     line-height: normal;
     text-align: center;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   .content {
     height: 58px;
@@ -56,7 +56,7 @@ export default {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #000000;
+    .font-color1;
   }
   .button {
     cursor: pointer;
@@ -65,7 +65,7 @@ export default {
     margin: 64px 4px 0 0;
     // padding: 14px 175px 15px 180px;
     border-radius: 6px;
-    background-image: linear-gradient(to left, #44465e, #2f303f 0%);
+    .black-theme-img1;
     font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 500;
@@ -73,7 +73,7 @@ export default {
     font-style: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #ffffff;
+    .font-color4;
   }
 }
 </style>

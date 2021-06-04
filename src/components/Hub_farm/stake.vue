@@ -43,7 +43,7 @@ export default {
   padding: 21px 19px 26px 39px;
   border-radius: 9px;
   border: solid 1px #979797;
-  background-color: #ffffff;
+  .theme-box-back;
   .title {
     margin: 11px 19px 52px 0;
     font-family: NotoSansCJKkr;
@@ -53,7 +53,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   .bclok {
     width: 402px;
@@ -62,7 +62,7 @@ export default {
     padding: 12px 17px 20px 20px;
     border-radius: 6px;
     box-shadow: 3px 3px 7px 0 #d8d8d8;
-    background-color: #f0f0f0;
+    .theme-list-back;
     .one-column {
       display: flex;
       justify-content: space-between;
@@ -76,7 +76,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #000000;
+      .font-color1;
     }
     .twp-column {
       display: flex;
@@ -91,7 +91,7 @@ export default {
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #2f303f;
+      .font-color7;
       .right {
         display: flex;
         align-items: center;
@@ -111,12 +111,12 @@ export default {
     justify-content: space-between;
     align-items: center;
     .button-1 {
-      background-image: linear-gradient(to left, #44465e, #2f303f 0%);
-      color: #ffffff;
+      .black-theme-img1;
+      .font-color4;
     }
     .button-2 {
-      background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
-      color: #000000;
+      .font-color1;
+      .black-theme-img2;
     }
     .button {
       cursor: pointer;
@@ -145,7 +145,7 @@ export default {
     line-height: normal;
     letter-spacing: normal;
     text-align: right;
-    color: #2f303f;
+    .font-color7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +155,7 @@ export default {
       height: 20px;
       //   background-image: url(../../../public/assets/icons-settings.png);
       background-size: 100% 100%;
-      background-color: #f00;
+      
     }
   }
 }

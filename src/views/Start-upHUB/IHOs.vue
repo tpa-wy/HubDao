@@ -154,22 +154,20 @@ export default {
 
 .ihos {
   > .block-item {
-    // height: 1075px;
-    // height: 117px;
+   
     border-radius: 12px;
     border: solid 1px #979797;
-    background-color: #ffffff;
+    .theme-box-back;
     margin-bottom: 32px;
     .header {
       height: 117px;
       display: flex;
       align-items: center;
       justify-content: center;
-      //   padding: 31px 0 0;
-      //   border-radius: 12px;
+      
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
-      background-image: linear-gradient(to left, #0b0d36, #44465e 0%);
+      .black-theme-img3;
       position: relative;
       .title {
         margin: 0 0 0 16px;
@@ -180,7 +178,7 @@ export default {
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #ffffff;
+        .font-color4;
       }
       .icon {
         cursor: pointer;
@@ -188,7 +186,7 @@ export default {
         height: 48px;
         border-radius: 6px;
         box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
-        background-color: #ffffff;
+        .theme-box-back;
         position: absolute;
         right: 62px;
         display: flex;
@@ -198,7 +196,7 @@ export default {
            height: 48px;
            border-radius: 6px;
            box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
-           background-color: #ffffff;
+           .theme-box-back;
           margin: 0 auto;
         }
         
@@ -219,10 +217,6 @@ export default {
         align-items: center;
         .article {
           width: 602px;
-          //   margin: 51px 62px 37px 30px;
-          //   padding: 0 202px 0 0;
-          //   border-radius: 5.5px;
-          //   background-color: #d8d8d8;
           height: 11px;
           .el-progress {
             .el-progress-bar__outer {
@@ -239,7 +233,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #444444;
+          .font-color2;
           text-align: right;
           //   margin-left: 62px;
         }
@@ -260,7 +254,8 @@ export default {
           margin-bottom: 38px;
           border-radius: 6px;
           border: solid 1px #d8d8d8;
-          background-image: linear-gradient(to bottom, #fbfbfb 21%, #f5f5f5);
+          .pink-border-color3;
+          .black-theme-img4;
           .title {
             height: 29px;
             font-family: NotoSansCJKkr;
@@ -271,7 +266,7 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #010033;
+            .font-color5;
             position: relative;
             .icon {
               position: absolute;
@@ -293,7 +288,7 @@ export default {
             // padding: 3px 11px 3px 10px;
             line-height: 26px;
             border-radius: 16px;
-            background-color: #010033;
+           
             font-family: NotoSansCJKkr;
             font-size: 14px;
             font-weight: bold;
@@ -301,9 +296,10 @@ export default {
             font-style: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #ffffff;
+            .font-color4;
             cursor: pointer;
             margin-bottom: 9px;
+            .black-font-color;
           }
           .money {
             height: 54px;
@@ -315,11 +311,10 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: #010033;
+            .font-color5;
           }
           .total {
             height: 29px;
-            // margin: 60px 172px 42px 1px;
             font-family: NotoSansCJKkr;
             font-size: 20px;
             font-weight: 300;
@@ -338,7 +333,6 @@ export default {
             // margin: 42px 6px 32px 0;
             // padding: 14px 92px 15px 95px;
             border-radius: 6px;
-            background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
             font-family: NotoSansCJKkr;
             font-size: 20px;
             font-weight: 500;
@@ -346,8 +340,9 @@ export default {
             font-style: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #010033;
+            .font-color5;
             margin-bottom: 32px;
+            .black-theme-img2;
           }
           .table {
             .tr {
@@ -364,7 +359,7 @@ export default {
                 font-style: normal;
                 line-height: normal;
                 letter-spacing: normal;
-                color: #000000;
+                .font-color1;
                 margin-right: 26px;
               }
             }
@@ -383,8 +378,8 @@ export default {
             margin: 19px 21px 23px 0;
             border-radius: 11px;
             border: solid 1px #979797;
-             background-color: #010033;
             margin-right: 21px;
+            .black-font-color;
             .left-img{
               width: 50px;
               height:50px;
@@ -401,7 +396,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #010033;
+              .font-color5;
             }
             > div:nth-child(2) {
               font-family: NotoSansCJKkr;
@@ -411,7 +406,7 @@ export default {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
-              color: #010033;
+              .font-color5;
               width: 154px;
             }
           }
@@ -453,7 +448,7 @@ export default {
           font-style: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #444444;
+          .font-color2;
         }
       }
     }
@@ -468,7 +463,7 @@ export default {
       font-style: normal;
       letter-spacing: normal;
       text-align: center;
-      color: #727272;
+      .font-color6;
     }
   }
   .block-item:last-child{

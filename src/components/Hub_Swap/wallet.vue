@@ -77,7 +77,7 @@ export default {
   padding: 45px 36px 34px;
   border-radius: 9px;
   border: solid 1px #979797;
-  background-color: #ffffff;
+  .theme-box-back;
   .title {
     height: 36px;
     // margin: 0 90px 29px;
@@ -90,7 +90,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #000000;
+    .font-color1;
   }
   .block {
     margin-bottom: 34px;
@@ -101,7 +101,7 @@ export default {
       margin: 0 0 8px;
       padding: 11px 137px 6px 19px;
       border-radius: 6px;
-      background-color: #ebebeb;
+      .theme-pink-back1;
       display: flex;
       align-items: center;
       .icon {
@@ -116,7 +116,7 @@ export default {
         font-stretch: normal;
         font-style: normal;
         letter-spacing: normal;
-        color: #444444;
+        .font-color2;
       }
     }
   }
@@ -130,7 +130,7 @@ export default {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #444444;
+    .font-color2;
     display: flex;
     align-items: center;
     justify-content: center;
