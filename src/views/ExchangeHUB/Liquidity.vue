@@ -13,28 +13,9 @@ export default {
   name: "EducationSwap",
   data() {
     return {
-      // 货币列表
-      currencyList: [],
-      // 当前选中的货币
-      selectedCurrency: "",
     };
   },
-  mounted() {
-    //   设置货币列表
-    this.currencyList = [
-      {
-        name: "HT",
-        label: "HT",
-      },
-      {
-        name: "BTC",
-        label: "BTC",
-      },
-    ];
-    if (this.currencyList.length >= 1) {
-      this.selectedCurrency = this.currencyList[0].label;
-    }
-  },
+  
   methods: {
     selectCurrency(command) {
       console.log(command);
@@ -50,7 +31,7 @@ export default {
   // padding-top: 72px;
   width: 594px;
   margin: 0 auto;
-  .block {
+  #block {
     width: 594px;
     margin: 0 auto;
     margin-bottom: 50px;

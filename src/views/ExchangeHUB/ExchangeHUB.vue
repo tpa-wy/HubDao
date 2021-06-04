@@ -74,8 +74,12 @@ export default {
       } else if (nav == 2) {
         router = "Liquidity";
       }
+      // 临时
+      if(router=="Bridge"){
+        return false
+      }
       this.nav = nav;
-      this.$router.push(router);
+      this.$router.push('/ExchangeHUB/'+router);
     },
   },
 };
@@ -97,11 +101,13 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+      height: 40px;
     .nav-item {
       cursor: pointer;
-      display: inline-block;
+      display: flex;
+      align-items: center;
       //   width: 122px;
-      height: 40px;
+      // line-height: 40px;
       padding: 8px 28px 8px 29px;
       font-family: NotoSansCJKkr;
       font-size: 16px;
@@ -115,7 +121,7 @@ export default {
     .checked {
       cursor: pointer;
       display: inline-block;
-      height: 40px;
+      // height: 40px;
       // padding: 8px 28px 8px 29px;
       border-radius: 21.5px;
       background-color: #000000;
