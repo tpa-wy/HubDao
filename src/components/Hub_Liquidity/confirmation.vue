@@ -28,7 +28,7 @@ export default {
 .confirmation {
   width: 480px;
   height: 439px;
-  padding: 21px 19px 58px 39px;
+  padding: 21px 29px 58px 29px;
   border-radius: 9px;
   border: solid 1px #979797;
   background-color: #ffffff;
@@ -46,11 +46,29 @@ export default {
   .loadimg {
     text-align: center;
     margin-bottom: 65px;
+    img {
+      -webkit-animation: rotate 1.1s infinite linear;
+      -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+      transform-origin: center center;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+      }
+      100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+      }
+    }
   }
   .block {
     .block-title {
-        margin-left: 59px;
-    //   margin: 65px 59px 10px 53px;
+      margin-left: 59px;
+      //   margin: 65px 59px 10px 53px;
       font-family: NotoSansCJKkr;
       font-size: 20px;
       font-weight: normal;

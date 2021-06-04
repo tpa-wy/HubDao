@@ -8,11 +8,11 @@
       <!-- <setting></setting> -->
       <!-- <token></token> -->
       <!-- <wallet></wallet> -->
-      <!-- <confirm></confirm> -->
+      <confirm></confirm>
       <!-- <transactions></transactions> -->
 
       <!-- <stake></stake> -->
-      <rol></rol>
+      <!-- <rol></rol> -->
     </Dialog>
   </div>
 </template>
@@ -26,11 +26,11 @@
 // import setting from "../components/Hub_Swap/setting";
 // import token from "../components/Hub_Swap/token";
 // import wallet from "../components/Hub_Swap/wallet";
-// import confirm from "../components/Hub_Swap/confirm";
+import confirm from "../components/Hub_Swap/confirm";
 // import transactions from "../components/Hub_Swap/transactions";
 // Hub_farm
 // import stake from "../components/Hub_farm/stake";
-import rol from "../components/Hub_farm/rol";
+// import rol from "../components/Hub_farm/rol";
 
 export default {
   components: {
@@ -42,11 +42,11 @@ export default {
     // setting,
     // token,
     // wallet,
-    // confirm,
+    confirm,
     // transactions,
     // #Hub_farm
     // stake,
-    rol,
+    // rol,
   },
   name: "EducationTest",
   data() {

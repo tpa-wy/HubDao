@@ -140,14 +140,19 @@ const {
 sdk.getLpBalance()
     .then(list => {
         console.log(list)
-        for (var i = 0; i < list.length; i += 5) {
+        for (var i = 0; i < list.length; i += 7) {
             console.log(formatUnits(list[i]))
             console.log(list[i + 1])
             console.log(list[i + 2])
         }
     })
+<<<<<<< HEAD
     .catch(error => console.error(error))
  */
+=======
+    .catch(error => console.error(error)) */
+
+>>>>>>> 10653b1c41cee807ce9ef1d6341ed4b382b30cfc
 // 去除流动性
 // sdk.removeLpETH("0x1b498643DeB60bbaedC1fc1FD526a09937713AD9","0xa71edc38d189767582c38a3145b5873052c3e47a","0x00","0.0001")
 // sdk.removeLpETH("0x1b498643DeB60bbaedC1fc1FD526a09937713AD9","0xa71edc38d189767582c38a3145b5873052c3e47a","0xfffffffffffffffffffffffffffffffffffff","0.0001")
@@ -159,9 +164,12 @@ sdk.getLpBalance()
     })
     .catch(error => console.error(error)) */
 
+<<<<<<< HEAD
     // sdk.swapExactETH()
     sdk.swapExactTokensForETH()
 
+=======
+>>>>>>> 10653b1c41cee807ce9ef1d6341ed4b382b30cfc
 new Vue({
     router,
     store,

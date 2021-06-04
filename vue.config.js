@@ -9,5 +9,6 @@ module.exports = {
 	transpileDependencies: [
 	    'vue-echarts',
 	    'resize-detector'
-	]
+	],
+	productionSourceMap: false, // 是否在构建生产包时生成 sourceMap 文件，false将提高构建速度
 }
