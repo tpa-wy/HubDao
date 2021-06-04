@@ -106,7 +106,7 @@
                 >
               </el-menu-item-group>
             </el-submenu>
-            <el-menu-item index="/Vote">
+            <el-menu-item index="/Vote/vote">
               <img
                 src="../../public/assets/menu/icons-vote.png"
                 alt=""
