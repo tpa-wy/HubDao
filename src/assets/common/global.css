@@ -13,6 +13,12 @@
 .font-color2 {
   color: #444444;
 }
+.font-color3 {
+  color: #a5a5a5;
+}
+.font-color4 {
+  color: #fff;
+}
 .font-size14 {
   font-size: 14px;
 }
@@ -21,6 +27,9 @@
 }
 .font-size24 {
   font-size: 24px;
+}
+.font-size26 {
+  font-size: 26px;
 }
 .layout-mt20 {
   margin-top: 20px;
@@ -71,6 +80,9 @@
 .fx-jc-c {
   justify-content: center;
 }
+.fx-ai-b {
+  align-items: baseline;
+}
 .fx-fd-jc-sb {
   display: flex;
   flex-direction: column;
@@ -101,4 +113,10 @@
   border-radius: 6px;
   background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
   text-align: center;
+}
+.layout-rel {
+  position: relative;
+}
+.layout-abs {
+  position: absolute;
 }

@@ -13,14 +13,38 @@
 
     <div class="block full-r-w">
         
-        <div class="vote-cxt">
+        <div class="vote-cxt fx-jc-sb fx-box fx-ai-c">
             <div class="vote-header fx-box">
-               <div v-for="item in headerList" :key="item.label" class="vote-item layout-rel">
-                   <div>{{item.label}}</div>
+               <div v-for="(item,index) in headerList" 
+                    :key="index" 
+                    @click.stop="changeTool(index)"
+                    class="vote-item layout-rel">
+                   <div :class="(item.checked?'font-color1':'font-color3')">{{item.label}}</div>
                    <div :class="'vote-active layout-abs '+(item.checked?'vote-ac':'vote-bc')"></div>
                </div>
                
             </div>
+            <div class="fx-box fx-ai-c">
+               <div class="small-pro font-size26">Proposals</div>
+               <div class="small-num font-size16 font-color4 font-w5">100</div>
+            </div>
+        </div>
+
+        <div class="vote-list">
+           <div 
+           v-for="(item,index) in storeList"
+           :key="index"
+           class="vote-list-item fx-box fx-ai-b">
+             <div :class="'vote-list-btn font-color4 '+(item.open?'':'vote-list-btn-close')">
+               {{item.text}}
+             </div>
+             <div class="vote-list-content">
+                 <div class="store-name">{{item.title}}</div>
+                 <div class="store-sign">{{item.sign}}</div>
+             </div>
+           </div>
+
+
         </div>
   
  
@@ -57,6 +81,26 @@ export default {
           label:'Closed',
           checked:false,
         }
+      ],
+      storeList:[
+        {
+          open:true,
+          text:'Active',
+          title:'Add Store Section to Hubdao',
+          sign:'#QmqQtwW By 0x24F5…14566 start 5/20/2021 end 7/31/2021',
+        },
+        {
+          open:false,
+          text:'Closed',
+          title:'Add Store Section to Hubdao',
+          sign:'#QmqQtwW By 0x24F5…14566 start 5/20/2021 end 7/31/2021',
+        },
+        {
+          open:false,
+          text:'Closed',
+          title:'Add Store Section to Hubdao',
+          sign:'#QmqQtwW By 0x24F5…14566 start 5/20/2021 end 7/31/2021',
+        }
       ]
      
     };
@@ -67,6 +111,26 @@ export default {
     }
   },
   methods: {
+    changeTool(e){
+      let {headerList}=this;
+      this.headerList=this.updateByIndex(e,headerList);
+    },
+    updateByIndex(index,datas){
+       datas=datas.map((item,i)=>{
+          if(index===i){
+            return {
+                ...item,
+                checked:true
+            }
+          }else{
+             return {
+                ...item,
+                checked:false
+            }
+          }
+       })
+       return datas;
+    },
     navhref(num) {
       this.checked = num;
       var router = "IHO";
@@ -109,6 +173,7 @@ export default {
   .block {
      .vote-cxt{
        margin: 20px 233px 0px 233px;
+       
        .vote-header{
          width:400px;
          margin:26px 0px;
@@ -134,7 +199,51 @@ export default {
            }
          }
        }
+       .small-num{
+          width: 48px;
+          height: 22px;
+          border-radius: 13.5px;
+          background-color: #010033;
+          text-align: center;
+          line-height:22px;
+          margin-left: 7px;
+       }
 
+     }
+     .vote-list{
+       margin: 0px 233px 10px 233px;
+       padding-bottom: 100px;
+       .vote-list-item{
+          padding: 23px 41px 36px;
+          border-radius: 8px;
+          border: solid 1px #d8d8d8;
+          background-color: @boxcolor;
+          margin-bottom: 10px;
+          .vote-list-btn{
+            padding: 5px 21px 7px 23px;
+            border-radius: 24px;
+            background-color:@blue-btn-color;
+          }
+          .vote-list-btn-close{
+           
+            background-color:@black-font-color;
+          }
+          .vote-list-content{
+            margin-left:30px;
+            .store-name{
+              color:@black-font-color;
+              font-size: 36px;
+            }
+            .store-sign{
+               .font-size26;
+               color:@pink-font-color;
+               max-width:550px;
+               overflow: hidden;
+               white-space:nowrap;
+               text-overflow: ellipsis;
+            }
+          }
+       }
      }
   }
 }

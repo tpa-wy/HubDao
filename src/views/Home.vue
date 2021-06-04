@@ -114,7 +114,7 @@
               />
               <span slot="title">Vote</span>
             </el-menu-item>
-            <el-menu-item index="/LendingHUB">
+            <el-menu-item index="/LendingHub/lendinghub">
               <img
                 src="../../public/assets/menu/icons-lending-hub.png"
                 alt=""

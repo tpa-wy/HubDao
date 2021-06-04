@@ -9,6 +9,7 @@
 @font-color: #ffffca; */
 // 第二种
 // 背景颜色
+
 @bgcolor: #f7f7f7;
 // 盒子模型
 @boxcolor: #fff;
@@ -16,15 +17,30 @@
 @header-left: #ffffff;
 // 字体颜色
 @font-color: #000;
+//白色字体颜色
+@white-font-color:#fff;
+
+@blue-btn-color:#00b3ff;
+
+
+@black-font-color:#010033;
+
+@pink-font-color:#727272;
 
 @list-item-back:#f0f0f0;
 
 .font-color1{
-    color: #000;
+    color: @font-color;
 }
 
 .font-color2{
     color: #444444;
+}
+.font-color3{
+    color: #a5a5a5;
+}
+.font-color4{
+    color: @white-font-color;
 }
 
 .font-size14{
@@ -35,6 +51,9 @@
 }
 .font-size24{
     font-size: 24px;
+}
+.font-size26{
+    font-size: 26px;
 }
 .layout-mt20{margin-top:20px;}
 .layout-mt24{margin-top:24px;}
@@ -81,6 +100,9 @@
 }
 .fx-jc-c{
     justify-content: center;
+}
+.fx-ai-b{
+    align-items: baseline;
 }
 
 .fx-fd-jc-sb{

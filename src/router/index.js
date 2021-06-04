@@ -66,9 +66,14 @@ const routes = [{
       component: () => import('@/views/Lottery/index.vue'),
     },
     {
-      path:'/Vote/vote',
+      path:'Vote/vote',
       name:'Vote',
       component: () => import('@/views/Vote/index.vue'),
+    },
+    {
+      path:'LendingHub/lendinghub',
+      name:'LendingHub',
+      component: () => import('@/views/LendingHub/index.vue'),
     },
   ]
   },
