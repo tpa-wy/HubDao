@@ -6,7 +6,7 @@
         <div class="title">TITLE TITLE</div>
         <div class="Comming">Comming Soon</div>
         <div class="icon fx-aj-cc">
-           <img class="header-icon-i" src="/assets/down-icon.png"/>
+          <img class="header-icon-i" src="/assets/down-icon.png" />
         </div>
       </div>
       <div class="content">
@@ -87,7 +87,7 @@
         <div class="info">
           <div class="left">
             <div class="img fx-aj-cc">
-               <img class="left-img" src="/assets/icons-default-img-2@2x.png"/>
+              <img class="left-img" src="/assets/icons-default-img-2@2x.png" />
             </div>
             <div class="content">
               <div>Achievement :</div>
@@ -96,17 +96,17 @@
             </div>
           </div>
           <div class="right">
-            <img class="cut-img" src="/assets/Cup.png"/>
+            <img class="cut-img" src="/assets/Cup.png" />
             <span>Learn more about TITLE(TITLE)</span>
             <div class="share">
-               <img src="/assets/Share.png" class="right-share-img"/>
+              <img src="/assets/Share.png" class="right-share-img" />
             </div>
           </div>
         </div>
       </div>
       <div class="footer">Close</div>
     </div>
-    <div class="block-item block-item-2">
+    <div class="block-item block-item-2" style="display: none">
       <div class="header">How to Take Part</div>
       <div class="content">
         <div class="block">
@@ -121,10 +121,10 @@
         <div class="block">
           <div class="ranking">2</div>
           <div class="line"></div>
-          <div class="title">Get CAKE-BNB LP Tokens</div>
+          <div class="title">Get HD-HT LP Tokens</div>
           <div class="smail-title">
-            Stake CAKE and BNB in the liquidity pool to get LP tokens. You’ll
-            spend them to buy IFO sale tokens.
+            Stake HD and HT in the liquidity pool to get LP tokens. You’ll spend
+            them to buy IHO sale tokens.
           </div>
           <div class="button2">Get LP tokens</div>
         </div>
@@ -133,7 +133,7 @@
           <div class="line"></div>
           <div class="title">Claim your tokens and achievement</div>
           <div class="smail-title">
-            When the IFO sales are live, you can “commit” your LP tokens to buy
+            When the IHO sales are live, you can “commit” your LP tokens to buy
             the tokens being sold. We recommend committing to the Basic Sale
             first, but you can do both if you want.
           </div>
@@ -142,56 +142,30 @@
     </div>
     <div class="block-item block-item-3">
       <div class="header">Details</div>
-      <div class="block">
+      <div
+        class="block"
+        :class="{ 'is-open': item.is_open }"
+        @click="item.is_open = !item.is_open"
+        v-for="item in list"
+        :key="item.list"
+      >
         <div class="top">
           <div>
-            What’s the difference between a Basic sale and Unlimited Sale?
+            {{ item.title }}
           </div>
           <div>
             Details
             <div class="icon">
-              <img class="top-icon-i" src="/assets/down-icon-2.png"/>
+              <img
+                class="top-icon-i"
+                :class="{ 'icon-rotating': item.is_open }"
+                src="/assets/down-icon-2.png"
+              />
             </div>
           </div>
         </div>
-      </div>
-      <div class="block">
-        <div class="top">
-          <div>
-            What’s the difference between a Basic sale and Unlimited Sale?
-          </div>
-          <div>
-            Details
-            <div class="icon">
-              <img class="top-icon-i" src="/assets/down-icon-2.png"/>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block">
-        <div class="top">
-          <div>
-            What’s the difference between a Basic sale and Unlimited Sale?
-          </div>
-          <div>
-            Details
-            <div class="icon">
-              <img class="top-icon-i" src="/assets/down-icon-2.png"/>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block">
-        <div class="top">
-          <div>
-            What’s the difference between a Basic sale and Unlimited Sale?
-          </div>
-          <div>
-            Details
-            <div class="icon">
-              <img class="top-icon-i" src="/assets/down-icon-2.png"/>
-            </div>
-          </div>
+        <div class="bottom">
+          {{ item.content }}
         </div>
       </div>
     </div>
@@ -204,6 +178,38 @@ export default {
   data() {
     return {
       checked: false,
+      list: [
+        {
+          title:
+            "What’s the difference betweena Basic Sale and Unlimited Sale?",
+          content: `In the Basic Sale, every user can commit a maximum of about 100 USD worth of HD-HT LP Tokens. We calculate the maximum LP amount about 30 minutes before each IHO. The Basic Sale has no participation fee.
+In the Unlimited Sale, there’s no limit to the amount of HD-HT LP Tokens you can commit. However, there’s a fee for participation: see below.`,
+          is_open: false,
+        },
+        {
+          title: "Which sale should I commit to? Can I do both?",
+          content: `You can choose one or both at the same time! If you’re only committing a small amount, we recommend the Basic Sale first. Just remember you need a PancakeSwap Profile in order to participate.`,
+          is_open: false,
+        },
+        {
+          title: "How much is the participation fee?",
+          content: `There’s only a participation fee for the Unlimited Sale: there’s no fee for the Basic Sale.
+The fee will start at 1%.
+The 1% participation fee decreases in cliffs, based on the percentage of overflow from the “Unlimited” portion of the sale.`,
+          is_open: false,
+        },
+        {
+          title: "Where does the participation fee go?",
+          content: `We burn it. The HD-HT LP tokens from the participation fee will be decomposed. We will then use the HT portion to market buy the HD equivalent, and finally throw all of the HD into the weekly token burn.`,
+          is_open: false,
+        },
+        {
+          title: "How can I get an achievement for participating in the IFO?",
+          content: `You need to contribute a minimum of about 10 USD worth of CAKE-BNB LP Tokens to either sale.
+You can contribute to one or both, it doesn’t matter: only your overall contribution is counted for the achievement.`,
+          is_open: false,
+        },
+      ],
     };
   },
   mounted() {},
@@ -213,6 +219,9 @@ export default {
 
 <style lang="less">
 .iho-block {
+  .icon-rotating {
+    transform: rotate(180deg);
+  }
   margin-bottom: 108px;
   > .block-item-1 {
     // height: 1075px;
@@ -268,12 +277,13 @@ export default {
         border-radius: 6px;
         box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
         background-color: #ffffff;
-        position:absolute;
+        position: absolute;
         top: 29px;
-        right:49px;
+        right: 49px;
       }
-      .header-icon-i{
-         width:24px;height: 24px;
+      .header-icon-i {
+        width: 24px;
+        height: 24px;
       }
     }
     > .content {
@@ -452,9 +462,9 @@ export default {
             border: solid 1px #979797;
             background-color: #010033;
             margin-right: 21px;
-            .left-img{
+            .left-img {
               width: 50px;
-              height:50px;
+              height: 50px;
             }
           }
           .content {
@@ -486,8 +496,9 @@ export default {
         .right {
           display: flex;
           align-items: center;
-          .cut-img{
-            width: 16px;height:16px;
+          .cut-img {
+            width: 16px;
+            height: 16px;
             margin-right: 8px;
           }
           .share {
@@ -495,8 +506,9 @@ export default {
             // border: solid 1.5px #2f303f;
             margin-left: 5px;
           }
-          .right-share-img{
-             width: 12px;height: 12px;
+          .right-share-img {
+            width: 12px;
+            height: 12px;
           }
           span {
             margin-left: 5px;
@@ -664,7 +676,7 @@ export default {
   > .block-item-3 {
     width: 948px;
     margin-top: 110px;
-    height: 721px;
+    // height: 721px;
     // margin: 110px 354px 108px 353px;
     padding: 48px 22px 25px 26px;
     border-radius: 12px;
@@ -684,40 +696,59 @@ export default {
       text-align: center;
       color: #010033;
     }
+
     .block {
       width: 900px;
-      height: 125px;
       margin: 0 auto 20px auto;
-      padding: 48px 40px 48px 29px;
+      // padding: 48px 40px 48px 29px;
       border-radius: 6px;
       background-color: #f5f5f5;
+      height: 125px;
+      // height: auto;
+      overflow: hidden;
+      padding-right: 20px;
       .top {
+        height: 125px;
+        line-height: 125px;
         display: flex;
+        user-select: none;
         justify-content: space-between;
         > div {
+          // margin-top: 48px;
+          margin-left: 29px;
           display: flex;
           align-items: center;
-          height: 29px;
           //   margin: 0 154px 0 0;
           font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: normal;
           font-stretch: normal;
           font-style: normal;
-          line-height: normal;
           letter-spacing: normal;
           text-align: center;
           color: #444444;
           .icon {
-           
             margin-left: 5px;
-            .top-icon-i{
-                width: 12px;
-                height: 12px;
+            user-select: none;
+            .top-icon-i {
+              width: 12px;
+              height: 12px;
             }
           }
         }
       }
+      .bottom {
+        margin-left: 24px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #8074ae;
+        line-height: 1.5;
+        margin-bottom: 28px;
+      }
+    }
+
+    .is-open {
+      height: auto;
     }
   }
 }

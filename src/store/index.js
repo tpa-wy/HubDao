@@ -9,6 +9,7 @@ export default new Vuex.Store({
   },
   mutations: {
     setAccount(state, account) { //设置参数
+      // console.log('切换了账户',account)
       state.account = account;
     }
   },

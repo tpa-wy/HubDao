@@ -78,7 +78,9 @@
 
             <div class="submit-group">
               <div class="submit-btn submit-btn1" @click="skip('add')">Add</div>
-              <div class="submit-btn submit-btn2" @click="skip('remove')">Remove</div>
+              <div class="submit-btn submit-btn2" @click="skip('remove')">
+                Remove
+              </div>
             </div>
           </div>
         </div>
@@ -221,7 +223,7 @@ export default {
       tokens: [],
     };
   },
-  async created() {
+  /* async created() {
     // 获取当前HT的余额
     if (await this.$sdk.getAddress()) {
       // 获取HT的余额
@@ -244,51 +246,22 @@ export default {
           money = "0";
         }
         this.$set(tokenInfo.tokens[i / 2], "info", money);
+        this.$set(tokenInfo.tokens[i / 2], "authorization", list[i + 1]);
         // tokenInfo.tokens[i].info = formatUnits(list[i]);
         // console.log(tokenInfo.tokens[i].info)
       }
+      // console.log(tokenInfo);
+      // 查询lp
+      this.getLpBalance();
     }
     this.tokens = [...tokenInfo.tokens];
     console.log(this.tokens);
-    // console.log(tokenInfo);
-    // 查询lp
-    var lpInfo = await this.$sdk.getLpBalance();
-    console.log(lpInfo);
-    var lpList = [];
-    for (var j = 0; j < lpInfo.length; j += 4) {
-      // console.log(formatUnits(list[i]));
-      // console.log(list[i + 1]);
-      // console.log(list[i + 2]);
-      // i + 2 token0
-      // i + 3 token1
-      var token0 = lpInfo[j + 2];
-      // console.log(token0);
-      var token1 = lpInfo[j + 3];
-      // console.log(token1);
-      // token0.
-      var token0Index = this.tokens.findIndex(
-        (item) => item.address.toLowerCase() == token0.toLowerCase()
-      );
-      var token1Index = this.tokens.findIndex(
-        (item) => item.address.toLowerCase() == token1.toLowerCase()
-      );
-      // console.log(token0Index);
-      // console.log(token1Index);
-      lpList.push({
-        balance: formatUnits(lpInfo[j]),
-        authorizationAmount: lpInfo[j + 1],
-        token0info: this.tokens[token0Index],
-        token1info: this.tokens[token1Index],
-      });
-    }
-    this.dataList = lpList;
-    console.log(lpList);
-  },
+  }, */
   methods: {
-    skip(router){
-      if(router=='add') {
-        this.$router.push('/ExchangeHUB/Liquidity/Supply-Liquidity')
-      }else if(router=='remove'){
+    skip(router) {
+      if (router == "add") {
+        this.$router.push("/ExchangeHUB/Liquidity/Supply-Liquidity");
+      } else if (router == "remove") {
         // 暂未页面
         // this.$router.push('/ExchangeHUB/Liquidity/Supply-Liquidity')
       }
@@ -303,6 +276,93 @@ export default {
       // console.log("obj[i]", obj[i]);
       // this.dataList[i].checked = !item.checked;
       this.$set(this.dataList[i], "checked", !this.dataList[i].checked);
+    },
+    async getLpBalance() {
+      console.log("激活了我");
+      var lpInfo = await this.$sdk.getLpBalance();
+      console.log(lpInfo);
+      var lpList = [];
+      for (var j = 0; j < lpInfo.length; j += 4) {
+        if (formatUnits(lpInfo[j]) > 0) {
+          // console.log(formatUnits(list[i]));
+          // console.log(list[i + 1]);
+          // console.log(list[i + 2]);
+          // i + 2 token0
+          // i + 3 token1
+          var token0 = lpInfo[j + 2];
+          // console.log(token0);
+          var token1 = lpInfo[j + 3];
+          // console.log(token1);
+          // token0.
+          var token0Index = this.tokens.findIndex(
+            (item) => item.address.toLowerCase() == token0.toLowerCase()
+          );
+          var token1Index = this.tokens.findIndex(
+            (item) => item.address.toLowerCase() == token1.toLowerCase()
+          );
+          // console.log(token0Index);
+          // console.log(token1Index);
+          lpList.push({
+            balance: formatUnits(lpInfo[j]),
+            authorizationAmount: lpInfo[j + 1],
+            token0info: this.tokens[token0Index],
+            token1info: this.tokens[token1Index],
+          });
+        }
+      }
+      this.dataList = lpList;
+    },
+  },
+  watch: {
+    account(newValue, oldValue) {
+      console.log(111);
+      this.$sdk.getAddress().then((res) => {
+        console.log(res);
+        if (res) {
+          // 获取HT的余额
+          this.$sdk.getHTCurrency().then((res) => {
+            this.item = {
+              name: "HT",
+              // wht
+              info: formatUnits(res),
+              address: "",
+              symbol: "HT",
+              decimals: 18,
+              chainId: 128,
+              logoURI:
+                "data:image/png;base64,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",
+            };
+          });
+
+          this.$sdk
+            .getMultiBalanceOf()
+            .then((list) => {
+              // console.log(tokenInfo.tokens)
+              // console.log("list", list);
+              for (var i = 0; i < list.length; i += 2) {
+                // console.log(formatUnits(list[i]))
+                let money = formatUnits(list[i]);
+                if (formatUnits(list[i]) == "0.0") {
+                  money = "0";
+                }
+                this.$set(tokenInfo.tokens[i / 2], "info", money);
+                // tokenInfo.tokens[i].info = formatUnits(list[i]);
+                // console.log(tokenInfo.tokens[i].info)
+              }
+            })
+            .catch((error) => console.error(error));
+
+          this.tokens = [...tokenInfo.tokens];
+          this.getLpBalance();
+        }
+      });
+    },
+  },
+  computed: {
+    account() {
+      console.log("我是账户");
+      // console.log(this.$store.state.account)
+      return this.$store.state.account;
     },
   },
 };

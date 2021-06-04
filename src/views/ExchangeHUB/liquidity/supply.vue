@@ -48,7 +48,7 @@
                     maxlength="79"
                     spellcheck="false"
                     value=""
-                    @input="fromValue=fromValue.replace(/[^\d.]/g,'')"
+                    @input="fromValue = fromValue.replace(/[^\d.]/g, '')"
                   />
                 </div>
                 <div class="liq-list-img">
@@ -93,7 +93,7 @@
                     maxlength="79"
                     spellcheck="false"
                     value=""
-                    @input="toValue=toValue.replace(/[^\d.]/g,'')"
+                    @input="toValue = toValue.replace(/[^\d.]/g, '')"
                   />
                 </div>
                 <div class="liq-list-img">
@@ -196,6 +196,7 @@
           :tokens="tokens"
           :item="item"
           @SelectCurrency="SelectCurrency"
+          @updateToken="updateToken"
         ></SelectCurrency>
       </Dialog>
     </div>
@@ -205,6 +206,7 @@
           :tokens="tokens"
           :item="item"
           @SelectCurrency="SelectCurrency2"
+          @updateToken="updateToken"
         ></SelectCurrency>
       </Dialog>
     </div>
@@ -277,6 +279,10 @@ export default {
     // console.log(tokenInfo);
   },
   methods: {
+    updateToken(list) {
+      console.log(list);
+      this.tokens = list;
+    },
     // 添加流动性
     addLiquidity() {
       if (

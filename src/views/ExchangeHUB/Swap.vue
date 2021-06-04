@@ -112,11 +112,11 @@
         <div>0.0000000 HT</div>
       </div>
       <div>
-        <div>Maximum sold</div>
+        <div>Price Impact</div>
         <div></div>
       </div>
       <div>
-        <div>Maximum sold</div>
+        <div>Liquidity Provider Fee</div>
         <div>0.0000000 HT</div>
       </div>
     </div>
@@ -127,6 +127,7 @@
           :tokens="tokens"
           :item="item"
           @SelectCurrency="SelectCurrency"
+          @updateToken="updateToken"
         ></SelectCurrency>
       </Dialog>
     </div>
@@ -136,6 +137,7 @@
           :tokens="tokens"
           :item="item"
           @SelectCurrency="SelectCurrency2"
+          @updateToken="updateToken"
         ></SelectCurrency>
       </Dialog>
     </div>
@@ -208,7 +210,7 @@ export default {
         .getMultiBalanceOf()
         .then((list) => {
           // console.log(tokenInfo.tokens)
-          console.log("list", list);
+          // console.log("list", list);
           for (var i = 0; i < list.length; i += 2) {
             // console.log(formatUnits(list[i]))
             let money = formatUnits(list[i]);
@@ -216,6 +218,7 @@ export default {
               money = "0";
             }
             this.$set(tokenInfo.tokens[i / 2], "info", money);
+            this.$set(tokenInfo.tokens[i / 2], "authorization", list[i + 1]);
             // tokenInfo.tokens[i].info = formatUnits(list[i]);
             // console.log(tokenInfo.tokens[i].info)
           }
@@ -224,10 +227,14 @@ export default {
     }
     this.fromcheckedBlock = tokenInfo.tokens[0];
     this.tokens = [...tokenInfo.tokens];
-    // console.log(this.tokens);
+    console.log(this.tokens);
     // console.log(tokenInfo);
   },
   methods: {
+    updateToken(list) {
+      console.log(list)
+      this.tokens = list
+    },
     SelectCurrency(Currency) {
       this.is_show = false;
       this.fromValue = "";

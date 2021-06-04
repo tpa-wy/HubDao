@@ -100,8 +100,13 @@
 </template>
 
 <script>
-
 // import erc20_ABi from "../../../public/js/ERC20_ABI.json";
+const {
+  // 将金额转换为小数
+  formatUnits,
+  // 将小数转换为金额
+  parseUnits,
+} = require("@ethersproject/units");
 export default {
   name: "HubdaoToken",
   props: {
@@ -123,6 +128,40 @@ export default {
     SelectCurrency(Currency) {
       this.$emit("SelectCurrency", Currency);
     },
+    getTokenInfo() {
+      // 0xa71edc38d189767582c38a3145b5873052c3e47b
+      console.log(this.searchValue);
+      this.$sdk
+        .getTokenInfo(this.searchValue)
+        .then((res) => {
+          console.log(res);
+          // 存取本地数据
+          console.log("本地数据");
+          let tokenlist =
+            JSON.parse(window.localStorage.getItem("tokenlist")) || [];
+          let token = {
+            name: res[0],
+            // wht
+            info: formatUnits(res[2]),
+            authorization: res[3],
+            address: this.searchValue,
+            symbol: res[1],
+            decimals: res[4],
+            chainId: 128,
+            logoURI:
+              "https://mdex.com/token-icons/heco/0x8dc9c7521cd538a9969a422e3f0f2a309713484a.png",
+          };
+          console.log(tokenlist);
+          tokenlist.push(token);
+          this.$emit("updateToken", [...this.tokens, token]);
+          // console.log(this.tokens);
+          window.localStorage.setItem("tokenlist", JSON.stringify(tokenlist));
+          /* () */
+        })
+        .catch((error) => {
+          console.log(console.log(error));
+        });
+    },
   },
   computed: {
     searchList() {
@@ -137,7 +176,22 @@ export default {
           searchList.push(item);
         }
       });
+      // console.log(searchList);
+      let localtokenlist =
+        JSON.parse(window.localStorage.getItem("tokenlist")) || [];
+      if (
+        searchList.length == 0 &&
+        _this.searchValue.substr(0, 2) &&
+        _this.searchValue.length == 42 &&
+        localtokenlist.findIndex(
+          (item) => item.address === _this.searchValue
+        ) == -1
+      ) {
+        console.log("应该添加");
+        this.getTokenInfo();
+      }
       // console.log(searchList)
+      // 排序
       if (this.sort) {
         searchList = searchList.sort((a, b) => {
           return a["symbol"].localeCompare(b["symbol"]); //index是list你需要索引的字段名称

@@ -94,21 +94,24 @@ class SDK {
      * @returns 
      */
     async getTokenInfo(address) {
-        if (!isAddress(address)) {
-            return false
-        }
         let account = await this.getAddress()
         const provider = new Provider(new JsonRpcProvider(LINK_NODE));
         await provider.init();
-        const contract = new Contract(address, ERC20_ABI);
-        const calls = [];
+        return new Promise((resolve, reject) => {
+            if (!isAddress(address)) {
+                reject(false)
+            }
+            const contract = new Contract(address, ERC20_ABI);
+            const calls = [];
 
-        calls.push(contract.name()); // 全程
-        calls.push(contract.symbol()); // 名称
-        calls.push(contract.balanceOf(account)); // 余额
-        calls.push(contract.allowance(account, ROUTER)) // 已授权金额
-        calls.push(contract.decimals()); // 长度
-        return provider.all(calls);
+            calls.push(contract.name()); // 全程
+            calls.push(contract.symbol()); // 名称
+            calls.push(contract.balanceOf(account)); // 余额
+            calls.push(contract.allowance(account, ROUTER)) // 已授权金额
+            calls.push(contract.decimals()); // 长度
+            resolve(provider.all(calls));
+        })
+
     }
     /**
      * 转账 https://web3js.readthedocs.io/en/v1.3.4/web3-eth-contract.html#methods-mymethod-send
@@ -430,11 +433,11 @@ class SDK {
                 "type": "function"
             }]);
             const contract = new Contract(lp_address, abi)
-            console.log(contract)
-            calls.push(contract.balanceOf(account))
-            calls.push(contract.allowance(account, ROUTER))
-            calls.push(contract.token0())
-            calls.push(contract.token1())
+                calls.push(contract.balanceOf(account))
+                calls.push(contract.allowance(account, ROUTER))
+                calls.push(contract.token0())
+                calls.push(contract.token1())
+
             // calls.push(contract.name()); // 全程
             // calls.push(contract.symbol()); // 名称
             // calls.push(contract.decimals()); // 长度
@@ -636,7 +639,6 @@ class SDK {
             deadline,
         ).send({
             from: account,
-            value: parseUnits('0.001')
         }))
     }
     /**
@@ -658,7 +660,7 @@ class SDK {
                 .on('receipt', function (receipt) {
                     resolve(receipt)
                 })
-                .on('error',function(error){
+                .on('error', function (error) {
                     reject(error)
                 }); // If there's an out of gas error the second parameter is the receipt.
         })

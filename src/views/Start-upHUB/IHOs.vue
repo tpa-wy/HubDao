@@ -6,75 +6,7 @@
         <div class="title">TITLE TITLE</div>
         <div class="icon">
           <div class="smail-icon fx-aj-cc">
-             <img class="header-icon-i" src="/assets/down-icon.png"/>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <div class="block">
-          <div class="block-item">
-            <div class="title">
-              Basic Sale
-              <div class="icon">
-                <img src="../../assets/icons-help.png" alt="" />
-              </div>
-            </div>
-            <div class="logo">
-              <img src="../../assets/icons-logo.png" alt="" />
-            </div>
-            <div class="sale-button">ON SALE</div>
-            <div class="money">15,000,000 TITLE</div>
-            <div class="total">30% of total sale</div>
-            <div class="wallet-button">Unlock Wallet</div>
-            <div class="table">
-              <div class="tr">
-                <div class="td">Max. LP token entry</div>
-                <div class="td">0</div>
-              </div>
-              <div class="tr">
-                <div class="td">Max. LP token entry</div>
-                <div class="td">0</div>
-              </div>
-              <div class="tr">
-                <div class="td">Max. LP token entry</div>
-                <div class="td">0</div>
-              </div>
-              <div class="tr">
-                <div class="td">Max. LP token entry</div>
-                <div class="td">0</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="info">
-          <div class="left">
-             <div class="img fx-aj-cc">
-               <img class="left-img" src="/assets/icons-default-img-2@2x.png"/>
-            </div>
-            <div class="content">
-              <div>Achievement :</div>
-              <div>IHO Shopper: TITLE (TITLE)</div>
-              <div>Commit ~0.082 LP in total to earn!</div>
-            </div>
-          </div>
-          <div class="right">
-            <img class="cut-img" src="/assets/Cup.png"/>
-            <span>Learn more about TITLE(TITLE)</span>
-            <div class="share">
-               <img src="/assets/Share.png" class="right-share-img"/>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer">Close</div>
-    </div>
-    <div class="block-item">
-      <div class="header">
-        <div class="logo"><img src="../../assets/icons-logo.png" alt="" /></div>
-        <div class="title">TITLE TITLE</div>
-        <div class="icon">
-          <div class="smail-icon fx-aj-cc">
-             <img class="header-icon-i" src="/assets/down-icon.png"/>
+            <img class="header-icon-i" src="/assets/down-icon.png" />
           </div>
         </div>
       </div>
@@ -117,7 +49,7 @@
         <div class="info">
           <div class="left">
             <div class="img fx-aj-cc">
-               <img class="left-img" src="/assets/icons-default-img-2@2x.png"/>
+              <img class="left-img" src="/assets/icons-default-img-2@2x.png" />
             </div>
             <div class="content">
               <div>Achievement :</div>
@@ -126,10 +58,78 @@
             </div>
           </div>
           <div class="right">
-             <img class="cut-img" src="/assets/Cup.png"/>
+            <img class="cut-img" src="/assets/Cup.png" />
             <span>Learn more about TITLE(TITLE)</span>
             <div class="share">
-               <img src="/assets/Share.png" class="right-share-img"/>
+              <img src="/assets/Share.png" class="right-share-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Close</div>
+    </div>
+    <div class="block-item">
+      <div class="header">
+        <div class="logo"><img src="../../assets/icons-logo.png" alt="" /></div>
+        <div class="title">TITLE TITLE</div>
+        <div class="icon">
+          <div class="smail-icon fx-aj-cc">
+            <img class="header-icon-i" src="/assets/down-icon.png" />
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="block">
+          <div class="block-item">
+            <div class="title">
+              Basic Sale
+              <div class="icon">
+                <img src="../../assets/icons-help.png" alt="" />
+              </div>
+            </div>
+            <div class="logo">
+              <img src="../../assets/icons-logo.png" alt="" />
+            </div>
+            <div class="sale-button">ON SALE</div>
+            <div class="money">15,000,000 TITLE</div>
+            <div class="total">30% of total sale</div>
+            <div class="wallet-button">Unlock Wallet</div>
+            <div class="table">
+              <div class="tr">
+                <div class="td">Max. LP token entry</div>
+                <div class="td">0</div>
+              </div>
+              <div class="tr">
+                <div class="td">Max. LP token entry</div>
+                <div class="td">0</div>
+              </div>
+              <div class="tr">
+                <div class="td">Max. LP token entry</div>
+                <div class="td">0</div>
+              </div>
+              <div class="tr">
+                <div class="td">Max. LP token entry</div>
+                <div class="td">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="left">
+            <div class="img fx-aj-cc">
+              <img class="left-img" src="/assets/icons-default-img-2@2x.png" />
+            </div>
+            <div class="content">
+              <div>Achievement :</div>
+              <div>IHO Shopper: TITLE (TITLE)</div>
+              <div>Commit ~0.082 LP in total to earn!</div>
+            </div>
+          </div>
+          <div class="right">
+            <img class="cut-img" src="/assets/Cup.png" />
+            <span>Learn more about TITLE(TITLE)</span>
+            <div class="share">
+              <img src="/assets/Share.png" class="right-share-img" />
             </div>
           </div>
         </div>
@@ -151,7 +151,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
 .ihos {
   > .block-item {
     // height: 1075px;
@@ -190,21 +189,23 @@ export default {
         box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
         background-color: #ffffff;
         position: absolute;
-        right: 62px;
+        right: 49px;
+        top: 29px;
         display: flex;
         align-items: center;
         .smail-icon {
-           width: 48px;
-           height: 48px;
-           border-radius: 6px;
-           box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
-           background-color: #ffffff;
+          width: 48px;
+          height: 48px;
+          border-radius: 6px;
+          box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+          background-color: #ffffff;
           margin: 0 auto;
         }
-        
-          .header-icon-i{
-            width:24px;height: 24px;
-          }
+
+        .header-icon-i {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
     > .content {
@@ -383,11 +384,11 @@ export default {
             margin: 19px 21px 23px 0;
             border-radius: 11px;
             border: solid 1px #979797;
-             background-color: #010033;
+            background-color: #010033;
             margin-right: 21px;
-            .left-img{
+            .left-img {
               width: 50px;
-              height:50px;
+              height: 50px;
             }
           }
           .content {
@@ -426,21 +427,23 @@ export default {
             // border: solid 1px #000000;
             background-color: #f00;
           }
-           
-           .cut-img{
-              width: 16px;height:16px;
-              margin-right: 8px;
-            }
-         
-            .share {
-              margin: 2px 2px 0 0;
-              // border: solid 1.5px #2f303f;
-              margin-left: 5px;
-            }
-            .right-share-img{
-              width: 12px;height: 12px;
-            }
-          
+
+          .cut-img {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+          }
+
+          .share {
+            margin: 2px 2px 0 0;
+            // border: solid 1.5px #2f303f;
+            margin-left: 5px;
+          }
+          .right-share-img {
+            width: 12px;
+            height: 12px;
+          }
+
           span {
             margin-left: 5px;
           }
@@ -471,7 +474,7 @@ export default {
       color: #727272;
     }
   }
-  .block-item:last-child{
+  .block-item:last-child {
     margin-bottom: 100px;
   }
 }

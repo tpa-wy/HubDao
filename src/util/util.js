@@ -35,6 +35,8 @@ export default {
                 method: "eth_requestAccounts"
             })
             .then((array) => {
+                console.log('账户-------------------------')
+                console.log(array)
                 // array[0]
                 store.commit('setAccount', array[0])
             })
