@@ -7,6 +7,7 @@ import Web3 from 'web3-eth';
 import utils from './util'
 
 
+
 // 一次性引入合约 @ethers-multicall https://github.com/hsienfu/ethers-multicall
 // https://github.com/ethers-io/ethers.js/tree/master/packages/providers
 const {
@@ -41,7 +42,7 @@ const {
     MaxUint256
 } = require("@ethersproject/constants");
 
-
+const ETH = "0x5545153ccfca01fbd7dd11c0b23ba694d9509a6f"
 class SDK {
     constructor() {
         /*  // normal node
@@ -449,11 +450,7 @@ class SDK {
         return provider.all(calls)
     }
     /**
-<<<<<<< HEAD
-     * 去除单流动性
-=======
      * 去除ETH流动性
->>>>>>> 10653b1c41cee807ce9ef1d6341ed4b382b30cfc
      * @param {*} lpAddress lp合约地址
      * @param {*} token usdt合约地址
      * @param {*} Authorizedamount1 lp地址授权金额
@@ -529,11 +526,7 @@ class SDK {
     }
 
     /**
-<<<<<<< HEAD
      * 去除lp流动性
-=======
-     * 去除流动性
->>>>>>> 10653b1c41cee807ce9ef1d6341ed4b382b30cfc
      * @param {*} lpAddress lp合约地址
      * @param {*} token0 token0合约地址
      * @param {*} token1 token1合约地址
@@ -611,7 +604,6 @@ class SDK {
             }
         })
     }
-<<<<<<< HEAD
     async swapExactETH() {
         const router = new this.web3.Contract(Router_ABI, ROUTER);
         const account = await this.getAddress()
@@ -619,16 +611,17 @@ class SDK {
 
         console.log(await router.methods.swapExactETHForTokensSupportingFeeOnTransferTokens(
             0,
-            ['0x5545153ccfca01fbd7dd11c0b23ba694d9509a6f',"0xa71edc38d189767582c38a3145b5873052c3e47a"],
+            [ETH, "0xa71edc38d189767582c38a3145b5873052c3e47a"],
             account,
             deadline,
-            ).send({
-                from: account,
-                value:parseUnits('0.001')
+        ).send({
+            from: account,
+            value: parseUnits('0.001')
         }))
     }
     async swapExactTokensForETH() {
         // 1.授权usdt一个无穷大的数
+
         // 2.调用router的方法
         const router = new this.web3.Contract(Router_ABI, ROUTER);
         console.log(router.methods)
@@ -638,15 +631,38 @@ class SDK {
         console.log(await router.methods.swapExactTokensForETHSupportingFeeOnTransferTokens(
             parseUnits('0.001'),
             0,
-            ["0xa71edc38d189767582c38a3145b5873052c3e47a","0x5545153ccfca01fbd7dd11c0b23ba694d9509a6"],
+            ["0xa71edc38d189767582c38a3145b5873052c3e47a", ETH],
             account,
             deadline,
-            ).send({
-                from: account,
+        ).send({
+            from: account,
+            value: parseUnits('0.001')
         }))
     }
-=======
->>>>>>> 10653b1c41cee807ce9ef1d6341ed4b382b30cfc
+    /**
+     * 授权合约
+     * @param {*} address 
+     */
+    async authorization(address) {
+        // router合约 要授权的金额(一个无尽的数)
+        const CURRENCY = new this.web3.Contract(ERC20_ABI, address);
+        console.log(CURRENCY)
+        const fund500 = MaxUint256;
+        const account = await this.getAddress()
+        return new Promise((resolve, reject) => {
+            CURRENCY.methods.approve(ROUTER, fund500).send({
+                    from: account
+                })
+                .on('transactionHash', function (hash) {})
+                .on('confirmation', function (confirmationNumber, receipt) {})
+                .on('receipt', function (receipt) {
+                    resolve(receipt)
+                })
+                .on('error',function(error){
+                    reject(error)
+                }); // If there's an out of gas error the second parameter is the receipt.
+        })
+    }
 }
 
 const sdk = new SDK()

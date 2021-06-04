@@ -289,6 +289,9 @@ a:focus,
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.button {
+  cursor: pointer;
+}
 .button:hover,
 .button:active {
   opacity: 0.85;
