@@ -62,17 +62,17 @@
         </g>
       </svg>
     </div>
-    <div class="title">
+    <div class="title font-color1">
       DECENTRALIZED FINANCIAL ECOSYSTEM BASED ON GOVERNANCE.
     </div>
     <div class="block">
       <div class="block-tr">
         <div class="block-td Rectangle-Copy-13 one">
           <div class="title">
-            <div class="TLV">TLV</div>
+            <div class="TLV font-color1">TLV</div>
             <div class="time">2021-05-19 오후 10:00 기준</div>
           </div>
-          <div class="money">$104.419.391</div>
+          <div class="money font-color1">$104.419.391</div>
           <div class="canvas">
             <div id="main" :style="{ width: '100%', height: '100%' }"></div>
           </div>
@@ -96,46 +96,46 @@
       </div>
       <div class="block-tr">
         <div class="block-td Rectangle-Copy-13 Paris">
-          <div class="title">Paris</div>
+          <div class="title font-color1">Paris</div>
           <div class="table">
             <div class="th">
-              <div class="Stake">Stake</div>
-              <div class="APY">APY</div>
-              <div class="Add-Liquidity">Add Liquidity</div>
-              <div class="Trade">/ Trade</div>
+              <div class="Stake font-color1">Stake</div>
+              <div class="APY font-color1">APY</div>
+              <div class="Add-Liquidity font-color1">Add Liquidity</div>
+              <div class="Trade fobnt-color1">/ Trade</div>
             </div>
             <div class="td">
-              <div class="Stake-td">HD-HTLP</div>
+              <div class="Stake-td font-color1">HD-HTLP</div>
               <div class="APY-td">293%</div>
-              <div class="button button-1">Add</div>
-              <div class="button button-2">Trade</div>
+              <div class="button button-1 font-color7">Add</div>
+              <div class="button button-2 font-color4">Trade</div>
             </div>
             <div class="td">
-              <div class="Stake-td">HD-HTLP</div>
+              <div class="Stake-td font-color1">HD-HTLP</div>
               <div class="APY-td">293%</div>
-              <div class="button button-1">Add</div>
-              <div class="button button-2">Trade</div>
+              <div class="button button-1 font-color7">Add</div>
+              <div class="button button-2 font-color4">Trade</div>
             </div>
             <div class="td">
-              <div class="Stake-td">HD-HTLP</div>
+              <div class="Stake-td font-color1">HD-HTLP</div>
               <div class="APY-td">293%</div>
-              <div class="button button-1">Add</div>
-              <div class="button button-2">Trade</div>
+              <div class="button button-1 font-color7">Add</div>
+              <div class="button button-2 font-color4">Trade</div>
             </div>
             <div class="td">
-              <div class="Stake-td">HD-HTLP</div>
-              <div class="APY-td">293%</div>
-              <div class="button button-1">Add</div>
-              <div class="button button-2">Trade</div>
+              <div class="Stake-td font-color1">HD-HTLP</div>
+              <div class="APY-td font-color1">293%</div>
+              <div class="button button-1 font-color7">Add</div>
+              <div class="button button-2 font-color4">Trade</div>
             </div>
           </div>
         </div>
         <div class="block-td Rectangle-Copy-14 block-td-4">
-          <div class="Earn-up-to">Earn up to</div>
+          <div class="Earn-up-to font-color1">Earn up to</div>
           <div class="content">
             <div class="content-1">1993%</div>
             <div class="content-2">APY</div>
-            <div class="content-3">In Stake HUB</div>
+            <div class="content-3 font-color1">In Stake HUB</div>
           </div>
         </div>
       </div>
@@ -197,15 +197,12 @@ export default {
     width: 824px;
     height: 90px;
     margin: 0 auto;
-    font-family: NotoSansCJKkr;
+    
     font-size: 30px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
+    .basic-font;
     letter-spacing: 7.5px;
     text-align: center;
-    .font-color1;
   }
   .block {
     margin-top: 40px;
@@ -220,27 +217,17 @@ export default {
           .TLV {
             width: 37px;
             height: 27px;
-            font-family: NotoSansCJKkr;
             font-size: 18px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            .font-color1;
+            .basic-font;
             margin-left: 30px;
           }
           .time {
             width: 146px;
             height: 18px;
             opacity: 0.68;
-            font-family: NotoSansCJKkr;
+			.basic-font;
             font-size: 12px;
             font-weight: 300;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
             text-align: right;
             color: #8f90a5;
             margin-right: 30px;
@@ -250,14 +237,8 @@ export default {
           height: 36px;
           // margin: 3px 86px 26px 30px;
           margin-left: 30px;
-          font-family: NotoSansCJKkr;
           font-size: 24px;
-          font-weight: normal;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color1;
+          .basic-font;
         }
         .canvas {
           width: 100%;
@@ -285,7 +266,7 @@ export default {
         .theme-box-back;
         .block-td-column:nth-child(1) {
           div {
-            .font-color9;
+            color:@f1;
           }
         }
         .block-td-column:nth-last-of-type(1) {
@@ -296,7 +277,7 @@ export default {
             height: 1px;
             margin: 0 0 14px;
             opacity: 0.27;
-            .font-color1;
+            color:@f1;
             position: absolute;
             bottom: -8px;
           }
@@ -308,7 +289,7 @@ export default {
             opacity: 0.27;
             position: absolute;
             top: 0;
-			.font-color1;
+			color:@f1;
           }
         }
         .block-td-column {
@@ -321,7 +302,7 @@ export default {
             margin: 0 0 14px;
             opacity: 0.27;
             position: absolute;
-			.font-color1;
+			color:@f1;
           }
           > div:nth-child(1) {
             margin-right: 36px;
@@ -340,9 +321,9 @@ export default {
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            .font-color1;
+            color:@f1;
             span {
-              .font-color1;
+              color:@f1;
             }
           }
         }
@@ -354,14 +335,9 @@ export default {
           width: 188px;
           height: 45px;
           margin: 0 68px 22px 0;
-          font-family: NotoSansCJKkr;
           font-size: 30px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color1;
+          .basic-font;
         }
         .content {
           display: flex;
@@ -405,7 +381,6 @@ export default {
             line-height: normal;
             letter-spacing: normal;
             text-align: right;
-            .font-color1;
           }
         }
       }
@@ -414,14 +389,10 @@ export default {
           width: 59px;
           height: 29px;
           margin: 0 119px 18px 30px;
-          font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color1;
+          .basic-font;
+          
         }
         .table {
           .th {
@@ -446,16 +417,11 @@ export default {
               height: 18px;
               // margin: 18px 146px 4px 30px;
               opacity: 0.79;
-              font-family: NotoSansCJKkr;
               font-size: 12px;
               font-weight: 300;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
               text-align: left;
               padding-left: 31px;
-              .font-color1;
+              .basic-font;
             }
             .APY {
               width: 150px;
@@ -470,35 +436,26 @@ export default {
               line-height: normal;
               letter-spacing: normal;
               text-align: left;
-              .font-color1;
+              
             }
             .Add-Liquidity {
               width: 74px;
               height: 18px;
               // margin: 0 5px 0 0;
               opacity: 0.79;
-              font-family: NotoSansCJKkr;
               font-size: 12px;
               font-weight: 300;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
+              .basic-font;
             }
             .Trade {
               width: 40px;
               height: 18px;
               // margin: 0 0 0 5px;
               opacity: 0.79;
-              font-family: NotoSansCJKkr;
               font-size: 12px;
               font-weight: 300;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
+              
+              .basic-font;
             }
           }
           .td {
@@ -508,26 +465,17 @@ export default {
               width: 177px;
               height: 24px;
               padding-left: 31px;
-              font-family: NotoSansCJKkr;
               font-size: 16px;
               font-weight: 300;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
+              .basic-font;
             }
             .APY-td {
               width: 150px;
               height: 24px;
-              font-family: NotoSansCJKkr;
+              
               font-size: 16px;
               font-weight: 300;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
+              .basic-font;
             }
             .button-1 {
               width: 75px;
@@ -536,15 +484,13 @@ export default {
               border-radius: 4px;
               .theme-yellow-back;
               cursor: pointer;
-              font-family: NotoSansCJKkr;
+              
               font-size: 12px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
+              
               text-align: center;
-              .font-color7;
+              .basic-font;
+              
             }
             .button-2 {
               cursor: pointer;
@@ -555,15 +501,12 @@ export default {
               padding: 2px 17px 3px 18px;
               border-radius: 4px;
               background-color: #3b3b5d;
-              font-family: NotoSansCJKkr;
               font-size: 12px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
+              
               text-align: center;
-              .font-color4;
+              .basic-font;
+              
             }
           }
         }

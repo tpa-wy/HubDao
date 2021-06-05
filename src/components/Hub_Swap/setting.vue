@@ -2,9 +2,9 @@
   <div class="setting">
     <div class="mask">
       <div class="content">
-        <div class="title">Settings</div>
+        <div class="title font-color1">Settings</div>
         <div class="block">
-          <div class="smail-title">
+          <div class="smail-title font-color1">
             Slippage tolerance
             <div class="icon-info">
               <div class="icon"></div>
@@ -15,7 +15,7 @@
             </div>
           </div>
           <div class="content">
-            <div class="Slippage">
+            <div class="Slippage font-color6">
               <div
                 :class="{ checked: tolerance == 0.1 }"
                 @click="tolerance = 0.1"
@@ -71,7 +71,7 @@
               inactive-color="#13ce66"
             >
             </el-switch>
-            <span class="myswich">{{ value ? "ON" : "YES" }}</span>
+            <span class="myswich font-color7">{{ value ? "ON" : "YES" }}</span>
           </div>
         </div>
       </div>
@@ -128,29 +128,17 @@ export default {
         height: 36px;
         margin-top: 45px;
         margin-bottom: 49px;
-        //   margin: 11px 159px 49px 0;
-        font-family: NotoSansCJKkr;
         font-size: 24px;
         font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color1;
+        .basic-font;
       }
       .block {
         margin-bottom: 20px;
         .smail-title {
           height: 29px;
-          // margin: 0 9px 22px 0;
-          font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color1;
+          .basic-font;
           display: flex;
           align-items: center;
           > .icon-info {
@@ -170,7 +158,6 @@ export default {
             display: flex;
             .checked {
               border-radius: 6px;
-              
               font-family: NotoSansCJKkr;
               font-size: 16px;
               font-weight: 500;
@@ -178,7 +165,7 @@ export default {
               font-style: normal;
               line-height: 40px;
               letter-spacing: normal;
-              .font-color4;
+              color: @f4;
               .theme-pink-back;
             }
             div {
@@ -187,14 +174,11 @@ export default {
               height: 40px;
               border-radius: 6px;
               .theme-pink-back1;
-              font-family: NotoSansCJKkr;
+              .basic-font;
               font-size: 16px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
               line-height: 40px;
-              letter-spacing: normal;
-              .font-color6;
+              
               text-align: center;
               margin-right: 8px;
             }
@@ -208,14 +192,10 @@ export default {
             div:nth-child(2) {
               height: 29px;
               margin-left: 12px;
-              font-family: NotoSansCJKkr;
               font-size: 20px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
+              .basic-font;
+              color:@f1;
             }
           }
         }
@@ -236,14 +216,9 @@ export default {
         }
         .myswich {
           height: 24px;
-          font-family: NotoSansCJKkr;
           font-size: 16px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color7;
+          .basic-font;
         }
       }
       .block-3 {

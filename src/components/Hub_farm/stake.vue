@@ -1,12 +1,12 @@
 <template>
   <div class="stake">
-    <div class="title">Stake LP tokens</div>
+    <div class="title font-color1">Stake LP tokens</div>
     <div class="bclok">
-      <div class="one-column">
+      <div class="one-column font-color1">
         <div class="left">Stake</div>
         <div class="right">Balance : 0.210304</div>
       </div>
-      <div class="twp-column">
+      <div class="twp-column font-color7">
         <div class="left">0</div>
         <div class="right">
           <div class="icon"></div>
@@ -15,10 +15,10 @@
       </div>
     </div>
     <div class="button-info">
-      <div class="button button-1">Cancle</div>
-      <div class="button button-2">Confirm</div>
+      <div class="button button-1 font-color4">Cancle</div>
+      <div class="button button-2 font-color1">Confirm</div>
     </div>
-    <div class="footer">
+    <div class="footer font-color7">
       <div class="font">Get HD-HT LP</div>
       <div class="icon"></div>
     </div>
@@ -43,17 +43,13 @@ export default {
   padding: 21px 19px 26px 39px;
   border-radius: 9px;
   border: solid 1px #979797;
+  .basic-font;
   .theme-box-back;
   .title {
     margin: 11px 19px 52px 0;
-    font-family: NotoSansCJKkr;
     font-size: 24px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
+    
   }
   .bclok {
     width: 402px;
@@ -68,30 +64,18 @@ export default {
       justify-content: space-between;
       align-items: center;
       height: 24px;
-      font-family: NotoSansCJKkr;
       margin-bottom: 24px;
       font-size: 16px;
       font-weight: 300;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      .font-color1;
     }
     .twp-column {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 38px;
-    //   margin: 24px 196px 2px 0;
-      font-family: NotoSansCJKkr;
       font-size: 26px;
       font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      .font-color7;
+    
       .right {
         display: flex;
         align-items: center;
@@ -112,10 +96,9 @@ export default {
     align-items: center;
     .button-1 {
       .black-theme-img1;
-      .font-color4;
     }
     .button-2 {
-      .font-color1;
+      
       .black-theme-img2;
     }
     .button {
@@ -135,17 +118,11 @@ export default {
     }
   }
   .footer {
+	.basic-font;
     height: 29px;
     margin: 0 7px 0 0;
-    font-family: NotoSansCJKkr;
     font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: right;
-    .font-color7;
     display: flex;
     justify-content: center;
     align-items: center;

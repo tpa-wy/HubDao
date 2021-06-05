@@ -3,7 +3,7 @@
     <div class="block-item block-item-1">
       <div class="header">
         <div class="logo"><img src="../../assets/icons-logo.png" alt="" /></div>
-        <div class="title">TITLE TITLE</div>
+        <div class="title font-color4">TITLE TITLE</div>
         <div class="Comming">Comming Soon</div>
         <div class="icon fx-aj-cc">
            <img class="header-icon-i" src="/assets/down-icon.png"/>
@@ -14,7 +14,7 @@
           <div class="article">
             <el-progress :show-text="false" :percentage="50"></el-progress>
           </div>
-          <div class="value">START : <span>0d 22h 41m(blocks)</span></div>
+          <div class="value font-color2">START : <span>0d 22h 41m(blocks)</span></div>
         </div>
         <div class="block">
           <div class="block-item">
@@ -30,21 +30,21 @@
             <div class="sale-button">ON SALE</div>
             <div class="money">15,000,000 TITLE</div>
             <div class="total">30% of total sale</div>
-            <div class="wallet-button">Unlock Wallet</div>
+            <div class="wallet-button font-color5">Unlock Wallet</div>
             <div class="table">
-              <div class="tr">
+              <div class="tr font-color1">
                 <div class="td">Max. LP token entry</div>
                 <div class="td">0</div>
               </div>
-              <div class="tr">
+              <div class="tr font-color1">
                 <div class="td">Max. LP token entry</div>
                 <div class="td">0</div>
               </div>
-              <div class="tr">
+              <div class="tr font-color1">
                 <div class="td">Max. LP token entry</div>
                 <div class="td">0</div>
               </div>
-              <div class="tr">
+              <div class="tr font-color1">
                 <div class="td">Max. LP token entry</div>
                 <div class="td">0</div>
               </div>
@@ -60,10 +60,10 @@
             <div class="logo">
               <img src="../../assets/icons-logo.png" alt="" />
             </div>
-            <div class="sale-button">ON SALE</div>
-            <div class="money">15,000,000 TITLE</div>
+            <div class="sale-button font-color4">ON SALE</div>
+            <div class="money font-color5">15,000,000 TITLE</div>
             <div class="total">30% of total sale</div>
-            <div class="wallet-button">Unlock Wallet</div>
+            <div class="wallet-button font-color5">Unlock Wallet</div>
             <div class="table">
               <div class="tr">
                 <div class="td">Max. LP token entry</div>
@@ -89,13 +89,13 @@
             <div class="img fx-aj-cc">
                <img class="left-img" src="/assets/icons-default-img-2@2x.png"/>
             </div>
-            <div class="content">
+            <div class="content font-color5">
               <div>Achievement :</div>
               <div>IHO Shopper: TITLE (TITLE)</div>
               <div>Commit ~0.082 LP in total to earn!</div>
             </div>
           </div>
-          <div class="right">
+          <div class="right font-color2">
             <img class="cut-img" src="/assets/Cup.png"/>
             <span>Learn more about TITLE(TITLE)</span>
             <div class="share">
@@ -104,35 +104,35 @@
           </div>
         </div>
       </div>
-      <div class="footer">Close</div>
+      <div class="footer  font-color6">Close</div>
     </div>
     <div class="block-item block-item-2">
-      <div class="header">How to Take Part</div>
+      <div class="header font-color4">How to Take Part</div>
       <div class="content">
         <div class="block">
-          <div class="ranking">1</div>
+          <div class="ranking font-color4">1</div>
           <div class="line"></div>
-          <div class="title">Activate your Profile</div>
-          <div class="smail-title">
+          <div class="title font-color1">Activate your Profile</div>
+          <div class="smail-title  font-color1">
             You’ll need an active PancakeSwap Profile to take part in an IHO!
           </div>
-          <div class="button">Active your profile</div>
+          <div class="button font-color4">Active your profile</div>
         </div>
         <div class="block">
-          <div class="ranking">2</div>
+          <div class="ranking font-color4">2</div>
           <div class="line"></div>
-          <div class="title">Get CAKE-BNB LP Tokens</div>
-          <div class="smail-title">
+          <div class="title font-color1">Get CAKE-BNB LP Tokens</div>
+          <div class="smail-title font-color1">
             Stake CAKE and BNB in the liquidity pool to get LP tokens. You’ll
             spend them to buy IFO sale tokens.
           </div>
-          <div class="button2">Get LP tokens</div>
+          <div class="button2 font-color5">Get LP tokens</div>
         </div>
         <div class="block">
-          <div class="ranking">3</div>
+          <div class="ranking font-color4">3</div>
           <div class="line"></div>
-          <div class="title">Claim your tokens and achievement</div>
-          <div class="smail-title">
+          <div class="title font-color1">Claim your tokens and achievement</div>
+          <div class="smail-title font-color1">
             When the IFO sales are live, you can “commit” your LP tokens to buy
             the tokens being sold. We recommend committing to the Basic Sale
             first, but you can do both if you want.
@@ -141,10 +141,10 @@
       </div>
     </div>
     <div class="block-item block-item-3">
-      <div class="header">Details</div>
+      <div class="header font-color5">Details</div>
       <div class="block">
         <div class="top">
-          <div>
+          <div class="font-color2">
             What’s the difference between a Basic sale and Unlimited Sale?
           </div>
           <div>
@@ -233,14 +233,10 @@ export default {
       position: relative;
       .title {
         margin: 0 0 0 16px;
-        font-family: NotoSansCJKkr;
         font-size: 36px;
         font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color4;
+        .basic-font;
+       
       }
       .Comming {
         position: absolute;
@@ -301,16 +297,11 @@ export default {
         }
         .value {
           flex: 1;
-          font-family: NotoSansCJKkr;
           font-size: 16px;
           font-weight: bold;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color2;
+          .basic-font;
           text-align: right;
-          //   margin-left: 62px;
+         
         }
       }
       > .block {
@@ -333,15 +324,11 @@ export default {
           .black-theme-img4;
           .title {
             height: 29px;
-            font-family: NotoSansCJKkr;
             font-size: 20px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
+           
             text-align: center;
-            .font-color5;
+            .basic-font;
             position: relative;
             .icon {
               position: absolute;
@@ -362,40 +349,31 @@ export default {
             // padding: 3px 11px 3px 10px;
             line-height: 26px;
             border-radius: 16px;
-            font-family: NotoSansCJKkr;
+            
             font-size: 14px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
+            .basic-font;
             text-align: center;
-            .font-color4;
+			.basic-font;
+            
             cursor: pointer;
             margin-bottom: 9px;
             .black-font-color;
           }
           .money {
             height: 54px;
-            // margin: 6px 25px 0 0;
-            font-family: NotoSansCJKkr;
+            
             font-size: 36px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            .font-color5;
+            .basic-font;
+          
           }
           .total {
             height: 29px;
-            // margin: 60px 172px 42px 1px;
-            font-family: NotoSansCJKkr;
+            
             font-size: 20px;
             font-weight: 300;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
+           .basic-font;
             color: rgba(47, 48, 63, 0.73);
             margin-bottom: 42px;
           }
@@ -406,15 +384,11 @@ export default {
             // margin: 42px 6px 32px 0;
             // padding: 14px 92px 15px 95px;
             border-radius: 6px;
-            font-family: NotoSansCJKkr;
             .black-theme-img2;
             font-size: 20px;
             font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
-            text-align: center;
-            .font-color5;
+            .basic-font;
+            
             margin-bottom: 32px;
           }
           .table {
@@ -425,14 +399,9 @@ export default {
               margin-bottom: 7px;
               .td {
                 height: 24px;
-                font-family: NotoSansCJKkr;
                 font-size: 16px;
                 font-weight: 300;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
-                .font-color1;
+               .basic-font;
                 margin-right: 26px;
               }
             }
@@ -460,26 +429,15 @@ export default {
           }
           .content {
             > div {
-              //   height: 24px;
-              //   margin: 48px 235px 0 21px;
-              font-family: NotoSansCJKkr;
               font-size: 16px;
               font-weight: 300;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color5;
+              .basic-font;
             }
             > div:nth-child(2) {
-              font-family: NotoSansCJKkr;
               font-size: 16px;
               font-weight: bold;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-             .font-color5;
+              .basic-font;
+              color: @f5;
               width: 154px;
             }
           }
@@ -493,7 +451,6 @@ export default {
           }
           .share {
             margin: 2px 2px 0 0;
-            // border: solid 1.5px #2f303f;
             margin-left: 5px;
           }
           .right-share-img{
@@ -503,15 +460,10 @@ export default {
             margin-left: 5px;
           }
           height: 24px;
-          //   margin: 0 0 0 19px;
-          font-family: NotoSansCJKkr;
           font-size: 16px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color2;
+          .basic-font;
+          
         }
       }
     }
@@ -519,14 +471,11 @@ export default {
       border-top: solid 1px #979797;
       height: 102px;
       line-height: 102px;
-      font-family: NotoSansCJKkr;
       font-size: 20px;
       font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      letter-spacing: normal;
+      .basic-font;
       text-align: center;
-      .font-color6;
+      
     }
   }
   > .block-item-2 {
@@ -544,14 +493,12 @@ export default {
       border-radius: 12px;
       border: solid 1px #d8d8d8;
       .pink-border-color3;
-      font-family: NotoSansCJKkr;
+     
       font-size: 36px;
       font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      letter-spacing: normal;
+     .basic-font;
       text-align: center;
-      .font-color4;
+      
       .black-font-color;
     }
     .content {
@@ -573,15 +520,11 @@ export default {
           height: 74px;
           line-height: 74px;
           border-radius: 50%;
-          font-family: NotoSansCJKkr;
           font-size: 30px;
           font-weight: bold;
-          font-stretch: normal;
-          font-style: normal;
-          //   line-height: normal;
-          letter-spacing: normal;
+          .basic-font;
           text-align: center;
-          .font-color4;
+          
           .black-font-color;
         }
         .line {
@@ -597,27 +540,19 @@ export default {
         // margin: 83px 516px 4px 21px;
         .title {
           height: 38px;
-          font-family: NotoSansCJKkr;
           font-size: 26px;
           font-weight: bold;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color1;
+          .basic-font;
+          
         }
         .smail-title {
           //   height: 29px;
           //   margin: 4px 97px 20px 21px;
           margin-bottom: 20px;
-          font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: 300;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color1;
+          .basic-font;
+         
         }
         .button {
           cursor: pointer;
@@ -629,15 +564,12 @@ export default {
           //   padding: 14px 33px 15px 36px;
           opacity: 0.69;
           border-radius: 6px;
-          font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          letter-spacing: normal;
+          .basic-font;
           text-align: center;
           .black-theme-img1;
-          .font-color4;
+         
           
         }
         .button2 {
@@ -646,14 +578,11 @@ export default {
           width: 229px;
           height: 58px;
           line-height: 58px;
-          font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          letter-spacing: normal;
+          .basic-font;
           text-align: center;
-          .font-color5;
+          
           border-radius: 6px;
           .black-theme-img2;
         }
@@ -673,15 +602,11 @@ export default {
       //   width: 119px;
       height: 54px;
       margin: 0 391px 34px 390px;
-      font-family: NotoSansCJKkr;
       font-size: 36px;
       font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
+      .basic-font;
       text-align: center;
-      .font-color5;
+      
     }
     .block {
       width: 900px;
@@ -698,15 +623,10 @@ export default {
           align-items: center;
           height: 29px;
           //   margin: 0 154px 0 0;
-          font-family: NotoSansCJKkr;
           font-size: 20px;
-          font-weight: normal;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
+          .basic-font;
           text-align: center;
-          .font-color2;
+          
           .icon {
            
             margin-left: 5px;

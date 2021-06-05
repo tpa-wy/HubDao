@@ -252,14 +252,9 @@ a:focus,
     z-index: 2003;
     user-select: none;
     padding: 15px;
-    font-family: NotoSansCJKkr;
     font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
+    .basic-font;
+    color:@f1;
     .theme-box-back;
   }
 }
@@ -300,4 +295,5 @@ a:focus,
   user-select: none;
   box-shadow: none;
 }
+@import  url("./assets/common/global.less");
 </style>

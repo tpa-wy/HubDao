@@ -64,6 +64,7 @@ Vue.component('v-chart', ECharts);
 Vue.prototype.$message = message
 // 引入封装的Dialog弹框
 import dialog from './components/dialog/dialog.js'
+import '@/assets/common/global.less'
 Vue.use(dialog)
 // 引入公共的方法
 import util from '@/util/util'

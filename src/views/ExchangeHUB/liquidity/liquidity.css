@@ -21,10 +21,7 @@
   height: 36px;
   font-size: 24px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
+  .basic-font;
 }
 .Liquidity .top .header .icon {
   display: flex;
@@ -97,26 +94,16 @@
 .bottom .content {
   text-align: center;
   margin: 68px 0px 74px 0;
-  font-family: NotoSansCJKkr;
   font-size: 20px;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  .font-color11;
+  .basic-font;
   user-select: none;
 }
 .bottom .value {
   margin-left: 40px;
   .font-color1;
-  font-family: NotoSansCJKkr;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
+  .basic-font;
   margin-right: 40px;
 }
 .bottom .value .value-2 {

@@ -1,11 +1,11 @@
 <template>
   <div class="submitted">
-    <div class="title">Transaction submitted</div>
+    <div class="title font-color1">Transaction submitted</div>
     <div class="img-center">
       <img src="../../../public/assets/group-2.png" alt="" />
     </div>
-    <div class="hecoscan">View on HecoScan</div>
-    <div class="button">Close</div>
+    <div class="hecoscan font-color7">View on HecoScan</div>
+    <div class="button font-color4">Close</div>
   </div>
 </template>
 
@@ -27,17 +27,13 @@ export default {
   padding: 21px 19px 32px 36px;
   border-radius: 9px;
   border: solid 1px #979797;
+  .basic-font;
   .theme-box-back;
   .title {
     margin: 11px 139px 48px 3px;
-    font-family: NotoSansCJKkr;
     font-size: 24px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
+    
   }
   .img-center {
     text-align: center;
@@ -45,14 +41,8 @@ export default {
   }
   .hecoscan {
     text-align: center;
-    font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color7;
     margin-bottom: 48px;
   }
   .button {
@@ -63,14 +53,12 @@ export default {
     padding: 6px 119.8px 15px 127.6px;
     border-radius: 6px;
     .black-theme-img1;
-    font-family: NotoSansCJKkr;
+   
     font-size: 20px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
+    
     text-align: center;
-    .font-color4;
+    
   }
 }
 </style>

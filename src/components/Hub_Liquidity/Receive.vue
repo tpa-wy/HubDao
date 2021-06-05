@@ -1,8 +1,8 @@
 <template>
   <div class="Receive">
-    <div class="title">You will Receive</div>
+    <div class="title font-color1">You will Receive</div>
     <div class="money">
-      <div class="left">0.9938263</div>
+      <div class="left font-color7">0.9938263</div>
       <div class="right">
         <img src="../../../public/assets/icons-default-img-1.png" alt="" />
         <img
@@ -12,12 +12,12 @@
         />
       </div>
     </div>
-    <div class="title2">HT/HD Pool Tokens</div>
-    <div class="content">
+    <div class="title2 font-color7">HT/HD Pool Tokens</div>
+    <div class="content font-color2">
       Output is estimated If the price changes by more than 0.8% your
       transaction will revert.
     </div>
-    <div class="block">
+    <div class="block font-color1">
       <div class="block-item block-item-1">
         <div class="block-item-child block-item-1-1">
           <div class="left">HT Deposited</div>
@@ -79,7 +79,7 @@
         </div>
       </div>
     </div>
-    <div class="button">Confirm Supply</div>
+    <div class="button font-color5">Confirm Supply</div>
   </div>
 </template>
 
@@ -103,18 +103,13 @@ export default {
   border-radius: 9px;
   border: solid 1px #979797;
   .theme-box-back;
+  .basic-font;
   .title {
     // width: 191px;
     height: 36px;
     margin: 11px 34px 37px 39px;
-    font-family: NotoSansCJKkr;
     font-size: 24px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
   }
   .money {
     display: flex;
@@ -126,14 +121,9 @@ export default {
       // margin: 37px 23px 43px 39px;
       margin-left: 39px;
       margin-right: 23px;
-      font-family: NotoSansCJKkr;
       font-size: 40px;
       font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      .font-color7;
+      
     }
     .right {
       position: relative;
@@ -152,43 +142,22 @@ export default {
     height: 36px;
     margin-left: 39px;
     margin-bottom: 37px;
-    // margin: 43px 6px 37px 39px;
-    font-family: NotoSansCJKkr;
     font-size: 24px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color7;
   }
   .content {
     width: 404px;
     height: 48px;
     margin-left: 39px;
     margin-bottom: 28px;
-    // margin: 37px 6px 28.5px 38px;
-    font-family: NotoSansCJKkr;
     font-size: 16px;
     font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color2;
   }
   .block {
     padding-left: 39px;
     padding-right: 32px;
-    font-family: NotoSansCJKkr;
     margin-bottom: 36px;
     font-size: 16px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
     .icon {
       border-radius: 50%;
       width: 24px;
@@ -229,16 +198,11 @@ export default {
     margin: 0 0 0 39px;
     // padding: 14px 0 15px;
     border-radius: 6px;
-    font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 58px;
-    letter-spacing: normal;
     text-align: center;
     cursor: pointer;
-    .font-color5;
     .black-theme-img2;
   }
 }

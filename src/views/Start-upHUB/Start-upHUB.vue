@@ -1,7 +1,7 @@
 <template>
   <div class="iho">
-    <div class="title">IHO (Initial Hubdao Offering)</div>
-    <div class="smail-title">
+    <div class="title font-color1">IHO (Initial Hubdao Offering)</div>
+    <div class="smail-title font-color1">
       Buy new tokens with a brand new token sale model.
     </div>
     <div class="block">
@@ -14,7 +14,7 @@
           Next IHO
         </div>
         <div
-          class="nav-item"
+          class="nav-item font-color4"
           :class="{ checked: checked == 2 }"
           @click="navhref(2)"
         >
@@ -59,26 +59,20 @@ export default {
   .title {
     height: 54px;
     // margin: 48px 26px 9px 177px;
-    font-family: NotoSansCJKkr;
+    
     font-size: 36px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
+    .basic-font;
+    
   }
   .smail-title {
     height: 36px;
     //   margin: 9px 883px 79px 177px;
-    font-family: NotoSansCJKkr;
+    
     font-size: 24px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
+    .basic-font;
+   
     margin-bottom: 79px;
   }
   .block {
@@ -100,15 +94,13 @@ export default {
         height: 40px;
         border-radius: 21.5px;
         cursor: pointer;
-        font-family: NotoSansCJKkr;
         font-size: 16px;
         font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
+        
         line-height: 40px;
-        letter-spacing: normal;
+        .basic-font;
         text-align: center;
-        .font-color4;
+       
       }
       .checked {
         .theme-black-back;

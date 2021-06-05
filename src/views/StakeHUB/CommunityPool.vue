@@ -1,9 +1,9 @@
 <template>
   <div class="CommunityPool">
-    <div class="title">Community Pool</div>
+    <div class="title font-color1">Community Pool</div>
     <div class="smail-title">Stake Liquidity Pool(LP) tokens to earn.</div>
     <div class="operation">
-      <div class="choose">
+      <div class="choose font-color6">
         <el-switch
           v-model="value"
           active-color="#13ce66"
@@ -14,9 +14,9 @@
       </div>
       <div class="nav">
         <div class="nav-item checked">Live</div>
-        <div class="nav-item">Finished</div>
+        <div class="nav-item font-color4">Finished</div>
       </div>
-      <div class="help-button">
+      <div class="help-button font-color4">
         <div class="font">Help</div>
         <img class="icon" src="../../assets/icons-help-white.png" alt="" />
       </div>
@@ -29,22 +29,22 @@
             <img src="../../assets/icons-default-img-4.png" alt="" srcset="" />
           </div>
           <div class="info">
-            <div class="title">Earn XEND</div>
-            <div class="smail-title">Stake HD</div>
+            <div class="title font-color1">Earn XEND</div>
+            <div class="smail-title font-color6">Stake HD</div>
           </div>
         </div>
         <div class="content">
-          <div class="APR">
+          <div class="APR font-color1">
             <div class="left">APR :</div>
             <div class="right">
               <span>49.28%</span>
               <div class="smail-block"></div>
             </div>
           </div>
-          <div class="start">START EARNING</div>
-          <div class="button">Unlock Wallet</div>
+          <div class="start font-color9">START EARNING</div>
+          <div class="button font-color1">Unlock Wallet</div>
           <div class="Menual">
-            <div class="Menual-button">Menual</div>
+            <div class="Menual-button font-color4">Menual</div>
             <div class="icon"></div>
           </div>
         </div>
@@ -72,11 +72,11 @@
           <div class="start">START EARNING</div>
           <div class="button">Unlock Wallet</div>
           <div class="Menual">
-            <div class="Menual-button">Menual</div>
+            <div class="Menual-button font-color4">Menual</div>
             <div class="icon"></div>
           </div>
         </div>
-        <div class="footer">Details <span class="icon"></span></div>
+        <div class="footer font-color6">Details <span class="icon"></span></div>
       </div>
       <div class="block-item">
         <div class="header">
@@ -100,7 +100,7 @@
           <div class="start">START EARNING</div>
           <div class="button">Unlock Wallet</div>
           <div class="Menual">
-            <div class="Menual-button">Menual</div>
+            <div class="Menual-button  font-color4">Menual</div>
             <div class="icon"></div>
           </div>
         </div>
@@ -113,8 +113,8 @@
             <img src="../../assets/icons-default-img-4.png" alt="" srcset="" />
           </div>
           <div class="info">
-            <div class="title">Earn XEND</div>
-            <div class="smail-title">Stake HD</div>
+            <div class="title  font-color1">Earn XEND</div>
+            <div class="smail-title font-color6">Stake HD</div>
           </div>
         </div>
         <div class="content">
@@ -128,7 +128,7 @@
           <div class="start">START EARNING</div>
           <div class="button">Unlock Wallet</div>
           <div class="Menual">
-            <div class="Menual-button">Menual</div>
+            <div class="Menual-button  font-color4">Menual</div>
             <div class="icon"></div>
           </div>
         </div>
@@ -141,8 +141,8 @@
             <img src="../../assets/icons-default-img-4.png" alt="" srcset="" />
           </div>
           <div class="info">
-            <div class="title">Earn XEND</div>
-            <div class="smail-title">Stake HD</div>
+            <div class="title font-color1">Earn XEND</div>
+            <div class="smail-title font-color6">Stake HD</div>
           </div>
         </div>
         <div class="content">
@@ -156,7 +156,7 @@
           <div class="start">START EARNING</div>
           <div class="button">Unlock Wallet</div>
           <div class="Menual">
-            <div class="Menual-button">Menual</div>
+            <div class="Menual-button font-color4">Menual</div>
             <div class="icon"></div>
           </div>
         </div>
@@ -169,8 +169,8 @@
             <img src="../../assets/icons-default-img-4.png" alt="" srcset="" />
           </div>
           <div class="info">
-            <div class="title">Earn XEND</div>
-            <div class="smail-title">Stake HD</div>
+            <div class="title font-color1">Earn XEND</div>
+            <div class="smail-title font-color6">Stake HD</div>
           </div>
         </div>
         <div class="content">
@@ -184,7 +184,7 @@
           <div class="start">START EARNING</div>
           <div class="button">Unlock Wallet</div>
           <div class="Menual">
-            <div class="Menual-button">Menual</div>
+            <div class="Menual-button font-color4">Menual</div>
             <div class="icon"></div>
           </div>
         </div>
@@ -213,27 +213,19 @@ export default {
   padding-top: 50px;
   > .title {
     height: 54px;
-    // margin: 0 157px 9px 0;
-    font-family: NotoSansCJKkr;
+    
     font-size: 36px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
+    .basic-font;
+   
   }
   > .smail-title {
     height: 36px;
     // margin: 9px 0 0;
-    font-family: NotoSansCJKkr;
     font-size: 24px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
+    .basic-font;
+    
     margin-bottom: 78px;
   }
   .operation {
@@ -248,14 +240,9 @@ export default {
         // margin: 85px 40px 61px 8px;
         margin-left: 8px;
         margin-right: 40px;
-        font-family: NotoSansCJKkr;
+        
         font-size: 16px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color6;
+        .basic-font;
       }
     }
     .nav {
@@ -270,14 +257,11 @@ export default {
       .nav-item {
         line-height: 32px;
         cursor: pointer;
-        font-family: NotoSansCJKkr;
         font-size: 16px;
         font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        letter-spacing: normal;
+        .basic-font;
         text-align: center;
-        .font-color4;
+        
         margin-right: 20px;
       }
       .checked {
@@ -301,14 +285,12 @@ export default {
       //   padding: 3px 12px 5px 13px;
       border-radius: 6px;
       
-      font-family: NotoSansCJKkr;
+      
       font-size: 16px;
       font-weight: 500;
-      text-align: center;
-      font-stretch: normal;
-      font-style: normal;
+      .basic-font;
       letter-spacing: 0.5px;
-      .font-color4;
+      
       .theme-pink-back;
       .icon {
         width: 19px;
@@ -363,27 +345,14 @@ export default {
           margin-left: 30px;
           .title {
             height: 29px;
-            // margin: 0 79px 41px 13px;
-            font-family: NotoSansCJKkr;
+            .basic-font;
             font-size: 20px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            .font-color1;
           }
           .smail-title {
             height: 24px;
-            // margin: 23px 13px;
-            font-family: NotoSansCJKkr;
             font-size: 16px;
             font-weight: 300;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            .font-color6;
+            .basic-font;
           }
         }
       }
@@ -395,28 +364,21 @@ export default {
           justify-content: space-between;
           height: 29px;
           margin: 0 21px 60px 24px;
-          font-family: NotoSansCJKkr;
+          
           font-size: 20px;
-          font-weight: normal;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color1;
+          .basic-font;
+          
           .left {
           }
         }
         .start {
           height: 20px;
           margin: 0 39px 9px 24px;
-          font-family: NotoSansCJKkr;
+          
           font-size: 14px;
           font-weight: bold;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color9;
+          .basic-font;
+          
         }
         .button {
           width: 370px;
@@ -425,14 +387,10 @@ export default {
           margin: 9px 24px 44px;
           // padding: 14px 0 15px;
           border-radius: 6px;
-          font-family: NotoSansCJKkr;
+          
           font-size: 20px;
-          font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          letter-spacing: normal;
-          text-align: center;
-          .font-color1;
+          .basic-font;
+          
           .black-theme-img2;
         }
         .Menual {
@@ -453,13 +411,9 @@ export default {
             border-radius: 18px;
             border: solid 1px #2f303f;
             .theme-pink-back;
-            font-family: NotoSansCJKkr;
             font-size: 16px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
-            .font-color4;
+            .basic-font;
+           
             margin-right: 7px;
           }
           .icon {
@@ -476,16 +430,13 @@ export default {
       .footer {
         border-top: solid 1px #d8d8d8;
         .pink-border-color3;
-        font-family: NotoSansCJKkr;
+        
         height: 79px;
         line-height: 79px;
         font-size: 16px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        letter-spacing: normal;
+        .basic-font;
         text-align: center;
-        .font-color6;
+        
         display: flex;
         justify-content: center;
         align-items: center;

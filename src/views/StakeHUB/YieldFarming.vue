@@ -1,6 +1,6 @@
 <template>
-  <div class="yield-farming">
-    <div class="header">
+  <div class="yield-farming basic-font">
+    <div class="header font-color4">
       <div class="title">Yield Farming</div>
       <div class="connect">Stake Liquidity Pool(LP) tokens to earn.</div>
     </div>
@@ -43,8 +43,8 @@
             <div>Staked only</div>
           </div>
           <div class="live">
-            <div class="live-1">Live</div>
-            <div class="live-2">Liquidity</div>
+            <div class="live-1 font-color4">Live</div>
+            <div class="live-2 font-color1">Liquidity</div>
           </div>
         </div>
 
@@ -54,7 +54,7 @@
             <div class="select"></div>
           </div>
           <div class="_SEARCH">
-            <div class="title">SEARCH</div>
+            <div class="title font-color1">SEARCH</div>
             <div class="search"></div>
           </div>
         </div>
@@ -70,43 +70,43 @@
             <div class="title">
               <div class="dot dot-1"></div>
               <div class="dot dot-2"></div>
-              <div class="content">COINCOIN-HT</div>
+              <div class="content font-color1">COINCOIN-HT</div>
             </div>
             <div class="core">
               <div class="core-item">
                 <div class="icon"></div>
                 <div class="font">Croe</div>
               </div>
-              <div class="ratio">40X</div>
+              <div class="ratio font-color4">40X</div>
             </div>
             <div class="line">
-              <div class="line-row">
+              <div class="line-row font-color1">
                 <div class="line-row-1">APR :</div>
                 <div class="line-row-2">49.28%</div>
               </div>
-              <div class="line-row">
+              <div class="line-row font-color1">
                 <div class="line-row-1">Earn :</div>
                 <div class="line-row-2">HD</div>
               </div>
             </div>
             <div class="small-block">
-              <div class="title">HD <span>EARNED</span></div>
+              <div class="title font-color3">HD <span>EARNED</span></div>
               <div class="block">
-                <div class="money">0</div>
-                <div class="button">Harvest</div>
+                <div class="money font-color3">0</div>
+                <div class="button font-color14">Harvest</div>
               </div>
             </div>
             <div class="small-block">
-              <div class="title">HD <span>EARNED</span></div>
+              <div class="title font-color3">HD <span>EARNED</span></div>
               <div class="block">
-                <div class="money">0</div>
-                <div class="button2">Harvest</div>
+                <div class="money font-color3">0</div>
+                <div class="button2 font-color4">Harvest</div>
               </div>
             </div>
           </div>
 
           <div
-            class="details"
+            class="details font-color1"
             v-show="!item.checked"
             @click="item.checked = !item.checked"
           >
@@ -127,7 +127,7 @@
                 <div class="block-left">Total Liquidity:</div>
                 <div class="block-right">$756,210,797</div>
               </div>
-              <div class="share">
+              <div class="share font-color3">
                 Get CAKE-BNB LP<svg
                   viewBox="0 0 24 24"
                   color="primary"
@@ -140,7 +140,7 @@
                   ></path>
                 </svg>
               </div>
-              <div class="share">
+              <div class="share font-color13">
                 View Contract<svg
                   viewBox="0 0 24 24"
                   color="primary"
@@ -153,7 +153,7 @@
                   ></path>
                 </svg>
               </div>
-              <div class="share">
+              <div class="share font-color13">
                 See Pair Info<svg
                   viewBox="0 0 24 24"
                   color="primary"
@@ -169,96 +169,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="block-item block-1">
-          <div class="content">
-            <div class="title">
-              <div class="dot dot-1"></div>
-              <div class="dot dot-2"></div>
-              <div class="content">COINCOIN-HT</div>
-            </div>
-            <div class="core">
-              <div class="core-item">
-                <div class="icon"></div>
-                <div class="font">Croe</div>
-              </div>
-              <div class="ratio">40X</div>
-            </div>
-            <div class="line">
-              <div class="line-row">
-                <div class="line-row-1">APR :</div>
-                <div class="line-row-2">49.28%</div>
-              </div>
-              <div class="line-row">
-                <div class="line-row-1">Earn :</div>
-                <div class="line-row-2">HD</div>
-              </div>
-            </div>
-            <div class="small-block">
-              <div class="title">HD <span>EARNED</span></div>
-              <div class="block">
-                <div class="money">0</div>
-                <div class="button">Harvest</div>
-              </div>
-            </div>
-            <div class="small-block">
-              <div class="title">HD <span>EARNED</span></div>
-              <div class="block">
-                <div class="money">0</div>
-                <div class="button2">Harvest</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="details">
-            Details
-            <div class="icon"></div>
-          </div>
-        </div>
-        <div class="block-item block-1">
-          <div class="content">
-            <div class="title">
-              <div class="dot dot-1"></div>
-              <div class="dot dot-2"></div>
-              <div class="content">COINCOIN-HT</div>
-            </div>
-            <div class="core">
-              <div class="core-item">
-                <div class="icon"></div>
-                <div class="font">Croe</div>
-              </div>
-              <div class="ratio">40X</div>
-            </div>
-            <div class="line">
-              <div class="line-row">
-                <div class="line-row-1">APR :</div>
-                <div class="line-row-2">49.28%</div>
-              </div>
-              <div class="line-row">
-                <div class="line-row-1">Earn :</div>
-                <div class="line-row-2">HD</div>
-              </div>
-            </div>
-            <div class="small-block">
-              <div class="title">HD <span>EARNED</span></div>
-              <div class="block">
-                <div class="money">0</div>
-                <div class="button">Harvest</div>
-              </div>
-            </div>
-            <div class="small-block">
-              <div class="title">HD <span>EARNED</span></div>
-              <div class="block">
-                <div class="money">0</div>
-                <div class="button2">Harvest</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="details">
-            Details
-            <div class="icon"></div>
-          </div>
-        </div> -->
+        
       </div>
       <div class="block2" v-show="!is_show">
         <div
@@ -280,33 +191,33 @@
                 alt=""
               />
             </div>
-            <div class="title">Title-HT</div>
-            <div class="Earned">
+            <div class="title font-color1">Title-HT</div>
+            <div class="Earned font-color1">
               <div class="top">Earned</div>
-              <div class="bottom">0</div>
+              <div class="bottom font-color1">0</div>
             </div>
             <div class="APR">
-              <div class="top">APR</div>
-              <div class="bottom">
+              <div class="top font-color1">APR</div>
+              <div class="bottom font-color1">
                 <div class="font">16.05</div>
-                <div class="icon">ROI</div>
+                <div class="icon font-color4">ROI</div>
               </div>
             </div>
-            <div class="Liquidity">
+            <div class="Liquidity font-color1">
               <div class="top">Liquidity</div>
               <div class="bottom">
                 <div class="font">$663,186,461</div>
                 <div class="icon"></div>
               </div>
             </div>
-            <div class="Liquidity">
+            <div class="Liquidity font-color1">
               <div class="top">Multiplier</div>
               <div class="bottom">
                 <div class="font">8x</div>
                 <div class="icon"></div>
               </div>
             </div>
-            <div class="Details" @click="item.checked = !item.checked">
+            <div class="Details font-color6" @click="item.checked = !item.checked">
               <div class="font">Details</div>
               <div class="icon" :class="{ 'icon-rotate': item.checked }"></div>
             </div>
@@ -314,7 +225,7 @@
           <div class="bottom">
             <div class="bottom-item">
               <img src="../../../public/assets/icons-core-checked.png" alt="" />
-              <div class="share">
+              <div class="share font-color3">
                 Get HD-HT LP<svg
                   data-v-d2b0da2e=""
                   viewBox="0 0 24 24"
@@ -329,7 +240,7 @@
                   ></path>
                 </svg>
               </div>
-              <div class="share">
+              <div class="share font-color3">
                 View Contract<svg
                   data-v-d2b0da2e=""
                   viewBox="0 0 24 24"
@@ -361,162 +272,19 @@
               </div>
             </div>
             <div class="bottom-item bottom-item-2">
-              <div class="title">HD <span>EARNED</span></div>
+              <div class="title font-color9">HD <span class="font-color6">EARNED</span></div>
               <div class="content">
-                <div class="value">0</div>
-                <div class="button">Harvest</div>
+                <div class="value font-color3">0</div>
+                <div class="button font-color3">Harvest</div>
               </div>
             </div>
             <div class="bottom-item bottom-item-3">
-              <div class="title">HD-HT LP <span>STAKED</span></div>
-              <div class="button">Unlock Wallet</div>
+              <div class="title font-color9">HD-HT LP <span class="font-color6">STAKED</span></div>
+              <div class="button font-color5">Unlock Wallet</div>
             </div>
           </div>
         </div>
-        <!-- <div class="block-item">
-          <div class="icon-block">
-            <img class="icon icon-1" src="../../../public/assets/icons-default-img-4.png" alt="">
-            <img class="icon icon-2" src="../../../public/assets/icons-default-img-4.png" alt="">
-          </div>
-          <div class="title">Title-HT</div>
-          <div class="Earned">
-            <div class="top">Earned</div>
-            <div class="bottom">0</div>
-          </div>
-          <div class="APR">
-            <div class="top">APR</div>
-            <div class="bottom">
-              <div class="font">16.05</div>
-              <div class="icon">ROI</div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Liquidity</div>
-            <div class="bottom">
-              <div class="font">$663,186,461</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Multiplier</div>
-            <div class="bottom">
-              <div class="font">8x</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Details">
-            <div class="font">Details</div>
-            <div class="icon"></div>
-          </div>
-        </div>
-        <div class="block-item">
-          <div class="icon-block">
-            <img class="icon icon-1" src="../../../public/assets/icons-default-img-4.png" alt="">
-            <img class="icon icon-2" src="../../../public/assets/icons-default-img-4.png" alt="">
-          </div>
-          <div class="title">Title-HT</div>
-          <div class="Earned">
-            <div class="top">Earned</div>
-            <div class="bottom">0</div>
-          </div>
-          <div class="APR">
-            <div class="top">APR</div>
-            <div class="bottom">
-              <div class="font">16.05</div>
-              <div class="icon">ROI</div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Liquidity</div>
-            <div class="bottom">
-              <div class="font">$663,186,461</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Multiplier</div>
-            <div class="bottom">
-              <div class="font">8x</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Details">
-            <div class="font">Details</div>
-            <div class="icon"></div>
-          </div>
-        </div>
-        <div class="block-item">
-          <div class="icon-block">
-            <img class="icon icon-1" src="../../../public/assets/icons-default-img-4.png" alt="">
-            <img class="icon icon-2" src="../../../public/assets/icons-default-img-4.png" alt="">
-          </div>
-          <div class="title">Title-HT</div>
-          <div class="Earned">
-            <div class="top">Earned</div>
-            <div class="bottom">0</div>
-          </div>
-          <div class="APR">
-            <div class="top">APR</div>
-            <div class="bottom">
-              <div class="font">16.05</div>
-              <div class="icon">ROI</div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Liquidity</div>
-            <div class="bottom">
-              <div class="font">$663,186,461</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Multiplier</div>
-            <div class="bottom">
-              <div class="font">8x</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Details">
-            <div class="font">Details</div>
-            <div class="icon"></div>
-          </div>
-        </div>
-        <div class="block-item">
-          <div class="icon-block">
-            <img class="icon icon-1" src="../../../public/assets/icons-default-img-4.png" alt="">
-            <img class="icon icon-2" src="../../../public/assets/icons-default-img-4.png" alt="">
-          </div>
-          <div class="title">Title-HT</div>
-          <div class="Earned">
-            <div class="top">Earned</div>
-            <div class="bottom">0</div>
-          </div>
-          <div class="APR">
-            <div class="top">APR</div>
-            <div class="bottom">
-              <div class="font">16.05</div>
-              <div class="icon">ROI</div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Liquidity</div>
-            <div class="bottom">
-              <div class="font">$663,186,461</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Liquidity">
-            <div class="top">Multiplier</div>
-            <div class="bottom">
-              <div class="font">8x</div>
-              <div class="icon"></div>
-            </div>
-          </div>
-          <div class="Details">
-            <div class="font">Details</div>
-            <div class="icon"></div>
-          </div>
-        </div>  -->
+       
       </div>
     </div>
   </div>
@@ -545,29 +313,17 @@ export default {
     .black-theme-img7;
     > .title {
       padding-top: 48px;
-      // width: 244px;
       margin-left: 178px;
-      font-family: NotoSansCJKkr;
       font-size: 36px;
       font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      .font-color4;
+      .basic-font;
     }
     > .connect {
       // width: 442px;
       height: 36px;
       margin: 9px 441px 63px 178px;
-      font-family: NotoSansCJKkr;
-      font-size: 24px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      .font-color4;
+      .font-size24;
+      .basic-font;
     }
   }
 
@@ -615,14 +371,10 @@ export default {
             width: 136px;
             height: 24px;
             // margin: 6px 40px 2px 8px;
-            font-family: NotoSansCJKkr;
+            
             font-size: 16px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            .font-color11;
+			.basic-font;
+            color:@f3;
           }
         }
         .live {
@@ -641,30 +393,21 @@ export default {
             // margin: 0 21px 0 0;
             padding: 3px 16px 5px 17px;
             border-radius: 16px;
-            font-family: NotoSansCJKkr;
+            
             font-size: 16px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
+            .basic-font;
             text-align: center;
-            .font-color4;
             .theme-black-back;
           }
           .live-2 {
             width: 65px;
             height: 24px;
             // margin: 3px 0 5px 21px;
-            font-family: NotoSansCJKkr;
             font-size: 16px;
             font-weight: 300;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
+            .basic-font;
             text-align: center;
-            .font-color1;
             margin-left: 21px;
           }
         }
@@ -679,16 +422,9 @@ export default {
           .title {
             width: 56px;
             height: 20px;
-            //   margin: 6px 13px 6px 366px;
-            font-family: NotoSansCJKkr;
             font-size: 14px;
             font-weight: 300;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
             text-align: right;
-            .font-color1;
           }
         }
         .select {
@@ -756,14 +492,9 @@ export default {
           }
           .content {
             height: 29px;
-            font-family: NotoSansCJKkr;
-            font-size: 20px;
+             font-size: 20px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            .font-color1;
+            .basic-font;
             margin-left: 70px;
           }
         }
@@ -790,13 +521,8 @@ export default {
             }
             .font {
               height: 24px;
-              font-family: NotoSansCJKkr;
               font-size: 16px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
               text-align: center;
               color: #252736;
             }
@@ -808,15 +534,10 @@ export default {
             padding: 2px 12px 2px 13px;
             border-radius: 4px;
             .theme-pink-back;
-            font-family: NotoSansCJKkr;
             font-size: 16px;
             font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
             letter-spacing: 0.5px;
             text-align: center;
-            .font-color4;
           }
         }
         .line {
@@ -826,29 +547,16 @@ export default {
             justify-content: space-between;
             margin: 10px 20px 5px 24px;
             .line-row-1 {
-              // width: 48px;
               height: 29px;
-              font-family: NotoSansCJKkr;
               font-size: 20px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
+              
             }
             .line-row-2 {
               width: 69px;
               height: 29px;
-              font-family: NotoSansCJKkr;
               font-size: 20px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
               text-align: right;
-              .font-color1;
+            
             }
           }
         }
@@ -856,14 +564,8 @@ export default {
           .title {
             height: 20px;
             margin: 18px 9px 9px 24px;
-            font-family: NotoSansCJKkr;
             font-size: 14px;
             font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            .font-color11;
             span {
               margin-left: 5px;
               font-weight: bold;
@@ -878,14 +580,8 @@ export default {
               width: 12px;
               height: 29px;
               margin-left: 24px;
-              font-family: NotoSansCJKkr;
               font-size: 20px;
               font-weight: bold;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color11;
             }
             .button {
               cursor: pointer;
@@ -897,15 +593,9 @@ export default {
               border-radius: 4px;
               // box-shadow: 3px 3px 7px 0 #010033;
               background-color: #e6e6e6;
-              font-family: NotoSansCJKkr;
               font-size: 20px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
               text-align: center;
-              color: #949494;
             }
             .button2 {
               cursor: pointer;
@@ -915,15 +605,9 @@ export default {
               margin-right: 22px;
               border-radius: 6px;
               background-color: #ffcc19;
-              font-family: NotoSansCJKkr;
               font-size: 20px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
               text-align: center;
-              .font-color4;
             }
           }
         }
@@ -937,14 +621,9 @@ export default {
           height: 79px;
           width: 100%;
           line-height: 79px;
-          font-family: NotoSansCJKkr;
           font-size: 16px;
-          font-weight: normal;
-          font-stretch: normal;
-          font-style: normal;
-          letter-spacing: normal;
           text-align: center;
-          .font-color1;
+          
           cursor: pointer;
           .icon {
             margin-left: 8px;
@@ -1023,50 +702,28 @@ export default {
           > .title {
             line-height: 112px;
             margin: 0px 183px 0px 80px;
-            font-family: NotoSansCJKkr;
             font-size: 20px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
-            .font-color1;
           }
           .Earned {
             .top {
-              font-family: NotoSansCJKkr;
               font-size: 14px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
+              
               margin-top: 20px;
             }
             .bottom {
               height: 29px;
               // margin: 12px 123px 0 183px;
               margin-top: 12px;
-              font-family: NotoSansCJKkr;
               font-size: 20px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
             }
           }
           .APR {
             .top {
-              font-family: NotoSansCJKkr;
               font-size: 14px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
               margin-top: 20px;
             }
             .bottom {
@@ -1075,16 +732,8 @@ export default {
               margin-top: 12px;
               margin-right: 93px;
               .font {
-                // height: 29px;
-                // margin: 12px 123px 0 183px;
-                font-family: NotoSansCJKkr;
                 font-size: 20px;
                 font-weight: 500;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
-                .font-color1;
               }
               .icon {
                 width: 29px;
@@ -1093,28 +742,18 @@ export default {
                 // padding: 0 3px 0 4px;
                 border-radius: 2px;
                .theme-pink-back;
-                font-family: NotoSansCJKkr;
                 font-size: 11px;
                 font-weight: 500;
-                font-stretch: normal;
-                font-style: normal;
                 line-height: 17px;
                 text-align: center;
                 letter-spacing: 0.83px;
-                .font-color4;
               }
             }
           }
           .Liquidity {
             .top {
-              font-family: NotoSansCJKkr;
               font-size: 14px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color1;
               margin-top: 20px;
             }
             .bottom {
@@ -1123,16 +762,8 @@ export default {
               margin-top: 12px;
               margin-right: 93px;
               .font {
-                // height: 29px;
-                // margin: 12px 123px 0 183px;
-                font-family: NotoSansCJKkr;
                 font-size: 20px;
                 font-weight: 500;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
-                .font-color1;
               }
               .icon {
                 width: 20px;
@@ -1149,19 +780,13 @@ export default {
             user-select: none;
             display: flex;
             justify-content: center;
-           
             margin-top: 0px;
             line-height: 112px;
             cursor: pointer;
             margin-left: 109px;
-            font-family: NotoSansCJKkr;
             font-size: 16px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
             text-align: center;
-            .font-color6;
+            
             .icon {
               width: 9px;
               height: 10px;
@@ -1191,16 +816,11 @@ export default {
               margin-bottom: 24px;
             }
             .share {
+              .basic-font;
               display: flex;
               align-items: center;
-              font-family: NotoSansCJKkr;
               font-size: 14px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color7;
               svg {
                 margin-left: 6px;
               }
@@ -1213,20 +833,15 @@ export default {
             padding: 19px 30px 20px 24px;
             border-radius: 6px;
             border: solid 1px #f5f5f5;
+			.basic-font;
             .theme-pink-back3;
             .title {
-              .font-color9;
-              font-family: NotoSansCJKkr;
+              
               font-size: 14px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color6;
               span {
                 font-weight: bold;
-                .font-color9;
+                
               }
             }
             .content {
@@ -1235,29 +850,15 @@ export default {
               align-items: center;
               margin-top: 18px;
               .value {
-                font-family: NotoSansCJKkr;
-                font-size: 20px;
+                 font-size: 20px;
                 font-weight: bold;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
-                .font-color11;
               }
               .button {
                 width: 125px;
                 height: 50px;
                 line-height: 50px;
-                // margin: 18px 0 0 174px;
-                // padding: 10px 24px 11px 26px;
-                font-family: NotoSansCJKkr;
                 font-size: 20px;
                 font-weight: 500;
-                font-stretch: normal;
-                font-style: normal;
-                letter-spacing: normal;
-                text-align: center;
-                .font-color11;
                 opacity: 0.64;
                 border-radius: 4px;
                 .theme-pink-back2;
@@ -1271,19 +872,14 @@ export default {
             padding: 19px 22px 20px 30px;
             border-radius: 6px;
             border: solid 1px #f5f5f5;
+			.basic-font;
             .theme-pink-back3;
             .title {
-              font-family: NotoSansCJKkr;
               font-size: 14px;
               font-weight: bold;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color9;
-              span {
+               span {
                 font-weight: 500;
-                .font-color6;
+                
               }
             }
             .button {
@@ -1291,14 +887,8 @@ export default {
               width: 392px;
               height: 50px;
               line-height: 50px;
-              font-family: NotoSansCJKkr;
               font-size: 20px;
               font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              letter-spacing: normal;
-              text-align: center;
-              .font-color5;
               margin: 18px 0 0;
               border-radius: 6px;
               .black-theme-img2;

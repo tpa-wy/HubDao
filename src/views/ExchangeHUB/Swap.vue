@@ -2,7 +2,7 @@
   <div class="swap">
     <div id="block">
       <div class="header">
-        <div class="title">Exchange</div>
+        <div class="title font-color1">Exchange</div>
         <div class="icon">
           <div class="icon-1" @click="is_setting = !is_setting">
             <img src="../../../public/assets/icons-settings.png" alt="" />
@@ -16,14 +16,14 @@
           </div>
         </div>
       </div>
-      <div class="title-2">Trade tokens in an instant</div>
+      <div class="title-2 font-color1">Trade tokens in an instant</div>
       <div class="block-1">
-        <div class="From">
+        <div class="From font-color1">
           <div>From</div>
           <div v-show="account()">Balance : {{ fromcheckedBlock.info }}</div>
         </div>
         <div class="content">
-          <div class="money">
+          <div class="money font-color3">
             <input
               v-model="fromValue"
               inputmode="decimal"
@@ -39,7 +39,7 @@
               value=""
             />
           </div>
-          <div class="currency">
+          <div class="currency  font-color1">
             <div
               class="img"
               v-show="account()"
@@ -61,7 +61,7 @@
       </div>
       <div class="icon-xia"></div>
       <div class="block-2">
-        <div class="to">
+        <div class="to font-color1">
           <div>To</div>
           <div v-show="tocheckedBlock.symbol != undefined">
             Balance : {{ tocheckedBlock.info }}
@@ -85,14 +85,14 @@
             />
           </div>
           <div
-            class="button-select"
+            class="button-select font-color1"
             @click="is_show2 = !is_show2"
             v-show="tocheckedBlock.symbol == undefined"
           >
             Select a currency
           </div>
           <div class="currency" v-show="tocheckedBlock.symbol != undefined">
-            <div class="block" @click="is_show2 = !is_show2">
+            <div class="block font-color1" @click="is_show2 = !is_show2">
               <img
                 class="icon"
                 :src="tocheckedBlock.logoURI"
@@ -104,9 +104,9 @@
           </div>
         </div>
       </div>
-      <div class="button">Unlock Wallet</div>
+      <div class="button font-color5">Unlock Wallet</div>
     </div>
-    <div class="rest">
+    <div class="rest font-color2">
       <div>
         <div>Maximum sold</div>
         <div>0.0000000 HT</div>
@@ -318,14 +318,10 @@ export default {
         width: 115px;
         height: 36px;
         margin: 0 136px 7px 0;
-        font-family: NotoSansCJKkr;
         font-size: 24px;
         font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color1;
+        .basic-font;
+        
       }
       .icon {
         display: flex;
@@ -345,14 +341,9 @@ export default {
     .title-2 {
       height: 24px;
       margin: 7px 59px 47px 0;
-      font-family: NotoSansCJKkr;
       font-size: 16px;
       font-weight: 300;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      .font-color1;
+      .basic-font;
       margin-bottom: 47px;
     }
     > .block-1 {
@@ -367,14 +358,9 @@ export default {
         // width: 41px;
         height: 24px;
         margin: 0 286px 24px 0;
-        font-family: NotoSansCJKkr;
         font-size: 16px;
         font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color1;
+        .basic-font;
         display: flex;
         justify-content: space-between;
         margin-right: 20px;
@@ -386,15 +372,11 @@ export default {
         .currency {
           display: flex;
           align-items: center;
-          font-family: NotoSansCJKkr;
           font-size: 20px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
+          
           text-align: right;
-          .font-color1;
+          .basic-font;
           .font {
             cursor: pointer;
           }
@@ -432,17 +414,10 @@ export default {
     }
 
     .money {
-      // width: 40px;
       height: 38px;
-      //   margin: 24px 287px 2px 0;
-      font-family: NotoSansCJKkr;
       font-size: 26px;
+      .basic-font;
       font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      .font-color11;
       flex: 1;
       input {
         outline: none;
@@ -475,14 +450,10 @@ export default {
         height: 24px;
         // margin: 0 190px 24px 0;
         margin-bottom: 24px;
-        font-family: NotoSansCJKkr;
         font-size: 16px;
         font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color1;
+        .basic-font;
+       
         display: flex;
         justify-content: space-between;
         margin-right: 20px;
@@ -503,16 +474,10 @@ export default {
         line-height: 41px;
         // padding: 4px 28.4px 8px 29.6px;
         border-radius: 20.5px;
-        // box-shadow: 2px 2px 6px 0 rgba(1, 0, 51, 0.64);
-        // background-color: #323160;
-        font-family: NotoSansCJKkr;
         font-size: 20px;
         font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        letter-spacing: normal;
         text-align: center;
-        .font-color1;
+        .basic-font;
       }
       .block {
         display: flex;
@@ -523,15 +488,11 @@ export default {
         padding-left: 10px;
         padding-right: 10px;
         cursor: pointer;
-        font-family: NotoSansCJKkr;
         font-size: 20px;
         font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
+        
         text-align: right;
-        .font-color1;
+        .basic-font;
         &:hover {
           background-color: #e0d9eb;
         }
@@ -563,14 +524,9 @@ export default {
     margin: 47px auto 0 auto;
     border-radius: 6px;
     background-color: #ffe505;
-    font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
-    text-align: center;
-    .font-color5;
+    .basic-font;
   }
   .rest {
     margin-bottom: 100px;
@@ -590,14 +546,10 @@ export default {
         // width: 108px;
         height: 24px;
         margin: 0 6px 6px 0;
-        font-family: NotoSansCJKkr;
+        
         font-size: 16px;
         font-weight: 300;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color2;
+        .basic-font;
       }
     }
   }

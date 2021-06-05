@@ -1,6 +1,6 @@
 <template>
   <div class="wallet">
-    <div class="title">Connect to a wallet</div>
+    <div class="title font-color1">Connect to a wallet</div>
     <div class="block">
       <div class="block-item">
         <img
@@ -30,7 +30,7 @@
         />
         <div class="font">Metamask</div>
       </div>
-      <div class="block-item">
+      <div class="block-item font-color2">
         <img
           src="../../../public/assets/icons-default-img-5.png"
           class="icon"
@@ -52,7 +52,7 @@
         <div class="font">Metamask</div>
       </div>
     </div>
-    <div class="footer">
+    <div class="footer font-color2">
       <div class="font">Learn how to connect</div>
       <img src="../../../public/assets/icons-help.png" alt="" class="icon" />
     </div>
@@ -83,14 +83,9 @@ export default {
     // margin: 0 90px 29px;
     margin-bottom: 38px;
     text-align: center;
-    font-family: NotoSansCJKkr;
     font-size: 24px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
+    .basic-font;
   }
   .block {
     margin-bottom: 34px;
@@ -110,27 +105,14 @@ export default {
       }
       .font {
         opacity: 0.8;
-        font-family: NotoSansCJKkr;
         font-size: 20px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        letter-spacing: normal;
-        .font-color2;
+       
       }
     }
   }
   .footer {
-    // height: 29px;
-    // margin: 0 8px 0 0;
-    font-family: NotoSansCJKkr;
+	.basic-font;
     font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color2;
     display: flex;
     align-items: center;
     justify-content: center;

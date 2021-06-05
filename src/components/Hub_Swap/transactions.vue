@@ -1,10 +1,10 @@
 <template>
   <div class="transactions">
-    <div class="title">Recent transactions</div>
-    <div class="content">
+    <div class="title font-color1">Recent transactions</div>
+    <div class="content font-color1">
       Please connect your wallet to view your recent transactions
     </div>
-    <div class="button" @click="close">Close</div>
+    <div class="button font-color4" @click="close">Close</div>
   </div>
 </template>
 
@@ -35,45 +35,31 @@ export default {
     // width: 237px;
     height: 36px;
     margin: 11px 89px 28px 86px;
-    font-family: NotoSansCJKkr;
     font-size: 24px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    text-align: center;
-    letter-spacing: normal;
-    .font-color1;
+    .basic-font;
   }
   .content {
     height: 58px;
     margin: 28px 4px 64px 0;
-    font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
+    
     text-align: center;
-    .font-color1;
+    
+	.basic-font;
   }
   .button {
     cursor: pointer;
     height: 58px;
     line-height: 58px;
     margin: 64px 4px 0 0;
-    // padding: 14px 175px 15px 180px;
     border-radius: 6px;
     .black-theme-img1;
-    font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
     text-align: center;
-    .font-color4;
+   
   }
 }
 </style>

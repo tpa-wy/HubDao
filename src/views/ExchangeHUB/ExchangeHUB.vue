@@ -2,21 +2,21 @@
   <div class="ExchangeHUB">
     <div class="nav">
       <div
-        class="nav-item nav-swap"
+        class="nav-item nav-swap font-color1"
         :class="{ checked: nav == 1 }"
         @click="skipNav(1)"
       >
         Swap
       </div>
       <div
-        class="nav-item nav-liquidityb"
+        class="nav-item font-color1 nav-liquidityb"
         :class="{ checked: nav == 2 }"
         @click="skipNav(2)"
       >
         Liquidity
       </div>
       <div
-        class="nav-item nav-brideg"
+        class="nav-item font-color1 nav-brideg"
         :class="{ checked: nav == 3 }"
         @click="skipNav(3)"
       >
@@ -109,14 +109,12 @@ export default {
       //   width: 122px;
       // line-height: 40px;
       padding: 8px 28px 8px 29px;
-      font-family: NotoSansCJKkr;
+      
       font-size: 16px;
       font-weight: 300;
-      font-stretch: normal;
-      font-style: normal;
-      letter-spacing: normal;
+      .basic-font;
       text-align: center;
-      .font-color1;
+      
     }
     .checked {
       cursor: pointer;
@@ -124,218 +122,16 @@ export default {
       // height: 40px;
       // padding: 8px 28px 8px 29px;
       border-radius: 21.5px;
-      font-family: NotoSansCJKkr;
+      
       font-size: 16px;
       font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      letter-spacing: normal;
+      .basic-font;
       text-align: center;
-      .font-color4;
+      color: @f4;
       .theme-black-back;
     }
    
   }
-  >.block {
-    width: 594px;
-    height: 600px;
-    margin: 0 auto;
-    // margin: 55px 531px 185px;
-    padding: 22px 39px 59px 40px;
-    border-radius: 8px;
-    border: solid 1px rgba(255, 242, 196, 0.31);
-   .black-font-color;
-    .header {
-      display: flex;
-      justify-content: space-between;
-      .title {
-        width: 115px;
-        height: 36px;
-        margin: 0 136px 7px 0;
-        font-family: NotoSansCJKkr;
-        font-size: 24px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color4;
-      }
-      .icon {
-        display: flex;
-        .icon-1 {
-          background-color: #f00;
-          width: 20px;
-          height: 20px;
-          margin-right: 25px;
-        }
-        .icon-2 {
-          background-color: #ff0;
-          width: 20px;
-          height: 20px;
-        }
-      }
-    }
-    .title-2 {
-      width: 192px;
-      height: 24px;
-      margin: 7px 59px 47px 0;
-      font-family: NotoSansCJKkr;
-      font-size: 16px;
-      font-weight: 300;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      .font-color4;
-      margin-bottom: 47px;
-    }
-    > .block-1 {
-      width: 466px;
-      height: 120px;
-      margin: 47px 0 19px 24px;
-      padding: 12px 21px 20px 20px;
-      border-radius: 6px;
-      .theme-pink-back4;
-      .From {
-        width: 41px;
-        height: 24px;
-        margin: 0 286px 24px 0;
-        font-family: NotoSansCJKkr;
-        font-size: 16px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color4;
-      }
-      .content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .currency {
-          display: flex;
-          align-items: center;
-          .icon {
-            width: 34px;
-            height: 34px;
-            // margin: 0 51px 0 0;
-            margin-right: 13px;
-            padding: 6px 7px 4px 6px;
-            opacity: 0.69;
-            border: solid 1px #444444;
-            border-radius: 50%;
-          }
-          .currency-select {
-            cursor: pointer;
-          }
-        }
-      }
-    }
-
-    .money {
-      width: 40px;
-      height: 38px;
-      //   margin: 24px 287px 2px 0;
-      font-family: NotoSansCJKkr;
-      font-size: 26px;
-      font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      .font-color11;
-    }
-    > .block-2 {
-      width: 466px;
-      height: 120px;
-      margin: 20px 0 47px 24px;
-      padding: 12px 14px 14px 20px;
-      border-radius: 6px;
-      background-color: #181742;
-      .to {
-        width: 20px;
-        height: 24px;
-        margin: 0 190px 24px 0;
-        font-family: NotoSansCJKkr;
-        font-size: 16px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color4;
-      }
-      .content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .button-select {
-        cursor: pointer;
-        width: 222px;
-        height: 41px;
-        padding: 4px 28.4px 8px 29.6px;
-        border-radius: 20.5px;
-        box-shadow: 2px 2px 6px 0 rgba(1, 0, 51, 0.64);
-        background-color: #323160;
-        font-family: NotoSansCJKkr;
-        font-size: 20px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: right;
-        .font-color4;
-      }
-    }
-    .icon-xia {
-      width: 17px;
-      height: 21px;
-      margin: 0 auto;
-      background-color: #f00;
-    }
-  }
-  .button {
-    cursor: pointer;
-    width: 466px;
-    height: 58px;
-    margin: 47px 0 0 24px;
-    padding: 14px 0 15px;
-    border-radius: 6px;
-    background-color: #e7e7e7;
-    font-family: NotoSansCJKkr;
-    font-size: 20px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    .font-color5;
-  }
-}
-// 下拉菜单
-.el-dropdown-link {
-  cursor: pointer;
-  font-family: NotoSansCJKkr;
-  font-size: 20px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: right;
-  .font-color4;
-}
-.el-icon-arrow-down {
-  font-size: 12px;
-}
-.el-dropdown {
-  .el-icon-arrow-down {
-    font-size: 18px;
-  }
+  
 }
 </style>

@@ -4,7 +4,7 @@
       <el-header>
         <div class="menu-button">
           <div @click="isCollapse = !isCollapse">
-            <img src="../../public/assets/icons-ham.png" alt="" srcset="" />
+            <img class="menu-logo" src="../../public/assets/icons-ham.png" alt="" srcset="" />
           </div>
           <div class="logo">
             <svg
@@ -111,12 +111,12 @@
         </div>
         <div class="userinfo">
           <div class="Rectangle" v-show="network == 128">
-            <div class="Connect" @click="connect" v-show="network == 128">
+            <div class="Connect font-color4" @click="connect" v-show="network == 128">
               {{ account }}
             </div>
           </div>
           <div class="Rectangle2" v-show="network != 128">
-            <div class="heUZLp">Wrong Network</div>
+            <div class="heUZLp font-color4">Wrong Network</div>
           </div>
           <div class="user-img">
             <div class="dot"></div>
@@ -241,7 +241,7 @@
             </el-menu-item>
           </el-menu>
         </div>
-        <el-main>
+        <el-main class="theme-back">
           <router-view></router-view>
         </el-main>
       </el-container>
@@ -410,23 +410,17 @@ body {
       display: inline-block;
      .theme-pink-back;
       .Connect {
-        // width: 64px;
-        // margin-left: 10px;
         padding-left: 10px;
         padding-right: 10px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        // height: 24px;
-        font-family: NotoSansCJKkr;
+        
         font-size: 16px;
         font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        // line-height: normal;
-        letter-spacing: normal;
+        
         text-align: center;
-        .font-color4;
+		.basic-font;
         cursor: pointer;
       }
     }
@@ -448,7 +442,6 @@ body {
         font-style: normal;
         letter-spacing: normal;
         text-align: center;
-        .font-color4;
         cursor: pointer;
       }
     }
@@ -479,7 +472,6 @@ body {
 .el-main {
   height: 100%;
   padding: 0;
-  .theme-back;
 }
 .el-container {
   height: 100%;

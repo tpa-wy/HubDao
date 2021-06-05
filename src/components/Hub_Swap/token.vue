@@ -21,7 +21,7 @@
     </div>
     <div class="select">
       <div class="title">
-        <div class="font">Token name</div>
+        <div class="font font-color1">Token name</div>
         <div
           class="icon"
           :class="{ 'icon-sort ': sort }"
@@ -43,7 +43,7 @@
               alt=""
               class="icon"
             />
-            <div class="font">{{ item.symbol }}</div>
+            <div class="font font-color1">{{ item.symbol }}</div>
           </div>
           <div class="right" v-show="account">
             <div
@@ -75,7 +75,7 @@
               alt=""
               class="icon"
             />
-            <div class="font">{{ item.symbol }}</div>
+            <div class="font font-color1">{{ item.symbol }}</div>
           </div>
           <div class="right" v-show="account">
             <div
@@ -176,19 +176,14 @@ export default {
   border: solid 1px #979797;
   .theme-box-back;
   > .title {
+	.basic-font;
     height: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 11px 8px 22px 24px;
-    font-family: NotoSansCJKkr;
     font-size: 24px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
     margin-bottom: 22px;
     > .font {
       margin-right: 8px;
@@ -263,15 +258,8 @@ export default {
       }
       .font {
         height: 20px;
-        //   margin: 38px 18px 22px 36px;
-        font-family: NotoSansCJKkr;
         font-size: 14px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color1;
+        .basic-font;
       }
     }
     .block {
@@ -299,13 +287,9 @@ export default {
           }
           .font {
             margin-left: 16px;
-            font-family: NotoSansCJKkr;
             font-size: 20px;
             font-weight: 400;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
-            .font-color1;
+            .basic-font;
           }
         }
         .right {

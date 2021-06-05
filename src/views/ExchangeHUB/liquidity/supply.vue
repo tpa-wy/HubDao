@@ -59,7 +59,7 @@
                   />
                   <div class="list-block" @click="is_show = !is_show">
                     <img class="list-row-map" :src="fromToken.logoURI" />
-                    <span class="list-row-span">{{ fromToken.symbol }}</span>
+                    <span class="list-row-span font-color1">{{ fromToken.symbol }}</span>
                     <img
                       class="list-row-down"
                       src="../../../assets/down-icon.png"
@@ -75,7 +75,7 @@
             <div class="liq-listitem">
               <div class="liq-list-row">
                 <div>Input</div>
-                <div class="list-item-right">Balance : {{ toToken.info }}</div>
+                <div class="list-item-right font-color2">Balance : {{ toToken.info }}</div>
               </div>
               <div class="liq-list-row">
                 <div>
@@ -104,7 +104,7 @@
                   />
                   <div class="list-block" @click="is_show2 = !is_show2">
                     <img class="list-row-map" :src="toToken.logoURI" />
-                    <span class="list-row-span">{{ toToken.symbol }}</span>
+                    <span class="list-row-span font-color1">{{ toToken.symbol }}</span>
                     <img
                       class="list-row-down"
                       src="../../../assets/down-icon.png"
@@ -117,20 +117,20 @@
         </div>
 
         <div class="liq-listview btm-liq">
-          <div class="liq-title">PRICES AND POOL SHARE</div>
+          <div class="liq-title font-color2">PRICES AND POOL SHARE</div>
 
           <div class="btm-liq-item">
             <div>
-              <div class="liq-i-num">18.800044</div>
-              <div class="liq-i-txt">HD per HT</div>
+              <div class="liq-i-num font-color7">18.800044</div>
+              <div class="liq-i-txt font-color3">HD per HT</div>
             </div>
             <div>
-              <div class="liq-i-num">18.800044</div>
-              <div class="liq-i-txt">HD per HT</div>
+              <div class="liq-i-num font-color7">18.800044</div>
+              <div class="liq-i-txt font-color3">HD per HT</div>
             </div>
             <div>
-              <div class="liq-i-num">18.800044</div>
-              <div class="liq-i-txt">HD per HT</div>
+              <div class="liq-i-num  font-color7">18.800044</div>
+              <div class="liq-i-txt font-color3">HD per HT</div>
             </div>
           </div>
 
@@ -159,25 +159,25 @@
               Insufficient {{toToken.symbol}} balance
             </div> -->
             <!-- <div class="submit-btn" @click="addLiquidity">Approve</div> -->
-            <div class="submit-btn" @click="addLiquidity">Supply</div>
+            <div class="submit-btn font-color5" @click="addLiquidity">Supply</div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="wallet-box">
-      <div class="wallet-state">
-        <div class="w-title">LP TOKENS IN YOUR WALLET</div>
+      <div class="wallet-state font-color1">
+        <div class="w-title font-color9">LP TOKENS IN YOUR WALLET</div>
 
         <div class="fx-aj-cs w-item">
           <div class="w-img-box fx-box">
             <img class="head-img" src="/assets/icons-default-img-2@2x.png" />
             <img class="head-img" src="/assets/icons-default-img-3@2x.png" />
           </div>
-          <div class="w-text">HD/HT</div>
+          <div class="w-text font-color1">HD/HT</div>
           <div>0</div>
         </div>
-        <div class="fx-aj-cs w-item">
+        <div class="fx-aj-cs w-item font-color1">
           <div class="w-img-box w-text">HD/HT</div>
           <div class="w-text">HD/HT</div>
           <div>0</div>
@@ -385,14 +385,11 @@ export default {
 @import url("./liquidity.less");
 .supply,
 .wallet-state {
-  font-family: NotoSansCJKkr;
+  
   font-size: 16px;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  .font-color1;
+  .basic-font;
+ 
   .top {
     .header-back-icon {
       width: 32px;
@@ -416,7 +413,6 @@ export default {
       .theme-list-back;
     }
     .liq-title {
-      .font-color2;
       font-size: 14px;
       font-weight: 300;
       height: 30px;
@@ -444,16 +440,13 @@ export default {
         font-size: 16px;
       }
     }
-    .list-item-right {
-      .font-color2;
-    }
+    
     .liq-list-row:last-child {
       .layout-mt24;
       font-size: 26px;
-      .font-color7;
+      color:@f7;
     }
     .list-row-span {
-      .font-color1;
       font-size: 20px;
       font-weight: 500;
       margin-right: 4px;
@@ -521,15 +514,13 @@ export default {
     flex-wrap: nowrap;
   }
   .liq-i-num {
-    .font-color7;
-    font-family: NotoSansCJKkr;
+	.basic-font;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
   }
   .liq-i-txt {
-    .font-color11;
-    font-family: NotoSansCJKkr;
+	.basic-font;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
@@ -553,7 +544,6 @@ export default {
     font-weight: 500;
     text-align: center;
     user-select: none;
-    .font-color5;
     .black-theme-img2;
   }
   .submit-btn-1 {
@@ -589,12 +579,10 @@ export default {
   margin-bottom: 100px;
 }
 .w-title {
-  .font-color9;
   font-size: 16px;
   margin-bottom: 6px;
 }
 .w-text {
-  .font-color1;
   font-size: 16px;
   font-weight: 300;
 }

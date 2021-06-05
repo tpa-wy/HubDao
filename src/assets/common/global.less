@@ -1,25 +1,53 @@
-
+@f1:#000000;
+@f2:#444444;
+@f3:#a5a5a5;
+@f4:#ffffff;
+@f5:#010033;
+@f6:#727272;
+@f7:#2f303f;
+@f8:#161557;
+@f9:#ffa402;
+@f10:#d8d8d8;
+@f11:#fafafa;
+@f12:#f5f5f5;
+@f13:#eaeaea;
+@f14:#ebebeb;
+@f15:rgba(245, 245, 245, 0.41);
+@f16:#181742;
+@f17:linear-gradient(to left, #010033, #2c3074 68%, #010033 88%);
+@f18: linear-gradient(to left, #44465e, #2f303f 0%);
+@f19: linear-gradient(to left, #ffe505, #ffc81c 0%);
+@f20: linear-gradient(to left, #0b0d36, #44465e 0%);
+@f21: linear-gradient(to bottom, #fbfbfb 21%, #f5f5f5);
+@f22: linear-gradient(to bottom, #e4ede1, #ffffff 87%);
+@f23: linear-gradient(to left, #ffe505, #ffc81c 0%);
+@f24: linear-gradient(275deg,#11122e 99%,#2c3053 31%,#070721 2%);
+@f25:#949494;
+@f26:#20c7d4;
 
 // 字体颜色
-.font-color1{color: #000;}
-.font-color2{color: #444444;}
-.font-color3{color: #a5a5a5;}
-.font-color4{color: #fff;}
-.font-color5{color:#010033;}
-.font-color6{color: #727272;}
-.font-color7{color: #2f303f;}
-.font-color8{color: #161557;}
+.font-color1{color: @f1;}
+.font-color2{color: @f2;}
+.font-color3{color: @f3;}
+.font-color4{color: @f4;}
+.font-color5{color: @f5;}
+.font-color6{color: @f6;}
+.font-color7{color: @f7;}
+.font-color8{color: @f8;}
 .font-color9{
-    color: #ffa402;
+    color: @f9;
 }
 .font-color10{
-    color: #ebebeb;
-}
-.font-color11{
-    color: #a5a5a5;
+    color: @f14;
 }
 .font-color12{
     color: #d8d8d8;
+}
+.font-color13{
+	color: @f26;
+}
+.font-color14{
+	color: @f25;
 }
 .font-size14{font-size: 14px;}
 .font-size16{font-size: 16px;}
@@ -159,4 +187,60 @@
 }
 .layout-abs{
     position: absolute;
+}
+
+.el-dropdown-link {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  .basic-font;
+  text-align: right;
+  color: @f4;
+}
+.el-icon-arrow-down {
+  font-size: 12px;
+}
+.el-dropdown {
+  .el-icon-arrow-down {
+    font-size: 18px;
+  }
+}
+.theme(@headerbg:#fff,@sliderbg:#333,@logocolor:#333,@menubg:#fff,@menucolor:#000,@menuhcolor:#333,@workbg:#fafafa,@workcolor:#000){
+	  //顶部导航背景色
+	  .el-header{
+		  background-color:@headerbg;
+	  }
+	  .menu-logo{
+		  background-color:@sliderbg;
+	  }
+	  .cls-1{
+		  fill:@logocolor;
+	  }
+	  .el-menu{
+		  background-color: @menubg;
+	  }
+	  .el-menu-item{
+		  color: @menucolor;
+	  }
+	  .el-menu-item.is-active{
+		   color:@menuhcolor;
+	  }
+	  
+	  .el-main{
+		  background-color: @workbg;
+	  }
+	  .font-color1{
+		  color: @workcolor;
+	  }
+	  
+}
+
+
+
+
+.white{
+	.theme();
+}
+.dark{
+	.theme(#000,#fff,#fff,#333,#fff,#fafafa,#000,#fff);
 }

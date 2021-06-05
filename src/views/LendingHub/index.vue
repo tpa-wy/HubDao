@@ -2,11 +2,11 @@
   <div class="lottery full-r-w fx-fd-c fx-ai-c">
 
     <div class="title full-r-w">
-        <div class="title-cxt">Vote</div>
+        <div class="title-cxt font-color1">Vote</div>
     </div>
 
     <div class="smail-title full-r-w">
-        <div class="smail-title-text">
+        <div class="smail-title-text font-color1">
             Description of the service Description of the service
         </div>
     </div>
@@ -14,7 +14,7 @@
     <div class="block full-r-w">
         <div class="lending-cxt">
              <div class="lending-content">
-                   <div class="block-msg full-r-w">
+                   <div class="block-msg full-r-w font-color12">
                        Comming Soon !
                    </div>
              </div>
@@ -46,24 +46,21 @@ export default {
    .basic-font;
   
   .title {
-    font-family: NotoSansCJKkr;
+    
     font-size: 36px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
+    .basic-font;
     
     .title-cxt{
         margin: 48px 176.5px 9px 176.5px;
-        .font-color1;
+        
         text-align: left;
     }
   }
   .smail-title {
         .basic-font;
         height: 36px;
-        .font-color1;
+        
         .smail-title-text{
             margin: 0px 176.5px 9px 176.5px;
         }
@@ -82,7 +79,7 @@ export default {
                         font-size: 72px;
                         line-height:560px;
                         text-align: center;
-                        .font-color12;
+                      
                     }
             }
      }

@@ -1,5 +1,5 @@
 <template>
-  <div class="Liquidity">
+  <div class="Liquidity  font-color1">
     
         <router-view>
         </router-view>

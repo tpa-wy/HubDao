@@ -18,17 +18,17 @@
           </div>
         </div>
       </div>
-      <div class="title-2">Add liquidity to receive LP tokens</div>
-      <div @click="addLiquidity" class="add-button">Add Liquidity</div>
+      <div class="title-2 font-color1">Add liquidity to receive LP tokens</div>
+      <div @click="addLiquidity" class="add-button font-color5">Add Liquidity</div>
     </div>
     <div class="bottom">
-      <div class="title">
+      <div class="title font-color1">
         <div>Your Liquidity</div>
         <div class="icon">
           <img src="../../../assets/icons-help@2x.png" class="icon-img-20" />
         </div>
       </div>
-      <div v-if="dataList.length == 0" class="content">
+      <div v-if="dataList.length == 0" class="content font-color3">
         Connect to a wallet to view your liquidity.
       </div>
       <div v-if="dataList.length !== 0" class="content-list">
@@ -43,7 +43,7 @@
               <img :src="item.token0info.logoURI" class="head-img" />
               <img :src="item.token1info.logoURI" class="head-img" />
 
-              <span class="head-title"
+              <span class="head-title font-color7"
                 >{{ item.token0info.symbol }}/{{ item.token1info.symbol }}</span
               >
             </div>
@@ -78,13 +78,13 @@
 
             <div class="submit-group">
               <div class="submit-btn submit-btn1" @click="skip('add')">Add</div>
-              <div class="submit-btn submit-btn2" @click="skip('remove')">Remove</div>
+              <div class="submit-btn submit-btn2 font-color4" @click="skip('remove')">Remove</div>
             </div>
           </div>
         </div>
       </div>
       <div class="value">
-        <div class="value-1">Don’t see a pool you joined? Import it.</div>
+        <div class="value-1 font-color1">Don’t see a pool you joined? Import it.</div>
         <div class="value-2">
           Or, if you staked your LP tokens in a farm, unstake them to see them
           here
@@ -132,7 +132,7 @@
   }
   .submit-btn2 {
     .black-theme-img1;
-    .font-color4;
+    
   }
 }
 
@@ -170,13 +170,7 @@
   margin-left: 12px;
 }
 
-.content-i-name {
-  .font-color7;
-  font-size: 16px;
-  .content-i-value > span {
-    font-size: 16px;
-  }
-}
+
 </style>
 <script>
 const {

@@ -2,11 +2,11 @@
   <div class="lottery full-r-w fx-fd-c fx-ai-c">
 
     <div class="title full-r-w">
-        <div class="title-cxt">Lottery</div>
+        <div class="title-cxt font-color1">Lottery</div>
     </div>
 
     <div class="smail-title full-r-w">
-        <div class="smail-title-text">
+        <div class="smail-title-text font-color1">
             Buy new tokens with a brand new token sale model.
         </div>
     </div>
@@ -14,8 +14,8 @@
     <div class="block full-r-w">
          <div class="lottery-nav fx-box fx-ai-c">
              <img class="lottery-nav-i" src="/assets/card-icon.png" alt="">
-             <div class="text">Unlock wallet to access lottery</div>
-             <div class="btn">Unlock Wallet</div>
+             <div class="text font-color4">Unlock wallet to access lottery</div>
+             <div class="btn font-color5">Unlock Wallet</div>
          </div>
 
          <div class="lottery-cxt fx-box">
@@ -36,14 +36,14 @@
                               <img src="/assets/s-card.png"/>
                               <div class="card-cxt-box fx-box fx-fd-jc-sb">
                                 <div class="card-num-title">Winning numbers</div>
-                                <div class="card-num">14, 11, 11, 2</div>
+                                <div class="card-num font-color7">14, 11, 11, 2</div>
                               </div>
                           </div>
                           <div class="card-item-i fx-box fx-jc-sb fx-ai-c full-r-w">
                               <img src="/assets/s-card.png"/>
                               <div class="card-cxt-box fx-box fx-fd-jc-sb">
                                 <div class="card-num-title">Winning numbers</div>
-                                <div class="card-num">14, 11, 11, 2</div>
+                                <div class="card-num font-color7">14, 11, 11, 2</div>
                               </div>
                           </div>
                       </div>
@@ -55,7 +55,7 @@
                             <div  class="fx-1 text-center">Winners</div>
                             <div  class="fx-1 text-right">Prize Pot</div>
                           </div>
-                          <div class="card-table-body">
+                          <div class="card-table-body font-color1">
                               <div class="full-r-w fx-box body-item fx-ai-c">
                                   <div class="fx-1 text-left">No Matched</div>
                                   <div  class="fx-1 text-center">Winners</div>
@@ -81,7 +81,7 @@
                       </div>
 
                       <div class="full-r-w fx-jc-c fx-ai-c">
-                          <div class="basic-btn-yellow lottery-btn">
+                          <div class="basic-btn-yellow lottery-btn font-color5">
                             Unlock Wallet
                           </div>
                       </div>
@@ -94,7 +94,7 @@
                   <div class="lottery-plr">
 
                       <div class="fx-box fx-jc-sb fx-ai-c">
-                        <div class="history">History</div>
+                        <div class="history font-color1">History</div>
                         <div class="fx-box fx-ai-c">
                             <div class="showlast font-color2">SHOW LAST</div>
                             <div>
@@ -234,14 +234,14 @@ export default {
     
     .title-cxt{
         margin: 48px 176.5px 9px 176.5px;
-        .font-color1;
+        
         text-align: left;
     }
   }
   .smail-title {
         .basic-font;
         height: 36px;
-        .font-color1;
+       
         .smail-title-text{
             margin: 0px 176.5px 9px 176.5px;
         }
@@ -264,7 +264,7 @@ export default {
             margin-right: 25px;
         }
         .text{
-            .font-color4;
+           
             font-size: 24px;
             margin-right: 30px;
         }
@@ -274,9 +274,9 @@ export default {
                 padding: 14px 95px 15px 98px;
                 border-radius: 6px;
                 box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
-                .font-color5;
+                
                 .black-theme-img2;
-                  font-size: 20px;
+                 font-size: 20px;
 
         }
     }
@@ -343,7 +343,7 @@ export default {
                       border-radius: 2px;
                       font-size: 16px;
                       font-weight: 500;
-                      .font-color1;
+                      
                       margin-bottom:8px;
                     }
                     .body-item-op1{
@@ -356,7 +356,7 @@ export default {
                         height: 58px;
                         width: 380px;
                         line-height: 58px;
-                        .font-color5;
+                       
                         font-size: 20px;
                         margin-top: 64px;
                     }
@@ -378,7 +378,7 @@ export default {
                   font-weight: 300;
                }
                .card-num{
-                  .font-color7;
+                  
                   font-size: 20px;
                   font-weight: bold;
                }
@@ -396,7 +396,7 @@ export default {
          .history{
            font-size: 24px;
            font-weight: bold;
-           .font-color1;
+           
          }
          .showlast{
            font-size: 14px;

@@ -3,14 +3,14 @@
     <div class="block-item">
       <div class="header">
         <div class="logo"><img src="../../assets/icons-logo.png" alt="" /></div>
-        <div class="title">TITLE TITLE</div>
+        <div class="title font-color4">TITLE TITLE</div>
         <div class="icon">
           <div class="smail-icon fx-aj-cc">
              <img class="header-icon-i" src="/assets/down-icon.png"/>
           </div>
         </div>
       </div>
-      <div class="content">
+      <div class="content font-color5">
         <div class="block">
           <div class="block-item">
             <div class="title">
@@ -23,7 +23,7 @@
               <img src="../../assets/icons-logo.png" alt="" />
             </div>
             <div class="sale-button">ON SALE</div>
-            <div class="money">15,000,000 TITLE</div>
+            <div class="money font-color5">15,000,000 TITLE</div>
             <div class="total">30% of total sale</div>
             <div class="wallet-button">Unlock Wallet</div>
             <div class="table">
@@ -57,7 +57,7 @@
               <div>Commit ~0.082 LP in total to earn!</div>
             </div>
           </div>
-          <div class="right">
+          <div class="right font-color2">
             <img class="cut-img" src="/assets/Cup.png"/>
             <span>Learn more about TITLE(TITLE)</span>
             <div class="share">
@@ -66,12 +66,12 @@
           </div>
         </div>
       </div>
-      <div class="footer">Close</div>
+      <div class="footer font-color6">Close</div>
     </div>
     <div class="block-item">
       <div class="header">
         <div class="logo"><img src="../../assets/icons-logo.png" alt="" /></div>
-        <div class="title">TITLE TITLE</div>
+        <div class="title font-color5">TITLE TITLE</div>
         <div class="icon">
           <div class="smail-icon fx-aj-cc">
              <img class="header-icon-i" src="/assets/down-icon.png"/>
@@ -81,7 +81,7 @@
       <div class="content">
         <div class="block">
           <div class="block-item">
-            <div class="title">
+            <div class="title font-color5">
               Basic Sale
               <div class="icon">
                 <img src="../../assets/icons-help.png" alt="" />
@@ -90,11 +90,11 @@
             <div class="logo">
               <img src="../../assets/icons-logo.png" alt="" />
             </div>
-            <div class="sale-button">ON SALE</div>
-            <div class="money">15,000,000 TITLE</div>
+            <div class="sale-button font-color4">ON SALE</div>
+            <div class="money font-color5">15,000,000 TITLE</div>
             <div class="total">30% of total sale</div>
-            <div class="wallet-button">Unlock Wallet</div>
-            <div class="table">
+            <div class="wallet-button font-color5">Unlock Wallet</div>
+            <div class="table font-color1">
               <div class="tr">
                 <div class="td">Max. LP token entry</div>
                 <div class="td">0</div>
@@ -125,7 +125,7 @@
               <div>Commit ~0.082 LP in total to earn!</div>
             </div>
           </div>
-          <div class="right">
+          <div class="right font-color2">
              <img class="cut-img" src="/assets/Cup.png"/>
             <span>Learn more about TITLE(TITLE)</span>
             <div class="share">
@@ -171,14 +171,10 @@ export default {
       position: relative;
       .title {
         margin: 0 0 0 16px;
-        font-family: NotoSansCJKkr;
         font-size: 36px;
         font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color4;
+        .basic-font;
+        
       }
       .icon {
         cursor: pointer;
@@ -211,33 +207,7 @@ export default {
       padding-bottom: 38px;
       padding-top: 51px;
 
-      .progress {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .article {
-          width: 602px;
-          height: 11px;
-          .el-progress {
-            .el-progress-bar__outer {
-              height: 11px !important;
-            }
-          }
-        }
-        .value {
-          flex: 1;
-          font-family: NotoSansCJKkr;
-          font-size: 16px;
-          font-weight: bold;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color2;
-          text-align: right;
-          //   margin-left: 62px;
-        }
-      }
+      
       > .block {
         display: flex;
         justify-content: center;
@@ -258,15 +228,13 @@ export default {
           .black-theme-img4;
           .title {
             height: 29px;
-            font-family: NotoSansCJKkr;
+           
             font-size: 20px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
+            .basic-font;
             text-align: center;
-            .font-color5;
+            
+			.basic-font;
             position: relative;
             .icon {
               position: absolute;
@@ -289,39 +257,28 @@ export default {
             line-height: 26px;
             border-radius: 16px;
            
-            font-family: NotoSansCJKkr;
+            
             font-size: 14px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
+            
             text-align: center;
-            .font-color4;
+			.basic-font;
             cursor: pointer;
             margin-bottom: 9px;
             .black-font-color;
           }
           .money {
             height: 54px;
-            // margin: 6px 25px 0 0;
-            font-family: NotoSansCJKkr;
             font-size: 36px;
             font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            .font-color5;
+            .basic-font;
           }
           .total {
             height: 29px;
-            font-family: NotoSansCJKkr;
+            
             font-size: 20px;
             font-weight: 300;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
+            .basic-font;
             color: rgba(47, 48, 63, 0.73);
             margin-bottom: 42px;
           }
@@ -333,14 +290,12 @@ export default {
             // margin: 42px 6px 32px 0;
             // padding: 14px 92px 15px 95px;
             border-radius: 6px;
-            font-family: NotoSansCJKkr;
+           
             font-size: 20px;
             font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
+            .basic-font;
             text-align: center;
-            .font-color5;
+           
             margin-bottom: 32px;
             .black-theme-img2;
           }
@@ -352,14 +307,11 @@ export default {
               margin-bottom: 7px;
               .td {
                 height: 24px;
-                font-family: NotoSansCJKkr;
+                
                 font-size: 16px;
                 font-weight: 300;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
-                .font-color1;
+               .basic-font;
+               
                 margin-right: 26px;
               }
             }
@@ -389,24 +341,18 @@ export default {
             > div {
               //   height: 24px;
               //   margin: 48px 235px 0 21px;
-              font-family: NotoSansCJKkr;
+             
               font-size: 16px;
               font-weight: 300;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color5;
+              .basic-font;
+              
             }
             > div:nth-child(2) {
-              font-family: NotoSansCJKkr;
+              
               font-size: 16px;
               font-weight: bold;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: normal;
-              .font-color5;
+              .basic-font;
+              
               width: 154px;
             }
           }
@@ -441,14 +387,10 @@ export default {
           }
           height: 24px;
           //   margin: 0 0 0 19px;
-          font-family: NotoSansCJKkr;
+          
           font-size: 16px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color2;
+          .basic-font;
         }
       }
     }
@@ -456,14 +398,12 @@ export default {
       border-top: solid 1px #979797;
       height: 70px;
       line-height: 70px;
-      font-family: NotoSansCJKkr;
+      
       font-size: 20px;
       font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      letter-spacing: normal;
+      .basic-font;
       text-align: center;
-      .font-color6;
+      
     }
   }
   .block-item:last-child{

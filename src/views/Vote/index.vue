@@ -2,10 +2,10 @@
   <div class="lottery full-r-w fx-fd-c fx-ai-c">
 
     <div class="title full-r-w">
-        <div class="title-cxt">Vote</div>
+        <div class="title-cxt font-color1">Vote</div>
     </div>
 
-    <div class="smail-title full-r-w">
+    <div class="smail-title full-r-w font-color1">
         <div class="smail-title-text">
             Description of the service Description of the service
         </div>
@@ -18,7 +18,7 @@
                <div v-for="(item,index) in headerList" 
                     :key="index" 
                     @click.stop="changeTool(index)"
-                    class="vote-item layout-rel">
+                    class="vote-item layout-rel font-color1">
                    <div :class="(item.checked?'font-color1':'font-color3')">{{item.label}}</div>
                    <div :class="'vote-active layout-abs '+(item.checked?'vote-ac':'vote-bc')"></div>
                </div>
@@ -39,8 +39,8 @@
                {{item.text}}
              </div>
              <div class="vote-list-content">
-                 <div class="store-name">{{item.title}}</div>
-                 <div class="store-sign">{{item.sign}}</div>
+                 <div class="store-name font-color5">{{item.title}}</div>
+                 <div class="store-sign font-color6">{{item.sign}}</div>
              </div>
            </div>
 
@@ -57,7 +57,7 @@
 <script>
 
 export default {
-  name: "EducationIho",
+  name: "Vote",
   data() {
     return {
       
@@ -158,14 +158,13 @@ export default {
     
     .title-cxt{
         margin: 48px 176.5px 9px 176.5px;
-        .font-color1;
         text-align: left;
     }
   }
   .smail-title {
         .basic-font;
         height: 36px;
-        .font-color1;
+        
         .smail-title-text{
             margin: 0px 176.5px 9px 176.5px;
         }
@@ -182,7 +181,6 @@ export default {
             line-height: 41px;
             margin-right: 40px;
             letter-spacing: 0.5px;
-            .font-color1;
             font-size: 28px;
             font-weight: 500;
            .vote-active{
@@ -232,11 +230,11 @@ export default {
             margin-left:30px;
             .store-name{
               font-size: 36px;
-              .font-color5;
+              
             }
             .store-sign{
                .font-size26;
-               .font-color6;
+              
                max-width:550px;
                overflow: hidden;
                white-space:nowrap;

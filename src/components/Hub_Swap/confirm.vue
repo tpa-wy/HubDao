@@ -1,6 +1,6 @@
 <template>
   <div class="confirm">
-    <div class="title">Confirm Swap</div>
+    <div class="title font-color1">Confirm Swap</div>
     <div class="currency">
       <div class="currency-item currency-top">
         <div class="left">
@@ -9,9 +9,9 @@
             alt=""
             class="icon"
           />
-          <div class="font">7.482793</div>
+          <div class="font font-color2">7.482793</div>
         </div>
-        <div class="right">HD</div>
+        <div class="right font-color1">HD</div>
       </div>
       <div class="currency-center"></div>
       <div class="currency-item currency-buttom">
@@ -21,48 +21,48 @@
             alt=""
             class="icon"
           />
-          <div class="font">7.482793</div>
+          <div class="font font-color2">7.482793</div>
         </div>
-        <div class="right">HD</div>
+        <div class="right font-color1">HD</div>
       </div>
     </div>
-    <div class="describe">
-      Output is estimated . You will receive at least <span>0.453432</span> HT
+    <div class="describe font-color2">
+      Output is estimated . You will receive at least <span class="font-color9">0.453432</span> HT
       or the transaction will revert.
     </div>
     <div class="Price">
       <div class="Price-1">
-        <div class="left">Price</div>
-        <div class="right">
+        <div class="left font-color1">Price</div>
+        <div class="right font-color1">
           <div class="font">0.18283949 HT / HD</div>
           <div class="icon"></div>
         </div>
       </div>
       <div class="Price-2">
-        <div class="Price-2-item">
+        <div class="Price-2-item font-color1">
           <div class="left">
-            <div class="font">Minimum received</div>
+            <div class="font font-color1">Minimum received</div>
             <div class="icon"></div>
           </div>
           <div class="right">0.482372 HT</div>
         </div>
-        <div class="Price-2-item">
+        <div class="Price-2-item  font-color1">
           <div class="left">
-            <div class="font">Minimum received</div>
+            <div class="font font-color1">Minimum received</div>
             <div class="icon"></div>
           </div>
           <div class="right">0.482372 HT</div>
         </div>
-        <div class="Price-2-item">
+        <div class="Price-2-item font-color1">
           <div class="left">
-            <div class="font">Minimum received</div>
+            <div class="font font-color1">Minimum received</div>
             <div class="icon"></div>
           </div>
           <div class="right">0.482372 HT</div>
         </div>
       </div>
     </div>
-    <div class="button">Confirm Swap</div>
+    <div class="button font-color5">Confirm Swap</div>
   </div>
 </template>
 
@@ -88,14 +88,9 @@ export default {
   > .title {
     height: 36px;
     margin: 11px 60px 37px 39px;
-    font-family: NotoSansCJKkr;
     font-size: 24px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color1;
+    .basic-font;
   }
   .currency {
     .currency-item {
@@ -114,28 +109,20 @@ export default {
           border-radius: 50%;
         }
         .font {
-          font-family: NotoSansCJKkr;
           font-size: 24px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color2;
+          .basic-font;
+          
         }
       }
       .right {
         // margin: 41px 0 21px 205px;
         margin-right: 32px;
-        font-family: NotoSansCJKkr;
         font-size: 24px;
         font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
+         .basic-font;
         text-align: right;
-        .font-color1;
+       
       }
     }
     .currency-center {
@@ -152,16 +139,12 @@ export default {
   .describe {
     height: 48px;
     margin: 34px 60px 28.5px 38px;
-    font-family: NotoSansCJKkr;
     font-size: 16px;
     font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    .font-color2;
+    .basic-font;
+    
     span {
-      .font-color9;
+      
       font-weight: 500;
     }
   }
@@ -179,31 +162,19 @@ export default {
       align-items: center;
       height: 24px;
       margin-bottom: 28px;
+      .basic-font;
       .left {
-        font-family: NotoSansCJKkr;
         font-size: 16px;
         font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        .font-color1;
+        .basic-font;
+        
       }
       .right {
         display: flex;
-        // justify-content: ;
         align-items: center;
         .font {
-          // width: 39px;
-          // margin: 22.5px 19px 28px 39px;
-          font-family: NotoSansCJKkr;
           font-size: 16px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color1;
           margin-right: 12px;
         }
         .icon {
@@ -226,14 +197,10 @@ export default {
           align-items: center;
           .font {
             margin: 0 8px 0 0;
-            font-family: NotoSansCJKkr;
             font-size: 16px;
             font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            .font-color1;
+            .basic-font;
+            
           }
           .icon {
             width: 20px;
@@ -243,14 +210,10 @@ export default {
           }
         }
         .right {
-          font-family: NotoSansCJKkr;
+          
           font-size: 16px;
           font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: normal;
-          .font-color1;
+          .basic-font;
         }
       }
     }
@@ -263,14 +226,10 @@ export default {
     // padding: 14px 0 15px;
     border-radius: 6px;
     .black-theme-img2;
-    font-family: NotoSansCJKkr;
     font-size: 20px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
+    .basic-font;
     text-align: center;
-    .font-color5;
   }
 }
 </style>
