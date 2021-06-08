@@ -400,12 +400,18 @@ class SDK {
         const provider = new Provider(new JsonRpcProvider(LINK_NODE));
         await provider.init();
         let calls = []
+
+        let LPs = []
+
+
         // console.log(tokenInfo.tokens.length)
         for (var i = 0; i < len; i++) {
             // console.log('---------------------')
             // console.log(Factory.methods.allPairs(i))
             // console.log('---------------------')
             var lp_address = await Factory.methods.allPairs(i).call({}, 'latest')
+            LPs.push(lp_address);
+
             // console.log(lp_address)
             const abi = ERC20_ABI.concat([{
                 "constant": true,
@@ -433,10 +439,11 @@ class SDK {
                 "type": "function"
             }]);
             const contract = new Contract(lp_address, abi)
-                calls.push(contract.balanceOf(account))
-                calls.push(contract.allowance(account, ROUTER))
-                calls.push(contract.token0())
-                calls.push(contract.token1())
+            // console.log(contract)
+            calls.push(contract.balanceOf(account))
+            calls.push(contract.allowance(account, ROUTER))
+            calls.push(contract.token0())
+            calls.push(contract.token1())
 
             // calls.push(contract.name()); // 全程
             // calls.push(contract.symbol()); // 名称
@@ -444,13 +451,21 @@ class SDK {
             // calls.push(lp_address)
             // calls.push(contract.address)
         }
-        // console.log(calls)
 
-        // console.log(ERC20_ABI)
-        /* let calls = [
-            new Contract('0xa71edc38d189767582c38a3145b5873052c3e47a', ERC20_ABI).balanceOf(`0x19bEB3f673D119cdC5f526710d89f162B2D3E8d3`)
-        ]; */
-        return provider.all(calls)
+        // console.log(LPs)
+        let result = await provider.all(calls)
+        let pairs = []
+        for (var j = 0; j < result.length; j += 4) {
+            // console.log('j=>%s', j)
+            pairs.push({
+                balance: formatUnits(result[j]),
+                authorizationAmount: result[j + 1],
+                token0: result[j + 2],
+                token1: result[j + 3],
+                lpAddress: LPs[j / 4]
+            })
+        }
+        return pairs
     }
     /**
      * 去除ETH流动性

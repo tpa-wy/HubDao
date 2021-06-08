@@ -31,6 +31,11 @@ const routes = [{
             component: () => import('@/views/ExchangeHUB/liquidity/index.vue'),
           },
           {
+            name:'remove-Liquidity',
+            path:'remove-Liquidity',
+            component: () => import('@/views/ExchangeHUB/removeLiquidity/index.vue'),
+          },
+          {
             name:'Supply-Liquidity',
             path:'Supply-Liquidity',
             component: () => import('@/views/ExchangeHUB/liquidity/supply.vue'),

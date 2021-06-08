@@ -1,4 +1,4 @@
-/* @charset "UTF-8";
+/* // @charset "UTF-8";
 // 背景颜色
 @bgcolor: #0f0f3f;
 // 盒子模型
@@ -6,7 +6,8 @@
 // 头部和左侧栏
 @header-left: #010033;
 // 字体颜色
-@font-color: #ffffca; */
+@font-color: #ffffca;
+@list-item-back:#f0f0f0; */
 .font-color1 {
   color: #000;
 }
@@ -101,4 +102,10 @@
   border-radius: 6px;
   background-image: linear-gradient(to left, #ffe505, #ffc81c 0%);
   text-align: center;
+}
+.layout-rel {
+  position: relative;
+}
+.layout-abs {
+  position: absolute;
 }

@@ -8,6 +8,15 @@
   letter-spacing: normal;
   color: #000;
 }
+.Liquidity .head-title {
+  color: #2f303f;
+  font-size: 20px;
+  margin-left: 11px;
+}
+.Liquidity .head-img {
+  width: 32px;
+  height: 32px;
+}
 .Liquidity .top {
   margin-left: 40px;
   margin-right: 40px;
@@ -24,6 +33,7 @@
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
+  font-family: NotoSansCJKkr;
   letter-spacing: normal;
 }
 .Liquidity .top .header .icon {
@@ -33,6 +43,7 @@
 .Liquidity .top .header .icon .icon-2 {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 .Liquidity .top .header .icon .icon-1 {
   margin-right: 25px;
@@ -92,6 +103,8 @@
 .bottom .title .icon {
   width: 20px;
   height: 20px;
+  position: relative;
+  cursor: pointer;
 }
 .bottom .content {
   text-align: center;

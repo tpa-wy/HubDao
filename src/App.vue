@@ -299,4 +299,14 @@ a:focus,
   user-select: none;
   box-shadow: none;
 }
+// 禁用样式
+.disabled {
+  cursor:not-allowed;
+}
+.ml5 {
+  margin-left: 5px;
+}
+.mr5 {
+  margin-right: 5px;
+}
 </style>

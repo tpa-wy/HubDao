@@ -157,6 +157,7 @@ export default {
             position: relative;
             margin-left: 9px;
             .icon {
+              cursor: pointer;
               width: 22px;
               height: 22px;
               background-image: url(../../assets/icons-help.png);
@@ -231,6 +232,7 @@ export default {
             position: relative;
             margin-left: 9px;
             .icon {
+              cursor: pointer;
               width: 22px;
               height: 22px;
               background-image: url(../../assets/icons-help.png);

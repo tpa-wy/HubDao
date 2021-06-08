@@ -23,7 +23,8 @@ import {
     checkbox,
     message,
     option,
-    select
+    select,
+    Loading,
 } from 'element-ui';
 
 import ECharts from 'vue-echarts'
@@ -59,6 +60,7 @@ Vue.use(progress)
 Vue.use(checkbox)
 Vue.use(option)
 Vue.use(select)
+Vue.use(Loading)
 Vue.component('v-chart', ECharts);
 
 Vue.prototype.$message = message

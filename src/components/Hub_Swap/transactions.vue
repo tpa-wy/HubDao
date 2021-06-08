@@ -1,8 +1,11 @@
 <template>
   <div class="transactions">
     <div class="title">Recent transactions</div>
-    <div class="content">
+    <div class="content" v-show="!account">
       Please connect your wallet to view your recent transactions
+    </div>
+    <div class="content" v-show="account">
+      No recent transactions
     </div>
     <div class="button" @click="close">Close</div>
   </div>
@@ -20,6 +23,11 @@ export default {
       this.$emit('close');
     }
   },
+  computed:{
+    account() {
+      return this.$store.state.account
+    }
+  }
 };
 </script>
 

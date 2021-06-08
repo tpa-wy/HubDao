@@ -364,7 +364,13 @@ export default {
 .cls-6 {
   fill: url(#무제_그라디언트_14-5);
 }
-
+/* ::-webkit-scrollbar-thumb {
+    background: rgb(184, 173, 210);
+    border-radius: 8px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+} */
 body {
   overflow: hidden;
 }

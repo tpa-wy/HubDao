@@ -28,7 +28,7 @@
             <div class="liq-listitem">
               <div class="liq-list-row">
                 <div>Input</div>
-                <div class="list-item-right">
+                <div class="list-item-right" v-show="account">
                   Balance : {{ fromToken.info }}
                 </div>
               </div>
@@ -273,8 +273,13 @@ export default {
     }
 
     this.tokens = [...tokenInfo.tokens];
-    this.fromToken = this.item;
-    this.toToken = this.tokens[0];
+    if (this.item.length > 1) {
+      this.fromToken = this.item
+      this.toToken = this.tokens[0];
+    } else {
+      this.fromToken = this.tokens[0]
+      this.toToken = this.tokens[1];
+    }
     // console.log(this.tokens);
     // console.log(tokenInfo);
   },
@@ -383,6 +388,13 @@ export default {
           this.tokens = [...tokenInfo.tokens];
         }
       });
+    },
+  },
+  computed: {
+    account() {
+      console.log("我是账户");
+      // console.log(this.$store.state.account)
+      return this.$store.state.account;
     },
   },
 };

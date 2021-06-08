@@ -4,16 +4,14 @@
       <div class="header">
         <div class="title">Liquidity</div>
         <div class="icon">
-          <div class="icon-1">
-            <img
-              class="icon-img-20"
-              src="../../../assets/icons-settings@2x.png"
-            />
+          <div class="icon-1" @click="is_setting = !is_setting">
+            <img src="../../../../public/assets/icons-settings.png" alt="" />
           </div>
-          <div class="icon-2">
+          <div class="icon-2" @click="is_transactions = !is_transactions">
             <img
-              class="icon-img-20"
-              src="../../../assets/icons-recent@2x.png"
+              src="../../../../public/assets/icons-recent.png"
+              alt=""
+              srcset=""
             />
           </div>
         </div>
@@ -21,15 +19,22 @@
       <div class="title-2">Add liquidity to receive LP tokens</div>
       <div @click="addLiquidity" class="add-button">Add Liquidity</div>
     </div>
-    <div class="bottom">
+    <div class="bottom" v-loading="loading">
       <div class="title">
         <div>Your Liquidity</div>
         <div class="icon">
           <img src="../../../assets/icons-help@2x.png" class="icon-img-20" />
+          <div class="hover">
+            No Content No Content No Content No Content No Content No Content No
+            Content No Content No Content No Content
+          </div>
         </div>
       </div>
-      <div v-if="dataList.length == 0" class="content">
+      <div v-if="!account" class="content">
         Connect to a wallet to view your liquidity.
+      </div>
+      <div v-if="account && dataList.length == 0 && !loading" class="content">
+        No liquidity found.
       </div>
       <div v-if="dataList.length !== 0" class="content-list">
         <div
@@ -78,7 +83,7 @@
 
             <div class="submit-group">
               <div class="submit-btn submit-btn1" @click="skip('add')">Add</div>
-              <div class="submit-btn submit-btn2" @click="skip('remove')">
+              <div class="submit-btn submit-btn2" @click="skip('remove', item)">
                 Remove
               </div>
             </div>
@@ -93,10 +98,25 @@
         </div>
       </div>
     </div>
+    <!-- 设置 -->
+    <div class="settings" v-show="is_setting">
+      <Dialog :is_close.sync="is_setting">
+        <Setting></Setting>
+      </Dialog>
+    </div>
+    <!-- 最近的交易 -->
+    <div class="transactions" v-show="is_transactions">
+      <Dialog :is_close.sync="is_transactions">
+        <Transactions @close="close"></Transactions>
+      </Dialog>
+    </div>
   </div>
 </template>
 <style lang="less" scoped>
 @import url("./liquidity.less");
+/* .bottom {
+  position: relative;
+} */
 .content-list {
   margin: 21px 40px 17px;
   .content-item {
@@ -187,45 +207,25 @@ const {
   parseUnits,
 } = require("@ethersproject/units");
 import tokenInfo from "../../../../public/js/tokenlist.json";
+import Setting from "../../../components/Hub_Swap/setting";
+import Transactions from "../../../components/Hub_Swap/transactions";
+// 引入Loading
 export default {
+  components: { Setting, Transactions },
   data() {
     return {
-      /* dataList: [
-        {
-          imgs: [
-            "/assets/icons-default-img-2@2x.png",
-            "/assets/icons-default-img-3@2x.png",
-          ],
-          coinName: "HD/HT",
-          children: [
-            {
-              name: "Pooled HD :",
-              value: "3.22221",
-              icons: ["/assets/icons-default-img-3@2x.png"],
-            },
-            {
-              name: "Pooled HT :",
-              value: "0.34256",
-              icons: ["/assets/icons-default-img-2@2x.png"],
-            },
-            {
-              name: "Your pool tokens:",
-              value: "0.6134",
-            },
-            {
-              name: "Your pool share:",
-              value: "0.00%",
-            },
-          ],
-        },
-      ], */
       dataList: [],
       tokens: [],
+      loading: null,
+      // 设置是否显示
+      is_setting: false,
+      is_transactions: false,
     };
   },
-  /* async created() {
+  async created() {
     // 获取当前HT的余额
     if (await this.$sdk.getAddress()) {
+      this.loading = true;
       // 获取HT的余额
       this.item = {
         name: "HT",
@@ -256,14 +256,25 @@ export default {
     }
     this.tokens = [...tokenInfo.tokens];
     console.log(this.tokens);
-  }, */
+    const ethereum = window.ethereum;
+    ethereum.on("chainChanged", (_chainId) => {
+      var chainId = Number(_chainId);
+      this.network = chainId;
+      console.log("切换了网络");
+      // window.location.reload();
+      this.dataList = [];
+    });
+  },
   methods: {
-    skip(router) {
+    close() {
+      this.is_transactions = false;
+    },
+    skip(router, params) {
       if (router == "add") {
         this.$router.push("/ExchangeHUB/Liquidity/Supply-Liquidity");
       } else if (router == "remove") {
-        // 暂未页面
-        // this.$router.push('/ExchangeHUB/Liquidity/Supply-Liquidity')
+        this.$store.commit("setremoveLiquidity", params);
+        this.$router.push("/ExchangeHUB/Liquidity/remove-Liquidity");
       }
     },
     addLiquidity() {
@@ -280,18 +291,13 @@ export default {
     async getLpBalance() {
       console.log("激活了我");
       var lpInfo = await this.$sdk.getLpBalance();
-      console.log(lpInfo);
-      var lpList = [];
-      for (var j = 0; j < lpInfo.length; j += 4) {
-        if (formatUnits(lpInfo[j]) > 0) {
-          // console.log(formatUnits(list[i]));
-          // console.log(list[i + 1]);
-          // console.log(list[i + 2]);
-          // i + 2 token0
-          // i + 3 token1
-          var token0 = lpInfo[j + 2];
+      console.log('lpInfo------------')
+      console.log(lpInfo)
+      for (var j = 0; j < lpInfo.length; j++) {
+        if (lpInfo[j].balance > 0) {
+          var token0 = lpInfo[j].token0;
           // console.log(token0);
-          var token1 = lpInfo[j + 3];
+          var token1 = lpInfo[j].token1;
           // console.log(token1);
           // token0.
           var token0Index = this.tokens.findIndex(
@@ -302,23 +308,32 @@ export default {
           );
           // console.log(token0Index);
           // console.log(token1Index);
-          lpList.push({
+          /* lpList.push({
             balance: formatUnits(lpInfo[j]),
             authorizationAmount: lpInfo[j + 1],
             token0info: this.tokens[token0Index],
             token1info: this.tokens[token1Index],
-          });
+          }); */
+          lpInfo[j].token0info = this.tokens[token0Index]
+          lpInfo[j].token1info = this.tokens[token1Index]
         }
       }
-      this.dataList = lpList;
+      
+      console.log('--------------------')
+      console.log(lpInfo);
+      this.dataList = lpInfo;
+      this.loading = false;
     },
   },
   watch: {
     account(newValue, oldValue) {
-      console.log(111);
+      if(oldValue == null){
+        return false
+      }
       this.$sdk.getAddress().then((res) => {
         console.log(res);
         if (res) {
+          this.loading = true;
           // 获取HT的余额
           this.$sdk.getHTCurrency().then((res) => {
             this.item = {
@@ -337,6 +352,7 @@ export default {
           this.$sdk
             .getMultiBalanceOf()
             .then((list) => {
+              this.loading = false;
               // console.log(tokenInfo.tokens)
               // console.log("list", list);
               for (var i = 0; i < list.length; i += 2) {
@@ -350,7 +366,9 @@ export default {
                 // console.log(tokenInfo.tokens[i].info)
               }
             })
-            .catch((error) => console.error(error));
+            .catch((error) => {
+              this.loading = false;
+            });
 
           this.tokens = [...tokenInfo.tokens];
           this.getLpBalance();
